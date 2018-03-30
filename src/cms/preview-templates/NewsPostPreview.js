@@ -1,12 +1,12 @@
 import React from 'react'
-import { BlogPostTemplate } from '../../templates/blog-post'
+import { NewsPostTemplate } from '../../templates/news-post'
 
-const BlogPostPreview = ({ entry, widgetFor }) => (
-  <BlogPostTemplate
+const NewsPostPreview = ({ entry, widgetFor }) => (
+  <NewsPostTemplate
     content={widgetFor('body')}
     description={entry.getIn(['data', 'description'])}
     title={entry.getIn(['data', 'title'])}
   />
 )
 
-export default BlogPostPreview
+export default NewsPostPreview
