@@ -28,8 +28,8 @@ const Navbar = () => (
             </Link>
           </div>
           <div className="navbar-item">
-            <Link to="/members">
-              Members
+            <Link to="/team">
+              Team
             </Link>
           </div>
           
