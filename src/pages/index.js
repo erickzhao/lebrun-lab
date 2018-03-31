@@ -13,15 +13,19 @@ export default class IndexPage extends React.Component {
           <div class='carousel-container'>
             <div class='carousel-item has-background is-active'>
               <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="" />
+              <div class="title">Merry Christmas</div>
             </div>
             <div class='carousel-item has-background'>
               <img class="is-background" src="https://wikiki.github.io/images/singer.jpg" alt="" />
+              <div class="title">Merry Christmas</div>
             </div>
             <div class='carousel-item has-background'>
               <img class="is-background" src="https://wikiki.github.io/images/sushi.jpg" alt="" />
+              <div class="title">Merry Christmas</div>
             </div>
             <div class='carousel-item has-background'>
               <img class="is-background" src="https://wikiki.github.io/images/life.jpg" alt="" />
+              <div class="title">Merry Christmas</div>
             </div>
           </div>
           <div class="carousel-navigation is-overlay">
