@@ -199,13 +199,9 @@ export default class Carousel {
       if (direction === 'previous') {
         // Reorder items
         this.items.unshift(this.items.pop());
-        // add reverse class
-        this.element.classList.add('is-reversing');
       } else {
         // Reorder items
         this.items.push(this.items.shift());
-        // re_slide reverse class
-        this.element.classList.remove('is-reversing');
       }
 
       if (this.items.length >= 1) {
@@ -236,19 +232,4 @@ export default class Carousel {
       this._slide('next');
     }, delay);
   }
-}
-
-/**
- * Initiate all DOM element containing carousel class
- * @method
- * @return {[type]} [description]
- */
-
-if (typeof document !== `undefined`) {
-  document.addEventListener('DOMContentLoaded', function() {
-    var carousels = document.querySelectorAll('.carousel, .hero-carousel');
-    [].forEach.call(carousels, function(carousel) {
-      new Carousel(carousel);
-    });
-  });
 }
