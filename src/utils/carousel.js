@@ -243,9 +243,12 @@ export default class Carousel {
  * @method
  * @return {[type]} [description]
  */
-document.addEventListener('DOMContentLoaded', function() {
-  var carousels = document.querySelectorAll('.carousel, .hero-carousel');
-  [].forEach.call(carousels, function(carousel) {
-    new Carousel(carousel);
+
+if (typeof document !== `undefined`) {
+  document.addEventListener('DOMContentLoaded', function() {
+    var carousels = document.querySelectorAll('.carousel, .hero-carousel');
+    [].forEach.call(carousels, function(carousel) {
+      new Carousel(carousel);
+    });
   });
-});
+}
