@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Carousel from '../components/Carousel'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -8,38 +9,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <div>
-      <section class="hero is-medium has-carousel">
-        <div class="hero-carousel carousel-animated carousel-animate-fade" data-autoplay="true">
-          <div class='carousel-container'>
-            <div class='carousel-item has-background is-active'>
-              <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="" />
-              <div class="title">Merry Christmas</div>
-            </div>
-            <div class='carousel-item has-background'>
-              <img class="is-background" src="https://wikiki.github.io/images/singer.jpg" alt="" />
-              <div class="title">Merry Christmas</div>
-            </div>
-            <div class='carousel-item has-background'>
-              <img class="is-background" src="https://wikiki.github.io/images/sushi.jpg" alt="" />
-              <div class="title">Merry Christmas</div>
-            </div>
-            <div class='carousel-item has-background'>
-              <img class="is-background" src="https://wikiki.github.io/images/life.jpg" alt="" />
-              <div class="title">Merry Christmas</div>
-            </div>
-          </div>
-          <div class="carousel-navigation is-overlay">
-            <div class="carousel-nav-left">
-              <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </div>
-            <div class="carousel-nav-right">
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-        <div class="hero-body has-text-centered">
-        </div>
-      </section>
+      <Carousel slides={posts.find(post => post.node.frontmatter.templateKey === 'carousel-page-component').node.frontmatter.carouselSlides}/>
       <section className="section">
         <div className="container">
           <div className="content">
@@ -73,7 +43,6 @@ export default class IndexPage extends React.Component {
         </div>
       </section>
       </div>
-      
     )
   }
 }
@@ -91,6 +60,10 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+            carouselSlides {
+              description
+              photo
+            }
             date(formatString: "MMMM DD, YYYY")
           }
         }
