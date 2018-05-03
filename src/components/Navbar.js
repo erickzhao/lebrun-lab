@@ -34,18 +34,6 @@ const Navbar = () => (
           </div>
           
         </div>
-        <div className="navbar-end">
-          <a
-            className="navbar-item"
-            href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="icon">
-              <img src={github} alt="Github" />
-            </span>
-          </a>
-        </div>
       </div>
     </div>
   </nav>
