@@ -1,9 +1,9 @@
-$carousel-nav-background: rgba($white, 0.7) !default;
-$carousel-nav-color: $text !default;
-$carousel-title-background: rgba($white, 0.6) !default;
-$carousel-title-size: $size-7 !default;
+$carousel-nav-background: rgba($black, 0.7) !default;
+$carousel-nav-color: $text-invert !default;
+$carousel-title-background: rgba($black, 0.6) !default;
+$carousel-title-size: $size-4 !default;
 $carousel-border: none;
-$carousel-animation-speed: 0.5s;
+$carousel-animation-speed: 1s;
 $carousel-animation-method: ease-in-out;
 
 $carousel-sizes: 2, 3, 4, 5 !default;
@@ -32,6 +32,7 @@ $carousel-sizes: 2, 3, 4, 5 !default;
     text-align: center;
     background: $carousel-title-background;
     font-size: $carousel-title-size;
+    color: $text-invert;
   }
 }
 

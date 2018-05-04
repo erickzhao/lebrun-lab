@@ -18,7 +18,7 @@ class Carousel extends Component {
   render() {
     const {slides} = this.state;
     return (
-      <section className="hero is-medium has-carousel">
+      <section className="hero is-large has-carousel">
       <div className="hero-carousel carousel-animated carousel-animate-fade" data-autoplay="true">
         <div className='carousel-container'>
           {
