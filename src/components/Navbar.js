@@ -2,17 +2,15 @@ import React from 'react'
 import Link from 'gatsby-link'
 import '../utils/navbar'
 
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
-
 const Navbar = () => (
   <nav className="navbar is-transparent">
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
-          <figure className="image">
+        Lebrun Lab
+          {/* <figure className="image">
             <img src={logo} alt="ECSESS" style={{ maxWidth: '48px', maxHeight: '30px' }} />
-          </figure>
+          </figure> */}
         </Link>
         <div className="navbar-burger" data-target="navMenu">
           <span></span>
