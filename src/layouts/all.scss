@@ -8,7 +8,7 @@ $blue: #00b1e2;
 $pink: #ffb3b3;
 $pink-invert: #fff;
 // Add a serif family
-$family-serif: "Merriweather", "Georgia", serif;
+$family-sans: "Muli", "Helvetica Neue", "Arial", sans-serif;
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
@@ -17,7 +17,7 @@ $primary-invert: $pink-invert;
 // Use the existing orange as the danger color
 $danger: $orange;
 // Use the new serif family
-$family-primary: $family-serif;
+$family-primary: $family-sans;
 
 // 4. Setup your Custom Colors
 $linkedin: #0077b5;
