@@ -30,6 +30,11 @@ const Navbar = () => (
               Team
             </Link>
           </div>
+          <div className="navbar-item">
+            <Link to="/research">
+              Research
+            </Link>
+          </div>
           
         </div>
       </div>

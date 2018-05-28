@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Header = ({title, heading}) => (
-  <section className="hero is-medium is-primary is-bold">
+const Header = ({title, heading, photo}) => (
+  <section className="hero is-medium is-primary is-bold" style={{background: `url(${photo}) no-repeat center center / cover fixed`}}>
   <div className="hero-body">
     <div className="container">
       <h1 className="title is-1">
