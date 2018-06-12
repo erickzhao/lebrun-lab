@@ -49,7 +49,7 @@ const Navbar = () => (
           </div>
           <div className="navbar-item has-dropdown is-hoverable">
             <span className="navbar-link">
-              Resources
+              Research
             </span>
             <div className="navbar-dropdown">
               <div className="navbar-item">
@@ -63,6 +63,16 @@ const Navbar = () => (
                 </Link>
               </div>
             </div>
+          </div>
+          <div className="navbar-item">
+            <Link to="/publications">
+              Publications
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link to="/contact">
+              Contact
+            </Link>
           </div>
         </div>
       </div>

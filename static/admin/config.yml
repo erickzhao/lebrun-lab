@@ -62,3 +62,11 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: Members, name: members, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Position, name: position, widget: string}, {label: Photo, name: photo, widget: image}, {label: Description, name: description, widget: text}]}
+          - file: "src/pages/team/index.md"
+        label: "Alumni"
+        name: "alumni"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "alumni-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Members, name: members, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Position, name: position, widget: string}, {label: Photo, name: photo, widget: image}, {label: Description, name: description, widget: text}]}
