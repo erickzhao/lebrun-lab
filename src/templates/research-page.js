@@ -1,18 +1,43 @@
 import React from "react"
 import Header from "../components/Header"
 import Content, { HTMLContent } from "../components/Content"
+import Link from 'gatsby-link'
 
 export const ResearchPageTemplate = ({topics}) => {
   console.log(topics);
   return (
   <div>
-    <h1>Research Topics</h1>
-    { topics.map(t =>
-      <div key={t.node.id}>
-        <h2>{t.node.frontmatter.title}</h2>
-        <p>{t.node.excerpt}</p>
+    <Header title="Research"/>
+    <section className="section container">
+      <div className="columns">
+      { topics.map(t =>
+        <div className="column is-one-third" key={t.node.id}>
+          <div className="card">
+            <div className="card-image">
+              <figure className="image is-4by3">
+                <img src={t.node.frontmatter.photo} alt="Topic Image"/>
+              </figure>
+            </div>
+            <div className="card-content">
+              <div className="media">
+                <div className="media-content">
+                  <h2 className="title is-4 is-spaced">{t.node.frontmatter.title}</h2>
+                  <p className="subtitle is-6">Keywords: A, S, D, F, G</p>
+                </div>
+              </div>
+
+              <div className="content">
+                <p>{t.node.excerpt}</p>
+                <Link className="button" to={t.node.fields.slug}>
+                  Keep Reading →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        ) }
       </div>
-      ) }
+    </section>
   </div>
   );
 }
@@ -40,6 +65,7 @@ export const researchPageQuery = graphql`
           frontmatter {
             title
             templateKey
+            photo
           }
         }
       }

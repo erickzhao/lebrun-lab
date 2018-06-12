@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:700|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Hind:700|Montserrat');
 @import "~bulma/sass/utilities/initial-variables";
 @import "~bulma/sass/utilities/functions";
 
@@ -42,7 +42,11 @@ $colors: map-merge($colors, $addColors);
 @import "./carousel.scss";
 
 .container {
-  max-width: 900px;
+  max-width: 1100px;
+}
+
+.navbar {
+  min-height: 5rem;
 }
 
 .navbar-link {
@@ -50,11 +54,18 @@ $colors: map-merge($colors, $addColors);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Fira Sans", "Helvetica Neue", sans-serif;
+  font-family: "Hind", "Helvetica Neue", sans-serif;
 }
 
 .navbar-brand {
-  font-family: "Fira Sans", "Helvetica Neue", sans-serif;
+  font-family: "Hind", "Helvetica Neue", sans-serif;
   font-size: 20px;
   font-weight: 700;
+}
+
+a {
+  &:hover {
+    color: $blue;
+    transition: all 0.3s ease-in-out;
+  }
 }
