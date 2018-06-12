@@ -18,10 +18,11 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "research"
-    label: "Research titles"
+    label: "Research Topics"
     folder: "src/pages/research"
     create: true
     slug: "{{slug}}"
+    filter: {field: "templateKey", value: "research-post"}
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "research-post"}
       - {label: "Title", name: "title", widget: "string"}
@@ -44,6 +45,13 @@ collections:
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/publications/index.md"
+        label: "Publications"
+        name: "publications"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "publications-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/team/index.md"

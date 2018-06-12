@@ -21,21 +21,49 @@ const Navbar = () => (
       <div className="navbar-menu" id="navMenu">
         <div className="navbar-start">
           <div className="navbar-item">
-            <Link to="/about">
-              About
+            <Link to="/">
+              Home
             </Link>
           </div>
-          <div className="navbar-item">
-            <Link to="/team">
-              Team
-            </Link>
+          <div className="navbar-item has-dropdown is-hoverable">
+            <span className="navbar-link">
+              The Lab
+            </span>
+            <div className="navbar-dropdown">
+              <div className="navbar-item">
+                <Link to="/about">
+                  About
+                </Link>
+              </div>
+              <div className="navbar-item">
+                <Link to="/team">
+                  Lab members
+                </Link>
+              </div>
+              <div className="navbar-item">
+                <Link to="/alumni">
+                  Alumni
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="navbar-item">
-            <Link to="/research">
-              Research
-            </Link>
+          <div className="navbar-item has-dropdown is-hoverable">
+            <span className="navbar-link">
+              Resources
+            </span>
+            <div className="navbar-dropdown">
+              <div className="navbar-item">
+                <Link to="/research">
+                  Projects
+                </Link>
+              </div>
+              <div className="navbar-item">
+                <Link to="/protocol">
+                  Protocol
+                </Link>
+              </div>
+            </div>
           </div>
-          
         </div>
       </div>
     </div>
