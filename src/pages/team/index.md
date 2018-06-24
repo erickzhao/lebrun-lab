@@ -13,7 +13,7 @@ members:
       est laborum."
     name: Erick Zhao
     photo: /img/coffee.png
-    position: Lab Manager
+    position:
   - description: >-
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -24,7 +24,7 @@ members:
       est laborum."
     name: Not Erick Zhao
     photo: /img/meeting-space.png
-    position: Research Associate
+    position:
   - description: >-
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -35,6 +35,6 @@ members:
       est laborum."
     name: Definitely Not Erick
     photo: /img/coffee-gear.png
-    position: Director
+    position:
 ---
 

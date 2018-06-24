@@ -61,7 +61,28 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-page"}
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
-          - {label: Members, name: members, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Position, name: position, widget: string}, {label: Photo, name: photo, widget: image}, {label: Description, name: description, widget: text}]}
+          - label: Members
+            name: members
+            widget: list
+            fields: 
+              - label: Name
+                name: name
+                widget: string
+              - label: Position
+                name: position
+                widget: select
+                options:
+                  - { label: "Research Associate", value: "associate" }
+                  - { label: "Post-Doctorate Fellow", value: "postdoc" }
+                  - { label: "Graduate Student", value: "grad" }
+                  - { label: "Research Assistant", value: "assistant" }
+                  - { label: "Undergraduate", value: "undergrad" }
+              - label: Photo
+                name: photo
+                widget: image
+              - label: Description
+                name: description
+                widget: text
       - file: "src/pages/alumni/index.md"
         label: "Alumni"
         name: "alumni"
