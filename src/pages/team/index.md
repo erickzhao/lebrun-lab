@@ -36,5 +36,9 @@ members:
     name: Definitely Not Erick
     photo: /img/coffee-gear.png
     position: undergrad
+  - description: Hello I'm erick
+    name: Erick 2
+    photo: /img/meeting-space.png
+    position: associate
 ---
 
