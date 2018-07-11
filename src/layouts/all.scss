@@ -78,3 +78,36 @@ a {
 .card-equal-height .card-footer {
   margin-top: auto;
 }
+
+.card {
+  &.is-horizontal {
+    @include tablet {
+      flex-direction: row;
+      display: flex;
+      flex-basis: 50ex;
+      flex-grow: 0;
+      flex-shrink: 1;
+      .card-image {
+        flex: 2;
+        flex-shrink: 2;
+        
+        .image {
+          display: block;
+          position: relative;
+          overflow: hidden;
+          height: 100%;
+          width: 100%;
+          img {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+      .card-content {
+        flex: 3;
+        flex-shrink: 3;
+      }
+    }
+  }
+}

@@ -9,10 +9,8 @@ export const ResearchPageTemplate = ({topics}) => {
   <div>
     <Header title="Research"/>
     <section className="section container">
-      <div className="columns">
       { topics.map(t =>
-        <div className="column is-one-third" key={t.node.id}>
-          <div className="card">
+          <div className="card is-horizontal" key={t.node.id}>
             <div className="card-image">
               <figure className="image is-4by3">
                 <img src={t.node.frontmatter.photo} alt="Topic Image"/>
@@ -34,9 +32,7 @@ export const ResearchPageTemplate = ({topics}) => {
               </div>
             </div>
           </div>
-        </div>
         ) }
-      </div>
     </section>
   </div>
   );
