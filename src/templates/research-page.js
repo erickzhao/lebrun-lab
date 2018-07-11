@@ -39,10 +39,7 @@ export const ResearchPageTemplate = ({ topics }) => {
 };
 
 export default ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark;
-  const topics = posts.filter(
-    t => t.node.frontmatter.templateKey === "research-post"
-  );
+  const { edges: topics } = data.allMarkdownRemark;
   return (
     <div>
       <ResearchPageTemplate topics={topics} />
@@ -52,7 +49,7 @@ export default ({ data }) => {
 
 export const researchPageQuery = graphql`
   query ResearchPage {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: { frontmatter: { templateKey: { eq:"research-post"}}}) {
       edges {
         node {
           excerpt(pruneLength: 400)

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CarouselUtil from "../utils/carousel";
+import Link from "gatsby-link";
 
 class Carousel extends Component {
   constructor(props) {
@@ -26,17 +27,17 @@ class Carousel extends Component {
           data-autoplay="true"
         >
           <div className="carousel-container">
-            {slides.map((s, i) => (
+            {slides.map((s) => (
               <div
                 className={"carousel-item has-background"}
-                key={s.description}
+                key={s.title}
               >
                 <img
                   className="is-background"
                   src={s.photo}
-                  alt={s.description}
+                  alt={s.title}
                 />
-                <div className="title">{s.description}</div>
+                <Link to={s.slug} className="title">{s.title}</Link>
               </div>
             ))}
           </div>
