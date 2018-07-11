@@ -82,3 +82,24 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: Members, name: members, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Position, name: position, widget: string}, {label: Photo, name: photo, widget: image}, {label: Description, name: description, widget: text}]}
+      - file: "src/pages/contact/index.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Principal Investigator, name: pi, widget: object, fields: [
+              {label: "Name", name: "name", widget: "string"},
+              {label: "Email", name: "email", widget: "string"},
+              {label: "Photo", name: "photo", widget: "image"},
+              {label: "Bio", name: "bio", widget: "text"}
+            ]}
+          - {label: Address, name: address, widget: object, fields: [
+              {label: "Address Line 1", name: "address-1", widget: "string"},
+              {label: "Address Line 2", name: "address-2", widget: "string"},
+              {label: "City", name: "city", widget: "string"},
+              {label: "Province", name: "province", widget: "string"},
+              {label: "Postal Code", name: "postal-code", widget: "string"}
+              ]
+            }
