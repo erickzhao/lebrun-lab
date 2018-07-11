@@ -96,10 +96,10 @@ collections:
               {label: "Bio", name: "bio", widget: "text"}
             ]}
           - {label: Address, name: address, widget: object, fields: [
-              {label: "Address Line 1", name: "address-1", widget: "string"},
-              {label: "Address Line 2", name: "address-2", widget: "string"},
+              {label: "Address Line 1", name: "line1", widget: "string"},
+              {label: "Address Line 2", name: "line2", widget: "string"},
               {label: "City", name: "city", widget: "string"},
               {label: "Province", name: "province", widget: "string"},
-              {label: "Postal Code", name: "postal-code", widget: "string"}
+              {label: "Postal Code", name: "postalCode", widget: "string"}
               ]
             }

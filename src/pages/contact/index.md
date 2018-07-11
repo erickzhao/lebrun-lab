@@ -15,10 +15,10 @@ pi:
   name: Hello
   photo: /img/chemex.jpg
 address:
-  address-1: McGill University Health Centre
-  address-2: 1001 Boulevard Decarie
+  line1: McGill University Health Centre
+  line2: 1001 Boulevard Decarie
   city: Montreal
-  postal-code: H4A 3J1
   province: Quebec
+  postalCode: H4A 3J1
 ---
 

@@ -5,13 +5,15 @@ import Map from "../components/Map";
 export const ContactPageTemplate = ({
   title,
   heading,
+  address
 }) => {
+  const stringAddress=`${address.line1}, ${address.line2}, ${address.city}, ${address.province} ${address.postalCode}`;
   return (
     <div>
       <header>
         <Header title={title} heading={heading} />
       </header>
-      <Map address="1001 Decarie Blvd, Montreal, QC H4A 3J1"/>
+      <Map address={stringAddress}/>
     </div>
   );
 };
@@ -23,7 +25,7 @@ export default ({ data }) => {
     <ContactPageTemplate
       title={post.frontmatter.title}
       heading={post.frontmatter.heading}
-      content={post.html}
+      address={post.frontmatter.address}
     />
   );
 };
@@ -35,6 +37,13 @@ export const contactPageQuery = graphql`
       frontmatter {
         title
         heading
+        address {
+          line1
+          line2
+          city
+          province
+          postalCode
+        }
       }
     }
   }
