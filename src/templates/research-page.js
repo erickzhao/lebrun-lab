@@ -1,10 +1,8 @@
 import React from "react"
 import Header from "../components/Header"
-import Content, { HTMLContent } from "../components/Content"
 import Link from 'gatsby-link'
 
 export const ResearchPageTemplate = ({topics}) => {
-  console.log(topics);
   return (
   <div>
     <Header title="Research"/>
