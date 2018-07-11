@@ -1,14 +1,19 @@
-import React from 'react'
-import Content, { HTMLContent } from '../components/Content'
-import Header from '../components/Header'
+import React from "react";
+import Content, { HTMLContent } from "../components/Content";
+import Header from "../components/Header";
 
-export const PublicationsPageTemplate = ({ title, heading, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const PublicationsPageTemplate = ({
+  title,
+  heading,
+  content,
+  contentComponent
+}) => {
+  const PageContent = contentComponent || Content;
 
   return (
     <div>
       <header>
-        <Header title={title} heading={heading}/>
+        <Header title={title} heading={heading} />
       </header>
       <section className="section">
         <div className="container">
@@ -22,12 +27,11 @@ export const PublicationsPageTemplate = ({ title, heading, content, contentCompo
         </div>
       </section>
     </div>
-    
-  )
-}
+  );
+};
 
-export default ({data}) => {
-  const { markdownRemark: post } = data
+export default ({ data }) => {
+  const { markdownRemark: post } = data;
   console.log(post);
 
   return (
@@ -37,8 +41,8 @@ export default ({data}) => {
       heading={post.frontmatter.heading}
       content={post.html}
     />
-  )
-}
+  );
+};
 
 export const publicationsPageQuery = graphql`
   query PublicationsPage($id: String!) {
@@ -50,4 +54,4 @@ export const publicationsPageQuery = graphql`
       }
     }
   }
-`
+`;

@@ -1,12 +1,15 @@
 export default class Carousel {
   constructor(selector) {
     // Determine click event depending on if we are on Touch device or not
-    this._clickEvent = ('ontouchstart' in window) ? 'touchstart' : 'click';
+    this._clickEvent = "ontouchstart" in window ? "touchstart" : "click";
 
-    this.element = typeof selector === 'string' ? document.querySelector(selector) : selector;
+    this.element =
+      typeof selector === "string"
+        ? document.querySelector(selector)
+        : selector;
     // An invalid selector or non-DOM node has been provided.
     if (!this.element) {
-      throw new Error('An invalid selector or non-DOM node has been provided.');
+      throw new Error("An invalid selector or non-DOM node has been provided.");
     }
 
     this.init();
@@ -18,32 +21,37 @@ export default class Carousel {
    * @return {void}
    */
   init() {
-    this.items = Array.from(this.element.querySelectorAll('.carousel-item'));
-    this.items.forEach((item) => {
-      let img = item.querySelector('img');
-      img.setAttribute('draggable', false);
+    this.items = Array.from(this.element.querySelectorAll(".carousel-item"));
+    this.items.forEach(item => {
+      let img = item.querySelector("img");
+      img.setAttribute("draggable", false);
     });
     this.computedStyle = window.getComputedStyle(this.element);
 
-    this.previousControl = this.element.querySelector('.carousel-nav-left');
-    this.nextControl = this.element.querySelector('.carousel-nav-right');
+    this.previousControl = this.element.querySelector(".carousel-nav-left");
+    this.nextControl = this.element.querySelector(".carousel-nav-right");
     if (this.items.length <= 1) {
-      const carouselContainer = this.element.querySelector('.carousel-container');
+      const carouselContainer = this.element.querySelector(
+        ".carousel-container"
+      );
       if (carouselContainer) {
-        carouselContainer.style.left = '0';
+        carouselContainer.style.left = "0";
       }
       if (this.previousControl) {
-        this.previousControl.style.display = 'none';
+        this.previousControl.style.display = "none";
       }
       if (this.nextControl) {
-        this.nextControl.style.display = 'none';
+        this.nextControl.style.display = "none";
       }
     }
 
     this._bindEvents();
     this._initOrder();
 
-    if (this.element.dataset.autoplay && this.element.dataset.autoplay == 'true') {
+    if (
+      this.element.dataset.autoplay &&
+      this.element.dataset.autoplay == "true"
+    ) {
       this._autoPlay(this.element.dataset.delay || 5000);
     }
   }
@@ -55,38 +63,46 @@ export default class Carousel {
    */
   _bindEvents() {
     if (this.previousControl) {
-      this.previousControl.addEventListener(this._clickEvent, (e) => {
-        e.preventDefault();
-        this._slide('previous');
-        if (this._autoPlayInterval) {
-          clearInterval(this._autoPlayInterval);
-          this._autoPlay(this.element.dataset.delay || 5000);
-        }
-      }, false);
+      this.previousControl.addEventListener(
+        this._clickEvent,
+        e => {
+          e.preventDefault();
+          this._slide("previous");
+          if (this._autoPlayInterval) {
+            clearInterval(this._autoPlayInterval);
+            this._autoPlay(this.element.dataset.delay || 5000);
+          }
+        },
+        false
+      );
     }
     if (this.nextControl) {
-      this.nextControl.addEventListener(this._clickEvent, (e) => {
-        e.preventDefault();
-        this._slide('next');
-        if (this._autoPlayInterval) {
-          clearInterval(this._autoPlayInterval);
-          this._autoPlay(this.element.dataset.delay || 5000);
-        }
-      }, false);
+      this.nextControl.addEventListener(
+        this._clickEvent,
+        e => {
+          e.preventDefault();
+          this._slide("next");
+          if (this._autoPlayInterval) {
+            clearInterval(this._autoPlayInterval);
+            this._autoPlay(this.element.dataset.delay || 5000);
+          }
+        },
+        false
+      );
     }
 
     // Bind swipe events
-    this.element.addEventListener('touchstart', (e) => {
+    this.element.addEventListener("touchstart", e => {
       this._swipeStart(e);
     });
-    this.element.addEventListener('mousedown', (e) => {
+    this.element.addEventListener("mousedown", e => {
       this._swipeStart(e);
     });
 
-    this.element.addEventListener('touchend', (e) => {
+    this.element.addEventListener("touchend", e => {
       this._swipeEnd(e);
     });
-    this.element.addEventListener('mouseup', (e) => {
+    this.element.addEventListener("mouseup", e => {
       this._swipeEnd(e);
     });
   }
@@ -97,9 +113,11 @@ export default class Carousel {
    * @return {void}
    */
   _initOrder() {
-    let currentActiveItem = this.element.querySelector('.carousel-item.is-active');
+    let currentActiveItem = this.element.querySelector(
+      ".carousel-item.is-active"
+    );
     if (!currentActiveItem) {
-      this.items[0].classList.add('is-active');
+      this.items[0].classList.add("is-active");
       currentActiveItem = this.items[0];
     }
     const currentActiveItemPos = this.items.indexOf(currentActiveItem);
@@ -120,9 +138,9 @@ export default class Carousel {
   _setOrder() {
     this.items.forEach((item, index) => {
       if (index !== 1) {
-        item.style['z-index'] = '0';
+        item.style["z-index"] = "0";
       } else {
-        item.style['z-index'] = '1';
+        item.style["z-index"] = "1";
       }
       item.style.order = index;
     });
@@ -144,7 +162,7 @@ export default class Carousel {
         x: e.clientX,
         y: e.clientY
       }
-    }
+    };
   }
 
   /**
@@ -157,7 +175,7 @@ export default class Carousel {
     this._touch.end = {
       x: e.clientX,
       y: e.clientY
-    }
+    };
 
     this._handleGesture();
   }
@@ -169,16 +187,20 @@ export default class Carousel {
    */
   _handleGesture() {
     const ratio = {
-      horizontal: (this._touch.end.x - this._touch.start.x) / parseInt(this.computedStyle.getPropertyValue('width')),
-      vertical: (this._touch.end.y - this._touch.start.y) / parseInt(this.computedStyle.getPropertyValue('height'))
+      horizontal:
+        (this._touch.end.x - this._touch.start.x) /
+        parseInt(this.computedStyle.getPropertyValue("width")),
+      vertical:
+        (this._touch.end.y - this._touch.start.y) /
+        parseInt(this.computedStyle.getPropertyValue("height"))
     };
 
     if (ratio.horizontal > ratio.vertical && ratio.horizontal > 0.25) {
-      this._slide('previous');
+      this._slide("previous");
     }
 
     if (ratio.horizontal < ratio.vertical && ratio.horizontal < -0.25) {
-      this._slide('next');
+      this._slide("next");
     }
   }
 
@@ -188,15 +210,17 @@ export default class Carousel {
    * @param  {String} [direction='next'] Direction in which slide needs to move
    * @return {void}
    */
-  _slide(direction = 'next') {
+  _slide(direction = "next") {
     if (this.items.length) {
-      const currentActiveItem = this.element.querySelector('.carousel-item.is-active');
+      const currentActiveItem = this.element.querySelector(
+        ".carousel-item.is-active"
+      );
       let newActiveItem;
 
-      currentActiveItem.classList.remove('is-active');
+      currentActiveItem.classList.remove("is-active");
 
       // initialize direction to change order
-      if (direction === 'previous') {
+      if (direction === "previous") {
         // Reorder items
         this.items.unshift(this.items.pop());
       } else {
@@ -209,14 +233,14 @@ export default class Carousel {
       } else {
         newActiveItem = this.items[0];
       }
-      newActiveItem.classList.add('is-active');
+      newActiveItem.classList.add("is-active");
       this._setOrder();
 
       // Disable transition to instant change order
-      this.element.classList.toggle('carousel-animated');
+      this.element.classList.toggle("carousel-animated");
       // Enable transition to animate order 1 to order 2
       setTimeout(() => {
-        this.element.classList.toggle('carousel-animated');
+        this.element.classList.toggle("carousel-animated");
       }, 50);
     }
   }
@@ -229,7 +253,7 @@ export default class Carousel {
    */
   _autoPlay(delay = 5000) {
     this._autoPlayInterval = setInterval(() => {
-      this._slide('next');
+      this._slide("next");
     }, delay);
   }
 }

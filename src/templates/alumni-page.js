@@ -1,15 +1,15 @@
-import React from "react"
-import Header from "../components/Header"
-import Team from "../components/Team"
+import React from "react";
+import Header from "../components/Header";
+import Team from "../components/Team";
 
-export default (props) => {
+export default props => {
   return (
     <div>
-      <Header {...props.data.markdownRemark.frontmatter}/>
-      <Team {...props.data.markdownRemark.frontmatter}/>
+      <Header {...props.data.markdownRemark.frontmatter} />
+      <Team {...props.data.markdownRemark.frontmatter} />
     </div>
-  )
-}
+  );
+};
 
 export const alumniPageQuery = graphql`
   query alumniPage($id: String!) {
@@ -26,4 +26,4 @@ export const alumniPageQuery = graphql`
       }
     }
   }
-`
+`;

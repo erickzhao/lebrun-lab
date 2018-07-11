@@ -1,6 +1,6 @@
-import React from "react"
-import Header from "../components/Header"
-import Team from "../components/Team"
+import React from "react";
+import Header from "../components/Header";
+import Team from "../components/Team";
 
 export default ({ data }) => {
   const positions = {
@@ -9,27 +9,27 @@ export default ({ data }) => {
     grad: "Graduate Students",
     assistant: "Research Assistants",
     undergrad: "Undergraduate Students"
-  }
+  };
   return (
     <div>
-      <Header {...data.markdownRemark.frontmatter}/>
-      { Object.keys(positions).map(pos => {
-        const members = data.markdownRemark.frontmatter.members.filter(m => m.position === pos);
+      <Header {...data.markdownRemark.frontmatter} />
+      {Object.keys(positions).map(pos => {
+        const members = data.markdownRemark.frontmatter.members.filter(
+          m => m.position === pos
+        );
         if (members.length > 0) {
           console.log(members);
           return (
             <div className="container" key={pos}>
               <h2 className="title">{positions[pos]}</h2>
-              <Team members={members}/>
+              <Team members={members} />
             </div>
-          )
+          );
         }
-      }
-      )}
-      
+      })}
     </div>
-  )
-}
+  );
+};
 
 export const teamPageQuery = graphql`
   query TeamPage($id: String!) {
@@ -46,4 +46,4 @@ export const teamPageQuery = graphql`
       }
     }
   }
-`
+`;
