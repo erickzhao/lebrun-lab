@@ -28,19 +28,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     result.data.allMarkdownRemark.edges.forEach(edge => {
       const id = edge.node.id
-
-      if (!edge.node.frontmatter.templateKey.includes('page-component')) {
-        createPage({
-          path: edge.node.fields.slug,
-          component: path.resolve(
-            `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-          ),
-          // additional data can be passed via context
-          context: {
-            id,
-          },
-        })
-      }
+      createPage({
+        path: edge.node.fields.slug,
+        component: path.resolve(
+          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+        ),
+        // additional data can be passed via context
+        context: {
+          id,
+        },
+      })
     })
   })
 }
