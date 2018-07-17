@@ -1,14 +1,10 @@
 import React from "react";
-import Link from "gatsby-link";
 import Carousel from "../components/Carousel";
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
-    const { 
-      news: {
-        edges: posts
-      },
+    const {
       research: {
         edges: topics
       }
@@ -28,25 +24,6 @@ export default class IndexPage extends React.Component {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    news: allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq:"news-post"}}}
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
-      }
-    }
     research: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq:"research-post"}}}) {
       edges {
         node {
