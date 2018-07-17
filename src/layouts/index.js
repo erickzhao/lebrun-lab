@@ -8,7 +8,7 @@ import "./all.scss";
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Lebrun Laboratory">
+    <Helmet title="J.J. Lebrun Laboratory">
       <script
         defer
         src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"

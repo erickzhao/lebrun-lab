@@ -1,10 +1,22 @@
 $carousel-nav-background: rgba($black, 0.7) !default
 $carousel-nav-color: $text-invert !default
-$carousel-title-background: rgba($black, 0.6) !default
-$carousel-title-size: $size-4 !default
+$carousel-title-background: rgba($black, 0.8) !default
+$carousel-title-size: $size-6 !default
 $carousel-border: none
-$carousel-animation-speed: .5s
+$carousel-animation-speed: 1s
 $carousel-animation-method: ease-in-out
+
+h1.main-title
+  position: absolute;
+  z-index: 999;
+  font-size: 48px;
+  top: 250px;
+  left: 10vw;
+  padding: 20px 30px;
+  background-color: $white;
+  box-shadow: 10px 10px $blue;
+  +mobile
+    font-size: 24px;
 
 =carousel-item
   display: block

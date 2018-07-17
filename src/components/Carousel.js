@@ -20,8 +20,9 @@ class Carousel extends Component {
     return (
       <section
         className="hero is-large has-carousel"
-        style={{ height: `400px` }}
+        style={{ height: `600px` }}
       >
+        <h1 className="main-title">Lebrun Laboratory</h1>
         <div
           className="hero-carousel carousel-animated carousel-animate-fade"
           data-autoplay="true"
