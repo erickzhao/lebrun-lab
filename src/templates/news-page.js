@@ -26,9 +26,11 @@ export const NewsPageTemplate = ({ news }) => {
                     {post.excerpt}
                     <br />
                     <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
+                    { post.excerpt.endsWith('…') && 
+                      <Link className="button is-small" to={post.fields.slug}>
+                        Keep Reading →
+                      </Link>
+                    }
                   </p>
                 </div>
               ))}
