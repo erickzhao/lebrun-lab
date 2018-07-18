@@ -2,10 +2,10 @@ import React from "react";
 import Header from "../components/Header";
 import Link from "gatsby-link";
 
-export const ResearchPageTemplate = ({ topics }) => {
+export const ResearchPageTemplate = ({ topics, title, photo }) => {
   return (
     <div>
-      <Header title="Research" />
+      <Header title={title} photo={photo} />
       <section className="section container">
         {topics.map(t => (
           <div className="card is-horizontal" key={t.node.id}>
@@ -39,17 +39,18 @@ export const ResearchPageTemplate = ({ topics }) => {
 };
 
 export default ({ data }) => {
-  const { edges: topics } = data.allMarkdownRemark;
+  const { edges: topics } = data.topics;
+  const { title, photo } = data.info.frontmatter;
   return (
     <div>
-      <ResearchPageTemplate topics={topics} />
+      <ResearchPageTemplate topics={topics} title={title} photo={photo}/>
     </div>
   );
 };
 
 export const researchPageQuery = graphql`
   query ResearchPage {
-    allMarkdownRemark(filter: { frontmatter: { templateKey: { eq:"research-post"}}}) {
+    topics: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq:"research-post"}}}) {
       edges {
         node {
           excerpt(pruneLength: 400)
@@ -63,6 +64,12 @@ export const researchPageQuery = graphql`
             photo
           }
         }
+      }
+    },
+    info: markdownRemark(frontmatter: { templateKey: {eq: "research-page"}}) {
+      frontmatter {
+        title
+        photo
       }
     }
   }

@@ -5,6 +5,7 @@ import Header from "../components/Header";
 export const AboutPageTemplate = ({
   title,
   heading,
+  photo,
   content,
   contentComponent
 }) => {
@@ -13,7 +14,7 @@ export const AboutPageTemplate = ({
   return (
     <div>
       <header>
-        <Header title={title} heading={heading} />
+        <Header title={title} heading={heading} photo={photo} />
       </header>
       <section className="section">
         <div className="container">
@@ -38,6 +39,7 @@ export default ({ data }) => {
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
       heading={post.frontmatter.heading}
+      photo={post.frontmatter.photo}
       content={post.html}
     />
   );
@@ -50,6 +52,7 @@ export const aboutPageQuery = graphql`
       frontmatter {
         title
         heading
+        photo
       }
     }
   }
