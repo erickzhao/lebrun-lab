@@ -45,6 +45,13 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "publications-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/protocol/index.md"
+        label: "Protocol"
+        name: "protocol"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "protocol-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/team/index.md"
         label: "Team"
         name: "team"
