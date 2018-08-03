@@ -32,6 +32,15 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/principal-investigator/index.md"
+        label: "Principal Investigator"
+        name: "principal-investigator"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "principal-investigator-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Bio", name: "body", widget: "markdown"}
+          - {label: "Photo", name: "photo", widget: "image"}
+          - {label: "Headshot", name: "headshot", widget: "image"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
