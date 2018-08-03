@@ -18,7 +18,7 @@ const Navbar = () => (
       <div className="navbar-menu" id="navMenu">
         <div className="navbar-end">
           <div className="navbar-item">
-            <Link to="/"><i class="fas fa-home"></i></Link>
+            <Link to="/"><i className="fas fa-home"></i></Link>
           </div>
           <div className="navbar-item has-dropdown is-hoverable">
             <span className="navbar-link">The Lab</span>
