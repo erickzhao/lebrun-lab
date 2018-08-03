@@ -5,7 +5,7 @@
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.6.0",
-    "gatsby": "^1.9.213",
+    "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-netlify-cms": "^1.0.9",
     "gatsby-plugin-react-helmet": "^2.0.5",
@@ -15,6 +15,7 @@
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-remark": "^1.7.33",
     "gatsby-transformer-sharp": "^1.6.21",
+    "global": "^4.3.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-helmet": "^5.2.0",
