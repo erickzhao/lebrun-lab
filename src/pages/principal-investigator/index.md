@@ -1,6 +1,8 @@
 ---
 templateKey: principal-investigator-page
-title: Laboratory Protocol
+title: Principal Investigator
+photo: /img/chemex.jpg
+headshot: /img/coffee-gear.png
 ---
 ### Shade-grown coffee
 
