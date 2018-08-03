@@ -17,11 +17,8 @@ const Navbar = () => (
       </div>
       <div className="navbar-menu" id="navMenu">
         <div className="navbar-end">
-          <div className="navbar-item">
-            <Link to="/"><i className="fas fa-home"></i></Link>
-          </div>
           <div className="navbar-item has-dropdown is-hoverable">
-            <span className="navbar-link">The Lab</span>
+            <span className="navbar-link"><i className="fas fa-flask navbar-icon"></i>Lab</span>
             <div className="navbar-dropdown">
               <div className="navbar-item">
                 <Link to="/about">About</Link>
@@ -38,7 +35,7 @@ const Navbar = () => (
             </div>
           </div>
           <div className="navbar-item has-dropdown is-hoverable">
-            <span className="navbar-link">Research</span>
+            <span className="navbar-link"><i className="fas fa-microscope navbar-icon"></i>Research</span>
             <div className="navbar-dropdown">
               <div className="navbar-item">
                 <Link to="/research">Projects</Link>
@@ -49,13 +46,13 @@ const Navbar = () => (
             </div>
           </div>
           <div className="navbar-item">
-            <Link to="/publications">Publications</Link>
+            <Link to="/publications"><i className="fas fa-book navbar-icon"></i>Publications</Link>
           </div>
           <div className="navbar-item">
-            <Link to="/news">News</Link>
+            <Link to="/news"><i className="fas fa-newspaper navbar-icon"></i>News</Link>
           </div>
           <div className="navbar-item">
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact"><i className="fas fa-globe navbar-icon"></i>Contact</Link>
           </div>
         </div>
       </div>
