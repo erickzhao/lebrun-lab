@@ -97,11 +97,11 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
-          - {label: Principal Investigator, name: pi, widget: object, fields: [
+          - {label: Point of contact, name: contact, widget: object, fields: [
               {label: "Name", name: "name", widget: "string"},
+              {label: "Position", name: "position", widget: "string"},
               {label: "Email", name: "email", widget: "string"},
-              {label: "Photo", name: "photo", widget: "image"},
-              {label: "Bio", name: "bio", widget: "text"}
+              {label: "Phone Number", name: "phone", widget: "string"}
             ]}
           - {label: Address, name: address, widget: object, fields: [
               {label: "Address Line 1", name: "line1", widget: "string"},
