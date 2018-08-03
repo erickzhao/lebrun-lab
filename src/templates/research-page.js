@@ -8,25 +8,32 @@ export const ResearchPageTemplate = ({ topics, title, photo }) => {
       <Header title={title} photo={photo} />
       <section className="section container">
         {topics.map(t => (
-          <div className="card is-horizontal" key={t.node.id}>
+          <div className="card is-horizontal section" key={t.node.id}>
             <div className="card-image">
               <figure className="image is-4by3">
-                <img src={t.node.frontmatter.photo} alt="Topic Image" />
+                <img src={t.node.frontmatter.photo} alt={t.node.frontmatter.title} />
               </figure>
             </div>
             <div className="card-content">
               <div className="media">
                 <div className="media-content">
-                  <h2 className="title is-4 is-spaced">
+                  <h2 className="title">
                     {t.node.frontmatter.title}
                   </h2>
-                  <p className="subtitle is-6">Keywords: A, S, D, F, G</p>
                 </div>
               </div>
 
               <div className="content">
+                {
+                  t.node.frontmatter.tags &&
+                  (<div className="tags">
+                    {t.node.frontmatter.tags.map(tag => 
+                      <span key={tag} className="tag is-primary is-capitalized">{tag}</span>
+                    )}
+                  </div>)
+                }
                 <p>{t.node.excerpt}</p>
-                <Link className="button" to={t.node.fields.slug}>
+                <Link className="button is-primary" to={t.node.fields.slug}>
                   Keep Reading →
                 </Link>
               </div>
@@ -60,6 +67,7 @@ export const researchPageQuery = graphql`
           }
           frontmatter {
             title
+            tags
             templateKey
             photo
           }

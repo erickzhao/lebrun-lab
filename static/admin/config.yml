@@ -26,6 +26,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "research-post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Tags (separate with commas)", name: "tags", widget: "list"}
       - {label: "Photo", name: "photo", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
