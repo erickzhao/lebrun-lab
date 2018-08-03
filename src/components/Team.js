@@ -10,8 +10,8 @@ export default ({ members }) => (
         >
           <div className="card card-equal-height">
             <div className="card-image">
-              <figure className="is-square">
-                <img className="is-center" src={m.photo} alt={m.name} />
+              <figure className="is-square is-flex is-horizontally-centered">
+                <img src={m.photo} alt={m.name} />
               </figure>
             </div>
             <div className="card-content">

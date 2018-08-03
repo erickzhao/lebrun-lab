@@ -18,9 +18,8 @@ export default ({ data }) => {
           m => m.position === pos
         );
         if (members.length > 0) {
-          console.log(members);
           return (
-            <div className="container" key={pos}>
+            <div className="section container" key={pos}>
               <h2 className="title">{positions[pos]}</h2>
               <Team members={members} />
             </div>
