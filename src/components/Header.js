@@ -1,7 +1,7 @@
 import React from "react";
 
 const Header = ({ title, heading, photo }) => (
-  <section
+  <header
     className="hero is-medium is-primary is-bold"
     style={{
       background: photo
@@ -16,7 +16,7 @@ const Header = ({ title, heading, photo }) => (
         <h2 className="subtitle">{heading}</h2>
       </div>
     </div>
-  </section>
+  </header>
 );
 
 export default Header;

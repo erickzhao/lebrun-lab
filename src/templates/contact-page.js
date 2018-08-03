@@ -11,9 +11,7 @@ export const ContactPageTemplate = ({
   const stringAddress=`${address.line1}, ${address.line2}, ${address.city}, ${address.province} ${address.postalCode}`;
   return (
     <div>
-      <header>
-        <Header title={title} heading={heading} />
-      </header>
+      <Header title={title} heading={heading} />
       <section className="section container">
         <div className="columns">
           <div className="column">

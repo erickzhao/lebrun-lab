@@ -12,18 +12,10 @@ export const PublicationsPageTemplate = ({
 
   return (
     <div>
-      <header>
-        <Header title={title} heading={heading} />
-      </header>
+      <Header title={title} heading={heading} />
       <section className="section">
         <div className="container">
-          <div className="columns">
-            <div className="column">
-              <div className="section">
-                <PageContent className="content" content={content} />
-              </div>
-            </div>
-          </div>
+          <PageContent className="content" content={content} />
         </div>
       </section>
     </div>
