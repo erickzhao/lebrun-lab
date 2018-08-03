@@ -4,8 +4,8 @@ import Header from "../components/Header";
 
 export const ProtocolPageTemplate = ({
   title,
-  heading,
-  photo,
+  subtitle,
+  headerImage,
   content,
   contentComponent
 }) => {
@@ -13,7 +13,7 @@ export const ProtocolPageTemplate = ({
 
   return (
     <div>
-      <Header title={title} heading={heading} photo={photo} />
+      <Header title={title} subtitle={subtitle} image={headerImage} />
       <section className="section">
         <div className="container">
           <PageContent className="content" content={content} />
@@ -30,8 +30,8 @@ export default ({ data }) => {
     <ProtocolPageTemplate
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
-      heading={post.frontmatter.heading}
-      photo={post.frontmatter.photo}
+      subtitle={post.frontmatter.subtitle}
+      headerImage={post.frontmatter.headerImage}
       content={post.html}
     />
   );
@@ -43,8 +43,8 @@ export const protocolPageQuery = graphql`
       html
       frontmatter {
         title
-        heading
-        photo
+        subtitle
+        headerImage
       }
     }
   }

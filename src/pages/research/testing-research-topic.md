@@ -5,7 +5,8 @@ tags:
   - tag 1
   - tag 2
   - tag 3
-photo: /img/flavor_wheel.jpg
+subtitle: My subtitle
+headerImage: /img/flavor_wheel.jpg
 ---
 
 

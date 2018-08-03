@@ -1,7 +1,8 @@
 ---
 templateKey: team-page
 title: Lab Team
-heading: Meet the team
+subtitle: My subtitle
+headerImage: /img/flavor_wheel.jpg
 members:
   - description: >-
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

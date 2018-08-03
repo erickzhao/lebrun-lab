@@ -5,7 +5,7 @@ import Content, { HTMLContent } from "../components/Content";
 export const ResearchPostTemplate = ({
   content,
   contentComponent,
-  title
+  title,
 }) => {
   const PostContent = contentComponent || Content;
   return (
@@ -24,9 +24,10 @@ export const ResearchPostTemplate = ({
 
 export default ({ data }) => {
   const { markdownRemark: post } = data;
+  const { title, subtitle, headerImage } = data.markdownRemark.frontmatter;
   return (
     <div>
-      <Header {...data.markdownRemark.frontmatter} />
+      <Header title={title} subtitle={subtitle} image={headerImage} />
       <ResearchPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -41,8 +42,9 @@ export const researchPostQuery = graphql`
       id
       html
       frontmatter {
-        photo
         title
+        subtitle
+        headerImage
         tags
       }
     }

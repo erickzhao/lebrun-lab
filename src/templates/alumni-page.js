@@ -2,11 +2,12 @@ import React from "react";
 import Header from "../components/Header";
 import Team from "../components/Team";
 
-export default props => {
+export default ({data}) => {
+  const { title, subtitle, headerImage, members } = data.markdownRemark.frontmatter;
   return (
     <div>
-      <Header {...props.data.markdownRemark.frontmatter} />
-      <Team {...props.data.markdownRemark.frontmatter} />
+      <Header title={title} subtitle={subtitle} image={headerImage} />
+      <Team members={members} />
     </div>
   );
 };
@@ -16,7 +17,8 @@ export const alumniPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        heading
+        subtitle
+        headerImage
         members {
           name
           position

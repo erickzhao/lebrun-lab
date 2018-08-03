@@ -4,14 +4,15 @@ import Map from "../components/Map";
 
 export const ContactPageTemplate = ({
   title,
-  heading,
+  subtitle,
+  headerImage,
   address,
   contact
 }) => {
   const stringAddress=`${address.line1}, ${address.line2}, ${address.city}, ${address.province} ${address.postalCode}`;
   return (
     <div>
-      <Header title={title} heading={heading} />
+      <Header title={title} subtitle={subtitle} image={headerImage} />
       <section className="section container">
         <div className="columns">
           <div className="column">
@@ -43,13 +44,15 @@ export const ContactPageTemplate = ({
 
 export default ({ data }) => {
   const { contact: post } = data;
+  const {title, subtitle, address, headerImage, contact} = post.frontmatter;
 
   return (
     <ContactPageTemplate
-      title={post.frontmatter.title}
-      heading={post.frontmatter.heading}
-      address={post.frontmatter.address}
-      contact={post.frontmatter.contact}
+      title={title}
+      subtitle={subtitle}
+      address={address}
+      headerImage={headerImage}
+      contact={contact}
     />
   );
 };
@@ -60,7 +63,8 @@ export const contactPageQuery = graphql`
       html
       frontmatter {
         title
-        heading
+        subtitle
+        headerImage
         address {
           line1
           line2

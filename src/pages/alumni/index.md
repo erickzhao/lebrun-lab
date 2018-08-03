@@ -1,6 +1,8 @@
 ---
 templateKey: alumni-page
 title: Lab Alumni
+subtitle: My subtitle
+headerImage: /img/flavor_wheel.jpg
 members:
   - description: >-
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

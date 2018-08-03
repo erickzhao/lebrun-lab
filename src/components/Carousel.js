@@ -35,7 +35,7 @@ class Carousel extends Component {
               >
                 <img
                   className="is-background"
-                  src={s.photo}
+                  src={s.headerImage}
                   alt={s.title}
                 />
                 <Link to={s.slug} className="title">{s.title}</Link>

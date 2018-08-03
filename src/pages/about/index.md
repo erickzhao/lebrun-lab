@@ -1,6 +1,8 @@
 ---
 templateKey: about-page
 title: About our values
+subtitle: My subtitle
+headerImage: /img/flavor_wheel.jpg
 ---
 ### Shade-grown coffee
 

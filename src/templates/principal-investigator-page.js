@@ -4,16 +4,16 @@ import Header from "../components/Header";
 
 export const PIPageTemplate = ({
   title,
-  heading,
+  subtitle,
   headshot,
-  photo,
+  headerImage,
   content,
   contentComponent
 }) => {
   const PageContent = contentComponent || Content;
   return (
     <div>
-      <Header title={title} heading={heading} photo={photo} />
+      <Header title={title} subtitle={subtitle} image={headerImage} />
       <section className="section container">
         <div className="columns is-flex is-vertically-centered">
           <div className="column is-flex is-horizontally-centered">
@@ -35,8 +35,8 @@ export default ({ data }) => {
     <PIPageTemplate
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
-      heading={post.frontmatter.heading}
-      photo={post.frontmatter.photo}
+      subtitle={post.frontmatter.subtitle}
+      headerImage={post.frontmatter.headerImage}
       headshot={post.frontmatter.headshot}
       content={post.html}
     />
@@ -49,9 +49,9 @@ export const PIPageQuery = graphql`
       html
       frontmatter {
         title
-        heading
+        subtitle
+        headerImage
         headshot
-        photo
       }
     }
   }

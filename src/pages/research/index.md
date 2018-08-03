@@ -1,5 +1,6 @@
 ---
 templateKey: research-page
 title: Research Topics
-photo: /img/flavor_wheel.jpg
+subtitle: My subtitle
+headerImage: /img/flavor_wheel.jpg
 ---

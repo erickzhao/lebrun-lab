@@ -1,6 +1,8 @@
 ---
 templateKey: protocol-page
 title: Laboratory Protocol
+subtitle: My subtitle
+headerImage: /img/flavor_wheel.jpg
 ---
 ### Shade-grown coffee
 

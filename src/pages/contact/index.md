@@ -1,7 +1,8 @@
 ---
 templateKey: contact-page
 title: Contact Us
-heading: What's up?
+subtitle: My subtitle
+headerImage: /img/flavor_wheel.jpg
 contact:
   email: erick.zhao@mail.mcgill.ca
   name: Erick Zhao

@@ -4,7 +4,8 @@ import Header from "../components/Header";
 
 export const PublicationsPageTemplate = ({
   title,
-  heading,
+  subtitle,
+  headerImage,
   content,
   contentComponent
 }) => {
@@ -12,7 +13,7 @@ export const PublicationsPageTemplate = ({
 
   return (
     <div>
-      <Header title={title} heading={heading} />
+      <Header title={title} subtitle={subtitle} image={headerImage} />
       <section className="section">
         <div className="container">
           <PageContent className="content" content={content} />
@@ -30,7 +31,8 @@ export default ({ data }) => {
     <PublicationsPageTemplate
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
-      heading={post.frontmatter.heading}
+      subtitle={post.frontmatter.subtitle}
+      headerImage={post.frontmatter.headerImage}
       content={post.html}
     />
   );
@@ -42,7 +44,8 @@ export const publicationsPageQuery = graphql`
       html
       frontmatter {
         title
-        heading
+        subtitle
+        headerImage
       }
     }
   }

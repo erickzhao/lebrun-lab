@@ -2,10 +2,10 @@ import React from "react";
 import Header from "../components/Header";
 import Link from "gatsby-link";
 
-export const NewsPageTemplate = ({ news }) => {
+export const NewsPageTemplate = ({ news, title, subtitle, headerImage }) => {
   return (
     <div>
-      <Header title="News" />
+      <Header title={title} subtitle={subtitle} image={headerImage} />
       <section className="section">
           <div className="container">
             {news
@@ -42,9 +42,15 @@ export const NewsPageTemplate = ({ news }) => {
 
 export default ({ data }) => {
   const { edges: news } = data.news;
+  const { title, headerImage, subtitle } = data.info.frontmatter;
   return (
     <div>
-      <NewsPageTemplate news={news} />
+      <NewsPageTemplate
+        news={news}
+        title={title}
+        headerImage={headerImage}
+        subtitle={subtitle}
+      />
     </div>
   );
 };
@@ -68,6 +74,13 @@ export const newsPageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
           }
         }
+      }
+    }
+    info: markdownRemark(frontmatter: { templateKey: {eq: "news-page"}}) {
+      frontmatter {
+        title
+        subtitle
+        headerImage
       }
     }
   }

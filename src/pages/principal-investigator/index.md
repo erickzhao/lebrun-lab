@@ -1,7 +1,8 @@
 ---
 templateKey: principal-investigator-page
 title: Principal Investigator
-photo: /img/chemex.jpg
+subtitle: My subtitle
+headerImage: /img/flavor_wheel.jpg
 headshot: /img/coffee-gear.png
 ---
 ### Shade-grown coffee

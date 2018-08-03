@@ -2,16 +2,16 @@ import React from "react";
 import Header from "../components/Header";
 import Link from "gatsby-link";
 
-export const ResearchPageTemplate = ({ topics, title, photo }) => {
+export const ResearchPageTemplate = ({ topics, title, subtitle, headerImage }) => {
   return (
     <div>
-      <Header title={title} photo={photo} />
+      <Header title={title} subtitle={subtitle} image={headerImage} />
       <section className="section container">
         {topics.map(t => (
           <div className="card is-horizontal section" key={t.node.id}>
             <div className="card-image">
               <figure className="image is-4by3">
-                <img src={t.node.frontmatter.photo} alt={t.node.frontmatter.title} />
+                <img src={t.node.frontmatter.headerImage} alt={t.node.frontmatter.title} />
               </figure>
             </div>
             <div className="card-content">
@@ -47,10 +47,15 @@ export const ResearchPageTemplate = ({ topics, title, photo }) => {
 
 export default ({ data }) => {
   const { edges: topics } = data.topics;
-  const { title, photo } = data.info.frontmatter;
+  const { title, headerImage, subtitle } = data.info.frontmatter;
   return (
     <div>
-      <ResearchPageTemplate topics={topics} title={title} photo={photo}/>
+      <ResearchPageTemplate
+        topics={topics}
+        title={title}
+        subtitle={subtitle}
+        headerImage={headerImage}
+      />
     </div>
   );
 };
@@ -69,7 +74,7 @@ export const researchPageQuery = graphql`
             title
             tags
             templateKey
-            photo
+            headerImage
           }
         }
       }
@@ -77,7 +82,8 @@ export const researchPageQuery = graphql`
     info: markdownRemark(frontmatter: { templateKey: {eq: "research-page"}}) {
       frontmatter {
         title
-        photo
+        subtitle
+        headerImage
       }
     }
   }

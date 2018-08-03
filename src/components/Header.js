@@ -1,12 +1,12 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-const Header = ({ title, heading, photo }) => (
+const Header = ({ title, subtitle, image }) => (
   <header
     className="hero is-medium is-primary is-bold"
     style={{
-      background: photo
-        ? `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${photo}) no-repeat center center / cover fixed`
+      background: image
+        ? `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${image}) no-repeat center center / cover fixed`
         : ``,
       marginBottom: '6rem'
     }}
@@ -17,7 +17,7 @@ const Header = ({ title, heading, photo }) => (
       </Helmet>
       <div className="container">
         <h1 className="title is-1">{title}</h1>
-        <h2 className="subtitle">{heading}</h2>
+        <h2 className="subtitle">{subtitle}</h2>
       </div>
     </div>
   </header>

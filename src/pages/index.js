@@ -12,7 +12,7 @@ export default class IndexPage extends React.Component {
       data.researchPage.frontmatter,
     ]
     const slides = topics.map(t => ({
-      photo: t.node.frontmatter.photo,
+      headerImage: t.node.frontmatter.headerImage,
       title: t.node.frontmatter.title,
       slug: t.node.fields.slug
     }));
@@ -26,10 +26,10 @@ export default class IndexPage extends React.Component {
                 <div className="column is-one-third">
                   <div className="card card-equal-height">
                     <div className="card-image">
-                      <figure className="image is-4by3" style={{backgroundColor: c.photo ? null : '#00b1e2'}}>
+                      <figure className="image is-4by3" style={{backgroundColor: c.headerImage ? null : '#00b1e2'}}>
                         {
-                          c.photo &&
-                          <img src={c.photo} alt={c.title}/>
+                          c.headerImage &&
+                          <img src={c.headerImage} alt={c.title}/>
                         }
                       </figure>
                     </div>
@@ -62,26 +62,26 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            photo
+            headerImage
           }
         }
       }
     },
     aboutPage: markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       frontmatter {
-        photo
+        headerImage
         title
       }
     },
     newsPage: markdownRemark(frontmatter: { templateKey: { eq: "news-page" } }) {
       frontmatter {
-        photo
+        headerImage
         title
       }
     },
     researchPage: markdownRemark(frontmatter: { templateKey: { eq: "research-page" } }) {
       frontmatter {
-        photo
+        headerImage
         title
       }
     }

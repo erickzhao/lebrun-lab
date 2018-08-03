@@ -10,18 +10,19 @@ export default ({ data }) => {
     assistant: "Research Assistants",
     undergrad: "Undergraduate Students"
   };
+  const { title, subtitle, headerImage, members } = data.markdownRemark.frontmatter;
   return (
     <div>
-      <Header {...data.markdownRemark.frontmatter} />
+      <Header title={title} subtitle={subtitle} image={headerImage} />
       {Object.keys(positions).map(pos => {
-        const members = data.markdownRemark.frontmatter.members.filter(
+        const membersByPosition = members.filter(
           m => m.position === pos
         );
-        if (members.length > 0) {
+        if (membersByPosition.length > 0) {
           return (
             <div className="section container" key={pos}>
               <h2 className="title">{positions[pos]}</h2>
-              <Team members={members} />
+              <Team members={membersByPosition} />
             </div>
           );
         }
@@ -35,7 +36,8 @@ export const teamPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        heading
+        subtitle
+        headerImage
         members {
           name
           position
