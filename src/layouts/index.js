@@ -8,14 +8,15 @@ import "./all.scss";
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="J.J. Lebrun Laboratory">
+    <Helmet>
+      <title>J.J. Lebrun Laboratory</title>
       <script
         defer
         src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
       />
     </Helmet>
     <Navbar />
-    <div style={{ marginBottom: `100px` }}>{children()}</div>
+    <div style={{ marginBottom: `10rem` }}>{children()}</div>
     <Footer />
   </div>
 );

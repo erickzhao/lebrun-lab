@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 
 const Header = ({ title, heading, photo }) => (
   <header
@@ -11,6 +12,9 @@ const Header = ({ title, heading, photo }) => (
     }}
   >
     <div className="hero-body">
+      <Helmet>
+        <title>{title} - J.J. Lebrun Laboratory</title>
+      </Helmet>
       <div className="container">
         <h1 className="title is-1">{title}</h1>
         <h2 className="subtitle">{heading}</h2>

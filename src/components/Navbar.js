@@ -7,7 +7,7 @@ const Navbar = () => (
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
-          Lebrun Lab
+          J.J. Lebrun Laboratory
         </Link>
         <div className="navbar-burger" data-target="navMenu">
           <span />
