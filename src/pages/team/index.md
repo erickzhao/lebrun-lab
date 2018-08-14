@@ -23,13 +23,14 @@ members:
     position: postdoc
   - description: >
       - Education : MSc in Biochemistry and Molecular Biology, University of
-      Calgary, Canada
+      Calgary, Canada.
 
 
       - Current research : Investigating the TGF-beta mediated tumor suppressive
       effects in human cutaneous melanoma
 
-       mostafa.ghozlan@mail.mcgill.ca
+
+      - mostafa.ghozlan@mail.mcgill.ca
     name: 'Mostafa Ghozlan, Ph.D. candidate'
     photo: /img/image1.jpeg
     position: grad
@@ -62,5 +63,6 @@ members:
       Karine.pasturaud@live.fr
     name: 'Karine Pasturaud, Ph.D.'
     position: postdoc
+  - {}
 ---
 
