@@ -25,10 +25,8 @@ members:
       - Education : MSc in Biochemistry and Molecular Biology, University of
       Calgary, Canada.
 
-
       - Current research : Investigating the TGF-beta mediated tumor suppressive
       effects in human cutaneous melanoma
-
 
       - mostafa.ghozlan@mail.mcgill.ca
     name: 'Mostafa Ghozlan, Ph.D. candidate'
