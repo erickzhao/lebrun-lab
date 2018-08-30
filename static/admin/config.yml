@@ -120,6 +120,9 @@ collections:
                   - { label: "Research Associate", value: "associate" }
                   - { label: "Post-Doctorate Fellow", value: "postdoc" }
                   - { label: "Graduate Student", value: "grad" }
+                  - { label: "Masters Student", value: "masters" }
+                  - { label: "Summer Student", value: "summer" }
+                  - { label: "Visiting Student", value: "visiting" }
                   - { label: "Research Assistant", value: "assistant" }
                   - { label: "Undergraduate", value: "undergrad" }
               - label: "Photo"
@@ -127,7 +130,10 @@ collections:
                 widget: "image"
               - label: "Description"
                 name: "description"
-                widget: "text"
+                widget: "markdown"
+              - label: "Email"
+                name: "email"
+                widget: "string"
       - file: "src/pages/principal-investigator/index.md"
         label: "Principal Investigator"
         name: "principal-investigator"
