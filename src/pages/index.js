@@ -7,9 +7,9 @@ export default class IndexPage extends React.Component {
     const { data } = this.props;
     const { researchPosts: { edges: topics } } = data;
     const cards = [
-      data.aboutPage.frontmatter,
-      data.newsPage.frontmatter,
-      data.researchPage.frontmatter,
+      data.aboutPage,
+      data.newsPage,
+      data.researchPage,
     ]
     const slides = topics.map(t => ({
       headerImage: t.node.frontmatter.headerImage,
@@ -23,20 +23,20 @@ export default class IndexPage extends React.Component {
           <div className="columns">
             {cards.map(c => 
               (
-                <div className="column is-one-third">
+                <div className="column is-one-third" key={c.fields.slug}>
                   <div className="card card-equal-height">
                     <div className="card-image">
-                      <figure className="image is-4by3" style={{backgroundColor: c.headerImage ? null : '#00b1e2'}}>
+                      <figure className="image is-4by3" style={{backgroundColor: c.frontmatter.headerImage ? null : '#00b1e2'}}>
                         {
-                          c.headerImage &&
-                          <img src={c.headerImage} alt={c.title}/>
+                          c.frontmatter.headerImage &&
+                          <img src={c.frontmatter.headerImage} alt={c.title}/>
                         }
                       </figure>
                     </div>
                     <div className="card-content">
                     <div className="is-flex" style={{justifyContent: 'space-between',alignItems: 'center'}}>
-                        <span className="title is-4 is-marginless">{c.title}</span>
-                        <Link to="/research" className="button is-primary">More</Link>
+                        <span className="title is-4 is-marginless">{c.frontmatter.title}</span>
+                        <Link to={c.fields.slug} className="button is-primary">More</Link>
                       </div>
                     </div>
                   </div>
@@ -68,18 +68,27 @@ export const pageQuery = graphql`
       }
     },
     aboutPage: markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
+      fields {
+        slug
+      }
       frontmatter {
         headerImage
         title
       }
     },
     newsPage: markdownRemark(frontmatter: { templateKey: { eq: "news-page" } }) {
+      fields {
+        slug
+      }
       frontmatter {
         headerImage
         title
       }
     },
     researchPage: markdownRemark(frontmatter: { templateKey: { eq: "research-page" } }) {
+      fields {
+        slug
+      }
       frontmatter {
         headerImage
         title
