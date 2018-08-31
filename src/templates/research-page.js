@@ -17,7 +17,7 @@ export const ResearchPageTemplate = ({ topics, title, subtitle, headerImage }) =
             <div className="card-content">
               <div className="media">
                 <div className="media-content">
-                  <h2 className="title">
+                  <h2 className="title is-6">
                     {t.node.frontmatter.title}
                   </h2>
                 </div>

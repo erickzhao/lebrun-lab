@@ -43,6 +43,7 @@ export const teamPageQuery = graphql`
           position
           photo
           description
+          email
         }
       }
     }
