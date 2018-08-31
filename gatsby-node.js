@@ -1,6 +1,6 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
-
+module.exports.resolvableExtensions = () => ['.json']
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 

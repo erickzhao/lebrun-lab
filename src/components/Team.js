@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
 export default ({ members }) => (
   <div className="container">
@@ -12,7 +13,7 @@ export default ({ members }) => (
           <div className="card-content">
             <p className="title is-4">{m.name}</p>
             <p class="subtitle is-6">{m.email}</p>
-            <p>{m.description}</p>
+            <ReactMarkdown source={m.description}/>
           </div>
         </div>
       ))}
