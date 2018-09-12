@@ -1,6 +1,6 @@
 ---
 templateKey: team-page
-title: Lab Team
+title: Lab Members
 subtitle: Current team
 headerImage: /img/new panoramic glen-blue-sky - low res.jpg
 members:
