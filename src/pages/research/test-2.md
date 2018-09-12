@@ -1,7 +1,7 @@
 ---
 templateKey: research-post
-title: Preclinical Xenograft cancer models
-subtitle: MicroRNAs modulation
+title: Preclinical Xenograft Cancer Models
+subtitle: MicroRNAs Modulation
 tags:
   - miRNAS
   - Preclinical xenograft
