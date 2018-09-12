@@ -1,32 +1,20 @@
 ---
 templateKey: research-post
-title: Testing Research title
+title: 'Research '
+subtitle: TGFb signaling pathways
 tags:
-  - tag 1
-  - tag 2
-  - tag 3
-subtitle: My subtitle
+  - Breast cancer
+  - Oncogenic role
+  - TGFb
+  - Cancer stem cells
+  - knockout srategies
+  - ''
 headerImage: /img/flavor_wheel.jpg
 ---
+Breast cancer is the most frequently diagnosed malignancy in women and the major cause of patient death is due to invasiveness and dissemination of the tumor to distant secondary sites. TGFβ signaling plays a major role in mediating these tumorigenic events and work from our laboratory has contributed to unravelling the complex oncogenic role of TGFβ. We made inroads into understanding cancer stem cell (CSC) biology. CSCs utilize their self-renewal ability to regenerate tumors, drive metastasis and are responsible for drug resistance. Accordingly, these cells constitute a key target for new therapeutics. We study the molecular mechanisms by which TGFβ signaling pathways and downstream targets modulate the self-renewal and metastatic capacities of CSCs using knockout strategies and preclinical orthotopic transplantation models.
 
 
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
 
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
 
-## What the updates mean to you
 
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
-
-* producers
-* roasters
-* importers/exporters
-* retailers
-* manufacturers
-* baristas
-
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
-
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
-
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+##
