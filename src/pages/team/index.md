@@ -40,7 +40,15 @@ members:
     email: sophie.poulet@mail.mcgill.ca
     name: 'Sophie Poulet, M.Sc. Candidate'
     position: grad
-  - description: ''
+  - description: >-
+      **Education :** M.Sc. in molecular biology at the University of
+      Sherbrooke.
+
+
+      **Current Research :**  I’ve participated in numerous projects and did
+      genetic manipulation of different established cancer cell lines using the
+      CRISPR system.
+    email: julien.boudreault@usherbrooke.ca
     name: 'Julien Boudreault, M.Sc.'
     photo: /img/38217166_10156647334633060_6161374737822908416_n.jpg
     position: assistant
