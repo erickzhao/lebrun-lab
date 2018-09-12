@@ -1,10 +1,10 @@
 ---
 templateKey: research-post
-title: TGFb signaling pathways
+title: TGFβ signaling pathways
 subtitle: Oncogenic role
 tags:
   - Breast cancer
-  - TGFb
+  - TGFβ
   - Cancer stem cells
   - knockout srategies
   - ''
