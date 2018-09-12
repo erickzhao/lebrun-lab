@@ -45,7 +45,7 @@ members:
       Sherbrooke.
 
 
-      **Current Research :**  I’ve participated in numerous projects and did
+      **Current Research :**  I have participated in numerous projects and did
       genetic manipulation of different established cancer cell lines using the
       CRISPR system.
     email: julien.boudreault@usherbrooke.ca
