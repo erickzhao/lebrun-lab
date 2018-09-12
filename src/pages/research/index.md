@@ -2,5 +2,6 @@
 templateKey: research-page
 title: Research Topics
 subtitle: My subtitle
-headerImage: /img/flavor_wheel.jpg
+headerImage: /img/dna-1811955_1280.jpg
 ---
+
