@@ -1,7 +1,9 @@
 ---
 templateKey: principal-investigator-page
 title: Principal Investigator
-subtitle: 'Jean-Jacques Lebrun, Ph.D.'
+subtitle: >-
+  Jean-Jacques Lebrun, Professor of Medicine | McGill University Health Center |
+  Cancer Research Program | Molecular and Translational Oncology |
 headerImage: /img/new panoramic glen-blue-sky - low res.jpg
 headshot: /img/dsc00510.jpg
 ---
