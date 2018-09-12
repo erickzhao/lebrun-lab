@@ -65,5 +65,10 @@ members:
     name: 'Meiou Dai, Ph.D.'
     photo: /img/picture1.png
     position: associate
+  - name: 'Gang Yan, Ph.D. candidate'
+    position: grad
+  - name: 'Ni Wang, Ph.D.'
+    position: associate
+  - {}
 ---
 
