@@ -4,24 +4,8 @@ title: About our values
 subtitle: My subtitle
 headerImage: /img/flavor_wheel.jpg
 ---
-### Shade-grown coffee
+### Overall, the vision/direction of our research program is to provide a better understanding of the molecular mechanisms driving tumor initiation and progression, stemness and resistance to chemotherapy, all of which considered as major challenges in the management of cancer patients. Our research will allow for the identification of key cancer master regulators, at the genome level and subsequent development of targeted treatments aimed at disabling/eliminating cancer cells, cancer stem cells as well as chemotherapy resistant tumors. It will also help define new diagnostic/prognostic markers and design novel anti-cancer therapies. Our research program is multidimensional involving molecular, prognostic and therapeutic research aspects. To achieve our objectives, we have developed central lines of research utilizing various cellular model systems (in vitro), preclinical studies using xenograft pre-clinical mouse models (in vivo), human cancer specimens as well as bioinformatics analyses of large cohorts of human tumors datasets. In time, our research will help develop diagnostic/biomarkers and therapeutic tools to improve metastatic cancer patients’ stratification and treatment and improve cancer patients’ survival. 
 
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+![null](/img/chemex.jpg)
 
-![](/img/chemex.jpg)
-
-### Single origin
-
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
-
-### Sustainable farming
-
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
-
-### Direct sourcing
-
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our .
+###
