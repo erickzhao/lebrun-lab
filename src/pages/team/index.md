@@ -56,7 +56,7 @@ members:
     position: postdoc
   - description: >-
       **Education : **PhD in Experimental Medicine, University of McGill,
-      Canada.** **
+      Canada.
 
 
       **Current research : **Genome-wide CRISPR/CAS9 loss-of-function screening
