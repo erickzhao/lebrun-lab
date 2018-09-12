@@ -2,7 +2,7 @@
 templateKey: about-page
 title: About our values
 subtitle: Lebrun Lab
-headerImage: /img/new panoramic glen-blue-sky - low res.jpg
+headerImage: /img/dna-1811955_1280.jpg
 ---
 # Based in Montréal, Canada, the Lebrun Lab is part of the Research Institute of McGill University Health center.
 
