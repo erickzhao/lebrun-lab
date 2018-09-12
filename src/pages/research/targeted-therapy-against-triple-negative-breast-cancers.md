@@ -9,7 +9,7 @@ tags:
   - drug rsistance
   - TNBCs
   - ''
-headerImage: /img/153029578-1024x1024.jpg
+headerImage: /img/lab-217041_1280.jpg
 ---
 Breast cancer is the most diagnosed cancer and the second leading cause of mortality. Triple-negative breast cancer (TNBC) is characterized by the absence of receptors for estrogen and progesterone as well as lack of HER-2 gene. These tumors are enriched in cancer stems cells and exhibit resistance to most treatments and chemotherapy. TNBC is more prevalent in younger females and accounts for about 10% to 20% of breast cancer incidence with poor prognosis.**_ Importantly, to date, no efficient therapy exists for this type of cancer._** Hence it is crucial to define new treatment options for these patients with deadly metastatic diseases.
 
