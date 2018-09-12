@@ -1,7 +1,7 @@
 ---
 templateKey: research-post
-title: TGFβ signaling pathways
-subtitle: Oncogenic role
+title: TGFβ Signaling Pathways
+subtitle: Oncogenic Role
 tags:
   - Breast cancer
   - TGFβ
