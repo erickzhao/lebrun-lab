@@ -1,32 +1,14 @@
 ---
 templateKey: alumni-page
 title: Lab Alumni
-subtitle: My subtitle
-headerImage: /img/flavor_wheel.jpg
+subtitle: 'Graduate Students '
+headerImage: /img/new panoramic glen-blue-sky - low res.jpg
 members:
-  - description: >-
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat."
-    name: Erick Zhao
-    photo: /img/coffee.png
-    position: Lab Manager
-  - description: >-
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat."
-    name: Not Erick Zhao
-    photo: /img/meeting-space.png
-    position: Research Associate
-  - description: >-
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat."
-    name: Definitely Not Erick
-    photo: /img/coffee-gear.png
-    position: Director
+  - description: ''
+    name: 'Nadege Fils-Aime, Ph.D.'
+    position: Ph.D. student
+  - description: ''
+    name: 'Mahmood Hachim, Ph.D.'
+    position: Ph.D. student
 ---
 
