@@ -1,7 +1,7 @@
 ---
 templateKey: research-post
-title: Targeted Therapy against Triple Negative Breast Cancers
-subtitle: Drug Design & Development
+title: Drug Design & Development
+subtitle: Targeted Therapy against Triple Negative Breast Cancers
 tags:
   - CDK4
   - CDK6
