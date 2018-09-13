@@ -2,7 +2,7 @@
 templateKey: contact-page
 title: Contact Us
 subtitle: The Research Institute of the MUHC
-headerImage: /img/new panoramic glen-blue-sky - low res.jpg
+headerImage: /img/logo.jpg
 contact:
   email: erick.zhao@mail.mcgill.ca
   name: Erick Zhao
