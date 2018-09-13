@@ -12,4 +12,6 @@ Overall, the vision/direction of our research program is to provide a better und
 
 ### 
 
-![null]()
+
+
+![null](/img/muhc-rilogocolour.jpg)
