@@ -1,7 +1,7 @@
 ---
 templateKey: research-page
 title: Research Topics
-subtitle: My subtitle
+subtitle: 'TGFβ, CRISPER/Cas, MicroARNs, Preclinical Xenogra, Drug Development'
 headerImage: /img/dna-1811955_1280.jpg
 ---
 
