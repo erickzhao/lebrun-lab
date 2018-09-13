@@ -1,7 +1,7 @@
 ---
 templateKey: news-page
 title: New marker and potential therapy for triple negative breast cancer
-date: 2017-01-19T00:00:00-05:00
+date: 2017-01-19T05:00:00.000Z
 description: |-
   Triple negative breast cancer (TNBC) is the most aggressive type of breast
   cancer, found in 15-20% of all cases. These breast tumors are enriched in
@@ -30,3 +30,5 @@ CDK4 and its binding partner cyclin D1 are the ultimate targets of many oncogeni
 Using the Pfizer CDK4 inhibitor “Palbociclib”, which is FDA approved in combination treatment with aromatase inhibitors for hormoneresponsive breast cancer and is currently in clinical trial, the researchers discovered new functions for CDK4 in regulating cancer stem cell differentiation and chemotherapy drug resistance in TNBCs.
 
 “We found that blocking CDK4, using Palbociclib prevented breast cancer stem cell self-renewal and efficiently eliminated cancer stem cells as well as chemotherapy-resistant cancer cells, highlighting CDK4 as a promising targeted therapy for these aggressive breast tumors for which no effective treatment currently exists,” notes Dr. Lebrun.
+
+This study was conducted with funding support from the Canadian Institutes for Health Research.
