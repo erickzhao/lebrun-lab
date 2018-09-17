@@ -1,5 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import placeholder from "../img/placeholder.svg";
 
 export default ({ members }) => (
   <div className="container">
@@ -7,7 +8,7 @@ export default ({ members }) => (
         <div className="card is-horizontal section" key={m.name}>
           <div className="card-image">
             <figure className="image is-4by3">
-              <img src={m.photo} alt={m.name} style={{objectFit: 'cover'}} />
+              <img src={m.photo || placeholder } alt={m.name} style={{objectFit: m.photo ? 'cover' : 'contain'}} />
             </figure>
           </div>
           <div className="card-content">
