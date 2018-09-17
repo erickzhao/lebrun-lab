@@ -1,7 +1,7 @@
 ---
 templateKey: news-page
-title: New marker and potential therapy for triple negative breast cancer
-date: 2018-09-17T00:00:00-04:00
-description: CDK4 regulates cancer stemness
+title: News
+subtitle: Latest news from the lab
+headerImage: /img/business-newspaper-coffee-time_925x.jpg
 ---
-![Screenshot of report](/img/cdk4.png)
+
