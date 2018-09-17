@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CarouselUtil from "../utils/carousel";
 import Link from "gatsby-link";
+import logo from '../img/logo.png';
 
 class Carousel extends Component {
   constructor(props) {
@@ -18,11 +19,12 @@ class Carousel extends Component {
   render() {
     const { slides } = this.state;
     return (
-      <section
+      <div>
+        <h1 className="main-title"><img src={logo}/></h1>
+        <section
         className="hero is-large has-carousel"
         style={{ height: `600px` }}
       >
-        <h1 className="main-title">Lebrun Laboratory</h1>
         <div
           className="hero-carousel carousel-animated carousel-animate-fade"
           data-autoplay="true"
@@ -53,6 +55,7 @@ class Carousel extends Component {
         </div>
         <div className="hero-body has-text-centered" />
       </section>
+      </div>
     );
   }
 }

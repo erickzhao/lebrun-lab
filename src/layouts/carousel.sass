@@ -9,14 +9,13 @@ $carousel-animation-method: ease-in-out
 h1.main-title
   position: absolute;
   z-index: 999;
-  font-size: 48px;
-  top: 12rem;
+  top: 10rem;
   left: 10vw;
   padding: 20px 30px;
   background-color: $white;
-  box-shadow: 10px 10px $blue;
-  +mobile
-    font-size: 24px;
+  box-shadow: 10px 10px $primary;
+  img
+    width: 200px;
 
 =carousel-item
   display: block
@@ -25,7 +24,7 @@ h1.main-title
   a
     color: $white
     &:hover
-      color: $blue
+      color: $primary
   &.has-background
     .is-background
       object-fit: cover

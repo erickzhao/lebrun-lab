@@ -3,18 +3,12 @@
 @import "~bulma/sass/utilities/functions";
 
 // 2. Set your own initial variables
-// Update blue
-$blue: #00b1e2;
-// Add pink and its invert
-$pink: #ffb3b3;
-$pink-invert: #fff;
 // Add a serif family
 $family-sans: "Montserrat", "Helvetica Neue", "Arial", sans-serif;
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
-$primary: $blue;
-$primary-invert: $pink-invert;
+$primary: $purple;
 // Use the existing orange as the danger color
 $danger: $orange;
 // Use the new serif family
@@ -116,4 +110,3 @@ a {
 .navbar-icon {
   margin-right: 0.5rem;
 }
-
