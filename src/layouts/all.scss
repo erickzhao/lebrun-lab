@@ -45,7 +45,16 @@ $colors: map-merge($colors, $addColors);
 }
 
 .navbar-link {
-  color: $blue;
+  color: $purple;
+}
+
+.navbar-item {
+  a {
+    color: $purple;
+    &:hover {
+      color: $blue;
+    }
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -113,4 +122,9 @@ a {
 
 .container.body {
   max-width: 800px;
+}
+
+.footer {
+  padding: 3rem 1.5rem;
+  font-size: 0.8rem;
 }
