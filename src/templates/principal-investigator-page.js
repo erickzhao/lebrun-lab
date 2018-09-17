@@ -15,7 +15,7 @@ export const PIPageTemplate = ({
     <div>
       <Header title={title} subtitle={subtitle} image={headerImage} />
       <section className="section container body">
-          <img src={headshot} alt="Principal Investigator Headshot" />
+          <img id="pi-headshot" src={headshot} alt="Principal Investigator Headshot" />
           <PageContent className="content" content={content} />
       </section>
     </div>
