@@ -25,7 +25,6 @@ export const PublicationsPageTemplate = ({
 
 export default ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(post);
 
   return (
     <PublicationsPageTemplate
