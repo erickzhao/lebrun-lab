@@ -10,6 +10,7 @@ collections:
     label: "News"
     folder: "src/pages/news"
     create: true
+    filter: {field: "templateKey", value: "news-post"}
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-post"}
@@ -57,7 +58,7 @@ collections:
             }
       - file: "src/pages/news/index.md"
         label: "News List"
-        name: "news-posts"
+        name: "news-page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-page"}
           - {label: "Title", name: "title", widget: "string"}
