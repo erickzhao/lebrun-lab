@@ -15,7 +15,7 @@ export const ProtocolPageTemplate = ({
     <div>
       <Header title={title} subtitle={subtitle} image={headerImage} />
       <section className="section">
-        <div className="container">
+        <div className="container body">
           <PageContent className="content" content={content} />
         </div>
       </section>
