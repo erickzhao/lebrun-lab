@@ -14,15 +14,9 @@ export const PIPageTemplate = ({
   return (
     <div>
       <Header title={title} subtitle={subtitle} image={headerImage} />
-      <section className="section container">
-        <div className="columns is-flex is-vertically-centered">
-          <div className="column is-flex is-horizontally-centered">
-            <img src={headshot} alt="Headshot" />
-          </div>
-          <div className="column">
-            <PageContent className="content" content={content} />
-          </div>
-        </div>
+      <section className="section container body">
+          <img src={headshot} alt="Principal Investigator Headshot" />
+          <PageContent className="content" content={content} />
       </section>
     </div>
   );
