@@ -73,3 +73,21 @@ doi: 10.1038/srep30934
 **_Characterization of CDK4 as a cancer stem cell regulator, prognostic marker and therapeutic target for triple-negative breast cancer_**. Nature Scientific Reports. 2016 Oct 19; 6:35383. 
 
 doi:10.1038/srep35383
+
+* Korah J, Canaff L, Lebrun JJ. (2016)
+
+**_The pRb/E2F1 pathway as a novel mediator of TGFβ-induced autophagy_**. J Biol Chem. 2016 Jan 29;291(5):2043-54.
+
+doi: 10.1074/jbc.M115.678557. Epub 2015 Nov 23.
+
+* Hachim IY, Shams A, Lebrun JJ, Ali S (2016). 
+
+**_A favorable role of prolactin in human breast cancer reveals novel pathway-based gene signatures indicative of tumor differentiation and favorable patient outcome_**. Hum Pathol. 2016 Jul;53:142-52. 
+
+doi: 10.1016/j.humpath.2016.02.010. Epub 2016 Mar 14
+
+* Hachim IY, Hachim MY, Lopez-Ozuna VM, Ali S, Lebrun JJ. (2016)
+
+**_A dual prognostic role for the TGFβ receptors in human breast cancer_**. Hum Pathol. 2016 Jul 18. pii: S0046-8177(16)30143-5. 
+
+doi: 10.1016/j.humpath.2016.07.002
