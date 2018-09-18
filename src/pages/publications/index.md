@@ -1,7 +1,9 @@
 ---
 templateKey: publications-page
 title: Publications
-subtitle: My subtitle
+subtitle: >-
+  Nature Scientific Reports, Nature Communications, Clinical Cancer Research,
+  Tumor Biology, Cell Signal...
 headerImage: /img/dna-1811955_1280.jpg
 ---
 # 2018
