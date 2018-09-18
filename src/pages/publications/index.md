@@ -38,4 +38,8 @@ headerImage: /img/dna-1811955_1280.jpg
 
 * Hachim IY, Villatoro M, Canaff L, Hachim M, Boudreault J, Haiub H, Ali S, Lebrun JJ. (2017). **_Transforming Growth Factorbeta Regulation Of Ephrin Type-A Receptor 4 Signaling in Breast Cancer Cellular Migration._** Nature Scientific Reports. 2017 Nov 3;7(1):14976. 
 * doi: 10.1038/s41598-017-14549-9. PMID: 29101386
-* WORLD
+
+
+
+* Binothman N, Hachim IY, Lebrun JJ, Ali S. (2017). **_CPSF6 is a Clinically Relevant Breast Cancer Vulnerability Target: Role of CPSF6 in Breast Cancer. _**EBioMedicine 2017 Jul;21:65-78. 
+* doi: 10.1016/j.ebiom.2017.06.023. Epub 2017 Jun 24. PMID:28673861
