@@ -43,3 +43,7 @@ headerImage: /img/dna-1811955_1280.jpg
 
 * Binothman N, Hachim IY, Lebrun JJ, Ali S. (2017). **_CPSF6 is a Clinically Relevant Breast Cancer Vulnerability Target: Role of CPSF6 in Breast Cancer. _**EBioMedicine 2017 Jul;21:65-78. 
 * doi: 10.1016/j.ebiom.2017.06.023. Epub 2017 Jun 24. PMID:28673861
+
+
+
+* Tian J, Hachim MY, Hachim IY, Dai M, Lo C, Al Raffa F, Ali S, Lebrun JJ. (2017). **_Cyclooxygenase-2 regulates TGFβ-induced cancer stemness in triple-negative breast cancer._** Nature Scientific Reports. Scientific Reports 7, Article number: 40258 (2017). doi:10.1038/srep40258
