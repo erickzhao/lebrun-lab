@@ -6,6 +6,10 @@ headerImage: /img/dna-1811955_1280.jpg
 ---
 # 2018
 
+* Moamer A, Binothman N, Hachim I, Lebrun JJ, Ali S. (2018)**_ Critical Role for Kinesin 1 Heavy Chain KIF5B in TNBC Aggressive Phenotype Independent of its Partner Protein Kinesin-1 Light Chain KLC1_**. EMBO J Submitted (2018).
+
+
+
 * Hachim I, López-Ozuna VM, Hachim M, Lebrun JJ, Ali S. (2018) **_Prolactin Hormone Exerts Anti-Tumorigenic Effects in HER-2 Overexpressing Breast Cancer Cells through Regulation of Tumor Initiation and Stemness._** Nature Scientific Reports (submitted).
 
 
