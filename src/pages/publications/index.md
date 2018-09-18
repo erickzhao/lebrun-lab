@@ -55,3 +55,19 @@ doi: 10.1016/j.ebiom.2017.06.023. Epub 2017 Jun 24. PMID:28673861
 **_Cyclooxygenase-2 regulates TGFβ-induced cancer stemness in triple-negative breast cancer._** Nature Scientific Reports. Scientific Reports 7, Article number: 40258 (2017).
 
 doi:10.1038/srep40258
+
+* Lopez-Ozuna VM, Hachim YI, Hachim YM, Lebrun JJ., Ali, S. (2016) 
+
+**_Prolactin Pro-Differentiation Pathway in Triple Negative Breast Cancer: Impact on Prognosis and Potential Therapy_**. Nature Scientific Reports. 2016 Aug 2; 6:30934. 
+
+doi: 10.1038/srep30934
+
+* Dai M, Zhang C, Ali A, Hong X, Lebrun JJ. (2016) 
+
+**_Characterization of CDK4 as a cancer stem cell regulator, prognostic marker and therapeutic target for triple-negative breast cancer_**. Nature Scientific Reports. 2016 Oct 19; 6:35383. 
+
+doi:10.1038/srep35383
+
+* Guo J, Fung BCM, Kuppen PJK, Tollenaar RAEM, Mesker WE, and Lebrun JJ. (2017) 
+
+_**Revealing Determinant Factors for Early Breast Cancer Recurrence by Decision Tree**_. Information Systems Frontiers (ISF), 13 pages, in press. Springer.
