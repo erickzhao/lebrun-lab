@@ -36,5 +36,6 @@ headerImage: /img/dna-1811955_1280.jpg
 
 # 2017
 
-* HELLO
+* Hachim IY, Villatoro M, Canaff L, Hachim M, Boudreault J, Haiub H, Ali S, Lebrun JJ. (2017). **_Transforming Growth Factorbeta Regulation Of Ephrin Type-A Receptor 4 Signaling in Breast Cancer Cellular Migration._** Nature Scientific Reports. 2017 Nov 3;7(1):14976. 
+* doi: 10.1038/s41598-017-14549-9. PMID: 29101386
 * WORLD
