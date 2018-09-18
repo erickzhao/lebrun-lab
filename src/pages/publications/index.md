@@ -2,13 +2,33 @@
 templateKey: publications-page
 title: Publications
 subtitle: My subtitle
-headerImage: /img/flavor_wheel.jpg
+headerImage: /img/dna-1811955_1280.jpg
 ---
 # 2018
 
-* ONDSDKSDSD
-* OJSDKDLS:DSDLKSKD
-* JHDSSKDJSK:LDKS"
+* Hachim I, López-Ozuna VM, Hachim M, Lebrun JJ, Ali S. (2018) **_Prolactin Hormone Exerts Anti-Tumorigenic Effects in HER-2 Overexpressing Breast Cancer Cells through Regulation of Tumor Initiation and Stemness._** Nature Scientific Reports (submitted).
+
+
+
+* Fils-Aime N, Poulet S, Neel JC, Dai, M, Hachim, I, Ali S, Lebrun JJ. (2018) **_Blocking microRNA-30 in triple negative breast Cancer can restore pro-apoptotic programs and block tumor development in vivo_**. Nature Communications (submitted).
+
+
+
+* Tian J, Al Raffa F, Dai M, Khandag B, Bakdounes K, Jean-Claude B, Ali S, Lebrun JJ. (2018). **_Dasatinib targeting of breast cancer stem cells sensitize triple negative breast cancer cells to chemotherapy._** Clin Cancer Res (submitted).
+
+
+
+* Hachim MY, Hachim IY, Dai M, Ali S, Lebrun JJ. (2018) **_Differential expression of TGFβ isoforms in breast cancer highlights different roles during breast cancer progression_**. Tumor Biology Jan;40(1):1010428317748254. 
+* doi:10.1177/1010428317748254. PMID: 29320969
+
+
+
+* Tian J, AlOdaini A, Wang Y, Dai M, Ali S, Lebrun JJ. (2018). **_KiSS1 gene as a novel mediator of TGFβ pro-invasive effects in triple negative breast cancer_.** Cell Signal. 2018 Jan;42:1-10. 
+* doi: 10.1016/j.cellsig.2017.10.002. Epub 2017 Oct 6. PMID:28988968
+
+
+
+* 
 
 # 2017
 
