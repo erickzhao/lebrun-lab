@@ -10,7 +10,7 @@ headerImage: /img/dna-1811955_1280.jpg
 
 * Moamer A, Binothman N, Hachim I, Lebrun JJ, Ali S.
 
-_**Critical Role for Kinesin 1 Heavy Chain KIF5B in TNBC Aggressive Phenotype Independent of its Partner Protein Kinesin-1 Light Chain KLC1**_. EMBO J (Submitted).
+**_Critical Role for Kinesin 1 Heavy Chain KIF5B in TNBC Aggressive Phenotype Independent of its Partner Protein Kinesin-1 Light Chain KLC1_**. EMBO J (Submitted).
 
 * Hachim I, López-Ozuna VM, Hachim M, Lebrun JJ, Ali S. 
 
@@ -18,7 +18,7 @@ _**Prolactin Hormone Exerts Anti-Tumorigenic Effects in HER-2 Overexpressing Bre
 
 * Fils-Aime N, Poulet S, Neel JC, Dai, M, Hachim, I, Ali S, Lebrun JJ. 
 
-_**Blocking microRNA-30 in triple negative breast Cancer can restore pro-apoptotic programs and block tumor development in vivo**_. Nature Communications (submitted).
+**_Blocking microRNA-30 in triple negative breast Cancer can restore pro-apoptotic programs and block tumor development in vivo_**. Nature Communications (submitted).
 
 * Tian J, Al Raffa F, Dai M, Khandag B, Bakdounes K, Jean-Claude B, Ali S, Lebrun JJ. (2018).
 
@@ -26,7 +26,7 @@ _**Dasatinib targeting of breast cancer stem cells sensitize triple negative bre
 
 * Hachim MY, Hachim IY, Dai M, Ali S, Lebrun JJ. 
 
-_**Differential expression of TGFβ isoforms in breast cancer highlights different roles during breast cancer progression**_. Tumor Biology 
+**_Differential expression of TGFβ isoforms in breast cancer highlights different roles during breast cancer progression_**. Tumor Biology 
 
 doi:10.1177/1010428317748254. PMID: 29320969
 
@@ -40,7 +40,7 @@ doi: 10.1016/j.cellsig.2017.10.002. PMID:28988968
 
 * Hachim IY, Villatoro M, Canaff L, Hachim M, Boudreault J, Haiub H, Ali S, Lebrun JJ. .
 
-_**Transforming Growth Factorbeta Regulation Of Ephrin Type-A Receptor 4 Signaling in Breast Cancer Cellular Migration.**_ Nature Scientific Reports. Nov 3;7(1):14976. 
+**_Transforming Growth Factorbeta Regulation Of Ephrin Type-A Receptor 4 Signaling in Breast Cancer Cellular Migration._** Nature Scientific Reports. Nov 3;7(1):14976. 
 
 doi: 10.1038/s41598-017-14549-9. PMID: 29101386
 
@@ -52,42 +52,42 @@ doi: 10.1016/j.ebiom.2017.06.023. Epub 2017 Jun 24. PMID:28673861
 
 * Tian J, Hachim MY, Hachim IY, Dai M, Lo C, Al Raffa F, Ali S, Lebrun JJ. 
 
-_**Cyclooxygenase-2 regulates TGFβ-induced cancer stemness in triple-negative breast cancer.**_ Nature Scientific Reports. Scientific Reports 7.
+**_Cyclooxygenase-2 regulates TGFβ-induced cancer stemness in triple-negative breast cancer._** Nature Scientific Reports. Scientific Reports 7.
 
 doi:10.1038/srep40258
 
 * Guo J, Fung BCM, Kuppen PJK, Tollenaar RAEM, Mesker WE, and Lebrun JJ. 
 
-**_Revealing Determinant Factors for Early Breast Cancer Recurrence by Decision Tree_**. Information Systems Frontiers (ISF), 13 pages, in press. 
+_**Revealing Determinant Factors for Early Breast Cancer Recurrence by Decision Tree**_. Information Systems Frontiers (ISF), 13 pages, in press. 
 
 # 2016
 
 Lopez-Ozuna VM, Hachim YI, Hachim YM, Lebrun JJ., Ali, S. 
 
-_**Prolactin Pro-Differentiation Pathway in Triple Negative Breast Cancer: Impact on Prognosis and Potential Therapy**_. Nature Scientific Reports. 2016 Aug 2; 6:30934. 
+**_Prolactin Pro-Differentiation Pathway in Triple Negative Breast Cancer: Impact on Prognosis and Potential Therapy_**. Nature Scientific Reports. 2016 Aug 2; 6:30934. 
 
 doi: 10.1038/srep30934
 
 * Dai M, Zhang C, Ali A, Hong X, Lebrun JJ. 
 
-_**Characterization of CDK4 as a cancer stem cell regulator, prognostic marker and therapeutic target for triple-negative breast cancer**_. Nature Scientific Reports. Oct 19; 6:35383. 
+**_Characterization of CDK4 as a cancer stem cell regulator, prognostic marker and therapeutic target for triple-negative breast cancer_**. Nature Scientific Reports. Oct 19; 6:35383. 
 
 doi:10.1038/srep35383
 
 * Korah J, Canaff L, Lebrun JJ. 
 
-_**The pRb/E2F1 pathway as a novel mediator of TGFβ-induced autophagy**_. J Biol Chem. Jan 29;291(5):2043-54.
+**_The pRb/E2F1 pathway as a novel mediator of TGFβ-induced autophagy_**. J Biol Chem. Jan 29;291(5):2043-54.
 
 doi: 10.1074/jbc.M115.678557. Epub 2015 Nov 23.
 
 * Hachim IY, Shams A, Lebrun JJ, Ali S.
 
-_**A favorable role of prolactin in human breast cancer reveals novel pathway-based gene signatures indicative of tumor differentiation and favorable patient outcome**_. Hum Pathol. Jul;53:142-52. 
+**_A favorable role of prolactin in human breast cancer reveals novel pathway-based gene signatures indicative of tumor differentiation and favorable patient outcome_**. Hum Pathol. Jul;53:142-52. 
 
 doi: 10.1016/j.humpath.2016.02.010. Epub 2016 Mar 14
 
 * Hachim IY, Hachim MY, Lopez-Ozuna VM, Ali S, Lebrun JJ. 
 
-_**A dual prognostic role for the TGFβ receptors in human breast cancer**_. Hum Pathol. Jul 18. pii: S0046-8177(16)30143-5. 
+**_A dual prognostic role for the TGFβ receptors in human breast cancer_**. Hum Pathol. Jul 18. pii: S0046-8177(16)30143-5. 
 
 doi: 10.1016/j.humpath.2016.07.002
