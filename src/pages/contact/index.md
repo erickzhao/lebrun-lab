@@ -10,7 +10,7 @@ contact:
   position: Web Developer
 address:
   city: Montreal
-  line1: McGill University Health Centre
+  line1: 'McGill University Health Centre, Link: https://muhc.ca/glen/dashboard'
   line2: 1001 Boulevard Decarie
   postalCode: H4A 3J1
   province: Quebec
