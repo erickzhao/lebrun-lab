@@ -48,7 +48,7 @@ members:
       inhibitors in breast cancer.
     email: julien.boudreault@usherbrooke.ca
     name: 'Julien Boudreault, M.Sc.'
-    photo: /img/38217166_10156647334633060_6161374737822908416_n.jpg
+    photo: /img/julien.jpg
     position: assistant
   - description: >-
       * **Education **: PhD in Organic Chemistry, University of Normandie,
@@ -73,7 +73,17 @@ members:
     position: associate
   - name: 'Gang Yan, Ph.D. candidate'
     position: grad
-  - name: 'Ni Wang, Ph.D.'
+  - description: >-
+      * **Education **: PhD.
+
+      * **Current research **:** **My research focuses on pre-clinic experiments
+      to investigate human cancerous processes and mechanisms by using
+      immunodeficient laboratory mouse models (breast cancer, pancreas cancer,
+      lung and liver metastases, etc.) in order to explore and develop novel
+      therapies for cancer treatment.
+    email: ' ni.wang79@gmail.com'
+    name: 'Ni Wang, Ph.D.'
+    photo: /img/ni-wang..jpg
     position: associate
   - {}
 ---
