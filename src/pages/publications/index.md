@@ -2,8 +2,8 @@
 templateKey: publications-page
 title: Publications
 subtitle: >-
-  Nature Scientific Reports, Nature Communications, Clinical Cancer Research,
-  Tumor Biology, Cell Signal...
+  TNBC, TGFβ isoforms, Breast cancer Stem Cells, MicroRNA-30, CPSF6,
+  Cyclooxygenase-2 
 headerImage: /img/dna-1811955_1280.jpg
 ---
 # 2018
