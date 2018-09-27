@@ -1,9 +1,9 @@
 ---
 templateKey: research-post
-title: CRISPER/Cas
+title: CRISPR/Cas
 subtitle: Genetic Identification
 tags:
-  - CRISPER/Cas9
+  - CRISPR/Cas9
   - Genes
   - Tumor development
 headerImage: /img/dai-lebrun.jpg
