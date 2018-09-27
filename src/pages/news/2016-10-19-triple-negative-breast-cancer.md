@@ -1,6 +1,6 @@
 ---
 templateKey: news-post
-title: New marker and potential therapy for triple negative breast cancer
+title: New Marker and Potential Therapy for Triple Negative Breast Cancers
 date: 2016-10-19T15:04:10.000Z
 description: >-
   Triple negative breast cancer (TNBC) is the most aggressive type of breast
