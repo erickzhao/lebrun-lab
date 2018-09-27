@@ -2,7 +2,7 @@
 templateKey: alumni-page
 title: Lab Alumni
 subtitle: 'Graduate Students '
-headerImage: /img/new panoramic glen-blue-sky - low res.jpg
+headerImage: /img/logo.jpg
 members:
   - description: ''
     name: 'Nadege Fils-Aime, Ph.D.'
