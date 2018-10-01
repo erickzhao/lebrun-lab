@@ -25,18 +25,8 @@ headerImage: /img/dna-1811955_1280.jpg
 
 
 
-Binothman N, Hachim IY, Lebrun JJ, Ali S. 
-
-**_CPSF6 is a Clinically Relevant Breast Cancer Vulnerability Target: Role of CPSF6 in Breast Cancer._ **EBioMedicine Jul;21:65-78. 
-
-doi: 10.1016/j.ebiom.2017.06.023. Epub 2017 Jun 24. PMID:28673861
-
-* Tian J, Hachim MY, Hachim IY, Dai M, Lo C, Al Raffa F, Ali S, Lebrun JJ. 
-
-_**Cyclooxygenase-2 regulates TGFβ-induced cancer stemness in triple-negative breast cancer.**_ Nature Scientific Reports. Scientific Reports 7.
-
-doi:10.1038/srep40258
-
+* [CPSF6 is a Clinically Relevant Breast Cancer Vulnerability Target: Role of CPSF6 in Breast Cancer. ](<CPSF6 is a Clinically Relevant Breast Cancer Vulnerability Target: Role of CPSF6 in Breast Cancer. >)Binothman N, Hachim IY, Lebrun JJ, Ali S. EBioMedicine. 2017 Jul;21:65-78. doi: 10.1016/j.ebiom.2017.06.023. Epub 2017 Jun 24.
+* [Cyclooxygenase-2 regulates TGFβ-induced cancer stemness in triple-negative breast cancer.](<Cyclooxygenase-2 regulates TGFβ-induced cancer stemness in triple-negative breast cancer.>) Tian J, Hachim MY, Hachim IY, Dai M, Lo C, Al Raffa F, Ali S, Lebrun JJ. doi:10.1038/srep40258
 * Guo J, Fung BCM, Kuppen PJK, Tollenaar RAEM, Mesker WE, and Lebrun JJ. 
 
 **_Revealing Determinant Factors for Early Breast Cancer Recurrence by Decision Tree_**. Information Systems Frontiers (ISF), 13 pages, in press. 
