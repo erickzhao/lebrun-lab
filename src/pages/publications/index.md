@@ -21,8 +21,8 @@ headerImage: /img/dna-1811955_1280.jpg
 
 * [Transforming Growth Factor-beta Regulation of Ephrin Type-A Receptor 4 Signaling in Breast Cancer Cellular Migration.](https://www.nature.com/articles/s41598-017-14549-9) Hachim IY, Villatoro M, Canaff L, Hachim MY, Boudreault J, Haiub H, Ali S, Lebrun JJ. Sci Rep. 2017 Nov 3;7(1):14976. doi: 10.1038/s41598-017-14549-9.
 * [CPSF6 is a Clinically Relevant Breast Cancer Vulnerability Target: Role of CPSF6 in Breast Cancer.](https://www.ncbi.nlm.nih.gov/pubmed/28673861) Binothman N, Hachim IY, Lebrun JJ, Ali S. EBioMedicine. 2017 Jul;21:65-78. doi: 10.1016/j.ebiom.2017.06.023. Epub 2017 Jun 24.
-* [Cyclooxygenase-2 regulates TGFβ-induced cancer stemness in triple-negative breast cancer.](<Cyclooxygenase-2 regulates TGFβ-induced cancer stemness in triple-negative breast cancer.>) Tian J, Hachim MY, Hachim IY, Dai M, Lo C, Al Raffa F, Ali S, Lebrun JJ. doi:10.1038/srep40258 
-* [Revealing determinant factors for early breast cancer recurrence by decision tree. ](<Revealing determinant factors for early breast cancer recurrence by decision tree. >)Guo J, Fung BCM, Kuppen PJK, Tollenaar RAEM, Mesker WE, and Lebrun JJ. Information Systems Frontiers (ISF), 13 pages, in press. 
+* [Cyclooxygenase-2 regulates TGFβ-induced cancer stemness in triple-negative breast cancer](https://www.nature.com/articles/srep40258). Tian J, Hachim MY, Hachim IY, Dai M, Lo C, Al Raffa F, Ali S, Lebrun JJ. doi:10.1038/srep40258 
+* [Revealing determinant factors for early breast cancer recurrence by decision tree.](https://link.springer.com/article/10.1007/s10796-017-9764-0) Guo J, Fung BCM, Kuppen PJK, Tollenaar RAEM, Mesker WE, and Lebrun JJ. Information Systems Frontiers (ISF), 13 pages, in press. 
 
 # 2016
 
