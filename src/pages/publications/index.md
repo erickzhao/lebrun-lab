@@ -33,14 +33,22 @@ headerImage: /img/dna-1811955_1280.jpg
 * [Prolactin Pro-Differentiation Pathway in Triple Negative Breast Cancer: Impact on Prognosis and Potential Therapy](<Prolactin Pro-Differentiation Pathway in Triple Negative Breast Cancer: Impact on Prognosis and Potential Therapy>). López-Ozuna VM, Hachim IY, Hachim MY, Lebrun JJ, Ali S. Sci Rep. 2016 Aug 2;6:30934. doi: 10.1038/srep30934.
 * [Cell-specific optoporation with near-infrared ultrafast laser and functionalized gold nanoparticles.](<Cell-specific optoporation with near-infrared ultrafast laser and functionalized gold nanoparticles.>) Bergeron E, Boutopoulos C, Martel R, Torres A, Rodriguez C, Niskanen J, Lebrun JJ, Winnik FM, Sapieha P, Meunier M. Nanoscale. 2015 Nov 14;7(42):17836-47. doi: 10.1039/c5nr05650k. Epub 2015 Oct 13.
 * [Prolactin/Jak2 directs apical/basal polarization and luminal linage maturation of mammary epithelial cells through regulation of the Erk1/2 pathway.](<Prolactin/Jak2 directs apical/basal polarization and luminal linage maturation of mammary epithelial cells through regulation of the Erk1/2 pathway.>) Liu F, Pawliwec A, Feng Z, Yasruel Z, Lebrun JJ, Ali S. Stem Cell Res. 2015 Sep;15(2):376-83. doi: 10.1016/j.scr.2015.08.001. Epub 2015 Aug 11.
-* Dai M, Zhang C, Ali A, Hong X, Lebrun JJ. 
-
-_**Characterization of CDK4 as a cancer stem cell regulator, prognostic marker and therapeutic target for triple-negative breast cancer**_. Nature Scientific Reports. Oct 19; 6:35383. 
-
-doi:10.1038/srep35383
-
-
-
+* [Prolactin Receptor Expression is an Independent Favorable Prognostic Marker in Human Breast Cancer.](<Prolactin Receptor Expression is an Independent Favorable Prognostic Marker in Human Breast Cancer.>) Hachim IY, Hachim MY, Lopez VM, Lebrun JJ, Ali S. Appl Immunohistochem Mol Morphol. 2016 Apr;24(4):238-45. doi: 10.1097/PAI.0000000000000178.
+* [CDK4 regulates cancer stemness and is a novel therapeutic target for triple-negative breast cancer](<CDK4 regulates cancer stemness and is a novel therapeutic target for triple-negative breast cancer>). Dai M, Zhang C, Ali A, Hong X, Lebrun JJ. Scientific Reports volume 6, Article number: 35383 (2016)
 * [The Retinoblastoma Tumor Suppressor Protein (pRb)/E2 Promoter Binding Factor 1 (E2F1) Pathway as a Novel Mediator of TGFβ-induced Autophagy](<The Retinoblastoma Tumor Suppressor Protein (pRb)/E2 Promoter Binding Factor 1 (E2F1) Pathway as a Novel Mediator of TGFβ-induced Autophagy>). Korah J, Canaff L, Lebrun JJ. J Biol Chem. 2016 Jan 29;291(5):2043-54. doi: 10.1074/jbc.M115.678557. Epub 2015 Nov 23.
 * [A favorable role of prolactin in human breast cancer reveals novel pathway-based gene signatures indicative of tumor differentiation and favorable patient outcome.](<A favorable role of prolactin in human breast cancer reveals novel pathway-based gene signatures indicative of tumor differentiation and favorable patient outcome.>) Hachim IY, Shams A, Lebrun JJ, Ali S. Hum Pathol. 2016 Jul;53:142-52. doi: 10.1016/j.humpath.2016.02.010. Epub 2016 Mar 14.
 * [A dual prognostic role for the TGFβ receptors in human breast cancer](<A dual prognostic role for the TGFβ receptors in human breast cancer>). Hachim IY, Hachim MY, Lopez-Ozuna VM, Ali S, Lebrun JJ.Hum Pathol. Jul 18. pii: S0046-8177(16)30143-5.  doi: 10.1016/j.humpath.2016.07.002
+
+# 2015
+
+* [The leukemia inhibitory factor (LIF) and p21 mediate the TGFβ tumor suppressive effects in human cutaneous melanoma.](<The leukemia inhibitory factor (LIF) and p21 mediate the TGFβ tumor suppressive effects in human cutaneous melanoma.>) Humbert L, Ghozlan M, Canaff L, Tian J, Lebrun JJ. BMC Cancer. 2015 Mar 29;15:200. doi: 10.1186/s12885-015-1177-1
+
+# 2014
+
+* [Breast cancer anti-estrogen resistance 3 inhibits transforming growth factor β/Smad signaling and associates with favorable breast cancer disease outcomes.](<Breast cancer anti-estrogen resistance 3 inhibits transforming growth factor β/Smad signaling and associates with favorable breast cancer disease outcomes.>) Guo J, Canaff L, Rajadurai CV, Fils-Aimé N, Tian J, Dai M, Korah J, Villatoro M, Park M, Ali S, Lebrun JJ. Breast Cancer Res. 2014 Dec 13;16(6):476. doi: 10.1186/s13058-014-0476-9.
+
+# 2013
+
+* [Development of buffers for fast semidry transfer of proteins](<Development of buffers for fast semidry transfer of proteins>). Garić D, Humbert L, Fils-Aimé N, Korah J, Zarfabian Y, Lebrun JJ, Ali S. Anal Biochem. 2013 Oct 15;441(2):182-4. doi: 10.1016/j.ab.2013.07.009. Epub 2013 Jul 16.
+* [Visible and near infrared resonance plasmonic enhanced nanosecond laser optoporation of cancer cells.](<Visible and near infrared resonance plasmonic enhanced nanosecond laser optoporation of cancer cells.>) St-Louis Lalonde B, Boulais E, Lebrun JJ, Meunier M. Biomed Opt Express. 2013 Apr 1;4(4):490-9. doi: 10.1364/BOE.4.000490. Epub 2013 Mar 1.
+* [Activin and TGFβ regulate expression of the microRNA-181 family to promote cell migration and invasion in breast cancer cells](<Activin and TGFβ regulate expression of the microRNA-181 family to promote cell migration and invasion in breast cancer cells>). Neel JC, Lebrun JJ. Cell Signal. 2013 Jul;25(7):1556-66. doi: 10.1016/j.cellsig.2013.03.013. Epub 2013 Mar 22
