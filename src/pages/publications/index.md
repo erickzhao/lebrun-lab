@@ -31,12 +31,9 @@ headerImage: /img/dna-1811955_1280.jpg
 * [CDK4 regulates cancer stemness and is a novel therapeutic target for triple-negative breast cancer](<CDK4 regulates cancer stemness and is a novel therapeutic target for triple-negative breast cancer.>).Dai M, Zhang C, Ali A, Hong X, Tian J, Lo C, Fils-Aimé N, Burgos SA, Ali S, Lebrun JJ.
   Sci Rep. 2016 Oct 19;6:35383. doi: 10.1038/srep35383.
 
-Lopez-Ozuna VM, Hachim YI, Hachim YM, Lebrun JJ., Ali, S. 
 
-_**Prolactin Pro-Differentiation Pathway in Triple Negative Breast Cancer: Impact on Prognosis and Potential Therapy**_. Nature Scientific Reports. 2016 Aug 2; 6:30934. 
 
-doi: 10.1038/srep30934
-
+* [Prolactin Pro-Differentiation Pathway in Triple Negative Breast Cancer: Impact on Prognosis and Potential Therapy](<Prolactin Pro-Differentiation Pathway in Triple Negative Breast Cancer: Impact on Prognosis and Potential Therapy>). López-Ozuna VM, Hachim IY, Hachim MY, Lebrun JJ, Ali S. Sci Rep. 2016 Aug 2;6:30934. doi: 10.1038/srep30934.
 * Dai M, Zhang C, Ali A, Hong X, Lebrun JJ. 
 
 _**Characterization of CDK4 as a cancer stem cell regulator, prognostic marker and therapeutic target for triple-negative breast cancer**_. Nature Scientific Reports. Oct 19; 6:35383. 
@@ -49,10 +46,5 @@ _**The pRb/E2F1 pathway as a novel mediator of TGFβ-induced autophagy**_. J Bio
 
 doi: 10.1074/jbc.M115.678557. Epub 2015 Nov 23.
 
-* Hachim IY, Shams A, Lebrun JJ, Ali S.
-
-_**A favorable role of prolactin in human breast cancer reveals novel pathway-based gene signatures indicative of tumor differentiation and favorable patient outcome**_. Hum Pathol. Jul;53:142-52. 
-
-doi: 10.1016/j.humpath.2016.02.010. Epub 2016 Mar 14 
-
+* [A favorable role of prolactin in human breast cancer reveals novel pathway-based gene signatures indicative of tumor differentiation and favorable patient outcome.](<A favorable role of prolactin in human breast cancer reveals novel pathway-based gene signatures indicative of tumor differentiation and favorable patient outcome.>) Hachim IY, Shams A, Lebrun JJ, Ali S. Hum Pathol. 2016 Jul;53:142-52. doi: 10.1016/j.humpath.2016.02.010. Epub 2016 Mar 14.
 * [A dual prognostic role for the TGFβ receptors in human breast cancer](<A dual prognostic role for the TGFβ receptors in human breast cancer>). Hachim IY, Hachim MY, Lopez-Ozuna VM, Ali S, Lebrun JJ.Hum Pathol. Jul 18. pii: S0046-8177(16)30143-5.  doi: 10.1016/j.humpath.2016.07.002
