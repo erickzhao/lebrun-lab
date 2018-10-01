@@ -28,6 +28,9 @@ headerImage: /img/dna-1811955_1280.jpg
 
 # 2016
 
+* [CDK4 regulates cancer stemness and is a novel therapeutic target for triple-negative breast cancer](<CDK4 regulates cancer stemness and is a novel therapeutic target for triple-negative breast cancer.>).Dai M, Zhang C, Ali A, Hong X, Tian J, Lo C, Fils-Aimé N, Burgos SA, Ali S, Lebrun JJ.
+  Sci Rep. 2016 Oct 19;6:35383. doi: 10.1038/srep35383.
+
 Lopez-Ozuna VM, Hachim YI, Hachim YM, Lebrun JJ., Ali, S. 
 
 _**Prolactin Pro-Differentiation Pathway in Triple Negative Breast Cancer: Impact on Prognosis and Potential Therapy**_. Nature Scientific Reports. 2016 Aug 2; 6:30934. 
@@ -50,10 +53,6 @@ doi: 10.1074/jbc.M115.678557. Epub 2015 Nov 23.
 
 _**A favorable role of prolactin in human breast cancer reveals novel pathway-based gene signatures indicative of tumor differentiation and favorable patient outcome**_. Hum Pathol. Jul;53:142-52. 
 
-doi: 10.1016/j.humpath.2016.02.010. Epub 2016 Mar 14
+doi: 10.1016/j.humpath.2016.02.010. Epub 2016 Mar 14 
 
-* Hachim IY, Hachim MY, Lopez-Ozuna VM, Ali S, Lebrun JJ. 
-
-_**A dual prognostic role for the TGFβ receptors in human breast cancer**_. Hum Pathol. Jul 18. pii: S0046-8177(16)30143-5. 
-
-doi: 10.1016/j.humpath.2016.07.002
+* [A dual prognostic role for the TGFβ receptors in human breast cancer](<A dual prognostic role for the TGFβ receptors in human breast cancer>). Hachim IY, Hachim MY, Lopez-Ozuna VM, Ali S, Lebrun JJ.Hum Pathol. Jul 18. pii: S0046-8177(16)30143-5.  doi: 10.1016/j.humpath.2016.07.002
