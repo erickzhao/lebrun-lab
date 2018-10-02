@@ -12,10 +12,10 @@ Overall, the vision/direction of our research program is to provide a better und
 
 * Links :
 
- <https://muhc.ca/glen/dashboard>
+[Glen Site](https://muhc.ca/glen/dashboard)
 
-<http://rimuhc.ca/cancer-research-program>
+[Cancer Research Program](http://rimuhc.ca/cancer-research-program)
 
-[ https://muhc.ca/glen/dashboard](< https://muhc.ca/glen/dashboard>)
+[RI-MUHC](http://rimuhc.ca/)
 
 ![null](/img/muhc-rilogocolour.jpg)
