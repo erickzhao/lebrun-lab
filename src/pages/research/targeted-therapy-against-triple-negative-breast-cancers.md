@@ -3,11 +3,10 @@ templateKey: research-post
 title: Drug Design & Development
 subtitle: Targeted Therapy against Triple Negative Breast Cancers
 tags:
-  - CDK4
-  - CDK6
-  - kinase inhibitor
-  - drug rsistance
-  - TNBCs
+  - CDKS
+  - Kinase Inhibitor
+  - Drug Desistance
+  - Cancer Stem Cells
 headerImage: /img/lab-217041_1280.jpg
 ---
 The MUHC-RI drug design and development platforms are equipped with the best instrumentations. Of note, and relevant to this project, the MUHC-RI has acquired the full license for the Molecular Operating Environment (MOE) software, which will be instrumental for the completion of the computational modeling part it.
