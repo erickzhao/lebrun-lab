@@ -3,9 +3,8 @@ templateKey: research-post
 title: Drug Design & Development
 subtitle: Targeted Therapy against Triple Negative Breast Cancers
 tags:
-  - CDKS
-  - Kinase Inhibitor
-  - Drug Desistance
+  - CDK Inhibitors
+  - Drug Resistance
   - Cancer Stem Cells
 headerImage: /img/lab-217041_1280.jpg
 ---
