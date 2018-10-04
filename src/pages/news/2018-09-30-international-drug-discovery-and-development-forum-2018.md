@@ -18,4 +18,4 @@ For more information, please contact us at : (514)934-1934 ext. 76435
 
 Trainingindrugdev.med@mcgill.ca
 
-* Link: <http://trainingindrugdev.program.mcgill.ca/symposium/>
+* [International Drug Discovery and Development Forum 2018](http://trainingindrugdev.program.mcgill.ca/symposium/)
