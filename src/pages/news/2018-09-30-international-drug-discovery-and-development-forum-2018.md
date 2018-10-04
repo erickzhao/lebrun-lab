@@ -2,11 +2,7 @@
 templateKey: news-post
 title: International Drug Discovery and Development Forum 2018
 date: '2018-09-30T16:19:27-04:00'
-description: >-
-  New Trends in Drug Discovery: Small Molecule Approaches to Immunotherapy and
-  Drug Conjugates
-
-  October 22nd to 24th, 2018, Montreal, Quebec
+description: New Trends in Drug Discovery
 ---
 The Drug Discovery and Development Forum 2018 will highlight New Trends in Drug Discovery: Small Molecule Approaches to Immunotherapy and Drug Conjugates.
 
