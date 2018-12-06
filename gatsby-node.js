@@ -15,6 +15,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             }
             frontmatter {
               templateKey
+              hidden
             }
           }
         }
@@ -26,7 +27,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allMarkdownRemark.edges.forEach(edge => {
+    result.data.allMarkdownRemark.edges
+      .filter(edge => !edge.node.frontmatter.hidden)
+      .forEach(edge => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
