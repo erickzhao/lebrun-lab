@@ -13,7 +13,7 @@ const Header = ({ title, subtitle, image }) => (
   >
     <div className="hero-body">
       <Helmet>
-        <title>{title} - J.J. Lebrun Laboratory</title>
+        <title>{title} - Lebrun Lab</title>
       </Helmet>
       <div className="container has-text-centered">
         <h1 className="title is-1">{title}</h1>

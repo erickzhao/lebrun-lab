@@ -15,7 +15,7 @@ const Footer = () => (
       </div>
     </div>
     <p className="content has-text-centered">
-      Copyright © 2018 Lebrun Laboratory. All rights reserved.
+      Copyright © 2018 Lebrun Lab. All rights reserved.
     </p>
   </footer>
 )

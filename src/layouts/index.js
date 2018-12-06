@@ -12,7 +12,7 @@ import faviconLg from '../img/favicon-512x512.png';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet>
-      <title>J.J. Lebrun Laboratory</title>
+      <title>Lebrun Lab</title>
       <script
         defer
         src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
