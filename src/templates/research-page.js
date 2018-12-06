@@ -8,16 +8,16 @@ export const ResearchPageTemplate = ({ topics, title, subtitle, headerImage }) =
       <Header title={title} subtitle={subtitle} image={headerImage} />
       <section className="section container">
         {topics.map(t => (
-          <div className="card is-horizontal section" key={t.node.id}>
+          <div className="box card is-horizontal" key={t.node.id}>
             <div className="card-image">
-              <figure className="image is-4by3">
+              <figure className="image is-4x3">
                 <img src={t.node.frontmatter.headerImage} alt={t.node.frontmatter.title} />
               </figure>
             </div>
             <div className="card-content">
               <div className="media">
                 <div className="media-content">
-                  <h2 className="title is-6">
+                  <h2 className="subtitle is-4">
                     {t.node.frontmatter.title}
                   </h2>
                 </div>
