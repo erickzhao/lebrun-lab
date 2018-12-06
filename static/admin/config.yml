@@ -31,6 +31,7 @@ collections:
       - {label: "Tags (separate with commas)", name: "tags", widget: "list"}
       - {label: "Header Image", name: "headerImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Files", name: "files", widget: "list", fields: [{label: "File", name: "file", widget: "file"}]}
   - name: "pages"
     label: "Pages"
     files:
