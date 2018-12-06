@@ -4,8 +4,7 @@ import "../utils/navbar";
 import logo from '../img/favicon-32x32.png';
 
 const Navbar = () => (
-  <nav className="navbar is-transparent">
-    <div className="container">
+  <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
           <img style={{'marginRight': '10px'}} src={logo} alt="Logo"/> Lebrun Lab
@@ -18,6 +17,9 @@ const Navbar = () => (
       </div>
       <div className="navbar-menu" id="navMenu">
         <div className="navbar-end">
+          <div className="navbar-item">
+            <Link to="/"><i className="fas fa-home navbar-icon"></i>Home</Link>
+          </div>
           <div className="navbar-item has-dropdown is-hoverable">
             <span className="navbar-link"><i className="fas fa-flask navbar-icon"></i>Lab</span>
             <div className="navbar-dropdown">
@@ -60,7 +62,6 @@ const Navbar = () => (
           </div>
         </div>
       </div>
-    </div>
   </nav>
 );
 

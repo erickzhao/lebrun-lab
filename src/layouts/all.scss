@@ -29,13 +29,6 @@ $family-primary: $family-sans;
   max-width: 1300px;
 }
 
-.navbar {
-  min-height: 5rem;
-  display: flex;
-  align-items: center;
-  z-index: 2;
-}
-
 .navbar-link {
   color: $primary;
 }
@@ -44,7 +37,7 @@ $family-primary: $family-sans;
   a {
     color: $primary;
     &:hover {
-      color: lighten($primary, 20%);
+      color: lighten($primary, 40%);
     }
   }
 }
