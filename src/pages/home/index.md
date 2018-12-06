@@ -2,7 +2,4 @@
 templateKey: home-content
 hidden: true
 ---
-
-# Testing home page text
-
-123456789
+# Based in Montréal, Canada, the Lebrun Lab is part of the Research Institute of McGill University Health center.
