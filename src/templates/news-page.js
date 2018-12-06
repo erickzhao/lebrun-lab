@@ -11,7 +11,7 @@ export const NewsPageTemplate = ({ news, title, subtitle, headerImage }) => {
             {news
               .map(({ node: post }) => (
                 <div
-                  className="content"
+                  className="box"
                   style={{ border: "1px solid #eaecee", padding: "2em 4em" }}
                   key={post.id}
                 >
@@ -27,7 +27,7 @@ export const NewsPageTemplate = ({ news, title, subtitle, headerImage }) => {
                     <br />
                     <br />
                     { post.excerpt.endsWith('…') && 
-                      <Link className="button is-small" to={post.fields.slug}>
+                      <Link className="button is-primary" to={post.fields.slug}>
                         Keep Reading →
                       </Link>
                     }
