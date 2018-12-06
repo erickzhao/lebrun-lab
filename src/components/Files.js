@@ -3,7 +3,7 @@ import fileIcon from "../img/file.svg";
 
 const Files = ({ files }) => {
   return (
-    (files.length > 0) &&
+    (files && files.length > 0) &&
       <div>
           <h2 className="title">Attachments</h2>
           <div className="columns">
