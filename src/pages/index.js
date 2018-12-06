@@ -19,7 +19,7 @@ export default class IndexPage extends React.Component {
     return (
       <div>
         <Carousel slides={slides} />
-        <div className="container">
+        <div className="container container--wide">
           <div className="columns">
             {cards.map(c => 
               (

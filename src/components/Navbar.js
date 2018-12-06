@@ -1,13 +1,14 @@
 import React from "react";
 import Link from "gatsby-link";
 import "../utils/navbar";
+import logo from '../img/favicon-32x32.png';
 
 const Navbar = () => (
   <nav className="navbar is-transparent">
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
-          J.J. Lebrun Laboratory
+          <img style={{'margin-right': '10px'}}src={logo}/> J.J. Lebrun Laboratory
         </Link>
         <div className="navbar-burger" data-target="navMenu">
           <span />

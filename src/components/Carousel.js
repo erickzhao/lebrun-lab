@@ -20,11 +20,11 @@ class Carousel extends Component {
     const { slides } = this.state;
     return (
       <div>
-        <h1 className="main-title"><img src={logo}/></h1>
         <section
         className="hero is-large has-carousel"
         style={{ height: `600px` }}
       >
+        <h1 className="main-title"><img src={logo}/></h1>
         <div
           className="hero-carousel carousel-animated carousel-animate-fade"
           data-autoplay="true"
