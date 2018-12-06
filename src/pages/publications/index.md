@@ -38,15 +38,15 @@ headerImage: /img/dna-1811955_1280.jpg
 
 # 2015
 
-* [The leukemia inhibitory factor (LIF) and p21 mediate the TGFβ tumor suppressive effects in human cutaneous melanoma.](<The leukemia inhibitory factor (LIF) and p21 mediate the TGFβ tumor suppressive effects in human cutaneous melanoma.>) Humbert L, Ghozlan M, Canaff L, Tian J, Lebrun JJ. BMC Cancer. 2015 Mar 29;15:200. doi: 10.1186/s12885-015-1177-1
+* [The leukemia inhibitory factor (LIF) and p21 mediate the TGFβ tumor suppressive effects in human cutaneous melanoma.](https://www.ncbi.nlm.nih.gov/pubmed/25885043) Humbert L, Ghozlan M, Canaff L, Tian J, Lebrun JJ. BMC Cancer. 2015 Mar 29;15:200. doi: 10.1186/s12885-015-1177-1
 
 # 2014
 
-* [Breast cancer anti-estrogen resistance 3 inhibits transforming growth factor β/Smad signaling and associates with favorable breast cancer disease outcomes.](<Breast cancer anti-estrogen resistance 3 inhibits transforming growth factor β/Smad signaling and associates with favorable breast cancer disease outcomes.>) Guo J, Canaff L, Rajadurai CV, Fils-Aimé N, Tian J, Dai M, Korah J, Villatoro M, Park M, Ali S, Lebrun JJ. Breast Cancer Res. 2014 Dec 13;16(6):476. doi: 10.1186/s13058-014-0476-9.
+* [Breast cancer anti-estrogen resistance 3 inhibits transforming growth factor β/Smad signaling and associates with favorable breast cancer disease outcomes.](https://www.ncbi.nlm.nih.gov/pubmed/25499443) Guo J, Canaff L, Rajadurai CV, Fils-Aimé N, Tian J, Dai M, Korah J, Villatoro M, Park M, Ali S, Lebrun JJ. Breast Cancer Res. 2014 Dec 13;16(6):476. doi: 10.1186/s13058-014-0476-9.
 
 # 2013
 
-* [Development of buffers for fast semidry transfer of proteins](<Development of buffers for fast semidry transfer of proteins>). Garić D, Humbert L, Fils-Aimé N, Korah J, Zarfabian Y, Lebrun JJ, Ali S. Anal Biochem. 2013 Oct 15;441(2):182-4. doi: 10.1016/j.ab.2013.07.009. Epub 2013 Jul 16.
+* [Development of buffers for fast semidry transfer of proteins. ](https://www.ncbi.nlm.nih.gov/pubmed/23872007)Garić D, Humbert L, Fils-Aimé N, Korah J, Zarfabian Y, Lebrun JJ, Ali S. Anal Biochem. 2013 Oct 15;441(2):182-4. doi: 10.1016/j.ab.2013.07.009. Epub 2013 Jul 16.
 * [Visible and near infrared resonance plasmonic enhanced nanosecond laser optoporation of cancer cells.](<Visible and near infrared resonance plasmonic enhanced nanosecond laser optoporation of cancer cells.>) St-Louis Lalonde B, Boulais E, Lebrun JJ, Meunier M. Biomed Opt Express. 2013 Apr 1;4(4):490-9. doi: 10.1364/BOE.4.000490. Epub 2013 Mar 1.
 * [Activin and TGFβ regulate expression of the microRNA-181 family to promote cell migration and invasion in breast cancer cells](<Activin and TGFβ regulate expression of the microRNA-181 family to promote cell migration and invasion in breast cancer cells>). Neel JC, Lebrun JJ. Cell Signal. 2013 Jul;25(7):1556-66. doi: 10.1016/j.cellsig.2013.03.013. Epub 2013 Mar 22
 * [MicroRNA-584 and the protein phosphatase and actin regulator 1 (PHACTR1), a new signaling route through which transforming growth factor-β Mediates the migration and actin dynamics of breast cancer cells.](<MicroRNA-584 and the protein phosphatase and actin regulator 1 (PHACTR1), a new signaling route through which transforming growth factor-β Mediates the migration and actin dynamics of breast cancer cells.>) Fils-Aimé N, Dai M, Guo J, El-Mousawi M, Kahramangil B, Neel JC, Lebrun JJ. J Biol Chem. 2013 Apr 26;288(17):11807-23. doi: 10.1074/jbc.M112.430934. Epub 2013 Mar 11.
