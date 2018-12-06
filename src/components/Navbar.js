@@ -55,6 +55,9 @@ const Navbar = () => (
           <div className="navbar-item">
             <Link to="/contact"><i className="fas fa-globe navbar-icon"></i>Contact</Link>
           </div>
+          <div className="navbar-item">
+            <Link to="/links"><i className="fas fa-external-link-alt navbar-icon"></i>Links</Link>
+          </div>
         </div>
       </div>
     </div>
