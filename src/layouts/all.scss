@@ -8,28 +8,13 @@ $family-sans: "Montserrat", "Helvetica Neue", "Arial", sans-serif;
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
-$primary: $purple;
-// Use the existing orange as the danger color
-$danger: $orange;
+$primary: darken($purple, 30%);
+$secondary: $orange;
 // Use the new serif family
 $family-primary: $family-sans;
 
-// 4. Setup your Custom Colors
-$linkedin: #0077b5;
-$linkedin-invert: findColorInvert($linkedin);
-$twitter: #55acee;
-$twitter-invert: findColorInvert($twitter);
-$github: #333;
-$github-invert: findColorInvert($github);
-
 // 5. Add new color variables to the color map.
 @import "~bulma/sass/utilities/derived-variables";
-$addColors: (
-  "twitter":($twitter, $twitter-invert),
-  "linkedin": ($linkedin, $linkedin-invert),
-  "github": ($github, $github-invert)
-);
-$colors: map-merge($colors, $addColors);
 
 // 6. Import the rest of Bulma
 @import "~bulma";
@@ -52,14 +37,14 @@ $colors: map-merge($colors, $addColors);
 }
 
 .navbar-link {
-  color: $purple;
+  color: $primary;
 }
 
 .navbar-item {
   a {
-    color: $purple;
+    color: $primary;
     &:hover {
-      color: $blue;
+      color: lighten($primary, 20%);
     }
   }
 }
@@ -143,4 +128,11 @@ a {
   margin-right: auto;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+.button.is-primary {
+  &:hover {
+    background: lighten($primary,20%);
+  }
+  transition: 0.15s all ease-in-out;
 }
