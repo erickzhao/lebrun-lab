@@ -24,7 +24,6 @@ class Carousel extends Component {
         className="hero is-large has-carousel"
         style={{ height: `600px` }}
       >
-        <h1 className="main-title"><img src={logo}/></h1>
         <div
           className="hero-carousel carousel-animated carousel-animate-fade"
           data-autoplay="true"
