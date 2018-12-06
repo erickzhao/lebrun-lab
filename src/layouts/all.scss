@@ -42,6 +42,7 @@ $colors: map-merge($colors, $addColors);
 
 .navbar {
   min-height: 5rem;
+  z-index: 2;
 }
 
 .navbar-link {
