@@ -1,10 +1,15 @@
 ---
 templateKey: links-page
 title: Links
-subtitle:
+subtitle: 'Research center, Research program, Services'
 headerImage: /img/dna-1811955_1280.jpg
 ---
+# [RIMUHC](http://rimuhc.ca/)
 
-# Testing links
+[Glen site](https://muhc.ca/glen/dashboard)
 
-123456789
+[Cancer Research Program](http://rimuhc.ca/cancer-research-program)
+
+[Drug Discovery Platform](http://rimuhc.ca/drug-discovery)
+
+[Drug discovery Services](http://rimuhc.ca/drug-discovery-services)
