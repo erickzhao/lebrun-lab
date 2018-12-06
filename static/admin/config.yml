@@ -54,6 +54,23 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/home/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "home-content",
+            }
+          - {
+              label: "Hidden",
+              name: "hidden",
+              widget: "hidden",
+              default: true,
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/contact/index.md"
         label: "Contact"
         name: "contact"
