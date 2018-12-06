@@ -10,28 +10,47 @@ collections:
     label: "News"
     folder: "src/pages/news"
     create: true
-    filter: {field: "templateKey", value: "news-post"}
+    filter: { field: "templateKey", value: "news-post" }
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "news-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "research"
     label: "Research Topics"
     folder: "src/pages/research"
     create: true
     slug: "{{slug}}"
-    filter: {field: "templateKey", value: "research-post"}
+    filter: { field: "templateKey", value: "research-post" }
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "research-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Subtitle", name: "subtitle", widget: "string"}
-      - {label: "Tags (separate with commas)", name: "tags", widget: "list"}
-      - {label: "Header Image", name: "headerImage", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Files", name: "files", widget: "list", fields: [{label: "File", name: "file", widget: "file"}]}
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "research-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Tags (separate with commas)", name: "tags", widget: "list" }
+      - { label: "Header Image", name: "headerImage", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Files",
+          name: "files",
+          widget: "list",
+          fields:
+            [
+              { label: "File", name: "file", widget: "file" },
+              { label: "File Name", name: "name", widget: "string" },
+            ],
+        }
   - name: "pages"
     label: "Pages"
     files:
@@ -39,79 +58,144 @@ collections:
         label: "Contact"
         name: "contact"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - {label: "Header Image", name: "headerImage", widget: "image"}
-          - {label: "Point of contact", name: "contact", widget: "object", fields: [
-              {label: "Name", name: "name", widget: "string"},
-              {label: "Position", name: "position", widget: "string"},
-              {label: "Email", name: "email", widget: "string"},
-              {label: "Phone Number", name: "phone", widget: "string"}
-            ]}
-          - {label: "Address", name: "address", widget: "object", fields: [
-              {label: "Address Line 1", name: "line1", widget: "string"},
-              {label: "Address Line 2", name: "line2", widget: "string"},
-              {label: "City", name: "city", widget: "string"},
-              {label: "Province", name: "province", widget: "string"},
-              {label: "Postal Code", name: "postalCode", widget: "string"}
-              ]
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contact-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - {
+              label: "Point of contact",
+              name: "contact",
+              widget: "object",
+              fields:
+                [
+                  { label: "Name", name: "name", widget: "string" },
+                  { label: "Position", name: "position", widget: "string" },
+                  { label: "Email", name: "email", widget: "string" },
+                  { label: "Phone Number", name: "phone", widget: "string" },
+                ],
+            }
+          - {
+              label: "Address",
+              name: "address",
+              widget: "object",
+              fields:
+                [
+                  { label: "Address Line 1", name: "line1", widget: "string" },
+                  { label: "Address Line 2", name: "line2", widget: "string" },
+                  { label: "City", name: "city", widget: "string" },
+                  { label: "Province", name: "province", widget: "string" },
+                  {
+                    label: "Postal Code",
+                    name: "postalCode",
+                    widget: "string",
+                  },
+                ],
             }
       - file: "src/pages/news/index.md"
         label: "News List"
         name: "news-page"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - {label: "Header Image", name: "headerImage", widget: "image"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "news-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
       - file: "src/pages/publications/index.md"
         label: "Publications"
         name: "publications"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "publications-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - {label: "Header Image", name: "headerImage", widget: "image"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "publications-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/protocol/index.md"
         label: "Protocol"
         name: "protocol"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "protocol-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - {label: "Header Image", name: "headerImage", widget: "image"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "protocol-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/research/index.md"
         label: "Research Topic List"
         name: "research-topics"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "research-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - {label: "Header Image", name: "headerImage", widget: "image"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "research-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
       - file: "src/pages/alumni/index.md"
         label: "Alumni"
         name: "alumni"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "alumni-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - {label: "Header Image", name: "headerImage", widget: "image"}
-          - {label: "Members", name: "members", widget: "list", fields: [{label: "Name", name: "name", widget: "string"}, {label: "Position", name: "position", widget: "string"}, {label: "Header Image", name: "headerImage", widget: "image"}, {label: "Description", name: "description", widget: "text"}]}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "alumni-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - {
+              label: "Members",
+              name: "members",
+              widget: "list",
+              fields:
+                [
+                  { label: "Name", name: "name", widget: "string" },
+                  { label: "Position", name: "position", widget: "string" },
+                  {
+                    label: "Header Image",
+                    name: "headerImage",
+                    widget: "image",
+                  },
+                  { label: "Description", name: "description", widget: "text" },
+                ],
+            }
       - file: "src/pages/team/index.md"
         label: "Team"
         name: "team"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - {label: "Header Image", name: "headerImage", widget: "image"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "team-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
           - label: "Members"
             name: "members"
             widget: "list"
-            fields: 
+            fields:
               - label: "Name"
                 name: "name"
                 widget: "string"
@@ -140,18 +224,28 @@ collections:
         label: "Principal Investigator"
         name: "principal-investigator"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "principal-investigator-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - {label: "Header Image", name: "headerImage", widget: "image"}
-          - {label: "Bio", name: "body", widget: "markdown"}
-          - {label: "Headshot", name: "headshot", widget: "image"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "principal-investigator-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - { label: "Bio", name: "body", widget: "markdown" }
+          - { label: "Headshot", name: "headshot", widget: "image" }
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - {label: "Header Image", name: "headerImage", widget: "image"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }

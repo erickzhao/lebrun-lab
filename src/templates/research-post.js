@@ -46,6 +46,10 @@ export const researchPostQuery = graphql`
         subtitle
         headerImage
         tags
+        files {
+          file
+          
+        }
       }
     }
   }
