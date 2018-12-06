@@ -1,17 +1,20 @@
 import React from "react";
 import Header from "../components/Header";
 import Content, { HTMLContent } from "../components/Content";
+import Files from "../components/Files";
 
 export const ResearchPostTemplate = ({
   content,
   contentComponent,
+  files,
 }) => {
   const PostContent = contentComponent || Content;
   return (
-    <div className="container content">
+    <div className="container">
       <div className="columns">
         <div className="column is-10 is-offset-1">
-          <PostContent content={content} />
+          <PostContent className="content" content={content} />
+          <Files files={files}/>
         </div>
       </div>
     </div>
@@ -45,6 +48,7 @@ export const researchPostQuery = graphql`
         tags
         files {
           file
+          name
         }
       }
     }

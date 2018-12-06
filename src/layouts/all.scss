@@ -60,9 +60,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
+  color: $primary;
   &:hover {
-    color: $black;
-    transition: all 0.3s ease-in-out;
+    color: lighten($primary, 20%);
+    transition: all 0.15s ease-in-out;
   }
 }
 
