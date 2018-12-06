@@ -8,7 +8,7 @@ const Navbar = () => (
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
-          <img style={{'marginRight': '10px'}}src={logo}/> Lebrun Lab
+          <img style={{'marginRight': '10px'}} src={logo} alt="Logo"/> Lebrun Lab
         </Link>
         <div className="navbar-burger" data-target="navMenu">
           <span />

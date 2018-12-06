@@ -7,10 +7,10 @@ const Footer = () => (
     <div className="container" style={{maxWidth: '700px'}}>
       <div className="columns">
         <div className="column">
-          <img src={crpLogo} style={{height: '80px'}}/>
+          <img src={crpLogo} style={{height: '80px'}} alt="Cancer Research Program logo"/>
         </div>
         <div className="column">
-          <img src={fomLogo}/>
+          <img src={fomLogo} alt="McGill Faculty of Medecine logo"/>
         </div>
       </div>
     </div>
