@@ -1,7 +1,7 @@
 ---
 templateKey: links-page
 title: Links
-subtitle: 'Research center, Research program'
+subtitle: 'Research center, Research program, Services'
 headerImage: /img/dna-1811955_1280.jpg
 ---
 # [RIMUHC](http://rimuhc.ca/)
