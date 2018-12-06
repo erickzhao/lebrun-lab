@@ -37,7 +37,11 @@ $colors: map-merge($colors, $addColors);
 @import "./helpers.scss";
 
 .container {
-  max-width: 1100px;
+  max-width: 1000px;
+}
+
+.container--wide {
+  max-width: 1300px;
 }
 
 .navbar {
