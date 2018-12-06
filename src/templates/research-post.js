@@ -5,16 +5,12 @@ import Content, { HTMLContent } from "../components/Content";
 export const ResearchPostTemplate = ({
   content,
   contentComponent,
-  title,
 }) => {
   const PostContent = contentComponent || Content;
   return (
     <div className="container content">
       <div className="columns">
         <div className="column is-10 is-offset-1">
-          <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-            {title}
-          </h1>
           <PostContent content={content} />
         </div>
       </div>
@@ -24,13 +20,14 @@ export const ResearchPostTemplate = ({
 
 export default ({ data }) => {
   const { markdownRemark: post } = data;
-  const { title, subtitle, headerImage } = data.markdownRemark.frontmatter;
+  const { title, subtitle, headerImage, files } = data.markdownRemark.frontmatter;
   return (
     <div>
       <Header title={title} subtitle={subtitle} image={headerImage} />
       <ResearchPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
+        files={files}
       />
     </div>
   );
@@ -48,7 +45,6 @@ export const researchPostQuery = graphql`
         tags
         files {
           file
-          
         }
       }
     }
