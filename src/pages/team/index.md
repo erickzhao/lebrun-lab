@@ -54,8 +54,15 @@ members:
       * **Education **: PhD in Organic Chemistry, University of Normandie,
       France.
 
-      * **Current research :** Design and development of a new targeted therapy
-      against Triple negative breast cancers.
+      * **Current research :** Triple negative breast cancer is the most
+      aggressive breast cancer subtype. While targeted therapies exist for the
+      hormone receptor-positive breast cancer subtypes, there are no approved
+      targeted treatments for TNBC. Following surgery, chemotherapy and
+      radiotherapy remain the only options for treatment of TNBC. My project
+      aims at developing novel potent CDK4 inhibitory compounds that can
+      effectively target and eliminate CSCs likely to be therapeutically
+      beneficial and may provide rationale for using a new type of targeted
+      therapy in TNBCs patients
     email: karine.pasturaud@mail.mcgill.ca
     name: 'Karine Pasturaud, Ph.D.'
     photo: ''
