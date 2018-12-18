@@ -4,7 +4,7 @@ hidden: true
 ---
 # About the Lebrun Lab
 
-Based in Montréal, Canada, the Lebrun Lab is part of the Research Institute of McGill University Health center.
+**_Based in Montréal, Canada, the Lebrun Lab is part of the Research Institute of McGill University Health center._**
 
 Dr Lebrun’s research program aims at understanding processes underlying tumor suppression, cancer stemness, drug resistance, metastasis and tumor relapse, all considered major challenges in the management of cancer patients.
 
@@ -12,6 +12,6 @@ The MUHC-RI Hospital offers a state of the art research institute equipped with 
 
 # News
 
-Dasatinib, a Promising Anti-BCSC Agent in Combination with Paclitaxel to Overcome Chemotherapy Resistance in TNBCs.
+**_Dasatinib, a Promising Anti-BCSC Agent in Combination with Paclitaxel to Overcome Chemotherapy Resistance in TNBCs._**
 
 We identified Dasatinib, a Src kinase family inhibitor, potently reduced BCSC self-renewal and two BCSC populations (ALDH+ and CD24lowCD44high) as well as phosphor-Src. We also demonstrated Dasatinib to block pac-induced BCSC enrichment and Src activation in the parental TNBC cells. Interestingly, we found that Dasatinib induced an epithelial differentiation of pac-resistant cells, resulting in their enhanced sensitivity to Paclitaxel.
