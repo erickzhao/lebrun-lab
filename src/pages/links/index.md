@@ -15,3 +15,5 @@ headerImage: /img/dna-1811955_1280.jpg
 [Drug discovery Services](http://rimuhc.ca/drug-discovery-services)
 
 [Faculty of Medecine](https://www.mcgill.ca/medicine/)
+
+[McGill University](https://www.mcgill.ca/)
