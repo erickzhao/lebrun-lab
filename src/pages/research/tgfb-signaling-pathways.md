@@ -3,10 +3,7 @@ templateKey: research-post
 title: TGFβ Signaling Pathways
 subtitle: Oncogenic Role and Tumor supressive Role
 tags:
-  - Breast cancer
-  - TGFβ
-  - Cancer stem cells
-  - knockout strategies
+  - Dual roles of TGFβ in cancer
 headerImage: /img/article3.png
 files:
   - file: /img/news-reports-2-.pdf
