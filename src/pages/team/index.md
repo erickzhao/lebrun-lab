@@ -78,7 +78,14 @@ members:
     name: 'Meiou Dai, Ph.D.'
     photo: ''
     position: associate
-  - name: 'Gang Yan, Ph.D. candidate'
+  - description: >2-
+       **Eudcation :** B.Sc. in Biochemistry and Molecular Biology, Northeast Agricultural University, China.
+
+      **Current research **: Utilizing genome-wide Crispr/Cas9 screen based on
+      paclitaxel to identify key genetic mutations responsible for paclitaxel
+      resistance in triple negative breast cancer.
+    email: ' gang.yan@mail.mcgill.ca '
+    name: 'Gang Yan, Ph.D. candidate'
     position: grad
   - description: >-
       * **Education **: PhD.
