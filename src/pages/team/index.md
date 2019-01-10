@@ -102,5 +102,7 @@ members:
   - email: halmesmary@gmail.com
     name: 'Haleema Al-Mesmary, M.Sc. Candidate'
     position: grad
+  - description: 'Program Assistant, Cancer Research Program (CRP)'
+    name: Veronica Atehortua
 ---
 
