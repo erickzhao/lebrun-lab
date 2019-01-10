@@ -1,6 +1,6 @@
 ---
 templateKey: research-post
-title: CRISPR/Cas
+title: Genome CRISPR/Cas loss-of-function screen
 subtitle: Genetic Identification
 tags:
   - CRISPR/Cas9
