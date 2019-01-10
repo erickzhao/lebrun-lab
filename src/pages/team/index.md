@@ -36,7 +36,7 @@ members:
       breast cancer. This is being tested in vitro as well as in vivo using
       CRISPR/Cas technology.
     email: sophie.poulet@mail.mcgill.ca
-    name: 'Sophie Poulet, M.Sc. Candidate'
+    name: 'Sophie Poulet, Ph.D. Candidate'
     position: grad
   - description: >-
       **Education :** M.Sc. in molecular biology at the University of
