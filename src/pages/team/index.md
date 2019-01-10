@@ -28,7 +28,7 @@ members:
     photo: ''
     position: grad
   - description: >-
-      * **Education **: B.Sc. Biopharmaceutical Sciences, Université de
+      * **Education **: M.Sc. Biopharmaceutical Sciences, Université de
       Montréal.
 
       * **Current research :** Evaluation of the therapeutic potential of a
