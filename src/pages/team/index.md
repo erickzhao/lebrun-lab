@@ -105,5 +105,8 @@ members:
   - description: 'Program Assistant, Cancer Research Program (CRP)'
     email: veronica.atehortua@muhc.mcgill.ca
     name: Veronica Atehortua
+  - description: 'Program Assistant, Cancer Research Program (CRP)'
+    email: zehra.khoja@mail.mcgill.ca
+    name: Zehra Khoja
 ---
 
