@@ -103,6 +103,7 @@ members:
     name: 'Haleema Al-Mesmary, M.Sc. Candidate'
     position: grad
   - description: 'Program Assistant, Cancer Research Program (CRP)'
+    email: veronica.atehortua@muhc.mcgill.ca
     name: Veronica Atehortua
 ---
 
