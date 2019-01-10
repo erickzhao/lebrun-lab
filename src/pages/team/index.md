@@ -99,7 +99,8 @@ members:
     name: 'Ni Wang, Ph.D.'
     photo: ''
     position: associate
-  - name: 'Haleema Al-Mesmary, M.Sc. Candidate'
+  - email: halmesmary@gmail.com
+    name: 'Haleema Al-Mesmary, M.Sc. Candidate'
     position: grad
 ---
 
