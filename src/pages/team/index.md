@@ -28,7 +28,7 @@ members:
     photo: ''
     position: grad
   - description: >-
-      * **Education **: M.Sc. Biopharmaceutical Sciences, Université de
+      * **Education **: M.Sc. in Biopharmaceutical Sciences, Université de
       Montréal.
 
       * **Current research :** Evaluation of the therapeutic potential of a
@@ -39,7 +39,7 @@ members:
     name: 'Sophie Poulet, Ph.D. Candidate'
     position: grad
   - description: >-
-      **Education :** M.Sc. in molecular biology at the University of
+      **Education :** M.Sc. in Molecular Biology at the University of
       Sherbrooke.
 
 
@@ -47,9 +47,9 @@ members:
       lines using the CRISPR technology and the cytotoxic study of kinase
       inhibitors in breast cancer.
     email: julien.boudreault@usherbrooke.ca
-    name: 'Julien Boudreault, M.Sc.'
+    name: 'Julien Boudreault, Ph.D. Candidate'
     photo: ''
-    position: assistant
+    position: grad
   - description: >-
       * **Education **: PhD in Organic Chemistry, University of Normandie,
       France.
