@@ -16,6 +16,7 @@ members:
       BCSC-mediated tumor metastasis and chemotherapy resistance.
     email: jun.tian3@mail.mcgill.ca
     name: 'Jun Tian, Ph.D.'
+    photo: /img/capture.png
     position: postdoc
   - description: >-
       * **Education :** M.Sc. in Biochemistry and Molecular Biology, University
