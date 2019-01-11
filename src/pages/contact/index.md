@@ -4,7 +4,7 @@ title: Contact Us
 subtitle: 'Lebrun lab, RI-MUHC'
 headerImage: /img/logo.jpg
 contact:
-  email: jj.lebrun@mcgill.ca
+  email: jj (Dot) lebrun (At) mcgill (Dot) ca
   name: 'Jean-Jacques Lebrun, PhD'
   phone: ''
   position: 'Professor of Medicine, McGill University Health Center'
