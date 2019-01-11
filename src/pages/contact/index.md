@@ -1,7 +1,7 @@
 ---
 templateKey: contact-page
 title: Contact Us
-subtitle: 'Lebrun lab, The Research Institute of the MUHC'
+subtitle: 'Lebrun lab, RI-MUHC'
 headerImage: /img/logo.jpg
 contact:
   email: jj.lebrun@mcgill.ca
