@@ -8,12 +8,8 @@ members:
       **Education:** Ph.D. in Experimental Medicine, McGill University
 
 
-      **Current research:** Due to lack of effective therapeutic markers, triple
-      negative breast cancer (TNBC) shows poor prognosis. These cancers are
-      enriched in breast cancer stem cells (BCSCs), allowing for tumor relapse,
-      metastasis and chemotherapy resistance. The current research focuses on
-      further investigating the role of COX-2 and its associated genes in
-      BCSC-mediated tumor metastasis and chemotherapy resistance.
+      **Current research:** Investigation of the role of COX-2 and its
+      associated genes in BCSC-mediated tumor metastasis and drug resistance.
     email: jun.tian3@mail.mcgill.ca
     name: 'Jun Tian, Ph.D.'
     photo: /img/capture.png
@@ -29,7 +25,7 @@ members:
     photo: /img/image1.jpeg
     position: grad
   - description: >-
-      * **Education **: M.Sc. in Biopharmaceutical Sciences, Université de
+      * **Education **: B.Sc. in Biopharmaceutical Sciences, Université de
       Montréal.
 
       * **Current research :** Evaluation of the therapeutic potential of a
