@@ -1,9 +1,7 @@
 ---
 templateKey: publications-page
 title: Publications
-subtitle: >-
-  TNBC, TGFβ isoforms, Breast cancer Stem Cells, MicroRNA-30, CPSF6,
-  Cyclooxygenase-2 
+subtitle: Selected publications
 headerImage: /img/dna-1811955_1280.jpg
 ---
 # 2018
@@ -12,7 +10,6 @@ headerImage: /img/dna-1811955_1280.jpg
 * Prolactin Hormone Exerts Anti-Tumorigenic Effects in HER-2 Overexpressing Breast Cancer Cells through Regulation of Tumor Initiation and Stemness. Nature Scientific Reports (submitted).Hachim I, López-Ozuna VM, Hachim M, Lebrun JJ, Ali S. 
 * Blocking microRNA-30 in triple negative breast Cancer can restore pro-apoptotic programs and block tumor development in vivo. Nature Communications (submitted).Fils-Aime N, Poulet S, Neel JC, Dai, M, Hachim, I, Ali S, Lebrun JJ. 
 * [Dasatinib sensitises triple negative breast cancer cells to chemotherapy by targeting breast cancer stem cells.](https://www.ncbi.nlm.nih.gov/pubmed/30482914) Br J Cancer. Tian J, Raffa FA, Dai M, Moamer A, Khadang B, Hachim IY, Bakdounes K, Ali S, Jean-Claude B, Lebrun JJ. doi: 10.1038/s41416-018-0287-3
-* [Dasatinib targeting of breast cancer stem cells sensitize triple negative breast cancer cells to chemotherapy.](https://www.ncbi.nlm.nih.gov/pubmed/30482914) Clin Cancer Res., Tian J, Al Raffa F, Dai M, Khandag B, Bakdounes K, Jean-Claude B, Ali S, Lebrun JJ. doi: 10.1038/s41416-018-0287-3
 * [Differential expression of TGFβ isoforms in breast cancer highlights different roles during breast cancer progression.](https://www.ncbi.nlm.nih.gov/pubmed/29320969) Hachim MY, Hachim IY, Dai M, Ali S, Lebrun JJ. Tumour Biol. 2018 Jan;40(1):1010428317748254. doi: 10.1177/1010428317748254
 * [KiSS1 gene as a novel mediator of TGFβ-mediated cell invasion in triple negative breast cancer](https://www.ncbi.nlm.nih.gov/pubmed/?term=KiSS1+gene+as+a+novel+mediator+of+TGF%CE%B2-mediated+cell+invasion+in+triple+negative+breast+cancer.).
   Tian J, Al-Odaini AA, Wang Y, Korah J, Dai M, Xiao L, Ali S, Lebrun JJ.
