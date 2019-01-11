@@ -7,7 +7,7 @@ contact:
   email: jj.lebrun@mcgill.ca
   name: 'Jean-Jacques Lebrun, PhD'
   phone: ''
-  position: Principal Investigator
+  position: Professor of Medicine
 address:
   city: Montreal
   line1: McGill University Health Centre
