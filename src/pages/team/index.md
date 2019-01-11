@@ -25,7 +25,7 @@ members:
       suppressive effects in human cutaneous melanoma.
     email: mostafa.ghozlan@mail.mcgill.ca
     name: 'Mostafa Ghozlan, Ph.D. candidate'
-    photo: ''
+    photo: /img/image1.jpeg
     position: grad
   - description: >-
       * **Education **: M.Sc. in Biopharmaceutical Sciences, Université de
@@ -48,7 +48,7 @@ members:
       inhibitors in breast cancer.
     email: julien.boudreault@usherbrooke.ca
     name: 'Julien Boudreault, Ph.D. Candidate'
-    photo: ''
+    photo: /img/julien.jpg
     position: grad
   - description: >-
       * **Education **: PhD in Organic Chemistry, University of Normandie,
@@ -65,7 +65,7 @@ members:
       therapy in TNBCs patients
     email: karine.pasturaud@mail.mcgill.ca
     name: 'Karine Pasturaud, Ph.D.'
-    photo: ''
+    photo: /img/karine.jpg
     position: postdoc
   - description: >-
       **Education : **PhD in Experimental Medicine, University of McGill,
@@ -76,7 +76,7 @@ members:
       for new cancer drug target discovery and biomarkers of drug resistance.
     email: meiou.dai@mail.mcgill.ca
     name: 'Meiou Dai, Ph.D.'
-    photo: ''
+    photo: /img/picture1.png
     position: associate
   - description: >2-
        **Eudcation :** B.Sc. in Biochemistry and Molecular Biology, Northeast Agricultural University, China.
