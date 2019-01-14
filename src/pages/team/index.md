@@ -62,7 +62,7 @@ members:
       therapy in TNBCs patients
     email: karine.pasturaud@mail.mcgill.ca
     name: 'Karine Pasturaud, Ph.D.'
-    photo: /img/karine.jpg
+    photo: /img/kp1_9069_pasturaud-convertimage.jpg
     position: postdoc
   - description: >-
       **Education : **PhD in Experimental Medicine, University of McGill,
