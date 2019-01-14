@@ -8,14 +8,11 @@ members:
       **Education:** Ph.D. in Experimental Medicine, McGill University
 
 
-      **Current research:** Due to lack of effective therapeutic markers, triple
-      negative breast cancer (TNBC) shows poor prognosis. These cancers are
-      enriched in breast cancer stem cells (BCSCs), allowing for tumor relapse,
-      metastasis and chemotherapy resistance. The current research focuses on
-      further investigating the role of COX-2 and its associated genes in
-      BCSC-mediated tumor metastasis and chemotherapy resistance.
+      **Current research:** Investigation of the role of COX-2 and its
+      associated genes in BCSC-mediated tumor metastasis and drug resistance.
     email: jun.tian3@mail.mcgill.ca
     name: 'Jun Tian, Ph.D.'
+    photo: /img/capture.png
     position: postdoc
   - description: >-
       * **Education :** M.Sc. in Biochemistry and Molecular Biology, University
@@ -25,10 +22,10 @@ members:
       suppressive effects in human cutaneous melanoma.
     email: mostafa.ghozlan@mail.mcgill.ca
     name: 'Mostafa Ghozlan, Ph.D. candidate'
-    photo: ''
+    photo: /img/image1.jpeg
     position: grad
   - description: >-
-      * **Education **: B.Sc. Biopharmaceutical Sciences, Université de
+      * **Education **: B.Sc. in Biopharmaceutical Sciences, Université de
       Montréal.
 
       * **Current research :** Evaluation of the therapeutic potential of a
@@ -36,10 +33,10 @@ members:
       breast cancer. This is being tested in vitro as well as in vivo using
       CRISPR/Cas technology.
     email: sophie.poulet@mail.mcgill.ca
-    name: 'Sophie Poulet, M.Sc. Candidate'
+    name: 'Sophie Poulet, Ph.D. Candidate'
     position: grad
   - description: >-
-      **Education :** M.Sc. in molecular biology at the University of
+      **Education :** M.Sc. in Molecular Biology at the University of
       Sherbrooke.
 
 
@@ -47,9 +44,9 @@ members:
       lines using the CRISPR technology and the cytotoxic study of kinase
       inhibitors in breast cancer.
     email: julien.boudreault@usherbrooke.ca
-    name: 'Julien Boudreault, M.Sc.'
-    photo: ''
-    position: assistant
+    name: 'Julien Boudreault, Ph.D. Candidate'
+    photo: /img/julien.jpg
+    position: grad
   - description: >-
       * **Education **: PhD in Organic Chemistry, University of Normandie,
       France.
@@ -65,7 +62,7 @@ members:
       therapy in TNBCs patients
     email: karine.pasturaud@mail.mcgill.ca
     name: 'Karine Pasturaud, Ph.D.'
-    photo: ''
+    photo: /img/karine.jpg
     position: postdoc
   - description: >-
       **Education : **PhD in Experimental Medicine, University of McGill,
@@ -76,9 +73,16 @@ members:
       for new cancer drug target discovery and biomarkers of drug resistance.
     email: meiou.dai@mail.mcgill.ca
     name: 'Meiou Dai, Ph.D.'
-    photo: ''
+    photo: /img/picture1.png
     position: associate
-  - name: 'Gang Yan, Ph.D. candidate'
+  - description: >2-
+       **Eudcation :** B.Sc. in Biochemistry and Molecular Biology, Northeast Agricultural University, China.
+
+      **Current research **: Utilizing genome-wide Crispr/Cas9 screen based on
+      paclitaxel to identify key genetic mutations responsible for paclitaxel
+      resistance in triple negative breast cancer.
+    email: ' gang.yan@mail.mcgill.ca '
+    name: 'Gang Yan, Ph.D. candidate'
     position: grad
   - description: >-
       * **Education **: PhD.
@@ -92,6 +96,14 @@ members:
     name: 'Ni Wang, Ph.D.'
     photo: ''
     position: associate
-  - {}
+  - email: halmesmary@gmail.com
+    name: 'Haleema Al-Mesmary, M.Sc. Candidate'
+    position: grad
+  - description: 'Program Assistant, Cancer Research Program (CRP)'
+    email: veronica.atehortua@muhc.mcgill.ca
+    name: Veronica Atehortua
+  - description: 'Program Assistant, Cancer Research Program (CRP)'
+    email: zehra.khoja@mail.mcgill.ca
+    name: Zehra Khoja
 ---
 

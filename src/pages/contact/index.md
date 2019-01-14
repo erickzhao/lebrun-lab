@@ -1,13 +1,13 @@
 ---
 templateKey: contact-page
 title: Contact Us
-subtitle: The Research Institute of the MUHC
+subtitle: 'Lebrun lab, RI-MUHC'
 headerImage: /img/logo.jpg
 contact:
-  email: erick.zhao@mail.mcgill.ca
-  name: Erick Zhao
-  phone: 514-679-1996
-  position: Web Developer
+  email: jj (Dot) lebrun (At) mcgill (Dot) ca
+  name: 'Jean-Jacques Lebrun, PhD'
+  phone: ''
+  position: 'Professor of Medicine, McGill University Health Center'
 address:
   city: Montreal
   line1: McGill University Health Centre
