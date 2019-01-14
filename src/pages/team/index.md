@@ -45,7 +45,7 @@ members:
       inhibitors in breast cancer.
     email: julien.boudreault@usherbrooke.ca
     name: 'Julien Boudreault, Ph.D. Candidate'
-    photo: /img/julien.jpg
+    photo: /img/38217166_10156647334633060_6161374737822908416_n-convertimage.gif
     position: grad
   - description: >-
       * **Education **: PhD in Organic Chemistry, University of Normandie,
