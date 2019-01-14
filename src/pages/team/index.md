@@ -45,7 +45,7 @@ members:
       inhibitors in breast cancer.
     email: julien.boudreault@usherbrooke.ca
     name: 'Julien Boudreault, Ph.D. Candidate'
-    photo: /img/38217166_10156647334633060_6161374737822908416_n-convertimage.gif
+    photo: /img/julien-1-.jpg
     position: grad
   - description: >-
       * **Education **: PhD in Organic Chemistry, University of Normandie,
@@ -62,7 +62,7 @@ members:
       therapy in TNBCs patients
     email: karine.pasturaud@mail.mcgill.ca
     name: 'Karine Pasturaud, Ph.D.'
-    photo: /img/kp1_9069_pasturaud-convertimage.jpg
+    photo: /img/karine.jpg
     position: postdoc
   - description: >-
       **Education : **PhD in Experimental Medicine, University of McGill,
