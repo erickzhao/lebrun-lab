@@ -161,6 +161,7 @@ collections:
                   - { label: "Visiting Student", value: "visiting" }
                   - { label: "Research Assistant", value: "assistant" }
                   - { label: "Undergraduate", value: "undergrad" }
+                  - { label: "Administration", value: "admin" }
               - label: "Photo"
                 name: "photo"
                 widget: "image"

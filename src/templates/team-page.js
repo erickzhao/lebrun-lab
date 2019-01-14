@@ -8,7 +8,8 @@ export default ({ data }) => {
     postdoc: "Post-Doctorate Fellows",
     grad: "Graduate Students",
     assistant: "Research Assistants",
-    undergrad: "Undergraduate Students"
+    undergrad: "Undergraduate Students",
+    admin: "Administration"
   };
   const { title, subtitle, headerImage, members } = data.markdownRemark.frontmatter;
   return (
