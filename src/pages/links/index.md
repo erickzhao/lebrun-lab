@@ -4,6 +4,14 @@ title: Resources
 subtitle: 'Research center, Research program, Services'
 headerImage: /img/dna-1811955_1280.jpg
 ---
+# Online databases
+
+# Tolls and Software
+
+# Cancer
+
+# Other links 
+
 # [RIMUHC](http://rimuhc.ca/)
 
 [Glen site](https://muhc.ca/glen/dashboard)
