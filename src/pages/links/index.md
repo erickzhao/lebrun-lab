@@ -6,7 +6,7 @@ headerImage: /img/dna-1811955_1280.jpg
 ---
 # Online databases
 
-# Tolls and Software
+# Tools and Software
 
 # Cancer
 
