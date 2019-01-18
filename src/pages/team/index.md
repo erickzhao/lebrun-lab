@@ -34,6 +34,7 @@ members:
       CRISPR/Cas technology.
     email: sophie.poulet@mail.mcgill.ca
     name: 'Sophie Poulet, Ph.D. Candidate'
+    photo: /img/photo-pour-site-web_sophie.jpg
     position: grad
   - description: >-
       **Education :** M.Sc. in Molecular Biology at the University of
