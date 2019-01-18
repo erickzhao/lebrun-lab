@@ -10,9 +10,9 @@ headerImage: /img/dna-1811955_1280.jpg
 
 # Cancer
 
-# Other links 
+# Other links
 
-# [RIMUHC](http://rimuhc.ca/)
+[RIMUHC](http://rimuhc.ca/)
 
 [Glen site](https://muhc.ca/glen/dashboard)
 
