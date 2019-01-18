@@ -31,3 +31,5 @@ We identified Dasatinib, a Src kinase family inhibitor, potently reduced BCSC se
 ![CIHR](/img/cihr.jpg)
 
 ![FRQS](/img/frqs.jpg)
+
+![CFI](/img/cfi.png)
