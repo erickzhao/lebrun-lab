@@ -12,7 +12,7 @@ headerImage: /img/analysis-2030266_1280.jpg
 
 **Bioinformatics:** Illumina 4000 Deep sequencing, RNASeq analysis, Pathway analysis, online database (ATCG,….)...
 
-**Pre-Clinical Models:** orthotopic mammary fat pad transplantation, pancreatic transplantation, subcutaneous injection, intraperitoneal injection (IP), intravenous injection (IV), tail vein injection, in vivoJet intratumoral drug delivery, primary tumor prep and analysis (breast, liver, pancreas, ovary, prostate, skin), metastatic tumor prep and analysis (lung, liver, kidney, bone), IHC, live fluorescent and luminescent bioimaging
+**Pre-Clinical Models:** orthotopic mammary fat pad transplantation, pancreatic transplantation, subcutaneous injection, intraperitoneal injection (IP), intravenous injection (IV), tail vein injection, in vivoJet intratumoral drug delivery, primary tumor preparation and analysis (breast, liver, pancreas, ovary, prostate, skin), metastatic tumor preparation and analysis (lung, liver, kidney, bone), IHC, live fluorescent and luminescent bioimaging
 
 **Drug Development:** small molecule inhibitor design and synthesis, combi-molecules, Computational inhibitor prediction and design...
 
