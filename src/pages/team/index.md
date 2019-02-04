@@ -88,14 +88,14 @@ members:
   - description: >-
       * **Education **: PhD.
 
-      * **Current research **:** **My research focuses on pre-clinic experiments
-      to investigate human cancerous processes and mechanisms by using
+      * **Current research **: My research focuses on pre-clinic experiments to
+      investigate human cancerous processes and mechanisms by using
       immunodeficient laboratory mouse models (breast cancer, pancreas cancer,
       lung and liver metastases, etc.) in order to explore and develop novel
       therapies for cancer treatment.
     email: ' ni.wang79@gmail.com'
     name: 'Ni Wang, Ph.D.'
-    photo: ''
+    photo: /img/image.png
     position: associate
   - description: >-
       **Education :** Graduate degree in experimental surgery, McGill
