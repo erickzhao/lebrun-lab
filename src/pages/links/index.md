@@ -38,6 +38,8 @@ headerImage: /img/dna-1811955_1280.jpg
 
 [GenePattern](http://software.broadinstitute.org/cancer/software/genepattern/)
 
+[MOE (Molecular operating environment) ](https://www.chemcomp.com/Products.htm)
+
 # Cancer
 
 [National Cancer Institute](https://www.cancer.gov/)
