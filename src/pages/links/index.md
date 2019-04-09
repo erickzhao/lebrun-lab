@@ -40,6 +40,10 @@ headerImage: /img/dna-1811955_1280.jpg
 
 # Cancer
 
+[National Cancer Institute](https://www.cancer.gov/)
+
+[Canadian Cancer Society](http://www.cancer.ca/en/?region=qc)
+
 # Other links
 
 [RIMUHC](http://rimuhc.ca/)
