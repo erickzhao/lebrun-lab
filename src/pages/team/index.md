@@ -101,7 +101,7 @@ members:
     email: veronica.atehortua@muhc.mcgill.ca
     name: Veronica Atehortua
     position: admin
-  - description: '**Education **: Diploma of Biotechnology, Algonquin College'
+  - description: '**Education **: Diploma of Biotechnology, Algonquin College, Canada'
     email: girija.daliah@muhc.mcgill.ca
     name: Girija Daliah
     position: assistant
@@ -109,5 +109,11 @@ members:
     name: Haleema Al-Mesmary
     photo: /img/halema.jpg
     position: grad
+  - description: >-
+      **Education **: MSc in Molecular Pathology and Toxicology, Leicester
+      University, UK
+    email: qzahraa590@gmail.com
+    name: Zahraa Qusairy
+    position: assistant
 ---
 
