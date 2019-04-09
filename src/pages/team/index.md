@@ -105,7 +105,21 @@ members:
     email: girija.daliah@muhc.mcgill.ca
     name: Girija Daliah
     position: assistant
-  - email: halmesmary@gmail.com
+  - description: >-
+      **Education** : Graduate degree in experimental surgery, McGill
+      university,  Montreal, Canada 
+
+
+      High diploma in medical laboratories, High institute of medical
+      technology, El-beyda, Libya.
+
+
+      **Current research** : TGF-beta1 mutation project, assessment of the
+      effect of TGF-beta1 in the intensified bone formation and muscles disorder
+      growth, translating current clinical data with the fundamental science in
+      order to highlight its rule in a comprehensive manner, and deliver new
+      therapeutic avenue.
+    email: halmesmary@gmail.com
     name: Haleema Al-Mesmary
     photo: /img/halema.jpg
     position: grad
