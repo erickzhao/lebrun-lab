@@ -97,24 +97,13 @@ members:
     name: 'Ni Wang, Ph.D.'
     photo: /img/image.png
     position: associate
-  - description: >-
-      **Education :** Graduate degree in experimental surgery, McGill
-      university,  Montreal, Canada. High diploma in medical laboratories, High
-      institute of medical technology, El-beyda, Libya.
-
-
-      **Current research** : TGF-beta1 mutation project, assessment of the
-      effect of TGF-beta1 in the intensified bone formation and muscles disorder
-      growth, translating current clinical data with the fundamental science in
-      order to highlight its rule in a comprehensive manner, and deliver new
-      therapeutic avenue.
-    email: '     halema.haiub@mail.mcgill.ca   halmesmary@gmail.com '
-    name: 'Halema Haiub, M.Sc. Candidate'
-    photo: /img/halema.jpg
-    position: grad
   - description: 'Program Assistant, Cancer Research Program (CRP)'
     email: veronica.atehortua@muhc.mcgill.ca
     name: Veronica Atehortua
     position: admin
+  - description: '**Education **: Diploma of Biotechnology, Algonquin College'
+    email: girija.daliah@muhc.mcgill.ca
+    name: Girija Daliah
+    position: assistant
 ---
 
