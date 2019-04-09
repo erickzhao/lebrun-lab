@@ -101,7 +101,7 @@ members:
     email: veronica.atehortua@muhc.mcgill.ca
     name: Veronica Atehortua
     position: admin
-  - description: '**Education **: Diploma of Biotechnology, Algonquin College, Canada'
+  - description: '**Education **: Diploma in Biotechnology, Algonquin College, Canada'
     email: girija.daliah@muhc.mcgill.ca
     name: Girija Daliah
     position: assistant
