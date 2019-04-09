@@ -105,7 +105,9 @@ members:
     email: girija.daliah@muhc.mcgill.ca
     name: Girija Daliah
     position: assistant
-  - name: Haleema
+  - email: halmesmary@gmail.com
+    name: Haleema Al-Mesmary
+    photo: /img/halema.jpg
     position: grad
 ---
 
