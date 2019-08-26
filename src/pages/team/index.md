@@ -34,6 +34,7 @@ members:
       CRISPR/Cas technology.
     email: sophie.poulet@mail.mcgill.ca
     name: 'Sophie Poulet, Ph.D. Candidate'
+    photo: /img/photo-pour-site-web_sophie.jpg
     position: grad
   - description: >-
       **Education :** M.Sc. in Molecular Biology at the University of
@@ -76,7 +77,7 @@ members:
     photo: /img/picture1.png
     position: associate
   - description: >2-
-       **Eudcation :** B.Sc. in Biochemistry and Molecular Biology, Northeast Agricultural University, China.
+       **Education :** B.Sc. in Biochemistry and Molecular Biology, Northeast Agricultural University, China.
 
       **Current research **: Utilizing genome-wide Crispr/Cas9 screen based on
       paclitaxel to identify key genetic mutations responsible for paclitaxel
@@ -87,23 +88,46 @@ members:
   - description: >-
       * **Education **: PhD.
 
-      * **Current research **:** **My research focuses on pre-clinic experiments
-      to investigate human cancerous processes and mechanisms by using
+      * **Current research **: My research focuses on pre-clinic experiments to
+      investigate human cancerous processes and mechanisms by using
       immunodeficient laboratory mouse models (breast cancer, pancreas cancer,
       lung and liver metastases, etc.) in order to explore and develop novel
       therapies for cancer treatment.
     email: ' ni.wang79@gmail.com'
     name: 'Ni Wang, Ph.D.'
-    photo: ''
+    photo: /img/image.png
     position: associate
-  - email: halmesmary@gmail.com
-    name: 'Haleema Al-Mesmary, M.Sc. Candidate'
-    position: grad
   - description: 'Program Assistant, Cancer Research Program (CRP)'
     email: veronica.atehortua@muhc.mcgill.ca
     name: Veronica Atehortua
-  - description: 'Program Assistant, Cancer Research Program (CRP)'
-    email: zehra.khoja@mail.mcgill.ca
-    name: Zehra Khoja
+    position: admin
+  - description: '**Education **: Diploma in Biotechnology, Algonquin College, Canada'
+    email: girija.daliah@muhc.mcgill.ca
+    name: Girija Daliah
+    position: assistant
+  - description: >-
+      **Education** : Graduate degree in experimental surgery, McGill
+      university,  Montreal, Canada 
+
+
+      High diploma in medical laboratories, High institute of medical
+      technology, El-beyda, Libya.
+
+
+      **Current research** : TGF-beta1 mutation project, assessment of the
+      effect of TGF-beta1 in the intensified bone formation and muscles disorder
+      growth, translating current clinical data with the fundamental science in
+      order to highlight its rule in a comprehensive manner, and deliver new
+      therapeutic avenue.
+    email: halmesmary@gmail.com
+    name: Haleema Al-Mesmary
+    photo: /img/halema.jpg
+    position: grad
+  - description: >-
+      **Education **: MSc in Molecular Pathology and Toxicology, Leicester
+      University, UK
+    email: qzahraa590@gmail.com
+    name: Zahraa Qusairy
+    position: assistant
 ---
 
