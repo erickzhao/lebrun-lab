@@ -5,7 +5,7 @@ import Team from "../components/Team";
 export default ({ data }) => {
   const positions = {
     associate: "Research Associates",
-    postdoc: "Post-Doctorate Fellows",
+    postdoc: "Post-Doctoral Fellows",
     grad: "Graduate Students",
     assistant: "Research Assistants",
     undergrad: "Undergraduate Students",
