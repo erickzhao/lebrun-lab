@@ -14,7 +14,10 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <p className="content has-text-centered">
+    <p className="has-text-centered">
+    For donations, please contact Dr. Lebrun at <a href="mailto:jj.lebrun@mcgill.ca">jj.lebrun@mcgill.ca</a>. Thank you for your support.
+    </p>
+    <p className="has-text-centered">
       Copyright © 2018 Lebrun Lab. All rights reserved.
     </p>
   </footer>
