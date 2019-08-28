@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import Header from "../components/Header";
 import Map from "../components/Map";
 
@@ -7,7 +8,8 @@ export const ContactPageTemplate = ({
   subtitle,
   headerImage,
   address,
-  contact
+  contact,
+  directions
 }) => {
   const stringAddress=`${address.line1}, ${address.line2}, ${address.city}, ${address.province} ${address.postalCode}`;
   return (
@@ -36,7 +38,12 @@ export const ContactPageTemplate = ({
         </div>
       </section>
       <section className="section container">
+        <h2 className="subtitle">Map</h2>
         <Map address={stringAddress}/>
+      </section>
+      <section className="section container">
+        <h2 className="subtitle">Directions</h2>
+        <ReactMarkdown className="content" source={directions}/>
       </section>
     </div>
   );
@@ -44,8 +51,7 @@ export const ContactPageTemplate = ({
 
 export default ({ data }) => {
   const { contact: post } = data;
-  const {title, subtitle, address, headerImage, contact} = post.frontmatter;
-
+  const {title, subtitle, address, headerImage, contact, directions} = post.frontmatter;
   return (
     <ContactPageTemplate
       title={title}
@@ -53,6 +59,7 @@ export default ({ data }) => {
       address={address}
       headerImage={headerImage}
       contact={contact}
+      directions={directions}
     />
   );
 };
@@ -65,6 +72,7 @@ export const contactPageQuery = graphql`
         title
         subtitle
         headerImage
+        directions
         address {
           line1
           line2

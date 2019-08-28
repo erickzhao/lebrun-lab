@@ -267,6 +267,7 @@ collections:
                   },
                 ],
             }
+          - { label: "Directions", name: "directions", widget: "markdown" }
       - file: "src/pages/links/index.md"
         label: "Links"
         name: "links"
