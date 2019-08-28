@@ -14,5 +14,6 @@ address:
   line2: 1001 Boulevard Decarie
   postalCode: H4A 3J1
   province: Quebec
+directions: Testing Testing
 ---
 
