@@ -44,18 +44,21 @@ const Navbar = () => (
                 <Link to="/research">Projects</Link>
               </div>
               <div className="navbar-item">
+                <Link to="/publications">Publications</Link>
+              </div>
+              <div className="navbar-item">
                 <Link to="/protocol">Protocol</Link>
               </div>
             </div>
-          </div>
-          <div className="navbar-item">
-            <Link to="/publications"><i className="fas fa-book navbar-icon"></i>Publications</Link>
           </div>
           <div className="navbar-item">
             <Link to="/news"><i className="fas fa-newspaper navbar-icon"></i>News</Link>
           </div>
           <div className="navbar-item">
             <Link to="/contact"><i className="fas fa-globe navbar-icon"></i>Contact</Link>
+          </div>
+          <div className="navbar-item">
+            <Link to="/donate"><i className="fas fa-dollar-sign navbar-icon"></i>Donate</Link>
           </div>
           <div className="navbar-item">
             <Link to="/links"><i className="fas fa-external-link-alt navbar-icon"></i>Links</Link>
