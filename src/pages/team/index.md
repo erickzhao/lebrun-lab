@@ -129,5 +129,7 @@ members:
     email: qzahraa590@gmail.com
     name: Zahraa Qusairy
     position: assistant
+  - name: Vivian Wang
+    position: masters
 ---
 
