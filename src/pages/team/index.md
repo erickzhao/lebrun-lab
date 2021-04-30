@@ -15,16 +15,6 @@ members:
     photo: /img/capture.png
     position: postdoc
   - description: >-
-      * **Education :** M.Sc. in Biochemistry and Molecular Biology, University
-      of Calgary, Canada.
-
-      * **Current research :** Investigating the TGF-beta mediated tumor
-      suppressive effects in human cutaneous melanoma.
-    email: mostafa.ghozlan@mail.mcgill.ca
-    name: 'Mostafa Ghozlan, Ph.D. candidate'
-    photo: /img/image1.jpeg
-    position: grad
-  - description: >-
       * **Education **: B.Sc. in Biopharmaceutical Sciences, Université de
       Montréal.
 
@@ -48,23 +38,6 @@ members:
     name: 'Julien Boudreault, Ph.D. Candidate'
     photo: /img/julien.jpg
     position: grad
-  - description: >-
-      * **Education **: PhD in Organic Chemistry, University of Normandie,
-      France.
-
-      * **Current research :** Triple negative breast cancer is the most
-      aggressive breast cancer subtype. While targeted therapies exist for the
-      hormone receptor-positive breast cancer subtypes, there are no approved
-      targeted treatments for TNBC. Following surgery, chemotherapy and
-      radiotherapy remain the only options for treatment of TNBC. My project
-      aims at developing novel potent CDK4 inhibitory compounds that can
-      effectively target and eliminate CSCs likely to be therapeutically
-      beneficial and may provide rationale for using a new type of targeted
-      therapy in TNBCs patients
-    email: karine.pasturaud@mail.mcgill.ca
-    name: 'Karine Pasturaud, Ph.D.'
-    photo: /img/karine.jpg
-    position: postdoc
   - description: >-
       **Education : **PhD in Experimental Medicine, University of McGill,
       Canada.
@@ -105,31 +78,21 @@ members:
     email: girija.daliah@muhc.mcgill.ca
     name: Girija Daliah
     position: assistant
-  - description: >-
-      **Education** : Graduate degree in experimental surgery, McGill
-      university,  Montreal, Canada 
-
-
-      High diploma in medical laboratories, High institute of medical
-      technology, El-beyda, Libya.
-
-
-      **Current research** : TGF-beta1 mutation project, assessment of the
-      effect of TGF-beta1 in the intensified bone formation and muscles disorder
-      growth, translating current clinical data with the fundamental science in
-      order to highlight its rule in a comprehensive manner, and deliver new
-      therapeutic avenue.
-    email: halmesmary@gmail.com
-    name: Haleema Al-Mesmary
-    photo: /img/halema.jpg
-    position: grad
-  - description: >-
-      **Education **: MSc in Molecular Pathology and Toxicology, Leicester
-      University, UK
-    email: qzahraa590@gmail.com
-    name: Zahraa Qusairy
-    position: assistant
   - name: Vivian Wang
     position: masters
+  - description: >-
+      Defining the role of CDK6 and DNA repair pathways in tumorigenesis and
+      identify CDK4/6-dependent synthetic lethal vulnerabilities in triple
+      negative breast cancer.
+    email: yi-ching.tsai2@mail.mcgill.ca
+    name: Yi-Ching Tsai
+    position: masters
+  - description: >-
+      PhD project proposal:  The role of Dual-specificity tyrosine
+      phosphorylation-regulated kinase 1A (DYRK1A) in DNA homologous
+      recombination repair and response of cancer cells to chemotherapy
+    email: amina.laham@mail.mcgill.ca
+    name: Amina Laham
+    position: grad
 ---
 
