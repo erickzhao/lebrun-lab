@@ -98,5 +98,11 @@ members:
     email: yunwang30@foxmail.com
     name: Dr Yun Wang
     position: postdoc
+  - description: microRNAs as therapeutic targets for breast cancer
+    email: zenan.jiao@mail.mcgill.ca
+    name: Jessica Jiao
+    position: summer
+  - name: Ting Ye
+    position: postdoc
 ---
 
