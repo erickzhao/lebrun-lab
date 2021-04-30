@@ -13,7 +13,7 @@ headerImage: /img/logo.jpg
   Nadêge Fils-Aimé, PhD student, Experimental Medicine, McGill University (2013-2019)
 * 
   Jun Tian, PhD student, Experimental Medicine, McGill University (2013-)
-  Recipient of a Graduate Studies International Fellowship Award (2014-2018).
+  
 * Chenjing Zhang, PhD exchange, Zhejiang University, China (2014-2016)
 * Weimeng Ding, PhD student, Polytechnique school, Univ Montreal (2011-2016)
 * Jimin Guo, PhD student, Experimental Medicine, McGill University (2008-2014)
