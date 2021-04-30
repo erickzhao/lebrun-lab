@@ -94,5 +94,9 @@ members:
     email: amina.laham@mail.mcgill.ca
     name: Amina Laham
     position: grad
+  - description: Studying synthetic lethality's in triple negative breast cancer
+    email: yunwang30@foxmail.com
+    name: Dr Yun Wang
+    position: postdoc
 ---
 
