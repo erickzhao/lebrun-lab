@@ -1,14 +1,14 @@
 ---
 templateKey: publications-page
 title: Publications
-subtitle: Selected recent publications
+subtitle: Selected recent publications Lebrun Lab
 headerImage: /img/dna-1811955_1280.jpg
 ---
 ## Pubmed link:
 
 https://pubmed-ncbi-nlm-nih-gov.proxy3.library.mcgill.ca/?term=lebrun+jj
 
-## Recent selected publications:
+## Recent publications:
 
 * Dai M, Yan G, Wang N, Daliah G, Edick A, Poulet S, Boudreault J, Ali S, Burgos S, Lebrun JJ. (2021) In vivo Genome-Wide CRISPR Screen Reveals Breast Cancer Vulnerabilities and synergistic mTOR/Hippo Targeted Combination Therapy. Nature Communications (Accepted, March 2021)
 * Yan G, Dai M, Zhang C, Poulet S, Moamer A, Wang N, Boudreault J, Ali S, Lebrun JJ. (2021) TGFβ/Cyclin D1/Smad-mediated inhibition of BMP4 promotes breast cancer stem cell self-renewal activity. Oncogenesis 2021 Mar 1;10(3):21. doi: 10.1038/s41389-021-00310-5
