@@ -102,7 +102,7 @@ members:
     email: zenan.jiao@mail.mcgill.ca
     name: Jessica Jiao
     position: summer
-  - name: Ting Ye
+  - name: Dr Ting Ye
     position: postdoc
 ---
 
