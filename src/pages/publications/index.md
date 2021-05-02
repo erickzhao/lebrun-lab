@@ -10,7 +10,7 @@ https://pubmed-ncbi-nlm-nih-gov.proxy3.library.mcgill.ca/?term=lebrun+jj
 
 ## Recent publications:
 
-* Dai M, Yan G, Wang N, Daliah G, Edick A, Poulet S, Boudreault J, Ali S, Burgos S, Lebrun JJ. (2021) In vivo Genome-Wide CRISPR Screen Reveals Breast Cancer Vulnerabilities and synergistic mTOR/Hippo Targeted Combination Therapy. Nature Communications (Accepted, March 2021)
+* 
 * Yan G, Dai M, Zhang C, Poulet S, Moamer A, Wang N, Boudreault J, Ali S, Lebrun JJ. (2021) TGFβ/Cyclin D1/Smad-mediated inhibition of BMP4 promotes breast cancer stem cell self-renewal activity. Oncogenesis 2021 Mar 1;10(3):21. doi: 10.1038/s41389-021-00310-5
 * Tian J, Wang V, Wang N, Khadang B, Bakdounes K, Ali S, Lebrun JJ. (2021) Identification of MFGE8 and KLK5/7 as mediators of breast tumorigenesis and resistance to COX-2 inhibition. Breast Cancer Research 2021 Feb 15;23(1):23. doi: 10.1186/s13058-021-01401-2.
 * Shams A, Binothman N, Boudreault J, Wang N, Shams F, Hamam D, Tian J, Moamer A, Dai M, Lebrun JJ, Ali S. (2021). Prolactin receptor-driven combined luminal and epithelial differentiation in breast cancer restricts plasticity, stemness, tumorigenesis and metastasis. Oncogenesis 2021 Jan 14;10(1):10. doi: 10.1038/s41389-020-00297-5.PMID: 33446633.
@@ -18,11 +18,8 @@ https://pubmed-ncbi-nlm-nih-gov.proxy3.library.mcgill.ca/?term=lebrun+jj
 * Hachim IY, López-Ozuna VM, Hachim MY, Lebrun JJ, Ali S (2019) Prolactin Hormone Exerts Anti-Tumorigenic Effects in HER-2 Overexpressing Breast Cancer Cells through Regulation of Stemness Stem Cell Res. 2019 Aug 18;40:101538.
   doi: 10.1016/j.scr.2019.101538. PMID: 31450192
 * López-Ozuna VM, Hachim I, Hachim M, Lebrun JJ, Ali S. (2019) Prolactin modulates TNBC aggressive phenotype limiting tumorigenesis. Endocrine-Related Cancer 26:3, pp321-327. PMID: 30640712.
-* 
-  
-  Moamer A, Hachim IY, Binothman N,  Wang N, Lebrun JJ, Ali S. (2019) A role for kinesin-1 subunits KIF5B/KLC1 in regulating epithelial mesenchymal plasticity in breast tumorigenesis. EBioMedicine 2019 Jul;45:92-107. doi: 10.1016/j.ebiom.2019.06.009. 
+* Moamer A, Hachim IY, Binothman N,  Wang N, Lebrun JJ, Ali S. (2019) A role for kinesin-1 subunits KIF5B/KLC1 in regulating epithelial mesenchymal plasticity in breast tumorigenesis. EBioMedicine 2019 Jul;45:92-107. doi: 10.1016/j.ebiom.2019.06.009. 
   Epub 2019 Jun 14. PMID: 31204277.
-  
 * [Dasatinib sensitises triple negative breast cancer cells to chemotherapy by targeting breast cancer stem cells.](https://www.ncbi.nlm.nih.gov/pubmed/30482914) Br J Cancer. Tian J, Raffa FA, Dai M, Moamer A, Khadang B, Hachim IY, Bakdounes K, Ali S, Jean-Claude B, Lebrun JJ. doi: 10.1038/s41416-018-0287-3
 * [Differential expression of TGFβ isoforms in breast cancer highlights different roles during breast cancer progression.](https://www.ncbi.nlm.nih.gov/pubmed/29320969) Hachim MY, Hachim IY, Dai M, Ali S, Lebrun JJ. Tumour Biol. 2018 Jan;40(1):1010428317748254. doi: 10.1177/1010428317748254
 * [KiSS1 gene as a novel mediator of TGFβ-mediated cell invasion in triple negative breast cancer](https://www.ncbi.nlm.nih.gov/pubmed/?term=KiSS1+gene+as+a+novel+mediator+of+TGF%CE%B2-mediated+cell+invasion+in+triple+negative+breast+cancer.).
@@ -49,15 +46,9 @@ https://pubmed-ncbi-nlm-nih-gov.proxy3.library.mcgill.ca/?term=lebrun+jj
 * [MicroRNA-584 and the protein phosphatase and actin regulator 1 (PHACTR1), a new signaling route through which transforming growth factor-β Mediates the migration and actin dynamics of breast cancer cells](https://www.ncbi.nlm.nih.gov/pubmed/23479725). Fils-Aimé N, Dai M, Guo J, El-Mousawi M, Kahramangil B, Neel JC, Lebrun JJ. J Biol Chem. 2013 Apr 26;288(17):11807-23. doi: 10.1074/jbc.M112.430934. Epub 2013 Mar 11.
 * [TGF-beta inhibits human cutaneous melanoma cell migration and invasion through regulation of the plasminogen activator system.](https://www.ncbi.nlm.nih.gov/pubmed/23085456) Humbert L, Lebrun JJ. Cell Signal. 2013 Feb;25(2):490-500. doi: 10.1016/j.cellsig.2012.10.011. Epub 2012 Oct 23.
 * Baumgart J., Humbert L, Winnick F, Lebrun JJ, Meunier M (2012) Femtosecond laser induced plasmonic enhanced optoporation and transfection of melanoma cells. Biomaterials Mar;33(7):2345-50. IF 7.9.
-* 
-  
-  Dai M, AlOdaini A, Arakelian A, Rabbani S, Ali S, Lebrun JJ (2012) A novel function for p21 as a critical regulator of TGFß mediated breast cancer metastasis. Breast Cancer Res, 2012 Sep 20;14(5): R127. \[Epub ahead of print]). Cited as highly accessed paper in biomed central
-* 
-  
-  Ma CI, Martin C, Ma Z, Lebrun JJ, Kiss RS (2012). The engulfment protein GULP is a regulator of transforming growth factor-beta response J Biol Chem, Jun 8;287(24):20636-51.
-* 
-  
-  Korah J, Falah N, Lacerte A, Lebrun JJ (2012). A transcriptionally active pRb-E2F1-P/CAF signaling pathway is central to TGFβ-mediated apoptosis, Cell Death and Disease, Nature Publishing Group, Vol 3. Pp 407
+* Dai M, AlOdaini A, Arakelian A, Rabbani S, Ali S, Lebrun JJ (2012) A novel function for p21 as a critical regulator of TGFß mediated breast cancer metastasis. Breast Cancer Res, 2012 Sep 20;14(5): R127. \[Epub ahead of print]). Cited as highly accessed paper in biomed central
+* Ma CI, Martin C, Ma Z, Lebrun JJ, Kiss RS (2012). The engulfment protein GULP is a regulator of transforming growth factor-beta response J Biol Chem, Jun 8;287(24):20636-51.
+* Korah J, Falah N, Lacerte A, Lebrun JJ (2012). A transcriptionally active pRb-E2F1-P/CAF signaling pathway is central to TGFβ-mediated apoptosis, Cell Death and Disease, Nature Publishing Group, Vol 3. Pp 407
 * Cocolakis E, Dai M, Drevet L, Ho J, Haynes E, Ali S, Lebrun JJ (2008) Smad signaling antagonizes Stat5-mediated cell growth and differentiation of mammary epithelial cells. (J. Biol Chem, 18;283(3):1293-307.
 * Ho J, Cocolakis E, Dumas V, Posner B, Laporte SA, Lebrun JJ (2005) The G protein-coupled receptor kinase-2 is a TGF-inducible antagonist of TGF signal transduction. EMBO J 24(18):3247-58.
 * Valderrama H, Cocolakis E, Lacerte A, Lee E-H, Krystal G, Ali S, Lebrun JJ. (2002) Activin/TGFβ induce apoptosis through Smad-dependent expression of the lipid phosphatase SHIP. Nature Cell Biology 4 (12):963-9.
