@@ -85,14 +85,14 @@ members:
       identify CDK4/6-dependent synthetic lethal vulnerabilities in triple
       negative breast cancer.
     email: yi-ching.tsai2@mail.mcgill.ca
-    name: Yi-Ching Tsai
-    position: masters
+    name: 'Yi-Ching Tsai, MSc candidate'
+    position: grad
   - description: >-
       PhD project proposal:  The role of Dual-specificity tyrosine
       phosphorylation-regulated kinase 1A (DYRK1A) in DNA homologous
       recombination repair and response of cancer cells to chemotherapy
     email: amina.laham@mail.mcgill.ca
-    name: Amina Laham
+    name: 'Amina Laham, PhD candidate'
     position: grad
   - description: Studying synthetic lethality's in triple negative breast cancer
     email: yunwang30@foxmail.com
