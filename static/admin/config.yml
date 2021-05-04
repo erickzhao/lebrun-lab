@@ -143,7 +143,7 @@ collections:
                   - { label: "Graduate Student", value: "grad" }
                   - { label: "Masters Student", value: "masters" }
                   - { label: "Summer Student", value: "summer" }
-                  - { label: "Visiting Student", value: "visiting" }
+                  - { label: "Visiting Scientist", value: "visiting" }
                   - { label: "Research Assistant", value: "assistant" }
                   - { label: "Undergraduate", value: "undergrad" }
                   - { label: "Administration", value: "admin" }
