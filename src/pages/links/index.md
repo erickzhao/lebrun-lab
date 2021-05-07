@@ -6,6 +6,8 @@ headerImage: /img/dna-1811955_1280.jpg
 ---
 # McGill/MUHC
 
+McGill University
+
 [RIMUHC](http://rimuhc.ca/)
 
 [Glen site](https://muhc.ca/glen/dashboard)
@@ -16,15 +18,11 @@ headerImage: /img/dna-1811955_1280.jpg
 
 [McGill University](https://www.mcgill.ca/)
 
-
-
 # Cancer
 
 [National Cancer Institute](https://www.cancer.gov/)
 
 [Canadian Cancer Society](http://www.cancer.ca/en/?region=qc)
-
-
 
 # Drug Development
 
@@ -37,8 +35,6 @@ MOE (Molecular operating environment)
 https://drugcentral.org/
 
 https://pharos.nih.gov/targets
-
-
 
 # Online databases
 
@@ -58,8 +54,6 @@ https://pharos.nih.gov/targets
 
 [TarBase](http://www.microrna.gr/tarbase)
 
-
-
 # Bioinformatics - Patient Datasets
 
 [GSEA](http://software.broadinstitute.org/gsea/index.jsp)
@@ -77,8 +71,6 @@ https://pharos.nih.gov/targets
 [Enrichr](http://amp.pharm.mssm.edu/Enrichr/)
 
 [GenePattern](http://software.broadinstitute.org/cancer/software/genepattern/)
-
-
 
 # miRNAs
 
