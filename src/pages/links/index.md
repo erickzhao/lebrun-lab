@@ -32,6 +32,8 @@ McGill University
 
 MOE (Molecular operating environment)
 
+Drug Central
+
 https://drugcentral.org/
 
 https://pharos.nih.gov/targets
