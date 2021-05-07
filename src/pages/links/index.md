@@ -1,7 +1,7 @@
 ---
 templateKey: links-page
 title: Resources
-subtitle: 'Research center, Research program, Services'
+subtitle: 'University resources, Online tools and datasets, Services'
 headerImage: /img/dna-1811955_1280.jpg
 ---
 # McGill/MUHC
