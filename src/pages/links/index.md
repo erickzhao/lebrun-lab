@@ -60,7 +60,7 @@ https://pharos.nih.gov/targets
 
 
 
-# Tools and Software
+# Bioinformatics - Patient Datasets
 
 [GSEA](http://software.broadinstitute.org/gsea/index.jsp)
 
@@ -80,12 +80,12 @@ https://pharos.nih.gov/targets
 
 
 
+# miRNAs
+
 [mirPath](< http://snf-515788.vm.okeanos.grnet.gr/>)
 
 [TargetScan](< http://www.targetscan.org/vert_72/>)
 
 [miRNet](https://www.mirnet.ca/faces/home.xhtml)
-
-# 
 
 #
