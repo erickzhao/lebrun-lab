@@ -32,7 +32,7 @@ MOE (Molecular operating environment) - https://www.chemcomp.com/Products.htm
 
 Drug Central - https://drugcentral.org/
 
-https://pharos.nih.gov/targets
+Pharos - https://pharos.nih.gov/targets
 
 # Online databases
 
