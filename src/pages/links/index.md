@@ -16,6 +16,30 @@ headerImage: /img/dna-1811955_1280.jpg
 
 [McGill University](https://www.mcgill.ca/)
 
+
+
+# Cancer
+
+[National Cancer Institute](https://www.cancer.gov/)
+
+[Canadian Cancer Society](http://www.cancer.ca/en/?region=qc)
+
+
+
+# Drug Development
+
+[Drug Discovery Platform](http://rimuhc.ca/drug-discovery)
+
+[Drug discovery Services](http://rimuhc.ca/drug-discovery-services)
+
+MOE (Molecular operating environment)
+
+https://drugcentral.org/
+
+https://pharos.nih.gov/targets
+
+
+
 # Online databases
 
 [KEGG](https://www.genome.jp/kegg/)
@@ -33,18 +57,6 @@ headerImage: /img/dna-1811955_1280.jpg
 [BioGRID](https://thebiogrid.org/)
 
 [TarBase](http://www.microrna.gr/tarbase)
-
-
-
-# Drug Development
-
-[Drug Discovery Platform](http://rimuhc.ca/drug-discovery)
-
-[Drug discovery Services](http://rimuhc.ca/drug-discovery-services)
-
-https://drugcentral.org/
-
-https://pharos.nih.gov/targets
 
 
 
@@ -66,7 +78,7 @@ https://pharos.nih.gov/targets
 
 [GenePattern](http://software.broadinstitute.org/cancer/software/genepattern/)
 
-[MOE (Molecular operating environment) ](https://www.chemcomp.com/Products.htm)
+
 
 [mirPath](< http://snf-515788.vm.okeanos.grnet.gr/>)
 
@@ -74,10 +86,6 @@ https://pharos.nih.gov/targets
 
 [miRNet](https://www.mirnet.ca/faces/home.xhtml)
 
-# Cancer
-
-[National Cancer Institute](https://www.cancer.gov/)
-
-[Canadian Cancer Society](http://www.cancer.ca/en/?region=qc)
+# 
 
 #
