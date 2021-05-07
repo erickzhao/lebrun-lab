@@ -28,11 +28,9 @@ headerImage: /img/dna-1811955_1280.jpg
 
 [Drug discovery Services](http://rimuhc.ca/drug-discovery-services)
 
-MOE (Molecular operating environment)
+MOE (Molecular operating environment) - https://www.chemcomp.com/Products.htm
 
-Drug Central
-
-https://drugcentral.org/
+Drug Central - https://drugcentral.org/
 
 https://pharos.nih.gov/targets
 
