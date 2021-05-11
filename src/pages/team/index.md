@@ -57,6 +57,7 @@ members:
       resistance in triple negative breast cancer.
     email: ' gang.yan@mail.mcgill.ca '
     name: 'Gang Yan, Ph.D. candidate'
+    photo: /img/20210511_100120.jpg
     position: grad
   - description: >-
       * **Education **: PhD.
