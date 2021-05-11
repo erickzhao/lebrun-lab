@@ -78,6 +78,7 @@ members:
   - description: '**Education **: Diploma in Biotechnology, Algonquin College, Canada'
     email: girija.daliah@muhc.mcgill.ca
     name: Girija Daliah
+    photo: /img/screenshot-42-.png
     position: assistant
   - name: Vivian Wang
     position: masters
