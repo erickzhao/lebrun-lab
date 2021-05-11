@@ -95,6 +95,7 @@ members:
       recombination repair and response of cancer cells to chemotherapy
     email: amina.laham@mail.mcgill.ca
     name: 'Amina Laham, PhD candidate'
+    photo: /img/amina-may-2021.png
     position: grad
   - description: Studying synthetic lethality's in triple negative breast cancer
     email: yunwang30@foxmail.com
