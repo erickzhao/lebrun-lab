@@ -88,6 +88,7 @@ members:
       negative breast cancer.
     email: yi-ching.tsai2@mail.mcgill.ca
     name: 'Yi-Ching Tsai, MSc candidate'
+    photo: /img/yi-ching.png
     position: grad
   - description: >-
       PhD project proposal:  The role of Dual-specificity tyrosine
