@@ -8,7 +8,7 @@ tags:
     therapies
 headerImage: /img/dai-lebrun.jpg
 files:
-  - {}
+  - file: /img/dai-2021-cancer-res.pdf
 ---
 We found that cyclin-dependent kinases CDK4/6 drives breast cancer stem cell (CSC) self -renewal activities and showed that their pharmacological inhibition efficiently eliminates CSCs. We further uncovered new use/repurposing for FDA approved drugs (palbociclib, celecoxib) in the treatment of metastatic cancer by targeting and eliminating self-renewing CSCs21 and by re-sensitizing (dasatinib) resistant cancer cells to chemotherapy. These studies also led to the development of a new dual targeting kinase inhibitor lead compound (USPTO patent filing EFS ID 40804961; Application Number 17066824; Title: Single molecules having mixed CDK4/6, PLK1 targeting properties. Filling date: Oct 9, 2020). 
 
