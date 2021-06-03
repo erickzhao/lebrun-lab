@@ -1,6 +1,6 @@
 ---
 templateKey: protocol-page
-title: Laboratory Protocol
+title: Laboratory Protocols
 subtitle: Research/laboratory platforms and technical expertise
 headerImage: /img/analysis-2030266_1280.jpg
 ---
