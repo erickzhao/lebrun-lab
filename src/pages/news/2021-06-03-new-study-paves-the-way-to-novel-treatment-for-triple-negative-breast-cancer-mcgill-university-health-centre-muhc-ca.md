@@ -7,9 +7,6 @@ date: '2021-06-02T10:42:44-04:00'
 description: >-
   A team of researchers at the RI-MUHC found two cellular pathways involved in
   TNBC tumor development and a promising targeted combination therapy
-
-
-  https://muhc.ca/news-and-patient-stories/releases/new-study-paves-way-novel-treatment-triple-negative-breast-cancer
 ---
 **Montreal, June 2, 2021** –Breast cancer is the leading cause of cancer death in women around the world, responsible for 1,700 deaths every day. Although the vast majority of breast cancers are treatable, the most aggressive subtype – triple negative breast cancer (TNBC) – has a high recurrence rate, a high potential for metastasis and shows resistance to conventional treatments, leading to very poor prognosis and survival outcomes. A team of researchers at the Research Institute of the McGill University Health Centre (RI-MUHC) conducted a preclinical study and discovered a novel targeted combination therapy that efficiently reduced tumour growth in metastatic breast cancer. Published in Nature Communications, their findings could lead to the development of a novel first line targeted therapy for the treatment of TNBC, with the prospect of rapidly transitioning to clinical trials in humans.
 
