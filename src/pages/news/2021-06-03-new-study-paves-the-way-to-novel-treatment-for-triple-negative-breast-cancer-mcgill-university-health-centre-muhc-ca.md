@@ -2,7 +2,7 @@
 templateKey: news-post
 title: >-
   New study paves the way to novel treatment for Triple Negative Breast Cancer |
-  McGill University Health Centre (muhc.ca)
+  McGill University Health Centre
 date: '2021-06-02T10:42:44-04:00'
 description: >-
   A team of researchers at the RI-MUHC found two cellular pathways involved in
