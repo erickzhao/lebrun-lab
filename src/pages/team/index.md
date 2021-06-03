@@ -2,7 +2,7 @@
 templateKey: team-page
 title: Lab Members
 subtitle: Current team
-headerImage: /img/new panoramic glen-blue-sky - low res.jpg
+headerImage: /img/logo.jpg
 members:
   - description: >-
       **Education:** Ph.D. in Experimental Medicine, McGill University
