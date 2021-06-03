@@ -47,7 +47,7 @@ members:
       for new cancer drug target discovery and biomarkers of drug resistance.
     email: meiou.dai@mail.mcgill.ca
     name: 'Meiou Dai, Ph.D.'
-    photo: /img/picture1.png
+    photo: /img/photo-3.png
     position: associate
   - description: >2-
        **Education :** B.Sc. in Biochemistry and Molecular Biology, Northeast Agricultural University, China.
