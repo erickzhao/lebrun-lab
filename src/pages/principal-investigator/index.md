@@ -5,7 +5,7 @@ subtitle: >-
   Professor of Medicine | McGill University Health Center | Cancer Research
   Program | Molecular and Translational Oncology 
 headerImage: /img/photo-1.png
-headshot: /img/photo-1.png
+headshot: /img/dna-1811955_1280.jpg
 ---
 Dr. Jean-Jacques Lebrun is a Full Professor of Medicine at McGill University and a member of the Cancer Research Program, Molecular and Translational Oncology Group at the McGill University Health Center in Montreal, Canada. Dr Lebrun multiple expertise’s lie in the fields of cancer research, molecular and cellular biology and signal transduction.
 
