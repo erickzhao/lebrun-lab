@@ -1,11 +1,14 @@
 ---
 templateKey: research-post
-title: Genome CRISPR/Cas loss-of-function screen
-subtitle: Genetic Identification
+title: Lebrun Lab "Crisperized Medicine" Research Program
+subtitle: Genome wide CRIPSR screens
 tags:
+  - Personalized Medicine
   - CRISPR/Cas9
-  - Genes
-  - Tumor development
+  - Cancer vulnerabilities
+  - Cancer treatment
+  - Drug resistance
+  - Precision Oncology
 headerImage: /img/dai-lebrun.jpg
 files: []
 ---
