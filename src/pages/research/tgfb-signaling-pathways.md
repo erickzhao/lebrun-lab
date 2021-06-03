@@ -8,6 +8,12 @@ headerImage: /img/article3.png
 files:
   - file: /img/news-reports-2-.pdf
     name: 'Article : A difficult duality'
+  - file: /img/yan-2021.pdf
+    name: >-
+      TGFβ/cyclin D1/Smad-mediated inhibition of BMP4 promotes breast cancer
+      stem cell self-renewal activity
+  - file: /img/lebrun-2012-rasterized.pdf
+    name: TGFβ Dual Role in Cancer - Review
 ---
 The overarching goal of our research program going forward is to elucidate the mechanisms underlying tumorigenesis, metastasis and drug resistance with the goal of developing novel targeted therapies, vital to achieve rationalized and personalized management for cancer patients. 
 
