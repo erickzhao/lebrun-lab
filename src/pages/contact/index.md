@@ -2,7 +2,7 @@
 templateKey: contact-page
 title: Contact Us
 subtitle: 'Lebrun lab, RI-MUHC'
-headerImage: /img/logo.jpg
+headerImage: /img/new panoramic glen-blue-sky - low res.jpg
 contact:
   email: jj (Dot) lebrun (At) mcgill (Dot) ca
   name: 'Jean-Jacques Lebrun, PhD'
@@ -10,7 +10,7 @@ contact:
   position: 'Professor of Medicine, McGill University Health Center'
 address:
   city: Montreal
-  line1: McGill University Health Centre
+  line1: 'McGill University Health Centre, Cancer Research Program'
   line2: 1001 Boulevard Decarie
   postalCode: H4A 3J1
   province: Quebec
