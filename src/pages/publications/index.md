@@ -10,11 +10,11 @@ https://pubmed-ncbi-nlm-nih-gov.proxy3.library.mcgill.ca/?term=lebrun+jj
 
 ## Recent publications:
 
-* 
+* Dai M, Yan G, Wang N, Daliah G, Edick A, Poulet S, Boudreault J, Ali S, Burgos S, Lebrun JJ. (2021) In vivo Genome-Wide CRISPR Screen Reveals Breast Cancer Vulnerabilities and synergistic mTOR/Hippo Targeted Combination Therapy. Nature Communications 12, Article number: 3055,  published May 24, 2021).
 * Yan G, Dai M, Zhang C, Poulet S, Moamer A, Wang N, Boudreault J, Ali S, Lebrun JJ. (2021) TGFβ/Cyclin D1/Smad-mediated inhibition of BMP4 promotes breast cancer stem cell self-renewal activity. Oncogenesis 2021 Mar 1;10(3):21. doi: 10.1038/s41389-021-00310-5
 * Tian J, Wang V, Wang N, Khadang B, Bakdounes K, Ali S, Lebrun JJ. (2021) Identification of MFGE8 and KLK5/7 as mediators of breast tumorigenesis and resistance to COX-2 inhibition. Breast Cancer Research 2021 Feb 15;23(1):23. doi: 10.1186/s13058-021-01401-2.
 * Shams A, Binothman N, Boudreault J, Wang N, Shams F, Hamam D, Tian J, Moamer A, Dai M, Lebrun JJ, Ali S. (2021). Prolactin receptor-driven combined luminal and epithelial differentiation in breast cancer restricts plasticity, stemness, tumorigenesis and metastasis. Oncogenesis 2021 Jan 14;10(1):10. doi: 10.1038/s41389-020-00297-5.PMID: 33446633.
-* Dai M, Boudreault J, Wang N, Poulet S, Daliah G, Yan G, Moamer A, Burgos S, Sabri S, Ali S, Lebrun JJ. (2020) Differential regulation of cancer progression by CDK4/6 plays a central role in DNA replication and repair pathways. Cancer Res 2020 Dec 28: canres.2121.2020. doi: 10.1158/0008-5472.CAN-20-2121. Online ahead of print.PMID: 33372040.
+* Dai M, Boudreault J, Wang N, Poulet S, Daliah G, Yan G, Moamer A, Burgos S, Sabri S, Ali S, Lebrun JJ. (2021) Differential regulation of cancer progression by CDK4/6 plays a central role in DNA replication and repair pathways. Cancer Res 2020 Dec 28: canres.2121.2020. doi: 10.1158/0008-5472.CAN-20-2121. Online ahead of print.PMID: 33372040.
 * Hachim IY, López-Ozuna VM, Hachim MY, Lebrun JJ, Ali S (2019) Prolactin Hormone Exerts Anti-Tumorigenic Effects in HER-2 Overexpressing Breast Cancer Cells through Regulation of Stemness Stem Cell Res. 2019 Aug 18;40:101538.
   doi: 10.1016/j.scr.2019.101538. PMID: 31450192
 * López-Ozuna VM, Hachim I, Hachim M, Lebrun JJ, Ali S. (2019) Prolactin modulates TNBC aggressive phenotype limiting tumorigenesis. Endocrine-Related Cancer 26:3, pp321-327. PMID: 30640712.
