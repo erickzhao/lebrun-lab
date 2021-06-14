@@ -4,9 +4,9 @@ hidden: true
 ---
 # About the Lebrun Lab
 
-_**Based in Montréal, Canada, the Lebrun Lab is part of the Research Institute of McGill University Health center.**_
+_**Based in Montréal, Canada, the Lebrun Lab is part of the Cancer Research Program at the McGill University Health center.**_
 
-The vision/direction of our research program is to provide a better understanding of the molecular mechanisms driving tumor initiation and progression, stemness and resistance to chemotherapy, all of which considered as major challenges in the management of cancer patients. Our research will allow for the identification of key cancer master regulators, at the genome level and subsequent development of targeted treatments aimed at disabling/eliminating cancer cells, cancer stem cells as well as chemotherapy resistant tumors. It will also help define new diagnostic/prognostic markers and design novel anti-cancer therapies. Our research program is multidimensional involving molecular, prognostic and therapeutic research aspects. To achieve our objectives, we have developed central lines of research utilizing various cellular model systems (in vitro), preclinical studies using xenograft pre-clinical mouse models (in vivo), human cancer specimens as well as bioinformatics analyses of large cohorts of human tumors datasets. In time, our research will help develop diagnostic/biomarkers and therapeutic tools to improve metastatic cancer patients’ stratification and treatment and improve cancer patients’ survival. 
+The vision/direction of our research program aims at understanding the molecular mechanisms underlying tumor initiation, progression, stemness and drug resistance in metastatic cancer, all of which considered as major challenges in the management of cancer patients. Metastatic cancer is by large an incurable disease, responsible for 90% of cancer deaths and lacks effective targeted therapies. Our mission and long-term goal are to advance and accelerate the translation of basic laboratory discoveries into new cancer therapeutics against this deadly disease. To achieve these objectives, our lab has developed central lines of research using cellular systems (in vitro), patient-derived organoids (ex-vivo), patient-derived preclinical xenografts (in vivo), bioinformatics and data mining analysis for large cohorts of human patient datasets (in silico). Using state of the art technologies, gene editing (CRISPR) and genome-wide molecular approaches, our lab has also developed a cutting edge “Crisperized Medicine” research program. In time, our research will help develop diagnostic/biomarkers and therapeutic tools to improve metastatic cancer patients’ stratification and treatment and improve cancer patients’ survival.
 
 # About the Research Institute of McGill University Health center
 
@@ -27,8 +27,6 @@ The Cancer Research Program (CRP) benefits from new state-of-the-art facilities 
 Montreal, June 2, 2021 –Breast cancer is the leading cause of cancer death in women around the world, responsible for 1,700 deaths every day. Although the vast majority of breast cancers are treatable, the most aggressive subtype – triple negative breast cancer (TNBC) – has a high recurrence rate, a high potential for metastasis and shows resistance to conventional treatments, leading to very poor prognosis and survival outcomes. A team of researchers at the Research Institute of the McGill University Health Centre (RI-MUHC) conducted a preclinical study and discovered a novel targeted combination therapy that efficiently reduced tumour growth in metastatic breast cancer. Published in Nature Communications, their findings could lead to the development of a novel first line targeted therapy for the treatment of TNBC, with the prospect of rapidly transitioning to clinical trials in humans.
 
 <https://muhc.ca/news-and-patient-stories/releases/new-study-paves-way-novel-treatment-triple-negative-breast-cancer>
-
-
 
 # We thank all of our sponsors for their continued support.
 
