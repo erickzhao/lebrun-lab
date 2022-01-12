@@ -2,6 +2,6 @@
 templateKey: news-page
 title: News
 subtitle: Latest News from The Lab
-headerImage: /img/business-newspaper-coffee-time_925x.jpg
+headerImage: /img/picture-top-10-discoveries-jan-2022.png
 ---
 
