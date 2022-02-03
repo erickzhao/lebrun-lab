@@ -14,7 +14,7 @@ tags:
   - Triple negative breast cancer
   - combination therapy
   - CRISPR genetic screen
-headerImage: /img/capsule-video-feb-2022-copy-2.png
+headerImage: /img/capsule-video-feb-2022.png
 files:
   - file: /img/capsule-video-feb-2022.png
 ---
