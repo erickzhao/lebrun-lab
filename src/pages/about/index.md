@@ -10,9 +10,7 @@ The MUHC-RI Hospital offers a state of the art research institute equipped with 
 
 Overall, the vision/direction of our research program aims at understanding the molecular mechanisms underlying tumor initiation, progression and drug resistance in metastatic cancer, all of which considered as major challenges in the management of cancer patients. Metastatic cancer is by large an incurable disease, responsible for 90% of cancer deaths and lacks effective targeted therapies. Our mission and long-term goal are to advance and accelerate the translation of basic laboratory discoveries into new cancer therapeutics against this deadly disease. To achieve these objectives, our lab has developed central lines of research using cellular systems (in vitro), patient-derived organoids (ex-vivo), patient-derived preclinical xenografts (in vivo), bioinformatics and data mining analysis for large cohorts of human patient datasets (in silico). Using state of the art technologies, gene editing (CRISPR) and genome-wide molecular approaches, our lab has also developed a cutting edge “Crisperized Medicine” research program. 
 
-
-
-* Quick Links :
+* Quick Links :<https://youtu.be/MrL8necSYhc>
 
 [Glen Site](https://muhc.ca/glen/dashboard)
 
@@ -20,4 +18,4 @@ Overall, the vision/direction of our research program aims at understanding the 
 
 [RI-MUHC](http://rimuhc.ca/)
 
-![null](/img/muhc-rilogocolour.jpg)
+![null](/img/capsule-video-feb-2022.png)
