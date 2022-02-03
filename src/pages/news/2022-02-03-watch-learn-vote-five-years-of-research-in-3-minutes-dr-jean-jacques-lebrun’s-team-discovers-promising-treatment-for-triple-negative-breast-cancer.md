@@ -13,3 +13,5 @@ description: >-
   voting on the contest’s website
 ---
 <https://youtu.be/MrL8necSYhc>
+
+![](/img/capsule-video-feb-2022.png)
