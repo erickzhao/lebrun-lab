@@ -13,3 +13,5 @@ description: >-
   voting on the contest’s website
 ---
 [Watch, Learn, Vote! Five years of research in 3 minutes: Dr. Jean-Jacques Lebrun’s team discovers promising treatment for triple negative breast cancer | McGill University Health Centre (muhc.ca)](<Watch, Learn, Vote! Five years of research in 3 minutes: Dr. Jean-Jacques Lebrun’s team discovers promising treatment for triple negative breast cancer | McGill University Health Centre (muhc.ca)>)
+
+<https://muhc.ca/news-and-patient-stories/news/watch-learn-vote-five-years-research-3-minutes-dr-jean-jacques>
