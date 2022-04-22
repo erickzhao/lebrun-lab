@@ -14,6 +14,12 @@ The RI-MUHC Hospital offers a state of the art research institute equipped with 
 
 # Latest News
 
+## ● March 25th, 2022 – Global News Morning, Anchor: Laura Casella, Live interview for the Discovery of the Year Award from Québec Science magazine.
+
+Montreal researchers receive prestigious award | Watch News Videos Online (globalnews.ca)
+
+
+
 # RI-MUHC researchers led one of Québec Science magazine’s top 10 discoveries of the year - January 5th, 2022.
 
 <https://youtu.be/MrL8necSYhc>
