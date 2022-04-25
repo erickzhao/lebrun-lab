@@ -20,13 +20,19 @@ The RI-MUHC Hospital offers a state of the art research institute equipped with 
 
 
 
+## ● March 22nd, 2022 – Discovery of the year Award from Quebec Science magazine
+
+[RI-MUHC team receives Discovery of the Year Award from Québec Science magazine | McGill University Health Centre](https://muhc.ca/news-and-patient-stories/news/ri-muhc-team-receives-discovery-year-award-quebec-science-magazine)
 
 
-## RI-MUHC researchers led one of Québec Science magazine’s top 10 discoveries of the year - January 5th, 2022.
+
+[Une équipe de l’IR-CUSM remporte le prix de la Découverte de l’année du magazine Québec Science | Centre universitaire de santé McGill](https://cusm.ca/nouvelles-et-histoires/nouvelles/une-equipe-de-lir-cusm-remporte-le-prix-de-la-decouverte-de-lannee)
+
+## ● RI-MUHC researchers led one of Québec Science magazine’s top 10 discoveries of the year - January 5th, 2022.
 
 <https://youtu.be/MrL8necSYhc>
 
-## **New study paves the way to novel treatment for Triple Negative Breast Cancer**
+## ● **New study paves the way to novel treatment for Triple Negative Breast Cancer**
 
 **A team of researchers at the RI-MUHC found two cellular pathways involved in TNBC tumor development and a promising targeted combination therap**y
 
