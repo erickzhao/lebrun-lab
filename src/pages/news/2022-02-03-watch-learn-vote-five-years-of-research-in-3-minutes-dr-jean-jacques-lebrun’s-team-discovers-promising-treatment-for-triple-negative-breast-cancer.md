@@ -12,6 +12,6 @@ description: >-
   and could be voted as Discovery of the Year. The public gets to decide by
   voting on the contest’s website
 ---
-<https://youtu.be/MrL8necSYhc>
+https://youtu.be/MrL8necSYhc
 
-![](/img/capsule-video-feb-2022.png)
+![null](/img/capsule-video-feb-2022.png)
