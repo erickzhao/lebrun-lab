@@ -16,7 +16,7 @@ The RI-MUHC Hospital offers a state of the art research institute equipped with 
 
 ## ● March 25th, 2022 – Global News Morning, Anchor: Laura Casella
 
-https://globalnews.ca/video/8709226/montreal-researchers-receive-prestigious-award/
+<https://globalnews.ca/video/8709226/montreal-researchers-receive-prestigious-award/>
 
 
 
