@@ -30,7 +30,7 @@ The RI-MUHC Hospital offers a state of the art research institute equipped with 
 
 ## ● RI-MUHC researchers led one of Québec Science magazine’s top 10 discoveries of the year - January 5th, 2022.
 
-<https://youtu.be/MrL8necSYhc>
+https://youtu.be/MrL8necSYhc
 
 ## ● **New study paves the way to novel treatment for Triple Negative Breast Cancer**
 
