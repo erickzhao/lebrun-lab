@@ -70,7 +70,7 @@ Pharos - https://pharos.nih.gov/targets
 
 [GenePattern](http://software.broadinstitute.org/cancer/software/genepattern/)
 
-https://bioinformatics.psb.ugent.be/webtools/Venn/
+Venn diagram: https://bioinformatics.psb.ugent.be/webtools/Venn/
 
 # miRNAs
 
