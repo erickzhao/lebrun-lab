@@ -4,7 +4,7 @@ hidden: true
 ---
 # About the Lebrun Lab
 
-_**Based in Montréal, Canada, the Lebrun Lab is part of the Cancer Research Program at the McGill University Health center.**_
+**_Based in Montréal, Canada, the Lebrun Lab is part of the Cancer Research Program at the McGill University Health center._**
 
 The vision/direction of our research program aims at understanding the molecular mechanisms underlying tumor initiation, progression, stemness and drug resistance in metastatic cancer, all of which considered as major challenges in the management of cancer patients. Metastatic cancer is by large an incurable disease, responsible for most of cancer deaths and lacks effective targeted therapies. Our mission and long-term goal are to advance and accelerate the translation of basic laboratory discoveries into new cancer therapeutics against this deadly disease. To achieve these objectives, our lab has developed central lines of research using cellular systems (in vitro), patient-derived organoids (ex-vivo), patient-derived preclinical xenografts (in vivo), bioinformatics and data mining analysis for large cohorts of human patient datasets (in silico). Using state of the art technologies, gene editing (CRISPR) and genome-wide molecular approaches, our lab has also developed a cutting edge “Crisperized Medicine” research program. In time, our research will help develop diagnostic/biomarkers and therapeutic tools to improve metastatic cancer patients’ stratification and treatment and improve cancer patients’ survival.
 
@@ -18,13 +18,9 @@ The RI-MUHC Hospital offers a state of the art research institute equipped with 
 
 <https://globalnews.ca/video/8709226/montreal-researchers-receive-prestigious-award/>
 
-
-
 ## ● March 22nd, 2022 – Discovery of the year Award from Quebec Science magazine
 
 [RI-MUHC team receives Discovery of the Year Award from Québec Science magazine | McGill University Health Centre](https://muhc.ca/news-and-patient-stories/news/ri-muhc-team-receives-discovery-year-award-quebec-science-magazine)
-
-
 
 [Une équipe de l’IR-CUSM remporte le prix de la Découverte de l’année du magazine Québec Science | Centre universitaire de santé McGill](https://cusm.ca/nouvelles-et-histoires/nouvelles/une-equipe-de-lir-cusm-remporte-le-prix-de-la-decouverte-de-lannee)
 
