@@ -1,7 +1,7 @@
 ---
 templateKey: news-post
 title: New Marker and Potential Therapy for Triple Negative Breast Cancers
-date: 2016-10-19T15:04:10.000Z
+date: '2016-10-19T08:00:10-07:00'
 description: >-
   Triple negative breast cancer (TNBC) is the most aggressive type of breast
   cancer, found in 15-20% of all cases. These breast tumors are enriched in a
