@@ -5,16 +5,6 @@ subtitle: Current team
 headerImage: /img/new panoramic glen-blue-sky - low res.jpg
 members:
   - description: >-
-      **Education:** Ph.D. in Experimental Medicine, McGill University
-
-
-      **Current research:** Investigation of the role of COX-2 and its
-      associated genes in BCSC-mediated tumor metastasis and drug resistance.
-    email: jun.tian3@mail.mcgill.ca
-    name: 'Jun Tian, Ph.D.'
-    photo: /img/capture.png
-    position: postdoc
-  - description: >-
       * **Education **: B.Sc. in Biopharmaceutical Sciences, Université de
       Montréal.
 
@@ -37,7 +27,7 @@ members:
     email: julien.boudreault@usherbrooke.ca
     name: 'Julien Boudreault, Ph.D. Candidate'
     photo: /img/julien.jpg
-    position: grad
+    position: assistant
   - description: >-
       **Education : **PhD in Experimental Medicine, University of McGill,
       Canada.
@@ -58,7 +48,7 @@ members:
     email: ' gang.yan@mail.mcgill.ca '
     name: 'Gang Yan, Ph.D. candidate'
     photo: /img/20210511_100120.jpg
-    position: grad
+    position: assistant
   - description: >-
       * **Education **: PhD.
 
