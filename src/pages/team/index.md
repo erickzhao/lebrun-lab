@@ -75,5 +75,11 @@ members:
     position: grad
   - name: Cheng Yang
     position: grad
+  - name: Soaad Galal
+    position: grad
+  - name: Dr Ana Belen Fraga Timiraos
+    position: postdoc
+  - name: Dr Huong Nguyen
+    position: postdoc
 ---
 
