@@ -14,9 +14,9 @@ The RI-MUHC Hospital offers a state of the art research institute equipped with 
 
 # Latest News
 
-## ● April 30th 2024 – Savoir Media – Telefiction Série documentaire ”La Vie Continue”.
+## ● April 30th, 2024 – Savoir Media – Telefiction Série documentaire ”La Vie Continue”.
 
-Vanessa Boisset. April 30th, Episode 1 : Cancer du Sein
+Vanessa Boisset. April 30th, Episode 1: Cancer du Sein
 
 https://savoir.media/player/385958/series?assetType=series
 
