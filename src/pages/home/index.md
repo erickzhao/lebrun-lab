@@ -10,7 +10,7 @@ The vision/direction of our research program aims at understanding the molecular
 
 # About the Research Institute of McGill University Health center
 
-The RI-MUHC Hospital offers a state of the art research institute equipped with powerful biomedical instruments. The MUHC is an internationally recognized biomedical and healthcare hospital research center, with over 500 researchers, 1,000 graduate and postdoctoral students. This is a unique medical and life sciences research facility in Canada, equipped with state-of-the-art technologies, cutting-edge core facilities (imaging, flow cytometry) and proteomic core unit for MS. The ultra-modern vivarium and associated staff is fully-ready for all surgical procedures and bio-imaging analysis.
+The RI-MUHC Hospital offers a state of the art research institute equipped with powerful biomedical instruments. The MUHC is an internationally recognized biomedical and healthcare hospital research center, with over 500 researchers, 1,000 graduate and postdoctoral students. This is a unique medical and life sciences research facility in Canada, equipped with state-of-the-art technologies, cutting-edge core facilities (imaging, flow cytometry) and proteomic core unit for MS. The ultra-modern vivarium and associated staff is fully ready for all surgical procedures and bio-imaging analysis.
 
 # Latest News
 
