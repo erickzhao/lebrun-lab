@@ -70,7 +70,7 @@ members:
       identify CDK4/6-dependent synthetic lethal vulnerabilities in triple
       negative breast cancer.
     email: yi-ching.tsai2@mail.mcgill.ca
-    name: 'Yi-Ching Tsai, MSc candidate'
+    name: Yi-Ching Tsai
     photo: /img/yi-2.jpg
     position: grad
   - name: Cheng Yang
