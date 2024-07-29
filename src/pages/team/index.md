@@ -46,7 +46,7 @@ members:
       paclitaxel to identify key genetic mutations responsible for paclitaxel
       resistance in triple negative breast cancer.
     email: ' gang.yan@mail.mcgill.ca '
-    name: 'Gang Yan, Ph.D. candidate'
+    name: Gang Yan
     photo: /img/20210511_100120.jpg
     position: assistant
   - description: >-
@@ -65,13 +65,6 @@ members:
     email: veronica.atehortua@muhc.mcgill.ca
     name: Veronica Atehortua
     position: admin
-  - description: '**Education **: Diploma in Biotechnology, Algonquin College, Canada'
-    email: girija.daliah@muhc.mcgill.ca
-    name: Girija Daliah
-    photo: /img/screenshot-42-.png
-    position: assistant
-  - name: Vivian Wang
-    position: masters
   - description: >-
       Defining the role of CDK6 and DNA repair pathways in tumorigenesis and
       identify CDK4/6-dependent synthetic lethal vulnerabilities in triple
@@ -80,24 +73,6 @@ members:
     name: 'Yi-Ching Tsai, MSc candidate'
     photo: /img/yi-2.jpg
     position: grad
-  - description: >-
-      PhD project proposal:  The role of Dual-specificity tyrosine
-      phosphorylation-regulated kinase 1A (DYRK1A) in DNA homologous
-      recombination repair and response of cancer cells to chemotherapy
-    email: amina.laham@mail.mcgill.ca
-    name: 'Amina Laham, PhD candidate'
-    photo: /img/amina-may-2021.png
-    position: grad
-  - description: Studying synthetic lethality's in triple negative breast cancer
-    email: yunwang30@foxmail.com
-    name: Dr Yun Wang
-    position: postdoc
-  - description: microRNAs as therapeutic targets for breast cancer
-    email: zenan.jiao@mail.mcgill.ca
-    name: Jessica Jiao
-    position: summer
-  - name: Dr Ting Ye
-    position: postdoc
   - name: Cheng Yang
     position: grad
 ---
