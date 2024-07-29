@@ -108,5 +108,7 @@ members:
     position: summer
   - name: Dr Ting Ye
     position: postdoc
+  - name: Cheng Yang
+    position: grad
 ---
 
