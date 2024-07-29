@@ -4,6 +4,38 @@ title: Lab Alumni
 subtitle: 'Visiting scientists, Postdocs and Graduate students'
 headerImage: /img/logo.jpg
 ---
+# Staff:
+
+* Dr Meiou Dai, PhD, Department of Medicine, McGill University (2013-)
+* 
+  Dr Lucie Canaff, Department of Medicine, McGill University (April-2014-2016)
+* Girija Daliah, Cancer Research Program (2019-2023) 
+* Aida Kasaei, MSc, Department of Medicine, McGill University (2016-)
+* 
+  Chieh (Regina) Lo, MSc, Department of Medicine, McGill University (July 2015-)
+* 
+  Ludovic Bretin, Internship, University of Lyon, France (2014)
+* 
+  Mayada El-Mousawi, Department of Medicine, McGill University (2012-present)
+* 
+  Isabelle Giscos, Department of Medicine, McGill University (2009-2011).
+* 
+  Mohammed Ridha, Department of Medicine, McGill University (2007-2009)
+* 
+  Thomas Zontag, Department of Medicine, McGill University (2008-2009)
+* 
+  Melanie Roy, Department of Medicine, McGill University (2005-2007)
+* 
+  Loren Drevet, Hormones and Cancer Research Unit, McGill (2006-2007)
+* Eun-Hye Lee, research fellow, Dept of Medicine, McGill University (2001-2003)
+* Shanhong Zhang Department of Medicine, McGill University (2003-2005).
+* 
+  Nusrat Sharmeen, Department of Medicine, McGill University (2000-2003).
+* 
+  Haying Chen, Department of Medicine, McGill University (1998-2000).
+  
+
+
 # Graduate Students:
 
 * Julien Boudreault PhD student, Experimental Surgery, McGill University (2019-2024)
