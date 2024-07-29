@@ -6,14 +6,16 @@ headerImage: /img/logo.jpg
 ---
 # Graduate Students:
 
+* Julien Boudreault PhD student, Experimental Surgery, McGill University (2019-2024)
+* 
+  Gang Yan, PhD student, Experimental Surgery, McGill University (2016-2023)
+* Amina Laham, PhD co-tutelle, Exp Medicine, McGill/Sharjah University, UAE (2020-2023)
+* 
+  Vivian Wang, MSc student, Experimental Medicine, McGill University (2019-2021)
 * Halema Haiub, MSc student, Experimental Surgery, McGill University (2018-2020)
-* 
-  Mostafa Ghozlan, PhD student, Experimental Medicine, McGill University (2013-2020)
-* 
-  Nadêge Fils-Aimé, PhD student, Experimental Medicine, McGill University (2013-2019)
-* 
-  Jun Tian, PhD student, Experimental Medicine, McGill University (2013-)
-  
+* Mostafa Ghozlan, PhD student, Experimental Medicine, McGill University (2013-2020)
+* Nadêge Fils-Aimé, PhD student, Experimental Medicine, McGill University (2013-2019)
+* Jun Tian, PhD student, Experimental Medicine, McGill University (2013-)
 * Chenjing Zhang, PhD exchange, Zhejiang University, China (2014-2016)
 * Weimeng Ding, PhD student, Polytechnique school, Univ Montreal (2011-2016)
 * Jimin Guo, PhD student, Experimental Medicine, McGill University (2008-2014)
