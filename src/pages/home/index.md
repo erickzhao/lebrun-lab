@@ -14,7 +14,7 @@ The RI-MUHC Hospital offers a state-of-the-art research institute equipped with 
 
 # Latest News
 
-## ● July 24th 2024 – Triple-negative breast cancer: new hope for an existing drug
+## ● July 24th, 2024 – Triple-negative breast cancer: new hope for an existing drug
 
 https://muhc.ca/news-and-patient-stories/news/triple-negative-breast-cancer-new-hope-existing-drug
 
