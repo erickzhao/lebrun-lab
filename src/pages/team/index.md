@@ -81,5 +81,9 @@ members:
     position: postdoc
   - name: Dr Huong Nguyen
     position: postdoc
+  - name: 'Leslie Azarel Chaltel Lima, Ph.D. Candidate'
+    position: grad
+  - name: 'Shima Rahimirad, Ph.D. Candidate'
+    position: grad
 ---
 
