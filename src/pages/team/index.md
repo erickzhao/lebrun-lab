@@ -74,6 +74,7 @@ members:
     photo: /img/yi-2.jpg
     position: grad
   - name: Cheng Yang
+    photo: /img/微信图片_20250710172330.jpg
     position: grad
   - name: Soaad Galal
     position: grad
@@ -85,6 +86,7 @@ members:
     photo: /img/lc_1.jpeg
     position: grad
   - name: 'Shima Rahimirad, Ph.D. Candidate'
+    photo: /img/img_4640.jpg
     position: grad
 ---
 
