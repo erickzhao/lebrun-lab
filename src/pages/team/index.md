@@ -13,7 +13,7 @@ members:
       breast cancer. This is being tested in vitro as well as in vivo using
       CRISPR/Cas technology.
     email: sophie.poulet@mail.mcgill.ca
-    name: 'Sophie Poulet, Ph.D. Candidate'
+    name: 'Sophie Poulet, Ph.D. '
     photo: /img/photo-pour-site-web_sophie.jpg
     position: grad
   - description: >-
@@ -25,7 +25,7 @@ members:
       lines using the CRISPR technology and the cytotoxic study of kinase
       inhibitors in breast cancer.
     email: julien.boudreault@usherbrooke.ca
-    name: 'Julien Boudreault, Ph.D. Candidate'
+    name: 'Julien Boudreault, Ph.D.'
     photo: /img/julien.jpg
     position: assistant
   - description: >-
@@ -82,6 +82,7 @@ members:
   - name: Dr Huong Nguyen
     position: postdoc
   - name: 'Leslie Azarel Chaltel Lima, Ph.D. Candidate'
+    photo: /img/lc_1.jpeg
     position: grad
   - name: 'Shima Rahimirad, Ph.D. Candidate'
     position: grad
