@@ -1,0 +1,89 @@
+---
+/**
+ * Homepage.
+ *
+ * The most complex page on the site, combining three data sources:
+ *
+ * 1. **Carousel** — cycles through all research topic images (React island
+ *    because it needs auto-play timers and transition state).
+ * 2. **Home body** — the markdown content from the `home` page entry,
+ *    displayed as the main column.
+ * 3. **Sidebar cards** — links to the Research, About, and News pages with
+ *    their header images, giving visitors quick entry points.
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Carousel from "@/components/Carousel";
+import { getEntry, getCollection } from "astro:content";
+
+/* Fetch all the data we need in parallel */
+const [homeEntry, researchTopics, researchPage, aboutPage, newsPage] = await Promise.all([
+  getEntry("pages", "home"),
+  getCollection("research"),
+  getEntry("pages", "research-listing"),
+  getEntry("pages", "about"),
+  getEntry("pages", "news-listing"),
+]);
+
+const { Content: HomeContent } = await homeEntry.render();
+
+/* Build carousel slides from research topics that have a header image */
+const slides = researchTopics
+  .filter((t) => t.data.headerImage)
+  .map((t) => ({
+    headerImage: t.data.headerImage!,
+    title: t.data.title,
+    slug: t.slug,
+  }));
+
+/* Sidebar "Learn More" cards — same three pages the old Gatsby site linked */
+const sidebarCards = [researchPage, aboutPage, newsPage].map((page) => ({
+  title: page.data.title ?? "",
+  image: page.data.headerImage,
+  /* Derive the URL from the page's entry id (e.g. "research-listing" → "/research") */
+  href:
+    page.id === "research-listing"
+      ? "/research"
+      : page.id === "news-listing"
+        ? "/news"
+        : `/${page.id}`,
+}));
+---
+
+<BaseLayout>
+  {/* Full-width carousel of research topic images (React island) */}
+  <Carousel client:load slides={slides} />
+
+  <section class="mx-auto mt-12 max-w-container-wide px-4">
+    <div class="flex flex-col gap-8 lg:flex-row">
+      {/* Main content column */}
+      <div class="prose flex-1">
+        <HomeContent />
+      </div>
+
+      {/* Sidebar — "Learn More" cards */}
+      <aside class="w-full space-y-6 lg:w-80 lg:shrink-0">
+        <h2 class="text-xl font-bold font-heading">Learn More</h2>
+        {sidebarCards.map((card) => (
+          <a
+            href={card.href}
+            class="block overflow-hidden rounded-lg border border-border shadow-sm transition-shadow hover:shadow-md no-underline"
+          >
+            {card.image ? (
+              <div class="aspect-4/3 bg-muted">
+                <img src={card.image} alt={card.title} class="h-full w-full object-cover" />
+              </div>
+            ) : (
+              <div class="aspect-4/3 bg-[#00b1e2]" />
+            )}
+            <div class="flex items-center justify-between p-4">
+              <span class="font-bold font-heading text-primary">{card.title}</span>
+              <span class="rounded-md bg-primary px-3 py-1 text-sm text-primary-foreground">
+                More
+              </span>
+            </div>
+          </a>
+        ))}
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

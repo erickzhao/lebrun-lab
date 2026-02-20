@@ -1,0 +1,63 @@
+---
+/**
+ * Root layout wrapping every page on the site.
+ *
+ * Provides the <html> shell, <head> meta (fonts, favicons, title),
+ * the site-wide Navbar (loaded as a React island for interactivity),
+ * a <main> content slot, and the static Footer.
+ *
+ * Usage in a page:
+ *   <BaseLayout title="About">
+ *     <p>Page content here…</p>
+ *   </BaseLayout>
+ */
+
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer.astro";
+import "@/styles/global.css";
+
+interface Props {
+  /** Text shown in the browser tab — appended with " - Lebrun Lab". */
+  title?: string;
+}
+
+const { title } = Astro.props;
+const pageTitle = title ? `${title} - Lebrun Lab` : "Lebrun Lab";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+
+    <!-- Google Fonts: Montserrat for headings, Roboto for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/img/favicon-256x256.png" sizes="256x256" />
+    <link rel="icon" type="image/png" href="/img/favicon-512x512.png" sizes="512x512" />
+  </head>
+  <body>
+    <!--
+      `client:load` tells Astro to hydrate this React component immediately
+      on page load so that interactive features (dropdown menus, mobile
+      hamburger toggle) work right away.
+    -->
+    <Navbar client:load />
+
+    <!-- Bottom margin keeps content from touching the footer -->
+    <main class="mb-40">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

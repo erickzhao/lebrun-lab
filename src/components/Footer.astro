@@ -1,0 +1,21 @@
+---
+/**
+ * Site-wide footer.
+ *
+ * Displays partner institution logos (CRP, McGill Faculty of Medicine),
+ * a donation contact line, and a copyright notice. Rendered as a static
+ * Astro component — no client-side JS required.
+ */
+---
+
+<footer class="border-t border-border py-12 px-6 text-center text-sm text-muted-foreground">
+  <div class="mx-auto flex max-w-[700px] items-center justify-center gap-12 mb-6">
+    <img src="/img/crp.png" alt="Cancer Research Program logo" class="h-20 object-contain" />
+    <img src="/img/fom.png" alt="McGill Faculty of Medicine logo" class="h-12 object-contain" />
+  </div>
+  <p>
+    For donations, please contact Dr. Lebrun at
+    <a href="mailto:jj.lebrun@mcgill.ca">jj.lebrun@mcgill.ca</a>. Thank you for your support.
+  </p>
+  <p class="mt-2">&copy; {new Date().getFullYear()} Lebrun Lab. All rights reserved.</p>
+</footer>

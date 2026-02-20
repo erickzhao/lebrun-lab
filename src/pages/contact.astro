@@ -1,0 +1,88 @@
+---
+/**
+ * Contact page.
+ *
+ * Displays structured contact information (point of contact, address) from
+ * frontmatter, a markdown "directions" section, and an embedded Google Maps
+ * iframe showing the lab location.
+ *
+ * Unlike the simple body pages, most of this page's data lives in frontmatter
+ * fields rather than the markdown body.
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import { getEntry } from "astro:content";
+import { marked } from "marked";
+
+const page = await getEntry("pages", "contact");
+const { Content } = await page.render();
+
+const contact = page.data.contact;
+const address = page.data.address;
+const directions = page.data.directions;
+---
+
+<BaseLayout title={page.data.title}>
+  <PageHeader title={page.data.title!} subtitle={page.data.subtitle} image={page.data.headerImage} />
+
+  <div class="mx-auto max-w-body px-4 space-y-10">
+    {/* Point of contact */}
+    {contact && (
+      <section>
+        <h2 class="mb-4 text-2xl font-bold font-heading">Point of Contact</h2>
+        <div class="rounded-lg border border-border p-6 space-y-1">
+          <p class="text-lg font-semibold">{contact.name}</p>
+          <p class="text-muted-foreground">{contact.position}</p>
+          {contact.email && (
+            <p>
+              <span class="font-medium">Email:</span>{" "}
+              <a href={`mailto:${contact.email}`}>{contact.email}</a>
+            </p>
+          )}
+          {contact.phone && (
+            <p>
+              <span class="font-medium">Phone:</span> {contact.phone}
+            </p>
+          )}
+        </div>
+      </section>
+    )}
+
+    {/* Address */}
+    {address && (
+      <section>
+        <h2 class="mb-4 text-2xl font-bold font-heading">Address</h2>
+        <div class="rounded-lg border border-border p-6 space-y-1">
+          <p>{address.line1}</p>
+          <p>{address.line2}</p>
+          <p>{address.city}, {address.province} {address.postalCode}</p>
+        </div>
+      </section>
+    )}
+
+    {/* Directions (markdown rendered to HTML) */}
+    {directions && (
+      <section>
+        <h2 class="mb-4 text-2xl font-bold font-heading">Directions</h2>
+        <div class="prose" set:html={marked.parse(directions)} />
+      </section>
+    )}
+
+    {/* Markdown body (if any additional content exists) */}
+    <div class="prose">
+      <Content />
+    </div>
+
+    {/* Embedded Google Map */}
+    <section>
+      <h2 class="mb-4 text-2xl font-bold font-heading">Map</h2>
+      <iframe
+        title="Lab location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.5!2d-73.6525!3d45.4741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc919e1b23b0f35%3A0x178822b2a0e6e526!2sMcGill+University+Health+Centre+(MUHC)!5e0!3m2!1sen!2sca!4v1533746456118"
+        class="h-96 w-full rounded-lg border-0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+  </div>
+</BaseLayout>

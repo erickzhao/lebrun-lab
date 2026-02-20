@@ -1,0 +1,55 @@
+---
+/**
+ * Individual news post page.
+ *
+ * Astro generates one HTML page per news post at build time. The
+ * `getStaticPaths()` function returns every post slug so Astro knows
+ * which URLs to create (e.g. /news/2026-02-04-some-post/).
+ *
+ * The `[...slug]` filename is Astro's dynamic route syntax — the `...`
+ * (rest parameter) means the slug can contain slashes, though our news
+ * slugs are flat.
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import type { InferGetStaticParamsType, InferGetStaticPropsType } from "astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("news");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+type Params = InferGetStaticParamsType<typeof getStaticPaths>;
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { post } = Astro.props as Props;
+const { Content } = await post.render();
+---
+
+<BaseLayout title={post.data.title}>
+  <article class="mx-auto max-w-body px-4 pt-24">
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold font-heading md:text-4xl">{post.data.title}</h1>
+      <time
+        datetime={post.data.date.toISOString()}
+        class="mt-2 block text-sm text-muted-foreground"
+      >
+        {post.data.date.toLocaleDateString("en-CA", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </time>
+      {post.data.description && (
+        <p class="mt-4 text-lg text-muted-foreground">{post.data.description}</p>
+      )}
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

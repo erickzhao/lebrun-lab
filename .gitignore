@@ -1,9 +1,14 @@
-# Project dependencies
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+# Dependencies
 node_modules
-.cache/
-# Build directory
-public/
-static/admin/*.bundle.*
+
+# Astro build output
+dist/
+
+# Astro internal cache
+.astro/
+
+# OS files
 .DS_Store
+
+# Logs
 yarn-error.log

@@ -1,0 +1,22 @@
+---
+/**
+ * Custom 404 page.
+ *
+ * Astro automatically uses `src/pages/404.astro` for missing routes.
+ * Netlify also recognises the built `404.html` in the output directory.
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Page Not Found">
+  <div class="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center">
+    <h1 class="text-6xl font-bold font-heading text-primary">404</h1>
+    <p class="mt-4 text-xl text-muted-foreground">The page you're looking for doesn't exist.</p>
+    <a
+      href="/"
+      class="mt-8 inline-flex items-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/80 no-underline"
+    >
+      Back to Home
+    </a>
+  </div>
+</BaseLayout>

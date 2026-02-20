@@ -1,0 +1,15 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import { getEntry } from "astro:content";
+
+const page = await getEntry("pages", "protocol");
+const { Content } = await page.render();
+---
+
+<BaseLayout title={page.data.title}>
+  <PageHeader title={page.data.title!} subtitle={page.data.subtitle} image={page.data.headerImage} />
+  <div class="prose mx-auto px-4">
+    <Content />
+  </div>
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+/**
+ * Principal Investigator page.
+ *
+ * Shows the PI's headshot image (centered) followed by their bio, which is
+ * stored as the markdown body of the content entry.
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import { getEntry } from "astro:content";
+
+const page = await getEntry("pages", "principal-investigator");
+const { Content } = await page.render();
+---
+
+<BaseLayout title={page.data.title}>
+  <PageHeader title={page.data.title!} subtitle={page.data.subtitle} image={page.data.headerImage} />
+
+  <div class="mx-auto max-w-body px-4">
+    {page.data.headshot && (
+      <img
+        src={page.data.headshot}
+        alt={page.data.title ?? "Principal Investigator"}
+        class="mx-auto mb-8 block max-w-md rounded-lg"
+      />
+    )}
+    <div class="prose mx-auto">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>

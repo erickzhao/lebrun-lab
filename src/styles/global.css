@@ -1,0 +1,161 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* shadcn theme tokens — maps CSS vars to Tailwind color utilities */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Custom theme extensions for Lebrun Lab */
+@theme {
+  --font-sans: "Roboto", "Helvetica Neue", "Arial", sans-serif;
+  --font-heading: "Montserrat", "Helvetica Neue", sans-serif;
+  --max-w-container: 1000px;
+  --max-w-container-wide: 1300px;
+  --max-w-body: 800px;
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Lebrun Lab brand colors */
+  --primary: #2b0a3d;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --accent-brand: #ff470f;
+
+  /* Neutral palette */
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2b0a3d;
+
+  /* Charts (kept from shadcn defaults) */
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+
+  /* Sidebar */
+  --sidebar: #fafafa;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #2b0a3d;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f5f9;
+  --sidebar-accent-foreground: #0f172a;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #2b0a3d;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  a {
+    color: var(--primary);
+    transition: color 0.15s ease-in-out;
+  }
+  a:hover {
+    color: color-mix(in srgb, var(--primary) 60%, white);
+  }
+}
+
+/* Prose (markdown content) styles */
+.prose {
+  max-width: var(--max-w-body);
+  line-height: 1.75;
+}
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+.prose h1 { font-size: 2.25rem; }
+.prose h2 { font-size: 1.5rem; }
+.prose h3 { font-size: 1.25rem; }
+.prose p { margin-bottom: 1.25em; }
+.prose ul, .prose ol { margin-bottom: 1.25em; padding-left: 1.5em; }
+.prose li { margin-bottom: 0.5em; }
+.prose ul { list-style-type: disc; }
+.prose ol { list-style-type: decimal; }
+.prose img { max-width: 100%; height: auto; border-radius: var(--radius-md); }
+.prose blockquote {
+  border-left: 4px solid var(--border);
+  padding-left: 1em;
+  font-style: italic;
+  color: var(--muted-foreground);
+}
+.prose a { text-decoration: underline; }
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.25em;
+}
+.prose th, .prose td {
+  border: 1px solid var(--border);
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+.prose th {
+  background-color: var(--muted);
+  font-weight: 700;
+}

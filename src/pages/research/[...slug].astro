@@ -1,0 +1,66 @@
+---
+/**
+ * Individual research topic page.
+ *
+ * Renders the full markdown body of a research post, plus a "Files" section
+ * at the bottom if the post has any downloadable attachments (PDFs, etc.)
+ * linked in its frontmatter.
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import { getCollection } from "astro:content";
+import type { InferGetStaticParamsType, InferGetStaticPropsType } from "astro";
+
+export async function getStaticPaths() {
+  const topics = await getCollection("research");
+  return topics.map((topic) => ({
+    params: { slug: topic.slug },
+    props: { topic },
+  }));
+}
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { topic } = Astro.props as Props;
+const { Content } = await topic.render();
+---
+
+<BaseLayout title={topic.data.title}>
+  <PageHeader
+    title={topic.data.title}
+    subtitle={topic.data.subtitle}
+    image={topic.data.headerImage}
+  />
+
+  <div class="mx-auto max-w-body px-4">
+    <div class="prose">
+      <Content />
+    </div>
+
+    {/* Downloadable file attachments (PDFs, papers, etc.) */}
+    {topic.data.files.length > 0 && (
+      <section class="mt-12">
+        <h2 class="mb-4 text-2xl font-bold font-heading">Files</h2>
+        <ul class="space-y-2">
+          {topic.data.files.map((f) => (
+            <li>
+              <a
+                href={f.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-md border border-border px-4 py-2 text-sm transition-colors hover:bg-muted"
+              >
+                {/* Simple file icon (SVG inline to avoid an extra dependency) */}
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                </svg>
+                {f.name ?? f.file.split("/").pop()}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </div>
+</BaseLayout>

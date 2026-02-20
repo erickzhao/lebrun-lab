@@ -1,0 +1,200 @@
+# DecapCMS configuration
+# Docs: https://decapcms.org/docs/configuration-options/
+#
+# This mirrors the original NetlifyCMS config but with updated file paths
+# pointing to the new Astro content collection directories under src/content/.
+# The templateKey fields have been removed since Astro uses directory-based
+# collections instead of a discriminator field.
+
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: public/img
+public_folder: /img
+
+collections:
+  # ─── Dynamic collections (users can create/delete entries) ───────────
+
+  - name: "news"
+    label: "News"
+    folder: "src/content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "research"
+    label: "Research Topics"
+    folder: "src/content/research"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Tags (separate with commas)", name: "tags", widget: "list" }
+      - { label: "Header Image", name: "headerImage", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Files"
+        name: "files"
+        widget: "list"
+        fields:
+          - { label: "File", name: "file", widget: "file" }
+          - { label: "File Name", name: "name", widget: "string" }
+
+  # ─── Fixed file pages (one entry per page, can't create new ones) ────
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/content/pages/home.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "src/content/pages/about.md"
+        label: "About"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "src/content/pages/principal-investigator.md"
+        label: "Principal Investigator"
+        name: "principal-investigator"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - { label: "Bio", name: "body", widget: "markdown" }
+          - { label: "Headshot", name: "headshot", widget: "image" }
+
+      - file: "src/content/pages/alumni.md"
+        label: "Alumni"
+        name: "alumni"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "src/content/pages/team.md"
+        label: "Team"
+        name: "team"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - label: "Members"
+            name: "members"
+            widget: "list"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Position"
+                name: "position"
+                widget: "select"
+                options:
+                  - { label: "Research Associate", value: "associate" }
+                  - { label: "Post-Doctorate Fellow", value: "postdoc" }
+                  - { label: "Graduate Student", value: "grad" }
+                  - { label: "Masters Student", value: "masters" }
+                  - { label: "Summer Student", value: "summer" }
+                  - { label: "Visiting Scientist", value: "visiting" }
+                  - { label: "Research Assistant", value: "assistant" }
+                  - { label: "Undergraduate", value: "undergrad" }
+                  - { label: "Administration", value: "admin" }
+              - label: "Photo"
+                name: "photo"
+                widget: "image"
+              - label: "Description"
+                name: "description"
+                widget: "markdown"
+              - label: "Email"
+                name: "email"
+                widget: "string"
+
+      - file: "src/content/pages/news-listing.md"
+        label: "News List"
+        name: "news-page"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+
+      - file: "src/content/pages/publications.md"
+        label: "Publications"
+        name: "publications"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "src/content/pages/protocol.md"
+        label: "Protocol"
+        name: "protocol"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "src/content/pages/research-listing.md"
+        label: "Research Topic List"
+        name: "research-topics"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+
+      - file: "src/content/pages/contact.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - label: "Point of contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Position", name: "position", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone Number", name: "phone", widget: "string" }
+          - label: "Address"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "Address Line 1", name: "line1", widget: "string" }
+              - { label: "Address Line 2", name: "line2", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "Province", name: "province", widget: "string" }
+              - { label: "Postal Code", name: "postalCode", widget: "string" }
+          - { label: "Directions", name: "directions", widget: "markdown" }
+
+      - file: "src/content/pages/donate.md"
+        label: "Donate"
+        name: "donate"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "src/content/pages/links.md"
+        label: "Links"
+        name: "links"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }

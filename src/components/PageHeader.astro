@@ -1,0 +1,39 @@
+---
+/**
+ * Full-width hero header used at the top of most pages.
+ *
+ * Renders a coloured banner with the page title and optional subtitle.
+ * When a background `image` URL is provided, it displays the image with
+ * a dark semi-transparent overlay so the white text remains readable.
+ */
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  /** URL to a background image (e.g. "/img/header.jpg"). */
+  image?: string;
+}
+
+const { title, subtitle, image } = Astro.props;
+---
+
+<header
+  class="relative flex items-center justify-center bg-primary py-20 px-4 mb-12 text-center text-white"
+>
+  {image && (
+    <>
+      <img
+        src={image}
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      {/* Dark overlay so text stays readable on top of any image */}
+      <div class="absolute inset-0 bg-black/60" />
+    </>
+  )}
+
+  <div class="relative z-10 mx-auto max-w-container">
+    <h1 class="text-4xl font-bold md:text-5xl">{title}</h1>
+    {subtitle && <p class="mt-3 text-lg text-white/80 md:text-xl">{subtitle}</p>}
+  </div>
+</header>
