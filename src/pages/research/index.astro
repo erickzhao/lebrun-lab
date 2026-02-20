@@ -11,14 +11,15 @@ import PageHeader from "@/components/PageHeader.astro";
 import { getEntry, getCollection } from "astro:content";
 
 const listingPage = await getEntry("pages", "research-listing");
+if (!listingPage) throw new Error("Research listing page not found");
 const topics = await getCollection("research");
 ---
 
-<BaseLayout title={listingPage.data.title}>
+<BaseLayout {...(listingPage.data.title && { title: listingPage.data.title })}>
   <PageHeader
     title={listingPage.data.title!}
-    subtitle={listingPage.data.subtitle}
-    image={listingPage.data.headerImage}
+    {...(listingPage.data.subtitle && { subtitle: listingPage.data.subtitle })}
+    {...(listingPage.data.headerImage && { image: listingPage.data.headerImage })}
   />
 
   <div class="mx-auto max-w-container-wide px-4 space-y-8">

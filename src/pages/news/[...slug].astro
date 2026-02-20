@@ -12,7 +12,7 @@
  */
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-import type { InferGetStaticParamsType, InferGetStaticPropsType } from "astro";
+import type { InferGetStaticPropsType } from "astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("news");
@@ -22,14 +22,13 @@ export async function getStaticPaths() {
   }));
 }
 
-type Params = InferGetStaticParamsType<typeof getStaticPaths>;
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { post } = Astro.props as Props;
 const { Content } = await post.render();
 ---
 
-<BaseLayout title={post.data.title}>
+<BaseLayout {...(post.data.title && { title: post.data.title })}>
   <article class="mx-auto max-w-body px-4 pt-24">
     <header class="mb-8">
       <h1 class="text-3xl font-bold font-heading md:text-4xl">{post.data.title}</h1>

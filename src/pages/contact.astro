@@ -15,6 +15,7 @@ import { getEntry } from "astro:content";
 import { marked } from "marked";
 
 const page = await getEntry("pages", "contact");
+if (!page) throw new Error("Contact page not found");
 const { Content } = await page.render();
 
 const contact = page.data.contact;
@@ -22,8 +23,8 @@ const address = page.data.address;
 const directions = page.data.directions;
 ---
 
-<BaseLayout title={page.data.title}>
-  <PageHeader title={page.data.title!} subtitle={page.data.subtitle} image={page.data.headerImage} />
+<BaseLayout {...(page.data.title && { title: page.data.title })}>
+  <PageHeader title={page.data.title!} {...(page.data.subtitle && { subtitle: page.data.subtitle })} {...(page.data.headerImage && { image: page.data.headerImage })} />
 
   <div class="mx-auto max-w-body px-4 space-y-10">
     {/* Point of contact */}

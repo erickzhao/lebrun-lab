@@ -16,6 +16,7 @@ import { getEntry } from "astro:content";
 import { marked } from "marked";
 
 const page = await getEntry("pages", "team");
+if (!page) throw new Error("Team page not found");
 const members = page.data.members ?? [];
 
 /**
@@ -43,8 +44,8 @@ const groups = Object.entries(positionLabels)
   .filter((g) => g.members.length > 0);
 ---
 
-<BaseLayout title={page.data.title}>
-  <PageHeader title={page.data.title!} subtitle={page.data.subtitle} image={page.data.headerImage} />
+<BaseLayout {...(page.data.title && { title: page.data.title })}>
+  <PageHeader title={page.data.title!} {...(page.data.subtitle && { subtitle: page.data.subtitle })} {...(page.data.headerImage && { image: page.data.headerImage })} />
 
   <div class="mx-auto max-w-container px-4">
     {groups.map((group) => (

@@ -24,6 +24,11 @@ const [homeEntry, researchTopics, researchPage, aboutPage, newsPage] = await Pro
   getEntry("pages", "news-listing"),
 ]);
 
+if (!homeEntry) throw new Error("Home page not found");
+if (!researchPage) throw new Error("Research listing page not found");
+if (!aboutPage) throw new Error("About page not found");
+if (!newsPage) throw new Error("News listing page not found");
+
 const { Content: HomeContent } = await homeEntry.render();
 
 /* Build carousel slides from research topics that have a header image */

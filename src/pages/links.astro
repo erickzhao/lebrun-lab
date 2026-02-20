@@ -4,11 +4,12 @@ import PageHeader from "@/components/PageHeader.astro";
 import { getEntry } from "astro:content";
 
 const page = await getEntry("pages", "links");
+if (!page) throw new Error("Links page not found");
 const { Content } = await page.render();
 ---
 
-<BaseLayout title={page.data.title}>
-  <PageHeader title={page.data.title!} subtitle={page.data.subtitle} image={page.data.headerImage} />
+<BaseLayout {...(page.data.title && { title: page.data.title })}>
+  <PageHeader title={page.data.title!} {...(page.data.subtitle && { subtitle: page.data.subtitle })} {...(page.data.headerImage && { image: page.data.headerImage })} />
   <div class="prose mx-auto px-4">
     <Content />
   </div>

@@ -9,7 +9,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import { getCollection } from "astro:content";
-import type { InferGetStaticParamsType, InferGetStaticPropsType } from "astro";
+import type { InferGetStaticPropsType } from "astro";
 
 export async function getStaticPaths() {
   const topics = await getCollection("research");
@@ -25,11 +25,11 @@ const { topic } = Astro.props as Props;
 const { Content } = await topic.render();
 ---
 
-<BaseLayout title={topic.data.title}>
+<BaseLayout {...(topic.data.title && { title: topic.data.title })}>
   <PageHeader
     title={topic.data.title}
-    subtitle={topic.data.subtitle}
-    image={topic.data.headerImage}
+    {...(topic.data.subtitle && { subtitle: topic.data.subtitle })}
+    {...(topic.data.headerImage && { image: topic.data.headerImage })}
   />
 
   <div class="mx-auto max-w-body px-4">
