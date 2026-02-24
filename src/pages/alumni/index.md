@@ -41,6 +41,7 @@ headerImage: /img/logo.jpg
 # Graduate Students:
 
 * Sophie Poulet, PhD student, Experimental Surgery, McGill University (2017-2024)
+* Yi-Ching Tsai, MSc student, Experimental Medicine, McGill University (2020-2024)
 * Julien Boudreault PhD student, Experimental Surgery, McGill University (2019-2024)
 * Gang Yan, PhD student, Experimental Surgery, McGill University (2016-2023)
 * Amina Laham, PhD co-tutelle, Exp Medicine, McGill/Sharjah University, UAE (2020-2023)
@@ -69,10 +70,95 @@ headerImage: /img/logo.jpg
 * Hector Valderrama, PhD Experimental Medicine - 2006, McGill University (2001-2006)
 * Christie Kim, MsC Experimental Medicine - 2000, McGill University (1998-2000)
 
-# 
+
 
 # Visiting Scientists:
 
 * Wang Yun, visiting PhD student, Canada-China exchange program (2011-2013)
 * Sarah Schimchowitsch, Strasbourg University, France, Sabbatical leave (1999-2000)
 * Rachel Reynaud, Marseille University, France, Sabbatical leave (2003-2004)
+
+
+
+# Internships:
+
+* Ines Khouane, Univ Lille, France (2025).
+* Farah Achnak, Univ Lille, France (2024).
+* Cleo Moury, MsC Biology-Health, University Clermont-Auvergne, France (2024).
+* Alan Guillevin, Univ Lille, France (March-Sept 2023).
+* Jessica Jiao, Dept Microbiology and Immunology, McGill (2020-2021)
+* Romain Gourby, LEGTA de Vendôme, Areines, France - 2019
+* Jason Boucher, LEGTA de Vendôme, Areines, France - 2019
+* Salima Ramdani, recipient of Dr. Raymond and Mrs. Leora Kahn Research Bursary for breast cancer research (2017)
+* Fatmah Alraffa, McGill University (2017-)
+* Ayad Ali, McGill (2013-2015)
+* Xinyuan Hong, McGill (2013-2015)
+* Juliana Seok, Department of Medicine, McGill University (2014-2015)
+* Dimtakurti Aparna, Department of Medicine, McGill University (2014-2015)
+* 
+  Thomas, University Rennes (2012-2013), Internships Ecole Ingenieurs (AGRO), France
+* 
+  Celia, University Rennes (June-Sept 2012), Internships Ecole Ingenieurs (AGRO), France
+* 
+  Gladys Filliat, Internship, University of Lyon, France (2013-2014)
+* Daizy Moualeu Kameni (ESTBB, Université catholique de Lyon), May 2012-Sept 2012.
+* 
+  Kristina Rozintseva, McGill University (2011-2012).
+* 
+  Kevin Lang, Internship, University of Lyon, France (2010)
+* 
+  Corina Schmid, University of Freiburg, Germany (2009)
+* 
+  Radhika Chandra, High School student, Royal West Academy, Montreal (2007-2008)
+* 
+  Raphaelle Millat, Internship, University of Lyon, France (2008)
+* 
+  Nisrine Falah, Internship, Ecole Normale Superieure (ENS) Lyon, France (2008)
+* 
+  Vineetha Vijaya Kumar, Internship, Ecole Normale Superieure (ENS) Lyon, France (2008)
+* 
+  Guillaume Teyre, Internship, University of Lyon, France (2007)
+* 
+  Loren Drevet, Internship, University of Lyon, France (May 2006-Oct 2006).
+* 
+  Anupam Batra, McGill (April 2005 – August 2005)
+* 
+  Tyanian Chen, McGill Med School student (May – June 2005)
+* 
+  Severine Frison, Internship, Univ of Montreal, (Feb2004-April2004)
+* 
+  Eugenia Bouras, Marianopolis College (2004)
+* 
+  Tami Zaft, Marianopolis College (2004).
+* 
+  Nikola Vukov, Marianopolis College (2003).
+* 
+  Julia Kassouf, Marianopolis College (2003).
+* 
+  Jennifer Soo, Marianopolis College (2002).
+* 
+  Melissa Sandrasagra, Marianopolis College (2002)
+* 
+  Chenjie Xia, Marianopolis College, (2003)
+* 
+  Genevieve Levasseur, Sherbrooke University, co-operation program (2002)
+
+
+
+# International Federation of Medical Students Associations (IFMSA program):
+
+* Micheal Svaton, Czech Republic (2013)
+* 
+  Jessica, suiss intern, 2012
+* 
+  Bora Kahramangil, Turkey 2012
+* 
+  Kristin Folberg, Denmark, 2011
+* 
+  Glavaš Sandra, Croatia, 2011
+* 
+  Al Omairi Sultan, Sultanate of Oman, 2011
+* 
+  Salih Kavuncu, Turkia, 2011
+* 
+  Paulino Tallón de Lara, Spain, 2011
