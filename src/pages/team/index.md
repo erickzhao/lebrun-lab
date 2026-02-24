@@ -46,5 +46,11 @@ members:
     position: grad
   - name: 'Yizhou Zhang, MD, Ph.D. Candidate'
     position: grad
+  - email: charles.essagian@muhc.mcgill.ca
+    name: Charles Essagian
+    position: admin
+  - email: thomas.kucharski@rimuhc.ca
+    name: Thomas Kucharski - CRP Program Manager
+    position: admin
 ---
 
