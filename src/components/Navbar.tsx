@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -6,7 +6,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+} from '@/components/ui/navigation-menu';
 import {
   Home,
   FlaskConical,
@@ -17,11 +17,11 @@ import {
   ExternalLink,
   Menu,
   X,
-} from "lucide-react";
-import { cn } from "@/lib/utils";
+} from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const navLinkClass =
-  "flex flex-row items-center gap-1.5 px-3 py-2 text-sm text-primary no-underline hover:bg-transparent hover:text-primary/70";
+  'flex flex-row items-center gap-1.5 px-3 py-2 text-sm text-primary no-underline hover:bg-transparent hover:text-primary/70';
 
 function DropdownLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -59,7 +59,9 @@ function NavLink({
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const closeMobile = () => { setMobileOpen(false); };
+  const closeMobile = () => {
+    setMobileOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm">
@@ -74,7 +76,9 @@ export default function Navbar() {
 
         <button
           type="button"
-          onClick={() => { setMobileOpen(!mobileOpen); }}
+          onClick={() => {
+            setMobileOpen(!mobileOpen);
+          }}
           className="p-2 text-primary md:hidden"
           aria-label="Toggle navigation menu"
         >
@@ -99,7 +103,9 @@ export default function Navbar() {
                 <NavigationMenuContent>
                   <ul className="grid w-44 gap-0.5 p-1.5">
                     <DropdownLink href="/about">About</DropdownLink>
-                    <DropdownLink href="/principal-investigator">Principal Investigator</DropdownLink>
+                    <DropdownLink href="/principal-investigator">
+                      Principal Investigator
+                    </DropdownLink>
                     <DropdownLink href="/team">Lab Members</DropdownLink>
                     <DropdownLink href="/alumni">Alumni</DropdownLink>
                   </ul>
@@ -155,25 +161,53 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className={cn("border-t border-border md:hidden", mobileOpen ? "block" : "hidden")}>
+      <div className={cn('border-t border-border md:hidden', mobileOpen ? 'block' : 'hidden')}>
         <div className="space-y-0.5 px-4 py-2">
-          <NavLink href="/" icon={Home} onClick={closeMobile}>Home</NavLink>
+          <NavLink href="/" icon={Home} onClick={closeMobile}>
+            Home
+          </NavLink>
 
-          <p className="px-3 pt-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Lab</p>
-          <NavLink href="/about" icon={FlaskConical} onClick={closeMobile}>About</NavLink>
-          <NavLink href="/principal-investigator" icon={FlaskConical} onClick={closeMobile}>Principal Investigator</NavLink>
-          <NavLink href="/team" icon={FlaskConical} onClick={closeMobile}>Lab Members</NavLink>
-          <NavLink href="/alumni" icon={FlaskConical} onClick={closeMobile}>Alumni</NavLink>
+          <p className="px-3 pt-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            Lab
+          </p>
+          <NavLink href="/about" icon={FlaskConical} onClick={closeMobile}>
+            About
+          </NavLink>
+          <NavLink href="/principal-investigator" icon={FlaskConical} onClick={closeMobile}>
+            Principal Investigator
+          </NavLink>
+          <NavLink href="/team" icon={FlaskConical} onClick={closeMobile}>
+            Lab Members
+          </NavLink>
+          <NavLink href="/alumni" icon={FlaskConical} onClick={closeMobile}>
+            Alumni
+          </NavLink>
 
-          <p className="px-3 pt-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Research</p>
-          <NavLink href="/research" icon={Microscope} onClick={closeMobile}>Projects</NavLink>
-          <NavLink href="/publications" icon={Microscope} onClick={closeMobile}>Publications</NavLink>
-          <NavLink href="/protocol" icon={Microscope} onClick={closeMobile}>Protocol</NavLink>
+          <p className="px-3 pt-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            Research
+          </p>
+          <NavLink href="/research" icon={Microscope} onClick={closeMobile}>
+            Projects
+          </NavLink>
+          <NavLink href="/publications" icon={Microscope} onClick={closeMobile}>
+            Publications
+          </NavLink>
+          <NavLink href="/protocol" icon={Microscope} onClick={closeMobile}>
+            Protocol
+          </NavLink>
 
-          <NavLink href="/news" icon={Newspaper} onClick={closeMobile}>News</NavLink>
-          <NavLink href="/contact" icon={Globe} onClick={closeMobile}>Contact</NavLink>
-          <NavLink href="/donate" icon={DollarSign} onClick={closeMobile}>Donate</NavLink>
-          <NavLink href="/links" icon={ExternalLink} onClick={closeMobile}>Links</NavLink>
+          <NavLink href="/news" icon={Newspaper} onClick={closeMobile}>
+            News
+          </NavLink>
+          <NavLink href="/contact" icon={Globe} onClick={closeMobile}>
+            Contact
+          </NavLink>
+          <NavLink href="/donate" icon={DollarSign} onClick={closeMobile}>
+            Donate
+          </NavLink>
+          <NavLink href="/links" icon={ExternalLink} onClick={closeMobile}>
+            Links
+          </NavLink>
         </div>
       </div>
     </nav>

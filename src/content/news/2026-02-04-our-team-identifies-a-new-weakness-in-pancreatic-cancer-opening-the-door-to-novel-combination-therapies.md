@@ -7,6 +7,7 @@ description: >-
   Recent study from the Lebrun Lab identifies a new biological Achilles’ heel in
   pancreatic cancer.
 ---
+
 ![](/img/targeting-pancreatic-cancer-weak-points.png)
 
 Pancreatic cancer remains one of the deadliest malignancies worldwide, with limited treatment options and a five-year survival rate that has improved only modestly over the past decades. Resistance to therapy and rapid disease progression continue to challenge clinicians and researchers alike. Now, our research team has identified a previously underappreciated biological vulnerability in pancreatic tumors that may be exploited through rational combination therapies.

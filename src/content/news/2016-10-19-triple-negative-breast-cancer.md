@@ -19,9 +19,10 @@ description: >-
   identified CDK4 to serve as a potential therapeutic target to combat TNBC
   tumors.
 ---
+
 ![ckd4](/img/cdk4.png)
 
-“Our study highlights new roles for CDK4 in regulating cancer stemness and as a novel prognostic marker in TNBC,” says Dr. Lebrun. Because the TNBC tumours are enriched with cancer stem cells – cells that utilize their self-renewal ability to generate and persistently propagate a heterogeneous tumor which results in metastasis and cancer relapse, while also displaying resistance to chemotherapy causing cancer patient death – targeting these cancer stem cells is a priority for the development of novel therapies that could efficiently target TNBCs. 
+“Our study highlights new roles for CDK4 in regulating cancer stemness and as a novel prognostic marker in TNBC,” says Dr. Lebrun. Because the TNBC tumours are enriched with cancer stem cells – cells that utilize their self-renewal ability to generate and persistently propagate a heterogeneous tumor which results in metastasis and cancer relapse, while also displaying resistance to chemotherapy causing cancer patient death – targeting these cancer stem cells is a priority for the development of novel therapies that could efficiently target TNBCs.
 
 CDK4 and its binding partner cyclin D1 are the ultimate targets of many oncogenic signals, suggesting a central role for these proteins in cancer development and progression. “We previously found that cyclin D1, a CDK4 binding partner, functions as downstream of TGFβ signaling pathway to regulate metastatic processes including cell migration and invasion of TNBC” explains Dr. Dai, the study’s first author. “This prompted us to then investigate the potential role played by the cyclin D1 partner, CDK4 in breast cancer progression.
 

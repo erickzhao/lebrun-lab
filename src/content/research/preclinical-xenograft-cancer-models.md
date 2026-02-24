@@ -12,6 +12,7 @@ files:
   - file: /img/j.-biol.-chem.-2013-fils-aimé-11807-23.pdf
     name: microRNA in cancer_2
 ---
+
 In the last two decades since the discovery of the first microRNA, these short, non-coding molecules have become attractive tools and targets for novel therapeutics against many diseases including cancer.
 
 We have identified multiple TGFβ-mediated microRNAs, for example miR-181, miR-584 and miR-30, that regulate tumor suppression and progression. We efficiently reduced primary tumor growth in vivo when modulating expression of these miRNAs in preclinical orthotopic breast cancer models. We are investigating their clinical prognostic and therapeutic values in different models of solid tumors (breast, pancreatic, prostate, melanoma, liver and ovarian cancers).

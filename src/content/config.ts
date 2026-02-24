@@ -12,10 +12,10 @@
  *
  * @see https://docs.astro.build/en/guides/content-collections/
  */
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content';
 
 const news = defineCollection({
-  type: "content",
+  type: 'content',
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
@@ -24,7 +24,7 @@ const news = defineCollection({
 });
 
 const research = defineCollection({
-  type: "content",
+  type: 'content',
   schema: z.object({
     title: z.string(),
     subtitle: z.string(),
@@ -51,7 +51,7 @@ const research = defineCollection({
  * for the entry it fetches.
  */
 const pages = defineCollection({
-  type: "content",
+  type: 'content',
   schema: z.object({
     title: z.string().optional(),
     subtitle: z.string().optional(),
@@ -67,8 +67,8 @@ const pages = defineCollection({
           name: z.string(),
           position: z.string(),
           photo: z.string().optional(),
-          description: z.string().default(""),
-          email: z.string().default(""),
+          description: z.string().default(''),
+          email: z.string().default(''),
         }),
       )
       .optional(),

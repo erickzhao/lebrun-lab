@@ -1,7 +1,7 @@
 [build]
-  # Astro outputs static HTML to dist/ (Gatsby used public/)
-  publish = "dist"
-  command = "npm run build"
+# Astro outputs static HTML to dist/ (Gatsby used public/)
+publish = "dist"
+command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "22"
+NODE_VERSION = "22"

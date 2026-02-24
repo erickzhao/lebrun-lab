@@ -88,4 +88,3 @@ members:
     photo: /img/img_4640.jpg
     position: grad
 ---
-

@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -48,8 +48,8 @@
 
 /* Custom theme extensions for Lebrun Lab */
 @theme {
-  --font-sans: "Roboto", "Helvetica Neue", "Arial", sans-serif;
-  --font-heading: "Montserrat", "Helvetica Neue", sans-serif;
+  --font-sans: 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  --font-heading: 'Montserrat', 'Helvetica Neue', sans-serif;
   --max-w-container: 1000px;
   --max-w-container-wide: 1300px;
   --max-w-body: 800px;
@@ -106,7 +106,12 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
   }
   a {
@@ -123,34 +128,62 @@
   max-width: var(--max-w-body);
   line-height: 1.75;
 }
-.prose h1, .prose h2, .prose h3, .prose h4 {
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
   font-family: var(--font-heading);
   font-weight: 700;
   margin-top: 2em;
   margin-bottom: 0.75em;
 }
-.prose h1 { font-size: 2.25rem; }
-.prose h2 { font-size: 1.5rem; }
-.prose h3 { font-size: 1.25rem; }
-.prose p { margin-bottom: 1.25em; }
-.prose ul, .prose ol { margin-bottom: 1.25em; padding-left: 1.5em; }
-.prose li { margin-bottom: 0.5em; }
-.prose ul { list-style-type: disc; }
-.prose ol { list-style-type: decimal; }
-.prose img { max-width: 100%; height: auto; border-radius: var(--radius-md); }
+.prose h1 {
+  font-size: 2.25rem;
+}
+.prose h2 {
+  font-size: 1.5rem;
+}
+.prose h3 {
+  font-size: 1.25rem;
+}
+.prose p {
+  margin-bottom: 1.25em;
+}
+.prose ul,
+.prose ol {
+  margin-bottom: 1.25em;
+  padding-left: 1.5em;
+}
+.prose li {
+  margin-bottom: 0.5em;
+}
+.prose ul {
+  list-style-type: disc;
+}
+.prose ol {
+  list-style-type: decimal;
+}
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
 .prose blockquote {
   border-left: 4px solid var(--border);
   padding-left: 1em;
   font-style: italic;
   color: var(--muted-foreground);
 }
-.prose a { text-decoration: underline; }
+.prose a {
+  text-decoration: underline;
+}
 .prose table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1.25em;
 }
-.prose th, .prose td {
+.prose th,
+.prose td {
   border: 1px solid var(--border);
   padding: 0.5em 0.75em;
   text-align: left;

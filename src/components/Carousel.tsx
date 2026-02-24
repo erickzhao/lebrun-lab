@@ -8,8 +8,8 @@
  * This replaces the old Bulma-carousel library with a lightweight,
  * dependency-free implementation using CSS transitions and a `setInterval`.
  */
-import { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, useCallback } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Slide {
   headerImage: string;
@@ -35,7 +35,9 @@ export default function Carousel({ slides }: CarouselProps) {
   /* Auto-advance every 5 seconds */
   useEffect(() => {
     const timer = setInterval(next, 5000);
-    return () => { clearInterval(timer); };
+    return () => {
+      clearInterval(timer);
+    };
   }, [next]);
 
   if (slides.length === 0) return null;
@@ -47,14 +49,10 @@ export default function Carousel({ slides }: CarouselProps) {
           key={slide.slug}
           href={`/research/${slide.slug}/`}
           className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-            i === current ? "opacity-100" : "opacity-0 pointer-events-none"
+            i === current ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
-          <img
-            src={slide.headerImage}
-            alt={slide.title}
-            className="h-full w-full object-cover"
-          />
+          <img src={slide.headerImage} alt={slide.title} className="h-full w-full object-cover" />
           {/* Dark gradient overlay at the bottom for text readability */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
           <span className="absolute bottom-8 left-8 right-8 text-2xl font-bold font-heading text-white drop-shadow-lg md:text-4xl">
