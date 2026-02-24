@@ -7,43 +7,44 @@ headerImage: /img/logo.jpg
 # Staff:
 
 * Dr Meiou Dai, PhD, Department of Medicine, McGill University (2013-)
-* 
-  Dr Lucie Canaff, Department of Medicine, McGill University (April-2014-2016)
+* Dr Lucie Canaff, Department of Medicine, McGill University (April-2014-2016)
 * Girija Daliah, Cancer Research Program (2019-2023) 
 * Aida Kasaei, MSc, Department of Medicine, McGill University (2016-)
-* 
-  Chieh (Regina) Lo, MSc, Department of Medicine, McGill University (July 2015-)
-* 
-  Ludovic Bretin, Internship, University of Lyon, France (2014)
-* 
-  Mayada El-Mousawi, Department of Medicine, McGill University (2012-present)
-* 
-  Isabelle Giscos, Department of Medicine, McGill University (2009-2011).
-* 
-  Mohammed Ridha, Department of Medicine, McGill University (2007-2009)
-* 
-  Thomas Zontag, Department of Medicine, McGill University (2008-2009)
-* 
-  Melanie Roy, Department of Medicine, McGill University (2005-2007)
-* 
-  Loren Drevet, Hormones and Cancer Research Unit, McGill (2006-2007)
+* Chieh (Regina) Lo, MSc, Department of Medicine, McGill University (July 2015-)
+* Ludovic Bretin, Internship, University of Lyon, France (2014)
+* Mayada El-Mousawi, Department of Medicine, McGill University (2012-present)
+* Isabelle Giscos, Department of Medicine, McGill University (2009-2011).
+* Mohammed Ridha, Department of Medicine, McGill University (2007-2009)
+* Thomas Zontag, Department of Medicine, McGill University (2008-2009)
+* Melanie Roy, Department of Medicine, McGill University (2005-2007)
+* Loren Drevet, Hormones and Cancer Research Unit, McGill (2006-2007)
 * Eun-Hye Lee, research fellow, Dept of Medicine, McGill University (2001-2003)
 * Shanhong Zhang Department of Medicine, McGill University (2003-2005).
-* 
-  Nusrat Sharmeen, Department of Medicine, McGill University (2000-2003).
-* 
-  Haying Chen, Department of Medicine, McGill University (1998-2000).
-  
+* Nusrat Sharmeen, Department of Medicine, McGill University (2000-2003).
+* Haying Chen, Department of Medicine, McGill University (1998-2000).
+
+
+
+# Post-doctoral Fellows:
+
+* Dr Yun Wang, Hospital and Clinical College of ChengDu University, China (2020-2023)
+* Dr Ana Belen Fraga Timiraos, postdoc, Spain (2023-2025)
+* Dr Jun Tian, PhD McGill (2018-2020)
+* Dr Karine Pasturaud, University of Rouen, France (2017-2019)
+* Dr Nader Hussein, University of Lyon, France (2007-2009)
+* Dr Chen Hui, MD, PhD, Visiting Scholar, China (2005-2007)
+* Dr. Serge Lemay, MD, Department of Medicine, McGill University (1999-2000)
+* Dr. Fatemeh Jafarian, MD, Univeristy of Teheran, Iran (2001-2002)
+
 
 
 # Graduate Students:
 
+* Sophie Poulet, PhD student, Experimental Surgery, McGill University (2017-2024)
 * Julien Boudreault PhD student, Experimental Surgery, McGill University (2019-2024)
-* 
-  Gang Yan, PhD student, Experimental Surgery, McGill University (2016-2023)
+* Gang Yan, PhD student, Experimental Surgery, McGill University (2016-2023)
 * Amina Laham, PhD co-tutelle, Exp Medicine, McGill/Sharjah University, UAE (2020-2023)
-* 
-  Vivian Wang, MSc student, Experimental Medicine, McGill University (2019-2021)
+* Vivian Wang, MSc student, Experimental Medicine, McGill University (2019-2021)
 * Halema Haiub, MSc student, Experimental Surgery, McGill University (2018-2020)
 * Mostafa Ghozlan, PhD student, Experimental Medicine, McGill University (2013-2020)
 * Nadêge Fils-Aimé, PhD student, Experimental Medicine, McGill University (2013-2019)
@@ -68,14 +69,7 @@ headerImage: /img/logo.jpg
 * Hector Valderrama, PhD Experimental Medicine - 2006, McGill University (2001-2006)
 * Christie Kim, MsC Experimental Medicine - 2000, McGill University (1998-2000)
 
-# Post-doctoral Fellows:
-
-* Dr Jun Tian, PhD McGill (2018-2020)
-* Dr Karine Pasturaud, University of Rouen, France (2017-2019)
-* Dr Nader Hussein, University of Lyon, France (2007-2009)
-* Dr Chen Hui, MD, PhD, Visiting Scholar, China (2005-2007)
-* Dr. Serge Lemay, MD, Department of Medicine, McGill University (1999-2000)
-* Dr. Fatemeh Jafarian, MD, Univeristy of Teheran, Iran (2001-2002)
+# 
 
 # Visiting Scientists:
 
