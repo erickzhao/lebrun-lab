@@ -48,8 +48,8 @@
 
 /* Custom theme extensions for Lebrun Lab */
 @theme {
-  --font-sans: 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-  --font-heading: 'Montserrat', 'Helvetica Neue', sans-serif;
+  --font-sans: system-ui, sans-serif;
+  --font-heading: system-ui, sans-serif;
   --max-w-container: 1000px;
   --max-w-container-wide: 1300px;
   --max-w-body: 800px;
