@@ -44,5 +44,7 @@ members:
   - name: 'Shima Rahimirad, Ph.D. Candidate'
     photo: /img/img_4640.jpg
     position: grad
+  - name: 'Yizhou Zhang, MD, Ph.D. Candidate'
+    position: grad
 ---
 
