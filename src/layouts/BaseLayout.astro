@@ -1,23 +1,9 @@
 ---
-/**
- * Root layout wrapping every page on the site.
- *
- * Provides the <html> shell, <head> meta (fonts, favicons, title),
- * the site-wide Navbar (loaded as a React island for interactivity),
- * a <main> content slot, and the static Footer.
- *
- * Usage in a page:
- *   <BaseLayout title="About">
- *     <p>Page content here…</p>
- *   </BaseLayout>
- */
-
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar.astro";
 import Footer from "@/components/Footer.astro";
 import "@/styles/global.css";
 
 interface Props {
-  /** Text shown in the browser tab — appended with " - Lebrun Lab". */
   title?: string;
 }
 
@@ -26,27 +12,21 @@ const pageTitle = title ? `${title} - Lebrun Lab` : "Lebrun Lab";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="lebrun">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
 
-    <!-- Favicons -->
     <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/img/favicon-256x256.png" sizes="256x256" />
     <link rel="icon" type="image/png" href="/img/favicon-512x512.png" sizes="512x512" />
   </head>
   <body>
-    <!--
-      `client:load` tells Astro to hydrate this React component immediately
-      on page load so that interactive features (dropdown menus, mobile
-      hamburger toggle) work right away.
-    -->
-    <Navbar client:load />
+    <Navbar />
 
-    <!-- Bottom margin keeps content from touching the footer -->
-    <main class="mb-40">
+    {/* Spacer for fixed navbar */}
+    <main class="pt-16 mb-40">
       <slot />
     </main>
 

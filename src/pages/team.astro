@@ -1,15 +1,4 @@
 ---
-/**
- * Team page — displays all lab members grouped by their role.
- *
- * Members are defined as a list in the `team.md` frontmatter (not in the
- * markdown body). Each member has a `position` value code (e.g. "grad",
- * "postdoc") from the DecapCMS select widget. We map those codes to
- * human-readable labels and group members under headings.
- *
- * Member descriptions are stored as markdown strings in frontmatter, so we
- * use the `marked` library to render them to HTML at build time.
- */
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import { getEntry } from "astro:content";
@@ -19,10 +8,6 @@ const page = await getEntry("pages", "team");
 if (!page) throw new Error("Team page not found");
 const members = page.data.members ?? [];
 
-/**
- * Maps the short position codes stored in the CMS to display labels.
- * The order here also determines the order groups appear on the page.
- */
 const positionLabels: Record<string, string> = {
   associate: "Research Associates",
   postdoc: "Post-Doctorate Fellows",
@@ -35,7 +20,6 @@ const positionLabels: Record<string, string> = {
   admin: "Administration",
 };
 
-/** Group members by position, preserving the display order above. */
 const groups = Object.entries(positionLabels)
   .map(([code, label]) => ({
     label,
@@ -47,15 +31,14 @@ const groups = Object.entries(positionLabels)
 <BaseLayout {...(page.data.title && { title: page.data.title })}>
   <PageHeader title={page.data.title!} {...(page.data.subtitle && { subtitle: page.data.subtitle })} {...(page.data.headerImage && { image: page.data.headerImage })} />
 
-  <div class="mx-auto max-w-container px-4">
+  <div class="mx-auto max-w-4xl px-4">
     {groups.map((group) => (
       <section class="mb-12">
-        <h2 class="mb-6 text-2xl font-bold font-heading">{group.label}</h2>
+        <h2 class="mb-6 text-2xl font-bold">{group.label}</h2>
         <div class="space-y-6">
           {group.members.map((m) => (
-            <div class="flex flex-col overflow-hidden rounded-lg border border-border shadow-sm md:flex-row">
-              {/* Photo */}
-              <div class="md:w-64 md:shrink-0">
+            <div class="card card-side bg-base-100 shadow-sm flex-col md:flex-row">
+              <figure class="md:w-64 md:shrink-0">
                 <img
                   src={m.photo || "/img/placeholder.svg"}
                   alt={m.name}
@@ -64,13 +47,11 @@ const groups = Object.entries(positionLabels)
                     !m.photo && "object-contain p-8",
                   ]}
                 />
-              </div>
-              {/* Info */}
-              <div class="flex-1 p-6">
-                <h3 class="text-xl font-bold font-heading">{m.name}</h3>
-                <p class="text-sm text-muted-foreground">{m.email}</p>
-                {/* Render the markdown description to HTML */}
-                <div class="prose mt-3 text-sm" set:html={marked.parse(m.description)} />
+              </figure>
+              <div class="card-body">
+                <h3 class="card-title">{m.name}</h3>
+                <p class="text-sm opacity-70">{m.email}</p>
+                <div class="prose mt-2 text-sm" set:html={marked.parse(m.description)} />
               </div>
             </div>
           ))}
