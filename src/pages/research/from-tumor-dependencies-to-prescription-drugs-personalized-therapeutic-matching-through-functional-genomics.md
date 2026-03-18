@@ -8,7 +8,7 @@ tags:
   - >-
     Custom CRISPR screening; Functional Genomics; patient Biopsies; Precision
     Oncology: Drug Repurposing
-headerImage: /img/figure_1.png
+headerImage: /img/fig.1_small-size.png
 files:
   - file: /img/figure_1.png
 ---
