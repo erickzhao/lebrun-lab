@@ -27,13 +27,11 @@ description: >-
 
 
   This study was recently accepted for publication in Molecular Cancer (IF 34).
-
-
-  https://muhc.ca/news-and-patient-stories/news/achilles-heel-pancreatic-cancer-could-pave-way-new-treatments
-
-
-  https://cusm.ca/nouvelles-et-histoires/nouvelles/le-talon-dachille-du-cancer-du-pancreas-pourrait-ouvrir-la-voie-de
 ---
 ![null](/img/targeting-pancreatic-cancer-weak-points.png)
 
-https://pubmed-ncbi-nlm-nih-gov.proxy3.library.mcgill.ca/41645202/
+https://muhc.ca/news-and-patient-stories/news/achilles-heel-pancreatic-cancer-could-pave-way-new-treatments
+
+
+
+https://cusm.ca/nouvelles-et-histoires/nouvelles/le-talon-dachille-du-cancer-du-pancreas-pourrait-ouvrir-la-voie-de
