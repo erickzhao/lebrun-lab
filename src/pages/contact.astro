@@ -1,0 +1,69 @@
+---
+import { marked } from 'marked'
+import { getEntry } from 'astro:content'
+import Base from '../layouts/Base.astro'
+import PageHeader from '../components/PageHeader.astro'
+import Map from '../components/Map.astro'
+import { normalizeEmail } from '../lib/email'
+
+const entry = await getEntry('pages', 'contact')
+if (!entry) throw new Error('Missing src/content/pages/contact.md')
+
+const { title, subtitle, headerImage, contact, address, directions } = entry.data
+
+const lines = [
+  address?.line1,
+  address?.line2,
+  [address?.city, address?.province].filter(Boolean).join(', '),
+  address?.postalCode,
+].filter((line): line is string => Boolean(line))
+
+const email = contact?.email ? normalizeEmail(contact.email) : undefined
+---
+
+<Base title={title} description={subtitle}>
+  <PageHeader title={title} subtitle={subtitle} image={headerImage} />
+
+  <section class="section container">
+    <div class="columns">
+      <div class="column">
+        <h2 class="subtitle">Point of Contact</h2>
+        <p>
+          {contact?.name}{contact?.name && <br />}
+          {contact?.position}{contact?.position && <br />}
+          {email && <a href={`mailto:${email}`}>{email}</a>}{email && <br />}
+          {contact?.phone}
+        </p>
+      </div>
+      <div class="column">
+        <h2 class="subtitle">Address</h2>
+        <address>
+          {lines.map((line, index) => (
+            <>
+              {line}
+              {index < lines.length - 1 && <br />}
+            </>
+          ))}
+        </address>
+      </div>
+    </div>
+  </section>
+
+  {
+    lines.length > 0 && (
+      <section class="section container">
+        <h2 class="subtitle">Map</h2>
+        <Map address={lines.join(', ')} />
+      </section>
+    )
+  }
+
+  {
+    directions && (
+      <section class="section container">
+        <h2 class="subtitle">Directions</h2>
+        <div class="content" set:html={marked.parse(directions)} />
+      </section>
+    )
+  }
+</Base>

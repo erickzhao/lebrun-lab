@@ -1,0 +1,37 @@
+---
+import type { GetStaticPaths } from 'astro'
+import { getCollection, render } from 'astro:content'
+import Base from '../../layouts/Base.astro'
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const posts = await getCollection('news')
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }))
+}
+
+const { post } = Astro.props
+const { Content } = await render(post)
+
+const dateFormat = new Intl.DateTimeFormat('en-CA', {
+  year: 'numeric',
+  month: 'long',
+  day: '2-digit',
+  timeZone: 'UTC',
+})
+---
+
+<Base title={post.data.title} description={post.data.description}>
+  <section class="section">
+    <div class="container content">
+      <div class="columns">
+        <div class="column is-10 is-offset-1">
+          <h1 class="title is-size-2 has-text-weight-bold">{post.data.title}</h1>
+          <p class="subtitle is-6">
+            <time datetime={post.data.date.toISOString()}>{dateFormat.format(post.data.date)}</time>
+          </p>
+          {post.data.description && <p>{post.data.description}</p>}
+          <Content />
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

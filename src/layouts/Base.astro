@@ -1,0 +1,85 @@
+---
+import '@fortawesome/fontawesome-free/css/fontawesome.css'
+import '@fortawesome/fontawesome-free/css/solid.css'
+import '../styles/global.scss'
+
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+
+import favicon32 from '../assets/favicon-32x32.png'
+import favicon256 from '../assets/favicon-256x256.png'
+import favicon512 from '../assets/favicon-512x512.png'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const { title, description } = Astro.props
+const pageTitle = title ? `${title} - Lebrun Lab` : 'Lebrun Lab'
+const canonical = new URL(Astro.url.pathname, Astro.site)
+---
+
+<!doctype html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" type="image/png" sizes="32x32" href={favicon32.src} />
+    <link rel="icon" type="image/png" sizes="256x256" href={favicon256.src} />
+    <link rel="icon" type="image/png" sizes="512x512" href={favicon512.src} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+    />
+  </head>
+  <body>
+    <!--
+      Netlify Identity invitation, recovery and confirmation links land on the
+      site root carrying a token in the URL fragment. Only then is the widget
+      worth loading, so ordinary visitors never pay for it.
+    -->
+    <script is:inline>
+      ;(function () {
+        var hash = window.location.hash
+        if (!/\b(invite_token|recovery_token|confirmation_token|email_change_token)=/.test(hash)) {
+          return
+        }
+        var script = document.createElement('script')
+        script.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js'
+        script.onload = function () {
+          var identity = window.netlifyIdentity
+          if (!identity) return
+          identity.on('init', function (user) {
+            if (!user) {
+              identity.on('login', function () {
+                window.location.href = '/admin/'
+              })
+            }
+          })
+          identity.init()
+        }
+        document.head.appendChild(script)
+      })()
+    </script>
+
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main {
+    margin-bottom: 10rem;
+  }
+</style>

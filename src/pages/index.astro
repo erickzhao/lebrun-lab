@@ -1,0 +1,88 @@
+---
+import { getCollection, getEntry, render } from 'astro:content'
+import Base from '../layouts/Base.astro'
+import Carousel from '../components/Carousel.astro'
+
+const home = await getEntry('pages', 'home')
+if (!home) throw new Error('Missing src/content/pages/home.md')
+const { Content } = await render(home)
+
+const topics = await getCollection('research')
+const slides = topics.map((topic) => ({
+  title: topic.data.title,
+  href: `/research/${topic.id}/`,
+  image: topic.data.headerImage,
+}))
+
+const cardIds = ['research', 'about', 'news'] as const
+const cards = (await Promise.all(cardIds.map((id) => getEntry('pages', id)))).filter(
+  (entry) => entry !== undefined
+)
+
+const hrefFor = (id: string) => `/${id}/`
+---
+
+<Base description="The Lebrun Lab studies the molecular mechanisms behind tumour initiation, progression, stemness and drug resistance in metastatic cancer, at the Research Institute of the McGill University Health Centre.">
+  <Carousel slides={slides} />
+
+  <div class="section container">
+    <div class="columns">
+      <div class="column is-8">
+        <article class="box content">
+          <Content />
+        </article>
+      </div>
+
+      <div class="column is-4">
+        <h2 class="subtitle">Learn More</h2>
+        <div class="learn-more">
+          {
+            cards.map((card) => (
+              <div class="card card-equal-height">
+                <div class="card-image">
+                  <figure
+                    class="image is-4by3"
+                    style={card.data.headerImage ? undefined : 'background-color: #00b1e2'}
+                  >
+                    {card.data.headerImage && (
+                      <img
+                        src={card.data.headerImage}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                        style="object-fit: cover"
+                      />
+                    )}
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="card-heading">
+                    <span class="title is-4 is-marginless">{card.data.title}</span>
+                    <a href={hrefFor(card.id)} class="button is-primary">
+                      More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .learn-more {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+</style>

@@ -1,0 +1,90 @@
+---
+import favicon32 from '../assets/favicon-32x32.png'
+
+const sections = [
+  { label: 'Home', href: '/', icon: 'fa-house' },
+  {
+    label: 'Lab',
+    icon: 'fa-flask',
+    items: [
+      { label: 'About', href: '/about/' },
+      { label: 'Principal Investigator', href: '/principal-investigator/' },
+      { label: 'Lab members', href: '/team/' },
+      { label: 'Alumni', href: '/alumni/' },
+    ],
+  },
+  {
+    label: 'Research',
+    icon: 'fa-microscope',
+    items: [
+      { label: 'Projects', href: '/research/' },
+      { label: 'Publications', href: '/publications/' },
+      { label: 'Protocol', href: '/protocol/' },
+    ],
+  },
+  { label: 'News', href: '/news/', icon: 'fa-newspaper' },
+  { label: 'Contact', href: '/contact/', icon: 'fa-globe' },
+  { label: 'Donate', href: '/donate/', icon: 'fa-dollar-sign' },
+  { label: 'Links', href: '/links/', icon: 'fa-arrow-up-right-from-square' },
+]
+---
+
+<nav class="navbar is-fixed-top" aria-label="Main navigation">
+  <div class="navbar-brand">
+    <a href="/" class="navbar-item">
+      <img src={favicon32.src} alt="" width="32" height="32" class="navbar-logo" />
+      Lebrun Lab
+    </a>
+    <button
+      type="button"
+      class="navbar-burger"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="navMenu"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="navbar-menu" id="navMenu">
+    <div class="navbar-end">
+      {
+        sections.map((section) =>
+          section.items ? (
+            <div class="navbar-item has-dropdown is-hoverable">
+              <span class="navbar-link">
+                <i class:list={['fa-solid', section.icon, 'navbar-icon']} aria-hidden="true" />
+                {section.label}
+              </span>
+              <div class="navbar-dropdown">
+                {section.items.map((item) => (
+                  <a class="navbar-item" href={item.href}>
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a class="navbar-item" href={section.href}>
+              <i class:list={['fa-solid', section.icon, 'navbar-icon']} aria-hidden="true" />
+              {section.label}
+            </a>
+          )
+        )
+      }
+    </div>
+  </div>
+</nav>
+
+<script>
+  const burger = document.querySelector<HTMLButtonElement>('.navbar-burger')
+  const menu = document.getElementById('navMenu')
+
+  burger?.addEventListener('click', () => {
+    const open = burger.classList.toggle('is-active')
+    menu?.classList.toggle('is-active', open)
+    burger.setAttribute('aria-expanded', String(open))
+  })
+</script>

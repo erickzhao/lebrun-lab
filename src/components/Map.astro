@@ -1,0 +1,23 @@
+---
+interface Props {
+  address: string
+}
+
+const { address } = Astro.props
+
+// A Maps Embed key is necessarily public on a static site — it ships in the
+// HTML either way. This is the key the site has always used; it should be
+// restricted to this domain in the Google Cloud console. Set
+// PUBLIC_GOOGLE_MAPS_KEY in the Netlify environment to override it.
+const FALLBACK_KEY = 'AIzaSyCZ6JNjNv5n4Hzzw04K8ffErcBOWatdFzg'
+const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || FALLBACK_KEY
+const src = `https://www.google.com/maps/embed/v1/place?key=${key}&q=${encodeURIComponent(address)}`
+---
+
+<iframe
+  title="Map to the Lebrun Lab"
+  src={src}
+  style="width: 100%; height: 400px; border: 0"
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  allowfullscreen></iframe>

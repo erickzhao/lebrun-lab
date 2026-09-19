@@ -1,0 +1,68 @@
+---
+import { getCollection, getEntry } from 'astro:content'
+import Base from '../../layouts/Base.astro'
+import PageHeader from '../../components/PageHeader.astro'
+import { excerpt } from '../../lib/excerpt'
+
+const info = await getEntry('pages', 'news')
+const { title, subtitle, headerImage } = info?.data ?? {}
+
+const posts = (await getCollection('news')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+)
+
+const dateFormat = new Intl.DateTimeFormat('en-CA', {
+  year: 'numeric',
+  month: 'long',
+  day: '2-digit',
+  timeZone: 'UTC',
+})
+---
+
+<Base title={title} description={subtitle}>
+  <PageHeader title={title} subtitle={subtitle} image={headerImage} />
+  <section class="section">
+    <div class="container">
+      {
+        posts.map((post) => {
+          const summary = excerpt(post.body ?? '')
+          const href = `/news/${post.id}/`
+          return (
+            <article class="box news-item">
+              <p>
+                <a class="has-text-primary" href={href}>
+                  {post.data.title}
+                </a>
+                <span> &bull; </span>
+                <small>
+                  <time datetime={post.data.date.toISOString()}>
+                    {dateFormat.format(post.data.date)}
+                  </time>
+                </small>
+              </p>
+              <p>{summary.text}</p>
+              {summary.truncated && (
+                <a class="button is-primary" href={href}>
+                  Keep Reading &rarr;
+                </a>
+              )}
+            </article>
+          )
+        })
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .news-item {
+    border: 1px solid #eaecee;
+    padding: 2em 4em;
+  }
+
+  @media screen and (max-width: 768px) {
+    .news-item {
+      padding: 1.5em;
+    }
+  }
+</style>

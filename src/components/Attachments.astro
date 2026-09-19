@@ -1,0 +1,38 @@
+---
+import fileIcon from '../assets/file.svg'
+
+interface Attachment {
+  file: string
+  name?: string
+}
+
+interface Props {
+  files?: Attachment[] | null
+}
+
+const { files } = Astro.props
+const attachments = files ?? []
+---
+
+{
+  attachments.length > 0 && (
+    <section>
+      <h2 class="title">Attachments</h2>
+      <div class="columns is-multiline">
+        {attachments.map((attachment) => (
+          <div class="column is-one-fifth">
+            <a class="box has-text-centered" href={attachment.file}>
+              <figure class="image container is-128x128">
+                <img src={fileIcon.src} alt="" />
+              </figure>
+              <p>
+                <strong>{attachment.name ?? 'Download'}</strong>
+              </p>
+              <p class="is-size-7">{attachment.file.replace('/img/', '')}</p>
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}

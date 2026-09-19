@@ -1,0 +1,54 @@
+---
+import { getCollection, getEntry } from 'astro:content'
+import Base from '../../layouts/Base.astro'
+import PageHeader from '../../components/PageHeader.astro'
+import { excerpt } from '../../lib/excerpt'
+
+const info = await getEntry('pages', 'research')
+const { title, subtitle, headerImage } = info?.data ?? {}
+
+const topics = await getCollection('research')
+---
+
+<Base title={title} description={subtitle}>
+  <PageHeader title={title} subtitle={subtitle} image={headerImage} />
+  <section class="section container">
+    {
+      topics.map((topic) => {
+        const href = `/research/${topic.id}/`
+        return (
+          <article class="box card is-horizontal">
+            {topic.data.headerImage && (
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img
+                    src={topic.data.headerImage}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </div>
+            )}
+            <div class="card-content">
+              <h2 class="subtitle is-4">{topic.data.title}</h2>
+              <div class="content">
+                {topic.data.tags && topic.data.tags.length > 0 && (
+                  <div class="tags">
+                    {topic.data.tags.map((tag) => (
+                      <span class="tag is-primary is-capitalized">{tag}</span>
+                    ))}
+                  </div>
+                )}
+                <p>{excerpt(topic.body ?? '').text}</p>
+                <a class="button is-primary" href={href}>
+                  Keep Reading &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+        )
+      })
+    }
+  </section>
+</Base>

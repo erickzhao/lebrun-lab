@@ -1,0 +1,24 @@
+---
+import crpLogo from '../assets/crp.png'
+import fomLogo from '../assets/fom.png'
+
+const year = new Date().getFullYear()
+---
+
+<footer class="footer has-text-centered">
+  <div class="container" style="max-width: 700px">
+    <div class="columns is-vcentered">
+      <div class="column">
+        <img src={crpLogo.src} alt="Cancer Research Program" style="height: 80px" />
+      </div>
+      <div class="column">
+        <img src={fomLogo.src} alt="McGill Faculty of Medicine" />
+      </div>
+    </div>
+  </div>
+  <p>
+    For donations, please contact Dr. Lebrun at
+    <a href="mailto:jj.lebrun@mcgill.ca">jj.lebrun@mcgill.ca</a>. Thank you for your support.
+  </p>
+  <p>Copyright &copy; {year} Lebrun Lab. All rights reserved.</p>
+</footer>

@@ -1,0 +1,52 @@
+---
+import { getEntry } from 'astro:content'
+import Base from '../layouts/Base.astro'
+import PageHeader from '../components/PageHeader.astro'
+import TeamList from '../components/TeamList.astro'
+
+const entry = await getEntry('pages', 'team')
+if (!entry) throw new Error('Missing src/content/pages/team.md')
+
+const { title, subtitle, headerImage, members } = entry.data
+const roster = members ?? []
+
+// Every position the CMS offers has a heading here. Anyone whose position is
+// not recognised still gets rendered, under a final group, so a member added
+// through the CMS can never silently disappear from this page.
+const groups: { key: string; label: string }[] = [
+  { key: 'associate', label: 'Research Associates' },
+  { key: 'postdoc', label: 'Post-Doctoral Fellows' },
+  { key: 'grad', label: 'Graduate Students' },
+  { key: 'masters', label: 'Masters Students' },
+  { key: 'visiting', label: 'Visiting Scientists' },
+  { key: 'assistant', label: 'Research Assistants' },
+  { key: 'undergrad', label: 'Undergraduate Students' },
+  { key: 'summer', label: 'Summer Students' },
+  { key: 'admin', label: 'Administration' },
+]
+
+const known = new Set(groups.map((group) => group.key))
+const sections = groups
+  .map((group) => ({
+    label: group.label,
+    members: roster.filter((member) => member.position === group.key),
+  }))
+  .filter((section) => section.members.length > 0)
+
+const unplaced = roster.filter((member) => !known.has(member.position))
+if (unplaced.length > 0) {
+  sections.push({ label: 'Other Lab Members', members: unplaced })
+}
+---
+
+<Base title={title} description={subtitle}>
+  <PageHeader title={title} subtitle={subtitle} image={headerImage} />
+  {
+    sections.map((section) => (
+      <div class="section container">
+        <h2 class="title">{section.label}</h2>
+        <TeamList members={section.members} />
+      </div>
+    ))
+  }
+</Base>

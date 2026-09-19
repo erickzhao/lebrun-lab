@@ -1,0 +1,98 @@
+---
+interface Slide {
+  title: string
+  href: string
+  image?: string
+}
+
+interface Props {
+  slides: Slide[]
+}
+
+const { slides } = Astro.props
+const visible = slides.filter((slide) => Boolean(slide.image))
+---
+
+{
+  visible.length > 0 && (
+    <section
+      class="hero-carousel"
+      data-autoplay-delay="5000"
+      aria-roledescription="carousel"
+      aria-label="Research topics"
+    >
+      {visible.map((slide, index) => (
+        <div
+          class:list={['carousel-item', { 'is-active': index === 0 }]}
+          role="group"
+          aria-roledescription="slide"
+          aria-label={`${index + 1} of ${visible.length}`}
+          aria-hidden={index === 0 ? 'false' : 'true'}
+        >
+          <img src={slide.image} alt="" loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+          <a class="carousel-caption" href={slide.href}>
+            {slide.title}
+          </a>
+        </div>
+      ))}
+
+      {visible.length > 1 && (
+        <>
+          <button type="button" class="carousel-nav is-left" aria-label="Previous slide">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true" />
+          </button>
+          <button type="button" class="carousel-nav is-right" aria-label="Next slide">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true" />
+          </button>
+        </>
+      )}
+    </section>
+  )
+}
+
+<script>
+  document.querySelectorAll<HTMLElement>('.hero-carousel').forEach((carousel) => {
+    const slides = Array.from(carousel.querySelectorAll<HTMLElement>('.carousel-item'))
+    if (slides.length < 2) return
+
+    const delay = Number(carousel.dataset.autoplayDelay ?? 5000)
+    let current = 0
+    let timer: ReturnType<typeof setInterval> | undefined
+
+    const show = (next: number) => {
+      current = (next + slides.length) % slides.length
+      slides.forEach((slide, index) => {
+        const active = index === current
+        slide.classList.toggle('is-active', active)
+        slide.setAttribute('aria-hidden', String(!active))
+      })
+    }
+
+    const start = () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+      timer = setInterval(() => show(current + 1), delay)
+    }
+
+    const stop = () => {
+      if (timer) clearInterval(timer)
+      timer = undefined
+    }
+
+    const step = (direction: number) => {
+      stop()
+      show(current + direction)
+      start()
+    }
+
+    carousel.querySelector('.carousel-nav.is-left')?.addEventListener('click', () => step(-1))
+    carousel.querySelector('.carousel-nav.is-right')?.addEventListener('click', () => step(1))
+
+    // Pause while the visitor is reading or tabbing through a slide.
+    carousel.addEventListener('mouseenter', stop)
+    carousel.addEventListener('mouseleave', start)
+    carousel.addEventListener('focusin', stop)
+    carousel.addEventListener('focusout', start)
+
+    start()
+  })
+</script>

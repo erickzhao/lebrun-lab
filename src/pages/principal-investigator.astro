@@ -1,0 +1,21 @@
+---
+import { getEntry, render } from 'astro:content'
+import Base from '../layouts/Base.astro'
+import PageHeader from '../components/PageHeader.astro'
+
+const entry = await getEntry('pages', 'principal-investigator')
+if (!entry) throw new Error('Missing src/content/pages/principal-investigator.md')
+
+const { Content } = await render(entry)
+const { title, subtitle, headerImage, headshot } = entry.data
+---
+
+<Base title={title} description={subtitle}>
+  <PageHeader title={title} subtitle={subtitle} image={headerImage} />
+  <section class="section container body">
+    {headshot && <img id="pi-headshot" src={headshot} alt={title} decoding="async" />}
+    <div class="content">
+      <Content />
+    </div>
+  </section>
+</Base>

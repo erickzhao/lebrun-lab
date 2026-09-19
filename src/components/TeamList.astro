@@ -1,0 +1,49 @@
+---
+import { marked } from 'marked'
+import placeholder from '../assets/placeholder.svg'
+
+interface Member {
+  name: string
+  position: string
+  photo?: string
+  description?: string
+  email?: string
+}
+
+interface Props {
+  members: Member[]
+}
+
+const { members } = Astro.props
+---
+
+<div class="container">
+  {
+    members.map((member) => (
+      <article class="card is-horizontal section">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img
+              src={member.photo || placeholder.src}
+              alt={member.photo ? member.name : ''}
+              loading="lazy"
+              decoding="async"
+              style={`object-fit: ${member.photo ? 'cover' : 'contain'}`}
+            />
+          </figure>
+        </div>
+        <div class="card-content">
+          <h3 class="title is-4">{member.name}</h3>
+          {member.email && (
+            <p class="subtitle is-6">
+              <a href={`mailto:${member.email.trim()}`}>{member.email.trim()}</a>
+            </p>
+          )}
+          {member.description && (
+            <div class="content" set:html={marked.parse(member.description)} />
+          )}
+        </div>
+      </article>
+    ))
+  }
+</div>

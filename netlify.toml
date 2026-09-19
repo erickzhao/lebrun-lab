@@ -1,6 +1,8 @@
 [build]
-  publish = "public"
+  publish = "dist"
   command = "npm run build"
+
 [build.environment]
-  YARN_VERSION = "1.3.2"
-  YARN_FLAGS = "--no-ignore-optional"
+  # Pinned so the build environment lives in the repository rather than
+  # only in the Netlify dashboard. Keep in sync with .nvmrc.
+  NODE_VERSION = "22"

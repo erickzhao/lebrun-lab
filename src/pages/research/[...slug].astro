@@ -1,0 +1,30 @@
+---
+import type { GetStaticPaths } from 'astro'
+import { getCollection, render } from 'astro:content'
+import Base from '../../layouts/Base.astro'
+import PageHeader from '../../components/PageHeader.astro'
+import Attachments from '../../components/Attachments.astro'
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const topics = await getCollection('research')
+  return topics.map((topic) => ({ params: { slug: topic.id }, props: { topic } }))
+}
+
+const { topic } = Astro.props
+const { Content } = await render(topic)
+const { title, subtitle, headerImage, files } = topic.data
+---
+
+<Base title={title} description={subtitle}>
+  <PageHeader title={title} subtitle={subtitle} image={headerImage} />
+  <div class="container">
+    <div class="columns">
+      <div class="column is-10 is-offset-1">
+        <div class="content">
+          <Content />
+        </div>
+        <Attachments files={files} />
+      </div>
+    </div>
+  </div>
+</Base>
