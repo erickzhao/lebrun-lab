@@ -27,34 +27,41 @@ const { previous, next, labels } = Astro.props
 
 {
   (previous || next) && (
-    <nav class="page post-nav" aria-label="More in this section">
-      {/* An empty first cell keeps a lone "next" over on the right. */}
-      {previous ? (
-        <a class="quiet nav-cell is-previous" href={previous.href} rel="prev">
-          <span class="meta">← {labels.previous}</span>
-          <span class="nav-title">{previous.title}</span>
-        </a>
-      ) : (
-        <span class="nav-cell is-empty" />
-      )}
+    <nav class="page page--measure post-nav" aria-label="More in this section">
+      {/* The same measure as the article above, so the rule and the two cells
+          line up with the text rather than spanning the whole page. */}
+      <div class="post-nav-grid">
+        {/* An empty first cell keeps a lone "next" over on the right. */}
+        {previous ? (
+          <a class="quiet nav-cell is-previous" href={previous.href} rel="prev">
+            <span class="meta">← {labels.previous}</span>
+            <span class="nav-title">{previous.title}</span>
+          </a>
+        ) : (
+          <span class="nav-cell is-empty" />
+        )}
 
-      {next && (
-        <a class="quiet nav-cell is-next" href={next.href} rel="next">
-          <span class="meta">{labels.next} →</span>
-          <span class="nav-title">{next.title}</span>
-        </a>
-      )}
+        {next && (
+          <a class="quiet nav-cell is-next" href={next.href} rel="next">
+            <span class="meta">{labels.next} →</span>
+            <span class="nav-title">{next.title}</span>
+          </a>
+        )}
+      </div>
     </nav>
   )
 }
 
 <style>
   .post-nav {
+    margin-bottom: clamp(3.5rem, 2rem + 6vw, 7rem);
+  }
+
+  .post-nav-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
     padding-block: 2rem 0;
-    margin-bottom: clamp(3.5rem, 2rem + 6vw, 7rem);
     border-top: 1px solid var(--ink);
   }
 
@@ -85,7 +92,7 @@ const { previous, next, labels } = Astro.props
   }
 
   @media (max-width: 700px) {
-    .post-nav {
+    .post-nav-grid {
       grid-template-columns: 1fr;
       gap: 0;
     }
