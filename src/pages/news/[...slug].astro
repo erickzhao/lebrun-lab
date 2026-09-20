@@ -16,6 +16,22 @@ interface Props {
 const { post } = Astro.props
 const { Content } = await render(post)
 
+/*
+ * The description is the standfirst, and for most posts it is a line or two.
+ * For a few it is the whole article: Dr. Lebrun writes the piece into the
+ * summary field and leaves the body for the photograph and the links. At
+ * standfirst size that runs to twenty-odd lines of 24px display type, which
+ * reads as shouting rather than as an introduction.
+ *
+ * So the length chooses the treatment. Anything longer than a standfirst is
+ * set as lead copy at reading size, and blank lines in the field are honoured
+ * as paragraph breaks either way.
+ */
+const LEAD_THRESHOLD = 300
+const description = post.data.description?.trim() ?? ''
+const paragraphs = description.split(/\n+/).map((p) => p.trim()).filter(Boolean)
+const isLead = description.length > LEAD_THRESHOLD
+
 const dateFormat = new Intl.DateTimeFormat('en-GB', {
   year: 'numeric',
   month: 'long',
@@ -31,7 +47,15 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
         News · <time datetime={post.data.date.toISOString()}>{dateFormat.format(post.data.date)}</time>
       </p>
       <h1>{post.data.title}</h1>
-      {post.data.description && <p class="post-sub">{post.data.description}</p>}
+      {
+        paragraphs.length > 0 && (
+          <div class:list={['post-sub', { 'is-lead': isLead }]}>
+            {paragraphs.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+        )
+      }
     </div>
   </header>
 
@@ -59,12 +83,25 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
     letter-spacing: -0.01em;
   }
 
-  .post-sub {
+  .post-sub p {
     margin: 0;
     font-family: var(--display-family);
     font-size: clamp(1.25rem, 1.1rem + 0.64vw, 1.5rem);
     line-height: 1.4;
     letter-spacing: -0.02em;
     color: var(--slate);
+  }
+
+  /* Lead copy is read, not scanned, so it takes the body face and size. */
+  .post-sub.is-lead p {
+    font-family: var(--body-family);
+    font-size: var(--size-body);
+    line-height: 1.7;
+    letter-spacing: normal;
+    color: var(--ink);
+  }
+
+  .post-sub p + p {
+    margin-top: 1.25rem;
   }
 </style>

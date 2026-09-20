@@ -16,6 +16,19 @@ interface Props {
 const { title, description } = Astro.props
 const pageTitle = title ? `${title} - Lebrun Lab` : 'Lebrun Lab'
 const canonical = new URL(Astro.url.pathname, Astro.site)
+
+/*
+ * A meta description is a search-result snippet, and a few posts carry their
+ * whole article in the field this comes from. Search engines cut it off around
+ * 160 characters anyway, so it is trimmed here on a word boundary rather than
+ * mid-word. The page itself still shows the text in full.
+ */
+const META_MAX = 160
+const flat = description?.replace(/\s+/g, ' ').trim()
+const metaDescription =
+  flat && flat.length > META_MAX
+    ? flat.slice(0, flat.lastIndexOf(' ', META_MAX - 1)).replace(/[,;:.]$/, '') + '…'
+    : flat
 ---
 
 <!doctype html>
@@ -24,7 +37,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
-    {description && <meta name="description" content={description} />}
+    {metaDescription && <meta name="description" content={metaDescription} />}
     <link rel="canonical" href={canonical} />
 
     <link rel="icon" type="image/png" sizes="32x32" href={favicon32.src} />
