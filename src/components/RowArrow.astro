@@ -1,0 +1,31 @@
+---
+/**
+ * The arrow at the end of a row or card that is itself a link.
+ *
+ * It repeats what the row already says, so it is decoration: hidden from
+ * assistive software, and coloured by whatever it sits in rather than
+ * carrying the accent itself.
+ */
+---
+
+<svg
+  class="row-arrow"
+  width="20"
+  height="20"
+  viewBox="0 0 20 20"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  <path d="M4 10h12M11 5l5 5-5 5"></path>
+</svg>
+
+<style>
+  .row-arrow {
+    display: block;
+    flex-shrink: 0;
+  }
+</style>

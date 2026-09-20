@@ -2,6 +2,7 @@
 import { marked } from 'marked'
 import { getCollection, getEntry } from 'astro:content'
 import Base from '../layouts/Base.astro'
+import RowArrow from '../components/RowArrow.astro'
 import { splitHome } from '../lib/homeSections'
 import { listedTopics } from '../lib/research'
 
@@ -135,6 +136,7 @@ const leadCaption = home.data.headerCaption
               {dateFormat.format(post.data.date)}
             </time>
             <span class="news-title">{post.data.title}</span>
+            <RowArrow />
           </a>
         ))
       }
@@ -435,10 +437,19 @@ const leadCaption = home.data.headerCaption
 
   .news-row {
     display: grid;
-    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-columns: 200px minmax(0, 1fr) 20px;
     gap: 32px;
-    align-items: baseline;
-    padding: 22px 0;
+    align-items: center;
+    padding: 24px 0;
+  }
+
+  /* The date carries the accent here, where it is the thing being scanned. */
+  .news-row time {
+    color: var(--accent);
+  }
+
+  .news-row :global(.row-arrow) {
+    color: var(--accent);
   }
 
   .news-title {
@@ -504,9 +515,16 @@ const leadCaption = home.data.headerCaption
       display: none;
     }
 
+    /* One column, so the arrow would land under the headline rather than
+       at the end of it. */
+    .news-row :global(.row-arrow) {
+      display: none;
+    }
+
     .news-row {
       grid-template-columns: 1fr;
       gap: 8px;
+      align-items: start;
       padding: 18px 0;
     }
 

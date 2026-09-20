@@ -2,6 +2,7 @@
 import { getCollection, getEntry } from 'astro:content'
 import Base from '../../layouts/Base.astro'
 import PageIntro from '../../components/PageIntro.astro'
+import RowArrow from '../../components/RowArrow.astro'
 import { excerpt } from '../../lib/excerpt'
 
 const info = await getEntry('pages', 'news')
@@ -38,6 +39,7 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
                 <span class="post-title">{post.data.title}</span>
                 {summary && <p class="post-summary">{summary}</p>}
               </div>
+              <RowArrow />
             </a>
           )
         })
@@ -49,13 +51,22 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
 <style>
   .post {
     display: grid;
-    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-columns: 200px minmax(0, 1fr) 20px;
     gap: 32px;
     padding: 26px 0;
   }
 
+  /* The date carries the accent here, where it is the thing being scanned. */
   .post time {
     padding-top: 6px;
+    color: var(--accent);
+  }
+
+  /* These rows run to three lines, so the arrow sits on the headline rather
+     than in the middle of the summary under it. */
+  .post :global(.row-arrow) {
+    margin-top: 7px;
+    color: var(--accent);
   }
 
   .post-body {
@@ -87,6 +98,11 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
       grid-template-columns: 1fr;
       gap: 8px;
       padding: 20px 0;
+    }
+
+    /* One column, so the arrow would land under the summary. */
+    .post :global(.row-arrow) {
+      display: none;
     }
 
     .post time {

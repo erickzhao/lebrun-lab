@@ -2,6 +2,7 @@
 import { getEntry } from 'astro:content'
 import Base from '../../layouts/Base.astro'
 import PageIntro from '../../components/PageIntro.astro'
+import RowArrow from '../../components/RowArrow.astro'
 import { listedTopics } from '../../lib/research'
 
 const info = await getEntry('pages', 'research')
@@ -35,18 +36,7 @@ const topics = await listedTopics()
                     accessibility tree along with the arrow beside it. */}
                 <p class="topic-index" aria-hidden="true">
                   <span class="meta">{String(position + 1).padStart(2, '0')}</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M4 10h12M11 5l5 5-5 5" />
-                  </svg>
+                  <RowArrow />
                 </p>
                 <h2>{topic.data.title.trim()}</h2>
                 {topic.data.subtitle && <p class="topic-sub">{topic.data.subtitle}</p>}
