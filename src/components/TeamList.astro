@@ -1,6 +1,5 @@
 ---
 import { marked } from 'marked'
-import placeholder from '../assets/placeholder.svg'
 
 interface Member {
   name: string
@@ -15,35 +14,142 @@ interface Props {
 }
 
 const { members } = Astro.props
+
+/**
+ * Most of the roster is a name and nothing else, so a member without a photo
+ * gets an initials tile of the same 4:5 proportion rather than a stretched
+ * placeholder. Roles and honorifics are written into the `name` field in the
+ * CMS ("Thomas Kucharski - CRP Program Manager", "Yizhou Zhang, MD, Ph.D.
+ * Candidate"), so take the initials from the part before them.
+ */
+function initials(name: string): string {
+  const bare = name
+    .split(' - ')[0]
+    .split(',')[0]
+    .replace(/^(dr|prof|mr|ms|mrs)\.?\s+/i, '')
+    .trim()
+
+  return bare
+    .split(/\s+/)
+    .filter((word) => /[\p{L}]/u.test(word))
+    .slice(0, 2)
+    .map((word) => word[0]?.toUpperCase() ?? '')
+    .join('')
+}
 ---
 
-<div class="container">
+<ul class="roster">
   {
-    members.map((member) => (
-      <article class="card is-horizontal section">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img
-              src={member.photo || placeholder.src}
-              alt={member.photo ? member.name : ''}
-              loading="lazy"
-              decoding="async"
-              style={`object-fit: ${member.photo ? 'cover' : 'contain'}`}
-            />
-          </figure>
-        </div>
-        <div class="card-content">
-          <h3 class="title is-4">{member.name}</h3>
-          {member.email && (
-            <p class="subtitle is-6">
-              <a href={`mailto:${member.email.trim()}`}>{member.email.trim()}</a>
-            </p>
+    members.map((member) => {
+      const email = member.email?.trim()
+      const bio = member.description?.trim()
+      return (
+        <li class="member">
+          {member.photo ? (
+            <div class="portrait">
+              <img src={member.photo} alt={member.name} loading="lazy" decoding="async" />
+            </div>
+          ) : (
+            <div class="portrait portrait--initials" aria-hidden="true">
+              <span>{initials(member.name)}</span>
+            </div>
           )}
-          {member.description && (
-            <div class="content" set:html={marked.parse(member.description)} />
+
+          <h3>{member.name}</h3>
+          {email && (
+            <a class="member-email" href={`mailto:${email}`}>
+              {email}
+            </a>
           )}
-        </div>
-      </article>
-    ))
+          {bio && (
+            <div class="member-bio">
+              <div class="bio-text prose" set:html={marked.parse(bio)} />
+              <button type="button" class="text-button bio-toggle" hidden>
+                More
+              </button>
+            </div>
+          )}
+        </li>
+      )
+    })
   }
-</div>
+</ul>
+
+<style>
+  .roster {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 48px 32px;
+  }
+
+  .member {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .member h3 {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    margin-top: 14px;
+  }
+
+  .member-email {
+    font-size: 0.8125rem;
+    margin-top: 8px;
+    align-self: flex-start;
+    overflow-wrap: anywhere;
+  }
+
+  .member-bio {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .bio-text {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--slate);
+  }
+
+  /*
+   * Biographies are Markdown bullet lists of wildly differing length. Clamping
+   * them is what keeps the grid even — but only where the toggle that undoes
+   * the clamp actually works.
+   */
+  :global(html.js) .bio-text:not(.is-open) {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @media (max-width: 900px) {
+    .roster {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px 16px;
+    }
+  }
+</style>
+
+<script>
+  for (const wrapper of document.querySelectorAll<HTMLElement>('.member-bio')) {
+    const text = wrapper.querySelector<HTMLElement>('.bio-text')
+    const toggle = wrapper.querySelector<HTMLButtonElement>('.bio-toggle')
+    if (!text || !toggle) continue
+
+    // Nothing is being hidden if the biography is short enough to fit.
+    if (text.scrollHeight <= text.clientHeight + 1) continue
+
+    toggle.hidden = false
+    toggle.addEventListener('click', () => {
+      const open = text.classList.toggle('is-open')
+      toggle.textContent = open ? 'Less' : 'More'
+    })
+  }
+</script>

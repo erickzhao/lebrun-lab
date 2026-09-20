@@ -1,52 +1,44 @@
 ---
 import { getCollection, getEntry } from 'astro:content'
 import Base from '../../layouts/Base.astro'
-import PageHeader from '../../components/PageHeader.astro'
+import PageIntro from '../../components/PageIntro.astro'
 import { excerpt } from '../../lib/excerpt'
 
 const info = await getEntry('pages', 'news')
-const { title, subtitle, headerImage } = info?.data ?? {}
+const { title, subtitle } = info?.data ?? {}
 
 const posts = (await getCollection('news')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 )
 
-const dateFormat = new Intl.DateTimeFormat('en-CA', {
+const dateFormat = new Intl.DateTimeFormat('en-GB', {
   year: 'numeric',
   month: 'long',
-  day: '2-digit',
+  day: 'numeric',
   timeZone: 'UTC',
 })
 ---
 
 <Base title={title} description={subtitle}>
-  <PageHeader title={title} subtitle={subtitle} image={headerImage} />
-  <section class="section">
-    <div class="container">
+  <PageIntro eyebrow="News" title={title} subtitle={subtitle} />
+
+  <section class="page band">
+    <div class="rule-list">
       {
         posts.map((post) => {
-          const summary = excerpt(post.body ?? '')
-          const href = `/news/${post.id}/`
+          // Most posts carry a description; the few that do not fall back to
+          // the opening of the body rather than showing an empty row.
+          const summary = post.data.description?.trim() || excerpt(post.body ?? '', 240).text
           return (
-            <article class="box news-item">
-              <p>
-                <a class="has-text-primary" href={href}>
-                  {post.data.title}
-                </a>
-                <span> &bull; </span>
-                <small>
-                  <time datetime={post.data.date.toISOString()}>
-                    {dateFormat.format(post.data.date)}
-                  </time>
-                </small>
-              </p>
-              <p>{summary.text}</p>
-              {summary.truncated && (
-                <a class="button is-primary" href={href}>
-                  Keep Reading &rarr;
-                </a>
-              )}
-            </article>
+            <a class="quiet post" href={`/news/${post.id}/`}>
+              <time class="meta" datetime={post.data.date.toISOString()}>
+                {dateFormat.format(post.data.date)}
+              </time>
+              <div class="post-body">
+                <span class="post-title">{post.data.title}</span>
+                {summary && <p class="post-summary">{summary}</p>}
+              </div>
+            </a>
           )
         })
       }
@@ -55,14 +47,55 @@ const dateFormat = new Intl.DateTimeFormat('en-CA', {
 </Base>
 
 <style>
-  .news-item {
-    border: 1px solid #eaecee;
-    padding: 2em 4em;
+  .post {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 32px;
+    padding: 26px 0;
   }
 
-  @media screen and (max-width: 768px) {
-    .news-item {
-      padding: 1.5em;
+  .post time {
+    padding-top: 6px;
+  }
+
+  .post-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .post-title {
+    font-family: var(--display-family);
+    font-size: 1.375rem;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+
+  .post-summary {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--slate);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @media (max-width: 900px) {
+    .post {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 20px 0;
+    }
+
+    .post time {
+      padding-top: 0;
+    }
+
+    .post-title {
+      font-size: 1.1875rem;
+      line-height: 1.3;
     }
   }
 </style>

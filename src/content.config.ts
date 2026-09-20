@@ -58,6 +58,7 @@ const pages = defineCollection({
     title: z.string().optional(),
     subtitle: z.string().optional(),
     headerImage: z.string().optional(),
+    headerCaption: z.string().optional(),
     headshot: z.string().optional(),
     members: z.array(teamMember).nullish(),
     contact: z

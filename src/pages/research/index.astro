@@ -1,54 +1,112 @@
 ---
 import { getCollection, getEntry } from 'astro:content'
 import Base from '../../layouts/Base.astro'
-import PageHeader from '../../components/PageHeader.astro'
-import { excerpt } from '../../lib/excerpt'
+import PageIntro from '../../components/PageIntro.astro'
 
 const info = await getEntry('pages', 'research')
-const { title, subtitle, headerImage } = info?.data ?? {}
+const { title, subtitle } = info?.data ?? {}
 
 const topics = await getCollection('research')
 ---
 
 <Base title={title} description={subtitle}>
-  <PageHeader title={title} subtitle={subtitle} image={headerImage} />
-  <section class="section container">
-    {
-      topics.map((topic) => {
-        const href = `/research/${topic.id}/`
-        return (
-          <article class="box card is-horizontal">
-            {topic.data.headerImage && (
-              <div class="card-image">
-                <figure class="image is-4by3">
+  <PageIntro eyebrow="Research" title={title} subtitle={subtitle} />
+
+  <section class="page band">
+    <ul class="topics">
+      {
+        topics.map((topic) => (
+          <li>
+            <a class="quiet topic" href={`/research/${topic.id}/`}>
+              <div class="figure">
+                {topic.data.headerImage ? (
                   <img
                     src={topic.data.headerImage}
                     alt=""
                     loading="lazy"
                     decoding="async"
                   />
-                </figure>
+                ) : null}
               </div>
-            )}
-            <div class="card-content">
-              <h2 class="subtitle is-4">{topic.data.title}</h2>
-              <div class="content">
-                {topic.data.tags && topic.data.tags.length > 0 && (
-                  <div class="tags">
-                    {topic.data.tags.map((tag) => (
-                      <span class="tag is-primary is-capitalized">{tag}</span>
-                    ))}
-                  </div>
-                )}
-                <p>{excerpt(topic.body ?? '').text}</p>
-                <a class="button is-primary" href={href}>
-                  Keep Reading &rarr;
-                </a>
-              </div>
-            </div>
-          </article>
-        )
-      })
-    }
+              <h2>{topic.data.title.trim()}</h2>
+              {topic.data.subtitle && <p class="topic-sub">{topic.data.subtitle}</p>}
+              {topic.data.tags && topic.data.tags.length > 0 && (
+                <p class="tags meta">
+                  {topic.data.tags.map((tag, index) => (
+                    <>
+                      {index > 0 && <span class="sep">·</span>}
+                      <span>{tag}</span>
+                    </>
+                  ))}
+                </p>
+              )}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </section>
 </Base>
+
+<style>
+  .topics {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 72px 48px;
+  }
+
+  .topic {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    height: 100%;
+  }
+
+  .figure {
+    width: 100%;
+    height: clamp(200px, 26vw, 340px);
+    background: var(--tile);
+    overflow: hidden;
+  }
+
+  .figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .topic h2 {
+    font-size: clamp(1.5rem, 1.32rem + 0.73vw, 1.75rem);
+    line-height: 1.2;
+    margin-top: 8px;
+  }
+
+  .topic-sub {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--slate);
+  }
+
+  .tags {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sep {
+    color: #b5b0a8;
+  }
+
+  @media (max-width: 900px) {
+    .topics {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+</style>

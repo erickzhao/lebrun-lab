@@ -1,5 +1,6 @@
 ---
 import type { GetStaticPaths } from 'astro'
+import type { CollectionEntry } from 'astro:content'
 import { getCollection, render } from 'astro:content'
 import Base from '../../layouts/Base.astro'
 
@@ -8,30 +9,62 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return posts.map((post) => ({ params: { slug: post.id }, props: { post } }))
 }
 
+interface Props {
+  post: CollectionEntry<'news'>
+}
+
 const { post } = Astro.props
 const { Content } = await render(post)
 
-const dateFormat = new Intl.DateTimeFormat('en-CA', {
+const dateFormat = new Intl.DateTimeFormat('en-GB', {
   year: 'numeric',
   month: 'long',
-  day: '2-digit',
+  day: 'numeric',
   timeZone: 'UTC',
 })
 ---
 
 <Base title={post.data.title} description={post.data.description}>
-  <section class="section">
-    <div class="container content">
-      <div class="columns">
-        <div class="column is-10 is-offset-1">
-          <h1 class="title is-size-2 has-text-weight-bold">{post.data.title}</h1>
-          <p class="subtitle is-6">
-            <time datetime={post.data.date.toISOString()}>{dateFormat.format(post.data.date)}</time>
-          </p>
-          {post.data.description && <p>{post.data.description}</p>}
-          <Content />
-        </div>
-      </div>
+  <header class="page page--measure post-head">
+    <div>
+      <p class="eyebrow meta">
+        News · <time datetime={post.data.date.toISOString()}>{dateFormat.format(post.data.date)}</time>
+      </p>
+      <h1>{post.data.title}</h1>
+      {post.data.description && <p class="post-sub">{post.data.description}</p>}
+    </div>
+  </header>
+
+  <section class="page page--measure band">
+    <div class="prose">
+      <Content />
     </div>
   </section>
 </Base>
+
+<style>
+  .post-head {
+    padding-block: clamp(2.5rem, 1.5rem + 4vw, 6rem) clamp(1.5rem, 1rem + 2vw, 3rem);
+  }
+
+  .post-head > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .post-head h1 {
+    font-size: var(--size-title);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+
+  .post-sub {
+    margin: 0;
+    font-family: var(--display-family);
+    font-size: clamp(1.25rem, 1.1rem + 0.64vw, 1.5rem);
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: var(--slate);
+  }
+</style>

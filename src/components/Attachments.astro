@@ -1,6 +1,4 @@
 ---
-import fileIcon from '../assets/file.svg'
-
 interface Attachment {
   file: string
   name?: string
@@ -11,28 +9,56 @@ interface Props {
 }
 
 const { files } = Astro.props
-const attachments = files ?? []
+const attachments = (files ?? []).filter((attachment) => Boolean(attachment.file))
+
+const extension = (path: string) => {
+  const match = /\.([a-z0-9]+)(?:[?#]|$)/i.exec(path)
+  return match ? match[1].toUpperCase() : 'FILE'
+}
+
+const fallbackName = (path: string) => decodeURIComponent(path.split('/').pop() ?? path)
 ---
 
 {
   attachments.length > 0 && (
-    <section>
-      <h2 class="title">Attachments</h2>
-      <div class="columns is-multiline">
+    <section class="attachments">
+      <p class="eyebrow meta">Attachments</p>
+      <div class="rule-list">
         {attachments.map((attachment) => (
-          <div class="column is-one-fifth">
-            <a class="box has-text-centered" href={attachment.file}>
-              <figure class="image container is-128x128">
-                <img src={fileIcon.src} alt="" />
-              </figure>
-              <p>
-                <strong>{attachment.name ?? 'Download'}</strong>
-              </p>
-              <p class="is-size-7">{attachment.file.replace('/img/', '')}</p>
-            </a>
-          </div>
+          <a class="quiet attachment" href={attachment.file}>
+            <span>{attachment.name?.trim() || fallbackName(attachment.file)}</span>
+            <span class="meta">{extension(attachment.file)}</span>
+          </a>
         ))}
       </div>
     </section>
   )
 }
+
+<style>
+  .attachments {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .attachment {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    padding: 14px 0;
+    font-size: 1rem;
+  }
+
+  .attachment > span:first-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .attachment .meta {
+    flex-shrink: 0;
+    font-size: 0.6875rem;
+  }
+</style>

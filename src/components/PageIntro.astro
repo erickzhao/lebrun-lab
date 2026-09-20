@@ -1,0 +1,29 @@
+---
+/**
+ * The header every inner page opens with: an accent-ruled eyebrow, the title,
+ * and the subtitle as the CMS holds it.
+ *
+ * This replaces the old scrim-over-photograph hero. Pages whose `headerImage`
+ * was a logo or a stock texture were the worst of it — the About page stretched
+ * `/img/logo.jpg` across a 300px band and darkened it. Photographs now appear
+ * only where they are the subject: the homepage lead image and research posts.
+ */
+
+interface Props {
+  eyebrow?: string
+  title?: string
+  subtitle?: string
+  /** Set the subtitle in the display face, for pages whose subtitle is a line rather than a sentence. */
+  displaySubtitle?: boolean
+}
+
+const { eyebrow, title, subtitle, displaySubtitle = false } = Astro.props
+---
+
+<div class="page">
+  <div class="intro">
+    {eyebrow && <p class="eyebrow meta">{eyebrow}</p>}
+    {title && <h1>{title}</h1>}
+    {subtitle && <p class:list={['intro-sub', { 'is-display': displaySubtitle }]}>{subtitle}</p>}
+  </div>
+</div>

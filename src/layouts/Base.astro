@@ -1,7 +1,5 @@
 ---
-import '@fortawesome/fontawesome-free/css/fontawesome.css'
-import '@fortawesome/fontawesome-free/css/solid.css'
-import '../styles/global.scss'
+import '../styles/global.css'
 
 import Navbar from '../components/Navbar.astro'
 import Footer from '../components/Footer.astro'
@@ -21,7 +19,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
 ---
 
 <!doctype html>
-<html lang="en" class="has-navbar-fixed-top">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,8 +35,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
     />
+
+    <!-- Progressive enhancements (the clamped team biographies) only apply
+         when their toggle is actually reachable. -->
+    <script is:inline>
+      document.documentElement.classList.replace('no-js', 'js')
+    </script>
   </head>
   <body>
     <!--
@@ -70,16 +74,23 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
       })()
     </script>
 
+    <a class="skip-link" href="#main">Skip to content</a>
     <Navbar />
-    <main>
+    <main id="main">
       <slot />
     </main>
     <Footer />
   </body>
 </html>
 
-<style>
+<style is:global>
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
   main {
-    margin-bottom: 10rem;
+    flex: 1 0 auto;
   }
 </style>

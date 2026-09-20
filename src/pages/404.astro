@@ -3,11 +3,36 @@ import Base from '../layouts/Base.astro'
 ---
 
 <Base title="Page not found">
-  <section class="section">
-    <div class="container body has-text-centered">
-      <h1 class="title is-2">Page not found</h1>
-      <p class="subtitle">That page does not exist, or it has moved.</p>
-      <a class="button is-primary" href="/">Back to the homepage</a>
+  <section class="page page--measure band not-found">
+    <div>
+      <p class="eyebrow meta">404</p>
+      <h1>Page not found</h1>
+      <p class="lead">That page does not exist, or it has moved.</p>
+      <p><a href="/">Back to the homepage</a></p>
     </div>
   </section>
 </Base>
+
+<style>
+  .not-found {
+    padding-block: clamp(3rem, 2rem + 5vw, 7rem);
+  }
+
+  .not-found > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .not-found h1 {
+    font-size: var(--size-title);
+  }
+
+  .not-found p {
+    margin: 0;
+  }
+
+  .lead {
+    color: var(--slate);
+  }
+</style>

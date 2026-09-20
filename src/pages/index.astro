@@ -1,88 +1,272 @@
 ---
-import { getCollection, getEntry, render } from 'astro:content'
+import { marked } from 'marked'
+import { getCollection, getEntry } from 'astro:content'
 import Base from '../layouts/Base.astro'
-import Carousel from '../components/Carousel.astro'
+import { splitHome } from '../lib/homeSections'
 
 const home = await getEntry('pages', 'home')
 if (!home) throw new Error('Missing src/content/pages/home.md')
-const { Content } = await render(home)
 
+const { lead, prose, sponsors } = splitHome(home.body ?? '')
+
+/**
+ * The homepage shows three of the ten research topics. Nothing in the CMS says
+ * which, so it takes the first three the collection returns — alphabetical by
+ * filename: Cancer Stem Cells, CDK4/6 and DNA repair, and the Crisperized
+ * Medicine programme. Marking the featured three in the CMS is a content
+ * decision that has not been made yet.
+ */
+const FEATURED_TOPICS = 3
 const topics = await getCollection('research')
-const slides = topics.map((topic) => ({
-  title: topic.data.title,
-  href: `/research/${topic.id}/`,
-  image: topic.data.headerImage,
-}))
+const featured = topics.slice(0, FEATURED_TOPICS)
 
-const cardIds = ['research', 'about', 'news'] as const
-const cards = (await Promise.all(cardIds.map((id) => getEntry('pages', id)))).filter(
-  (entry) => entry !== undefined
-)
+const LATEST_NEWS = 4
+const posts = (await getCollection('news'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, LATEST_NEWS)
 
-const hrefFor = (id: string) => `/${id}/`
+const dateFormat = new Intl.DateTimeFormat('en-GB', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+})
+
+/**
+ * The lead photograph. `headerImage` on the Home entry is the CMS field for it;
+ * until one is chosen there, the site falls back to the panoramic photograph of
+ * the Glen site that the Contact and Lab members pages already use.
+ */
+const DEFAULT_LEAD_IMAGE = '/img/new panoramic glen-blue-sky - low res.jpg'
+const leadImage = home.data.headerImage || DEFAULT_LEAD_IMAGE
+const leadCaption = home.data.headerCaption
 ---
 
 <Base description="The Lebrun Lab studies the molecular mechanisms behind tumour initiation, progression, stemness and drug resistance in metastatic cancer, at the Research Institute of the McGill University Health Centre.">
-  <Carousel slides={slides} />
-
-  <div class="section container">
-    <div class="columns">
-      <div class="column is-8">
-        <article class="box content">
-          <Content />
-        </article>
-      </div>
-
-      <div class="column is-4">
-        <h2 class="subtitle">Learn More</h2>
-        <div class="learn-more">
-          {
-            cards.map((card) => (
-              <div class="card card-equal-height">
-                <div class="card-image">
-                  <figure
-                    class="image is-4by3"
-                    style={card.data.headerImage ? undefined : 'background-color: #00b1e2'}
-                  >
-                    {card.data.headerImage && (
-                      <img
-                        src={card.data.headerImage}
-                        alt=""
-                        loading="lazy"
-                        decoding="async"
-                        style="object-fit: cover"
-                      />
-                    )}
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="card-heading">
-                    <span class="title is-4 is-marginless">{card.data.title}</span>
-                    <a href={hrefFor(card.id)} class="button is-primary">
-                      More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </div>
+  <figure class="lead">
+    <div class="figure-wide">
+      <img src={leadImage} alt="" fetchpriority="high" decoding="async" />
     </div>
-  </div>
+    <figcaption class="page">
+      <div class="figure-caption">
+        <span class="meta">{leadCaption}</span>
+        <span class="meta">Lebrun Lab</span>
+      </div>
+    </figcaption>
+  </figure>
+
+  <section class="page masthead-band">
+    <h1>Lebrun Laboratory</h1>
+    {lead && <p class="mission">{lead}</p>}
+  </section>
+
+  <section class="page band">
+    <div class="section-head">
+      <p class="eyebrow meta">Research</p>
+      <a href="/research/">All {topics.length} research areas</a>
+    </div>
+    <ul class="topics">
+      {
+        featured.map((topic) => (
+          <li>
+            <a class="quiet topic" href={`/research/${topic.id}/`}>
+              <h2>{topic.data.title.trim()}</h2>
+              {topic.data.subtitle && <p class="topic-sub">{topic.data.subtitle}</p>}
+              {topic.data.tags && topic.data.tags.length > 0 && (
+                <p class="tags meta">
+                  {topic.data.tags.map((tag, index) => (
+                    <>
+                      {index > 0 && <span class="sep">·</span>}
+                      <span>{tag}</span>
+                    </>
+                  ))}
+                </p>
+              )}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="page band">
+    <div class="section-head">
+      <p class="eyebrow meta">Latest news</p>
+      <a href="/news/">All news</a>
+    </div>
+    <div class="rule-list news">
+      {
+        posts.map((post) => (
+          <a class="quiet news-row" href={`/news/${post.id}/`}>
+            <time class="meta" datetime={post.data.date.toISOString()}>
+              {dateFormat.format(post.data.date)}
+            </time>
+            <span class="news-title">{post.data.title}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  {
+    prose && (
+      <section class="page page--measure band">
+        <div class="prose" set:html={marked.parse(prose)} />
+      </section>
+    )
+  }
+
+  {
+    sponsors && (
+      <section class="page band">
+        <p class="eyebrow meta">{sponsors.heading}</p>
+        <div class="sponsors">
+          {sponsors.logos.map((logo) => (
+            <img src={logo.src} alt={logo.alt} loading="lazy" decoding="async" />
+          ))}
+        </div>
+      </section>
+    )
+  }
 </Base>
 
 <style>
-  .learn-more {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  .lead {
+    margin: 0;
   }
 
-  .card-heading {
+  .masthead-band {
+    padding-block: clamp(2.5rem, 1.5rem + 4vw, 6rem) clamp(3.5rem, 2rem + 6vw, 7rem);
     display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    max-width: min(var(--page-max), 61.25rem);
+  }
+
+  .masthead-band h1 {
+    font-size: var(--size-display);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  .mission {
+    margin: 0;
+    font-family: var(--display-family);
+    font-size: clamp(1.3125rem, 1.05rem + 1.09vw, 1.75rem);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    max-width: 26em;
+  }
+
+  .section-head {
+    margin-bottom: 2.5rem;
+  }
+
+  .topics {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 48px;
+  }
+
+  .topic {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ink);
+    height: 100%;
+  }
+
+  .topic h2 {
+    font-size: var(--size-card);
+    line-height: 1.2;
+  }
+
+  .topic-sub {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--slate);
+  }
+
+  .tags {
+    margin: 0;
+    font-size: 0.6875rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sep {
+    color: #b5b0a8;
+  }
+
+  .news-row {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 32px;
+    align-items: baseline;
+    padding: 22px 0;
+  }
+
+  .news-title {
+    font-family: var(--display-family);
+    font-size: 1.375rem;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+
+  .sponsors {
+    margin-top: 1.75rem;
+    display: flex;
+    gap: 48px;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    padding: 32px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .sponsors img {
+    flex: 1;
+    min-width: 0;
+    max-height: 90px;
+    object-fit: contain;
+  }
+
+  @media (max-width: 900px) {
+    .topics {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .topic {
+      padding-block: 20px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .topics li:first-child .topic {
+      border-top-color: var(--ink);
+    }
+
+    .news-row {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 18px 0;
+    }
+
+    .news-title {
+      font-size: 1.1875rem;
+      line-height: 1.3;
+    }
+
+    .sponsors {
+      flex-wrap: wrap;
+      gap: 24px;
+    }
   }
 </style>

@@ -12,13 +12,17 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "check:cms": "node scripts/check-cms.mjs",
+    "check": "astro check"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.3.1",
     "astro": "^7.3.3",
-    "bulma": "^1.0.4",
-    "marked": "^18.0.13",
-    "sass": "^1.104.1"
+    "marked": "^18.0.13"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "js-yaml": "^5.4.2",
+    "typescript": "^6.0.3"
   }
 }

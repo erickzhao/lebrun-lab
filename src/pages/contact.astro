@@ -2,14 +2,14 @@
 import { marked } from 'marked'
 import { getEntry } from 'astro:content'
 import Base from '../layouts/Base.astro'
-import PageHeader from '../components/PageHeader.astro'
+import PageIntro from '../components/PageIntro.astro'
 import Map from '../components/Map.astro'
 import { normalizeEmail } from '../lib/email'
 
 const entry = await getEntry('pages', 'contact')
 if (!entry) throw new Error('Missing src/content/pages/contact.md')
 
-const { title, subtitle, headerImage, contact, address, directions } = entry.data
+const { title, subtitle, contact, address, directions } = entry.data
 
 const lines = [
   address?.line1,
@@ -19,51 +19,133 @@ const lines = [
 ].filter((line): line is string => Boolean(line))
 
 const email = contact?.email ? normalizeEmail(contact.email) : undefined
+const phone = contact?.phone?.trim()
 ---
 
 <Base title={title} description={subtitle}>
-  <PageHeader title={title} subtitle={subtitle} image={headerImage} />
+  <PageIntro eyebrow="Contact" title={title} subtitle={subtitle} displaySubtitle />
 
-  <section class="section container">
-    <div class="columns">
-      <div class="column">
-        <h2 class="subtitle">Point of Contact</h2>
+  <section class="page band details">
+    <div class="field">
+      <p class="meta">Point of contact</p>
+      {contact?.name && <p class="field-name">{contact.name}</p>}
+      {contact?.position && <p class="field-note">{contact.position}</p>}
+      {email && (
         <p>
-          {contact?.name}{contact?.name && <br />}
-          {contact?.position}{contact?.position && <br />}
-          {email && <a href={`mailto:${email}`}>{email}</a>}{email && <br />}
-          {contact?.phone}
+          <a href={`mailto:${email}`}>{email}</a>
         </p>
-      </div>
-      <div class="column">
-        <h2 class="subtitle">Address</h2>
-        <address>
-          {lines.map((line, index) => (
-            <>
-              {line}
-              {index < lines.length - 1 && <br />}
-            </>
-          ))}
-        </address>
-      </div>
+      )}
+      {phone && (
+        <p>
+          <a href={`tel:${phone.replace(/[^+\d]/g, '')}`}>{phone}</a>
+        </p>
+      )}
     </div>
+
+    {
+      lines.length > 0 && (
+        <div class="field">
+          <p class="meta">Address</p>
+          <address>
+            {lines.map((line, index) => (
+              <>
+                {line}
+                {index < lines.length - 1 && <br />}
+              </>
+            ))}
+          </address>
+        </div>
+      )
+    }
   </section>
 
   {
     lines.length > 0 && (
-      <section class="section container">
-        <h2 class="subtitle">Map</h2>
-        <Map address={lines.join(', ')} />
+      <section class="page band">
+        <p class="eyebrow meta">Map</p>
+        <div class="map">
+          <Map address={lines.join(', ')} />
+        </div>
       </section>
     )
   }
 
   {
     directions && (
-      <section class="section container">
-        <h2 class="subtitle">Directions</h2>
-        <div class="content" set:html={marked.parse(directions)} />
+      <section class="page band">
+        <p class="eyebrow meta">Directions</p>
+        <div class="directions prose" set:html={marked.parse(directions)} />
       </section>
     )
   }
 </Base>
+
+<style>
+  .details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ink);
+  }
+
+  .field p {
+    margin: 0;
+  }
+
+  .field-name {
+    font-family: var(--display-family);
+    font-size: var(--size-card);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .field-note {
+    color: var(--slate);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .field address {
+    font-style: normal;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  .map {
+    margin-top: 1.5rem;
+  }
+
+  .directions {
+    margin-top: 1.5rem;
+    max-width: var(--measure);
+  }
+
+  /* The directions are a bullet list, one line per mode of transport. */
+  .directions :global(ul) {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .directions :global(li) {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .directions :global(li + li) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 900px) {
+    .details {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+</style>

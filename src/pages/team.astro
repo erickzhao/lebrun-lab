@@ -1,13 +1,13 @@
 ---
 import { getEntry } from 'astro:content'
 import Base from '../layouts/Base.astro'
-import PageHeader from '../components/PageHeader.astro'
+import PageIntro from '../components/PageIntro.astro'
 import TeamList from '../components/TeamList.astro'
 
 const entry = await getEntry('pages', 'team')
 if (!entry) throw new Error('Missing src/content/pages/team.md')
 
-const { title, subtitle, headerImage, members } = entry.data
+const { title, subtitle, members } = entry.data
 const roster = members ?? []
 
 // Every position the CMS offers has a heading here. Anyone whose position is
@@ -40,13 +40,36 @@ if (unplaced.length > 0) {
 ---
 
 <Base title={title} description={subtitle}>
-  <PageHeader title={title} subtitle={subtitle} image={headerImage} />
-  {
-    sections.map((section) => (
-      <div class="section container">
-        <h2 class="title">{section.label}</h2>
-        <TeamList members={section.members} />
-      </div>
-    ))
-  }
+  <PageIntro eyebrow="Lab" title={title} subtitle={subtitle} />
+
+  <div class="page band groups">
+    {
+      sections.map((section) => (
+        <section class="group">
+          <h2>{section.label}</h2>
+          <TeamList members={section.members} />
+        </section>
+      ))
+    }
+  </div>
 </Base>
+
+<style>
+  .groups {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 2rem + 3vw, 5.5rem);
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 24px;
+    border-top: 1px solid var(--ink);
+  }
+
+  .group h2 {
+    font-size: var(--size-card);
+  }
+</style>

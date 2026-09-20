@@ -1,13 +1,17 @@
 ---
 import { getEntry, render } from 'astro:content'
 import Base from './Base.astro'
-import PageHeader from '../components/PageHeader.astro'
+import PageIntro from '../components/PageIntro.astro'
 
 interface Props {
   id: string
+  /** Small label above the title, naming the section this page sits in. */
+  eyebrow?: string
+  /** `citations` styles a flat bullet list as a run of reference rows. */
+  variant?: 'prose' | 'citations'
 }
 
-const { id } = Astro.props
+const { id, eyebrow, variant = 'prose' } = Astro.props
 const entry = await getEntry('pages', id)
 
 if (!entry) {
@@ -15,16 +19,19 @@ if (!entry) {
 }
 
 const { Content } = await render(entry)
-const { title, subtitle, headerImage } = entry.data
+const { title, subtitle } = entry.data
 ---
 
 <Base title={title} description={subtitle}>
-  <PageHeader title={title} subtitle={subtitle} image={headerImage} />
-  <section class="section">
-    <div class="container body">
-      <div class="content">
-        <Content />
-      </div>
+  <PageIntro
+    eyebrow={eyebrow}
+    title={title}
+    subtitle={subtitle}
+    displaySubtitle={variant === 'citations'}
+  />
+  <section class="page page--measure band">
+    <div class:list={['prose', { 'prose--citations': variant === 'citations' }]}>
+      <Content />
     </div>
   </section>
 </Base>

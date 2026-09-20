@@ -73,6 +73,18 @@ collections:
               widget: "hidden",
               default: true,
             }
+          - {
+              label: "Lead image",
+              name: "headerImage",
+              widget: "image",
+              required: false,
+            }
+          - {
+              label: "Lead image caption",
+              name: "headerCaption",
+              widget: "string",
+              required: false,
+            }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/content/pages/about.md"
         label: "About"

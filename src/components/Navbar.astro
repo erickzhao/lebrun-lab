@@ -1,11 +1,23 @@
 ---
-import favicon32 from '../assets/favicon-32x32.png'
+// `?url` so this resolves to a plain URL on every Astro version: an SVG
+// imported bare becomes a component in Astro 5.7+.
+import mark from '../assets/lebrun-mark.svg?url'
 
-const sections = [
-  { label: 'Home', href: '/', icon: 'fa-house' },
+interface Item {
+  label: string
+  href: string
+}
+
+interface Section {
+  label: string
+  href?: string
+  items?: Item[]
+}
+
+const sections: Section[] = [
+  { label: 'Home', href: '/' },
   {
     label: 'Lab',
-    icon: 'fa-flask',
     items: [
       { label: 'About', href: '/about/' },
       { label: 'Principal Investigator', href: '/principal-investigator/' },
@@ -15,76 +27,395 @@ const sections = [
   },
   {
     label: 'Research',
-    icon: 'fa-microscope',
     items: [
       { label: 'Projects', href: '/research/' },
       { label: 'Publications', href: '/publications/' },
       { label: 'Protocol', href: '/protocol/' },
     ],
   },
-  { label: 'News', href: '/news/', icon: 'fa-newspaper' },
-  { label: 'Contact', href: '/contact/', icon: 'fa-globe' },
-  { label: 'Donate', href: '/donate/', icon: 'fa-dollar-sign' },
-  { label: 'Links', href: '/links/', icon: 'fa-arrow-up-right-from-square' },
+  { label: 'News', href: '/news/' },
+  { label: 'Contact', href: '/contact/' },
+  { label: 'Donate', href: '/donate/' },
+  { label: 'Links', href: '/links/' },
 ]
+
+// Trailing slashes are what the build emits, but a visitor may arrive without
+// one, so compare on a normalised path.
+const path = Astro.url.pathname.replace(/\/*$/, '/')
+
+const isCurrent = (href: string) => (href === '/' ? path === '/' : path.startsWith(href))
+const sectionIsCurrent = (section: Section) =>
+  section.href ? isCurrent(section.href) : (section.items ?? []).some((item) => isCurrent(item.href))
 ---
 
-<nav class="navbar is-fixed-top" aria-label="Main navigation">
-  <div class="navbar-brand">
-    <a href="/" class="navbar-item">
-      <img src={favicon32.src} alt="" width="32" height="32" class="navbar-logo" />
-      Lebrun Lab
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="/" class="lockup" aria-label="Lebrun Laboratory — home">
+      <img src={mark} alt="" width="28" height="28" />
+      <span>Lebrun Laboratory</span>
     </a>
-    <button
-      type="button"
-      class="navbar-burger"
-      aria-label="Toggle navigation menu"
-      aria-expanded="false"
-      aria-controls="navMenu"
-    >
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
+
+    <nav class="nav" aria-label="Main">
+      <ul>
+        {
+          sections.map((section) =>
+            section.items ? (
+              <li class="has-menu">
+                <button
+                  type="button"
+                  class:list={['nav-link', { 'is-current': sectionIsCurrent(section) }]}
+                  aria-expanded="false"
+                >
+                  {section.label}
+                </button>
+                <ul class="nav-menu">
+                  {section.items.map((item) => (
+                    <li>
+                      <a
+                        href={item.href}
+                        aria-current={isCurrent(item.href) ? 'page' : undefined}
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ) : (
+              <li>
+                <a
+                  class:list={['nav-link', { 'is-current': sectionIsCurrent(section) }]}
+                  href={section.href}
+                  aria-current={isCurrent(section.href!) ? 'page' : undefined}
+                >
+                  {section.label}
+                </a>
+              </li>
+            )
+          )
+        }
+      </ul>
+    </nav>
+
+    <button type="button" class="sheet-toggle meta" aria-expanded="false" aria-controls="navSheet">
+      Menu
     </button>
   </div>
+</header>
 
-  <div class="navbar-menu" id="navMenu">
-    <div class="navbar-end">
-      {
-        sections.map((section) =>
-          section.items ? (
-            <div class="navbar-item has-dropdown is-hoverable">
-              <span class="navbar-link">
-                <i class:list={['fa-solid', section.icon, 'navbar-icon']} aria-hidden="true" />
-                {section.label}
-              </span>
-              <div class="navbar-dropdown">
-                {section.items.map((item) => (
-                  <a class="navbar-item" href={item.href}>
-                    {item.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <a class="navbar-item" href={section.href}>
-              <i class:list={['fa-solid', section.icon, 'navbar-icon']} aria-hidden="true" />
+<!--
+  The mobile sheet lists every destination expanded, so nothing is hidden
+  behind a second tap. It is inert until the toggle opens it.
+-->
+<div class="sheet" id="navSheet" hidden>
+  <div class="sheet-head">
+    <span class="sheet-title">Lebrun Laboratory</span>
+    <button type="button" class="sheet-close meta">Close</button>
+  </div>
+  <nav class="sheet-nav" aria-label="Main, expanded">
+    {
+      sections.map((section) => (
+        <>
+          {section.href ? (
+            <a class="sheet-link" href={section.href}>
               {section.label}
             </a>
-          )
-        )
-      }
-    </div>
-  </div>
-</nav>
+          ) : (
+            <>
+              <span class="sheet-link is-group">{section.label}</span>
+              <div class="sheet-sub">
+                {(section.items ?? []).map((item) => (
+                  <a href={item.href}>{item.label}</a>
+                ))}
+              </div>
+            </>
+          )}
+        </>
+      ))
+    }
+  </nav>
+</div>
+
+<style>
+  .masthead {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .masthead-inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding-inline: var(--gutter);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .lockup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    text-decoration: none;
+    min-width: 0;
+  }
+
+  .lockup img {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .lockup span {
+    font-family: var(--display-family);
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  /*
+   * Direct-child selectors throughout: a descendant selector here would also
+   * match the dropdown's own <ul>, which is laid out quite differently.
+   */
+  .nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 32px;
+  }
+
+  .nav > ul > li {
+    position: relative;
+  }
+
+  .nav-link {
+    font: inherit;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--ink);
+    background: none;
+    border: 0;
+    padding: 0 0 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav-link:hover,
+  .nav-link.is-current {
+    border-bottom-color: var(--accent);
+  }
+
+  .nav-menu {
+    list-style: none;
+    margin: 6px 0 0;
+    position: absolute;
+    top: 100%;
+    left: -16px;
+    padding: 12px 16px;
+    min-width: 200px;
+    background: var(--bg);
+    border: 1px solid var(--rule);
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .has-menu:hover .nav-menu,
+  .has-menu:focus-within .nav-menu,
+  .has-menu.is-open .nav-menu {
+    display: flex;
+  }
+
+  /*
+   * Escape has to beat :focus-within, since it closes the menu while focus is
+   * still on the trigger. Same specificity as the rules above, so it wins on
+   * source order — it must stay last.
+   */
+  .has-menu.is-dismissed .nav-menu {
+    display: none;
+  }
+
+  .nav-menu a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    padding: 6px 0;
+    display: block;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu a[aria-current='page'] {
+    color: var(--accent);
+  }
+
+  .sheet-toggle,
+  .sheet {
+    display: none;
+  }
+
+  /* ----------------------------------------------------------- mobile -- */
+
+  @media (max-width: 900px) {
+    .nav {
+      display: none;
+    }
+
+    .masthead-inner {
+      height: 56px;
+    }
+
+    .lockup span {
+      font-size: 1.1875rem;
+    }
+
+    .sheet-toggle {
+      display: block;
+      background: none;
+      border: 0;
+      padding: 12px 0;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    .sheet:not([hidden]) {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      background: var(--bg);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .sheet-head {
+      height: 56px;
+      padding-inline: var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .sheet-title {
+      font-family: var(--display-family);
+      font-size: 1.1875rem;
+      font-weight: 600;
+    }
+
+    .sheet-close {
+      background: none;
+      border: 0;
+      padding: 12px 0;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    .sheet-nav {
+      padding: 16px var(--gutter) 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sheet-link {
+      font-family: var(--display-family);
+      font-size: 1.9375rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-decoration: none;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .sheet-link.is-group {
+      border-bottom: 0;
+      padding-bottom: 4px;
+    }
+
+    .sheet-sub {
+      display: flex;
+      flex-direction: column;
+      padding: 4px 0 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .sheet-sub a {
+      font-size: 1.0625rem;
+      color: var(--ink);
+      text-decoration: none;
+      padding: 10px 0;
+    }
+  }
+</style>
 
 <script>
-  const burger = document.querySelector<HTMLButtonElement>('.navbar-burger')
-  const menu = document.getElementById('navMenu')
+  const sheet = document.getElementById('navSheet')
+  const toggle = document.querySelector<HTMLButtonElement>('.sheet-toggle')
+  const close = document.querySelector<HTMLButtonElement>('.sheet-close')
 
-  burger?.addEventListener('click', () => {
-    const open = burger.classList.toggle('is-active')
-    menu?.classList.toggle('is-active', open)
-    burger.setAttribute('aria-expanded', String(open))
+  const setSheet = (open: boolean) => {
+    if (!sheet || !toggle) return
+    sheet.hidden = !open
+    toggle.setAttribute('aria-expanded', String(open))
+    document.body.style.overflow = open ? 'hidden' : ''
+    if (!open) toggle.focus()
+  }
+
+  toggle?.addEventListener('click', () => setSheet(sheet?.hidden !== false))
+  close?.addEventListener('click', () => setSheet(false))
+
+  // The dropdowns open on hover and on focus through CSS alone; the click
+  // handler is what makes them work on a touch screen and with a keyboard.
+  const menus = Array.from(document.querySelectorAll<HTMLElement>('.has-menu'))
+
+  const closeMenus = (except?: HTMLElement) => {
+    for (const menu of menus) {
+      if (menu === except) continue
+      menu.classList.remove('is-open')
+      menu.querySelector('button')?.setAttribute('aria-expanded', 'false')
+    }
+  }
+
+  for (const menu of menus) {
+    menu.querySelector('button')?.addEventListener('click', (event) => {
+      event.stopPropagation()
+      const open = !menu.classList.contains('is-open')
+      closeMenus(menu)
+      menu.classList.remove('is-dismissed')
+      menu.classList.toggle('is-open', open)
+      menu.querySelector('button')?.setAttribute('aria-expanded', String(open))
+    })
+
+    // A menu dismissed with Escape reopens as soon as the pointer or focus
+    // arrives afresh.
+    menu.addEventListener('pointerenter', () => menu.classList.remove('is-dismissed'))
+    menu.addEventListener('focusout', (event) => {
+      if (!menu.contains(event.relatedTarget as Node | null)) menu.classList.remove('is-dismissed')
+    })
+  }
+
+  document.addEventListener('click', () => closeMenus())
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return
+
+    // Escape closes whichever menu the keyboard is currently inside, leaving
+    // focus on its trigger where the visitor left it.
+    for (const menu of menus) {
+      if (menu.contains(document.activeElement) || menu.classList.contains('is-open')) {
+        menu.classList.add('is-dismissed')
+      }
+    }
+    closeMenus()
+
+    if (sheet && !sheet.hidden) setSheet(false)
   })
 </script>
