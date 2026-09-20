@@ -6,7 +6,7 @@ contact:
   email: jj (Dot) lebrun (At) mcgill (Dot) ca
   name: 'Jean-Jacques Lebrun, PhD'
   phone: ''
-  position: 'Professor of Medicine, McGill University Health Center'
+  position: 'Professor of Medicine, McGill University Health Centre'
 address:
   city: Montreal
   line1: 'McGill University Health Centre, Cancer Research Program'
