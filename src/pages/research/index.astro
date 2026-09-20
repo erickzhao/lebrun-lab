@@ -19,7 +19,7 @@ const topics = await listedTopics()
       {
         topics.map((topic, position) => (
           <li>
-            <a class="quiet topic" href={`/research/${topic.id}/`}>
+            <a class="quiet topic card-link" href={`/research/${topic.id}/`}>
               <div class:list={['figure', { 'figure--empty': !topic.data.headerImage }]}>
                 {topic.data.headerImage ? (
                   <img
@@ -38,7 +38,7 @@ const topics = await listedTopics()
                   <span class="meta">{String(position + 1).padStart(2, '0')}</span>
                   <RowArrow />
                 </p>
-                <h2>{topic.data.title.trim()}</h2>
+                <h2 class="row-title">{topic.data.title.trim()}</h2>
                 {topic.data.subtitle && <p class="topic-sub">{topic.data.subtitle}</p>}
                 {topic.data.tags && topic.data.tags.length > 0 && (
                   <p class="tags meta">

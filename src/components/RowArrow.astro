@@ -24,8 +24,11 @@
 </svg>
 
 <style>
+  /* The row or card it sits in moves it on hover; the ease-out is the
+     movement's own, so every arrow on the site travels the same way. */
   .row-arrow {
     display: block;
     flex-shrink: 0;
+    transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 </style>

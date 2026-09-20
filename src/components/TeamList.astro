@@ -55,20 +55,22 @@ function initials(name: string): string {
             </div>
           )}
 
-          <h3>{member.name}</h3>
-          {email && (
-            <a class="member-email" href={`mailto:${email}`}>
-              {email}
-            </a>
-          )}
-          {bio && (
-            <div class="member-bio">
-              <div class="bio-text prose" set:html={marked.parse(bio)} />
-              <button type="button" class="text-button bio-toggle" hidden>
-                More
-              </button>
-            </div>
-          )}
+          <div class="member-body">
+            <h3>{member.name}</h3>
+            {email && (
+              <a class="member-email" href={`mailto:${email}`}>
+                {email}
+              </a>
+            )}
+            {bio && (
+              <div class="member-bio">
+                <div class="bio-text prose" set:html={marked.parse(bio)} />
+                <button type="button" class="text-button bio-toggle" hidden>
+                  More
+                </button>
+              </div>
+            )}
+          </div>
         </li>
       )
     })
@@ -82,13 +84,33 @@ function initials(name: string): string {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 48px 32px;
+    gap: 32px;
   }
 
+  /*
+   * The same bordered card the homepage rail uses, so a person and a research
+   * topic are the same kind of object. The portrait runs to the card's edges
+   * and the words are inset from it. It is not a link, so it has no hover.
+   */
   .member {
     display: flex;
     flex-direction: column;
     min-width: 0;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    background: var(--bg);
+    overflow: hidden;
+  }
+
+  .member :global(.portrait) {
+    border-radius: 0;
+  }
+
+  .member-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 24px;
+    flex-grow: 1;
   }
 
   .member h3 {
@@ -149,7 +171,11 @@ function initials(name: string): string {
   @media (max-width: 900px) {
     .roster {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 32px 16px;
+      gap: 16px;
+    }
+
+    .member-body {
+      padding: 0 14px 18px;
     }
   }
 </style>

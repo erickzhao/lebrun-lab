@@ -31,12 +31,12 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
           // the opening of the body rather than showing an empty row.
           const summary = post.data.description?.trim() || excerpt(post.body ?? '', 240).text
           return (
-            <a class="quiet post" href={`/news/${post.id}/`}>
+            <a class="quiet post row-link" href={`/news/${post.id}/`}>
               <time class="meta" datetime={post.data.date.toISOString()}>
                 {dateFormat.format(post.data.date)}
               </time>
               <div class="post-body">
-                <span class="post-title">{post.data.title}</span>
+                <span class="post-title row-title">{post.data.title}</span>
                 {summary && <p class="post-summary">{summary}</p>}
               </div>
               <RowArrow />
@@ -53,7 +53,7 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
     display: grid;
     grid-template-columns: 200px minmax(0, 1fr) 20px;
     gap: 32px;
-    padding: 26px 0;
+    padding: 26px var(--row-bleed);
   }
 
   /* The date carries the accent here, where it is the thing being scanned. */
@@ -97,7 +97,7 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
     .post {
       grid-template-columns: 1fr;
       gap: 8px;
-      padding: 20px 0;
+      padding: 20px var(--row-bleed);
     }
 
     /* One column, so the arrow would land under the summary. */

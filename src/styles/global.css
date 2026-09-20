@@ -46,11 +46,15 @@
   --page-max: 1280px;
   --gutter: 80px;
   --measure: 40rem;
+
+  /* How far a hovered row's wash runs past the text on either side. */
+  --row-bleed: 20px;
 }
 
 @media (max-width: 800px) {
   :root {
     --gutter: 20px;
+    --row-bleed: 12px;
     --size-body: 1.0625rem;
   }
 }
@@ -211,11 +215,16 @@ a:hover {
   font-size: 0.9375rem;
 }
 
-/* A list that opens under a heavy rule and separates rows with hairlines. */
+/*
+ * A list that opens under a heavy rule and separates rows with hairlines. It
+ * runs a little past the text on either side, so a hovered row's wash has
+ * somewhere to go and the rules span the same width as the wash.
+ */
 .rule-list {
   display: flex;
   flex-direction: column;
   border-top: 1px solid var(--ink);
+  margin-inline: calc(var(--row-bleed) * -1);
 }
 
 .rule-list > * {
@@ -229,11 +238,28 @@ a:hover {
  * page is bracketed by the same grey top and bottom, and the rule does the
  * work a tint behind the type never could. The margin below is the band's own,
  * because it ends at a hard edge the body would otherwise start against.
+ *
+ * The dot field is the placeholder tiles' pattern, so the band and the tiles
+ * read as one family. It fades in from the right, where the band is empty,
+ * and never sits under the title.
  */
 .intro-band {
-  background: var(--bg-2);
+  background-color: var(--bg-2);
+  background-image:
+    linear-gradient(to right, var(--bg-2) 38%, rgba(244, 246, 248, 0) 70%),
+    radial-gradient(rgba(163, 18, 143, 0.22) 1.5px, transparent 1.5px);
+  background-size: 100% 100%, 22px 22px;
   border-bottom: 3px solid var(--accent);
   margin-block-end: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+}
+
+@media (max-width: 800px) {
+  /* The title takes most of the width here, so the dots keep to the edge. */
+  .intro-band {
+    background-image:
+      linear-gradient(to right, var(--bg-2) 62%, rgba(244, 246, 248, 0) 100%),
+      radial-gradient(rgba(163, 18, 143, 0.22) 1.5px, transparent 1.5px);
+  }
 }
 
 .intro {
@@ -398,6 +424,43 @@ a:hover {
 .prose--citations h2 {
   margin-top: 3.25rem;
   font-size: var(--size-card);
+}
+
+/* -------------------------------------------------------------- link hover - */
+
+/*
+ * A row or a card that is one link answers the pointer the same way
+ * everywhere: the title takes an accent underline and the arrow, where there
+ * is one, moves off to the right. A row also gets a grey wash that runs past
+ * the text by the list's bleed; a card has a border to change instead, so it
+ * gets none. The text itself stays ink rather than turning accent, because
+ * three things changing colour at once is noise.
+ */
+.row-link,
+.card-link {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.row-link:hover,
+.card-link:hover {
+  color: inherit;
+}
+
+.row-link:hover {
+  background: var(--bg-2);
+}
+
+.row-link:hover .row-title,
+.card-link:hover .row-title {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.row-link:hover .row-arrow,
+.card-link:hover .row-arrow {
+  transform: translateX(6px);
 }
 
 /* ------------------------------------------------------------------ tiles - */

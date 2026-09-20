@@ -94,14 +94,14 @@ const leadCaption = home.data.headerCaption
       {
         topics.map((topic) => (
           <li>
-            <a class="quiet topic" href={`/research/${topic.id}/`}>
+            <a class="quiet topic card-link" href={`/research/${topic.id}/`}>
               <div class:list={['topic-figure', { 'figure--empty': !topic.data.headerImage }]}>
                 {topic.data.headerImage && (
                   <img src={topic.data.headerImage} alt="" loading="lazy" decoding="async" />
                 )}
               </div>
               <div class="topic-body">
-                <h2>{topic.data.title.trim()}</h2>
+                <h2 class="row-title">{topic.data.title.trim()}</h2>
                 {topic.data.subtitle && <p class="topic-sub">{topic.data.subtitle}</p>}
                 {topic.data.tags && topic.data.tags.length > 0 && (
                   <p class="tags meta">
@@ -131,11 +131,11 @@ const leadCaption = home.data.headerCaption
     <div class="rule-list news">
       {
         posts.map((post) => (
-          <a class="quiet news-row" href={`/news/${post.id}/`}>
+          <a class="quiet news-row row-link" href={`/news/${post.id}/`}>
             <time class="meta" datetime={post.data.date.toISOString()}>
               {dateFormat.format(post.data.date)}
             </time>
-            <span class="news-title">{post.data.title}</span>
+            <span class="news-title row-title">{post.data.title}</span>
             <RowArrow />
           </a>
         ))
@@ -440,7 +440,7 @@ const leadCaption = home.data.headerCaption
     grid-template-columns: 200px minmax(0, 1fr) 20px;
     gap: 32px;
     align-items: center;
-    padding: 24px 0;
+    padding: 24px var(--row-bleed);
   }
 
   /* The date carries the accent here, where it is the thing being scanned. */
@@ -525,7 +525,7 @@ const leadCaption = home.data.headerCaption
       grid-template-columns: 1fr;
       gap: 8px;
       align-items: start;
-      padding: 18px 0;
+      padding: 18px var(--row-bleed);
     }
 
     .news-title {
