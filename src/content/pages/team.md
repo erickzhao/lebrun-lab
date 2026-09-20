@@ -4,7 +4,7 @@ title: Lab Members
 subtitle: Current team
 members:
   - description: >-
-      * **Education **: PhD, Experimental Surgery. McGill University  (2023)
+      * **Education**: PhD, Experimental Surgery. McGill University  (2023)
 
       * **Current research :** Evaluation of the therapeutic potential of a
       certain TGFb-mediated microRNA found to be upregulated in triple negative
@@ -15,9 +15,9 @@ members:
     photo: /img/20210511_100120.jpg
     position: associate
   - description: >-
-      * **Education **: PhD.
+      * **Education**: PhD.
 
-      * **Current research **: My research focuses on pre-clinic experiments to
+      * **Current research**: My research focuses on pre-clinic experiments to
       investigate human cancerous processes and mechanisms by using
       immunodeficient laboratory mouse models (breast cancer, pancreas cancer,
       lung and liver metastases, etc.) in order to explore and develop novel

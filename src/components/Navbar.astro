@@ -228,10 +228,34 @@ const sectionIsCurrent = (section: Section) =>
     gap: 2px;
   }
 
+  /*
+   * The menu hangs a few pixels clear of its trigger. Without this the pointer
+   * crossing that strip counted as leaving the item, so the menu closed again
+   * before anyone could reach it and the only way in was to click. The bridge
+   * is an invisible band over the gap, the width of the menu below it, which
+   * makes trigger and menu one continuous hover target.
+   */
+  .has-menu::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -16px;
+    right: -16px;
+    min-width: 200px;
+    height: 6px;
+    display: none;
+  }
+
   .has-menu:hover .nav-menu,
   .has-menu:focus-within .nav-menu,
   .has-menu.is-open .nav-menu {
     display: flex;
+  }
+
+  .has-menu:hover::after,
+  .has-menu:focus-within::after,
+  .has-menu.is-open::after {
+    display: block;
   }
 
   /*
