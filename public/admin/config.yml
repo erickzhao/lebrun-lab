@@ -54,6 +54,18 @@ collections:
               { label: "File Name", name: "name", widget: "string" },
             ],
         }
+      - {
+          label: "Hide from the Research page",
+          name: "unlisted",
+          widget: "boolean",
+          default: false,
+          hint: "The topic keeps its own page and web address, it just stops being listed. Use this when the same item is already posted under News.",
+        }
+  # Inner pages open with a typographic header, not a photograph, so only the
+  # two places that still render an image offer the field: the Home lead image
+  # below, and Header Image on a research topic. Offering it on the other pages
+  # only invited what the About page had — the lab logo stretched across a hero
+  # band — for a picture the page would never show.
   - name: "pages"
     label: "Pages"
     files:
@@ -98,7 +110,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Header Image", name: "headerImage", widget: "image" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/content/pages/principal-investigator.md"
         label: "Principal Investigator"
@@ -112,7 +123,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Header Image", name: "headerImage", widget: "image" }
           - { label: "Bio", name: "body", widget: "markdown" }
           - { label: "Headshot", name: "headshot", widget: "image" }
       - file: "src/content/pages/alumni.md"
@@ -127,7 +137,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Header Image", name: "headerImage", widget: "image" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/content/pages/team.md"
         label: "Team"
@@ -141,7 +150,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Header Image", name: "headerImage", widget: "image" }
           - label: "Members"
             name: "members"
             widget: "list"
@@ -183,7 +191,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Header Image", name: "headerImage", widget: "image" }
       - file: "src/content/pages/publications.md"
         label: "Publications"
         name: "publications"
@@ -196,7 +203,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Header Image", name: "headerImage", widget: "image" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/content/pages/protocol.md"
         label: "Protocol"
@@ -210,7 +216,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Header Image", name: "headerImage", widget: "image" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/content/pages/research.md"
         label: "Research Topic List"
@@ -224,7 +229,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Header Image", name: "headerImage", widget: "image" }
       - file: "src/content/pages/contact.md"
         label: "Contact"
         name: "contact"
@@ -237,7 +241,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Header Image", name: "headerImage", widget: "image" }
           - {
               label: "Point of contact",
               name: "contact",
@@ -280,7 +283,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Header Image", name: "headerImage", widget: "image" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/content/pages/links.md"
         label: "Links"
@@ -294,5 +296,4 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Header Image", name: "headerImage", widget: "image" }
           - { label: "Body", name: "body", widget: "markdown" }

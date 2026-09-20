@@ -2,7 +2,6 @@
 templateKey: donate-page
 title: Donations
 subtitle: Help our research
-headerImage: /img/logo.jpg
 ---
 We thank all our sponsors and donors for their continued support. Without them, research would not be the same. All our achievements are due to your great and sustained support.
 

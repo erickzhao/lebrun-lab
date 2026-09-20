@@ -14,6 +14,7 @@ tags:
 headerImage: /img/picture-top-10-discoveries-jan-2022.png
 files:
   - file: /img/picture-top-10-discoveries-jan-2022.png
+unlisted: true
 ---
 ● RI-MUHC researchers led one of Québec Science magazine’s top 10 discoveries of the year - January 5th, 2022. Jean-Jacques Lebrun and his team have discovered a promising treatment for triple negative breast cancer.
 

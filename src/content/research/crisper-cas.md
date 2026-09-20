@@ -1,7 +1,7 @@
 ---
 templateKey: research-post
 title: Lebrun Lab "Crisperized Medicine" Research Program
-subtitle: Genome wide CRIPSR screens
+subtitle: Genome wide CRISPR screens
 tags:
   - Personalized Medicine
   - CRISPR/Cas9

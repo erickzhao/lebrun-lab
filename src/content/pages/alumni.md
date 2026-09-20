@@ -2,7 +2,6 @@
 templateKey: alumni-page
 title: Lab Alumni
 subtitle: 'Visiting scientists, Postdocs and Graduate students'
-headerImage: /img/logo.jpg
 ---
 # Staff:
 

@@ -3,6 +3,7 @@ import { marked } from 'marked'
 import { getCollection, getEntry } from 'astro:content'
 import Base from '../layouts/Base.astro'
 import { splitHome } from '../lib/homeSections'
+import { listedTopics } from '../lib/research'
 
 const home = await getEntry('pages', 'home')
 if (!home) throw new Error('Missing src/content/pages/home.md')
@@ -10,11 +11,17 @@ if (!home) throw new Error('Missing src/content/pages/home.md')
 const { lead, prose, sponsors } = splitHome(home.body ?? '')
 
 /**
- * Every research topic goes in the rail, in the order the collection returns
- * them, so the CMS ordering is the running order and there is no featured set
- * to choose. Three fit on screen at a time with the fourth peeking out.
+ * Every listed research topic goes in the rail, in the order the collection
+ * returns them, so the CMS ordering is the running order and there is no
+ * featured set to choose. Three fit on screen at a time with the fourth
+ * peeking out.
+ *
+ * Topics flagged `unlisted` are left out here exactly as they are on the
+ * Research page, so the homepage never promotes a topic that page hides. That
+ * flag keeps the topic's own page and address — it is not Gatsby's `hidden`,
+ * which meant build no page at all.
  */
-const topics = await getCollection('research')
+const topics = await listedTopics()
 
 const LATEST_NEWS = 4
 const posts = (await getCollection('news'))
