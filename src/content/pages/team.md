@@ -2,7 +2,6 @@
 templateKey: team-page
 title: Lab Members
 subtitle: Current team
-headerImage: /img/new panoramic glen-blue-sky - low res.jpg
 members:
   - description: >-
       * **Education **: PhD, Experimental Surgery. McGill University  (2023)

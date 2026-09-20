@@ -2,7 +2,6 @@
 templateKey: about-page
 title: About Our Values
 subtitle: Lebrun Lab
-headerImage: /img/logo.jpg
 ---
 # Based in Montréal, Canada, the Lebrun Lab is part of the Cancer Research Program at the  McGill University Health Center Research Institute
 

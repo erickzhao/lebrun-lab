@@ -2,7 +2,6 @@
 templateKey: protocol-page
 title: Laboratory Protocols
 subtitle: Research/laboratory platforms and technical expertise
-headerImage: /img/analysis-2030266_1280.jpg
 ---
 **Molecular Biology:** DNA/RNA/microRNA manipulation and preparation, qPCR, cloning, CRISPR/CAS9 knockout, CRISPR/Cas Activation Systems, Lentiviral packaging and production for shRNAs and CRISPR constructs, Luciferase, cell viability, apoptosis, autophagy, cell cycle regulation assays...
 

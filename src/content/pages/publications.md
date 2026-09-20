@@ -2,7 +2,6 @@
 templateKey: publications-page
 title: Publications
 subtitle: Selected recent publications - Lebrun Lab
-headerImage: /img/dna-1811955_1280.jpg
 ---
 ## Pubmed link:
 

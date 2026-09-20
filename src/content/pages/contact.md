@@ -2,7 +2,6 @@
 templateKey: contact-page
 title: Contact Us
 subtitle: 'Lebrun lab, RI-MUHC'
-headerImage: /img/new panoramic glen-blue-sky - low res.jpg
 contact:
   email: jj (Dot) lebrun (At) mcgill (Dot) ca
   name: 'Jean-Jacques Lebrun, PhD'
