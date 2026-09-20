@@ -64,8 +64,10 @@ const leadCaption = home.data.headerCaption
   </figure>
 
   <section class="page masthead-band">
-    <h1>Lebrun Laboratory</h1>
-    {lead && <p class="mission">{lead}</p>}
+    <div class="masthead-panel">
+      <h1>Lebrun Laboratory</h1>
+      {lead && <p class="mission">{lead}</p>}
+    </div>
   </section>
 
   <section class="page band research">
@@ -164,12 +166,27 @@ const leadCaption = home.data.headerCaption
     margin: 0;
   }
 
+  /*
+   * The title sits on a white panel cut into the bottom of the photograph
+   * rather than below it. At most window heights the photograph alone filled
+   * the screen, so the name of the lab was under the fold on arrival.
+   */
   .masthead-band {
-    padding-block: clamp(2.5rem, 1.5rem + 4vw, 6rem) clamp(3.5rem, 2rem + 6vw, 7rem);
+    padding-block: 0 clamp(3.5rem, 2rem + 6vw, 7rem);
+    margin-top: clamp(-10rem, -6vw - 2rem, -3.5rem);
+    position: relative;
+    z-index: 1;
+  }
+
+  .masthead-panel {
+    background: var(--bg);
+    /* Open on the left, where it meets the page gutter, so the panel reads as
+       cut out of the image rather than laid on top of it. */
+    padding: clamp(1.5rem, 1rem + 2.5vw, 2.75rem) clamp(1.5rem, 1rem + 3vw, 3rem) 0 0;
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
-    max-width: min(var(--page-max), 61.25rem);
+    max-width: 44rem;
   }
 
   .masthead-band h1 {

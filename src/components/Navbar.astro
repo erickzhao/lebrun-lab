@@ -418,13 +418,31 @@ const sectionIsCurrent = (section: Section) =>
       menu.querySelector('button')?.setAttribute('aria-expanded', String(open))
     })
 
-    // A menu dismissed with Escape reopens as soon as the pointer or focus
-    // arrives afresh.
-    menu.addEventListener('pointerenter', () => menu.classList.remove('is-dismissed'))
     menu.addEventListener('focusout', (event) => {
       if (!menu.contains(event.relatedTarget as Node | null)) menu.classList.remove('is-dismissed')
     })
   }
+
+  /*
+   * A menu opened by a click stays open until something dismisses it, so
+   * moving the pointer onto another item has to be one of those things —
+   * otherwise a clicked menu and a hovered one sit on screen together,
+   * overlapping. Entering a menu also clears an Escape dismissal, so it opens
+   * again on a fresh approach.
+   */
+  document.querySelector('.nav')?.addEventListener('pointerover', (event) => {
+    const entered = (event.target as Element | null)?.closest<HTMLElement>('.has-menu')
+    entered?.classList.remove('is-dismissed')
+    closeMenus(entered ?? undefined)
+
+    for (const menu of menus) {
+      // A clicked trigger keeps focus afterwards, and :focus-within on its own
+      // would hold that menu open behind the one now under the pointer.
+      if (menu !== entered && menu.contains(document.activeElement)) {
+        menu.classList.add('is-dismissed')
+      }
+    }
+  })
 
   document.addEventListener('click', () => closeMenus())
 

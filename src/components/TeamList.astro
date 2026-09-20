@@ -118,14 +118,31 @@ function initials(name: string): string {
   }
 
   /*
-   * Biographies are Markdown bullet lists of wildly differing length. Clamping
-   * them is what keeps the grid even — but only where the toggle that undoes
-   * the clamp actually works.
+   * Two labelled facts rather than a bulleted list: at this width the markers
+   * and their indent only take room away from the text beside them.
    */
-  :global(html.js) .bio-text:not(.is-open) {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+  .bio-text :global(ul) {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .bio-text :global(li + li) {
+    margin-top: 0.4rem;
+  }
+
+  /*
+   * Biographies run to wildly different lengths and clamping them is what
+   * keeps the grid even. The script below applies this class, rather than the
+   * stylesheet keying off a class on <html>: that way the clamp exists only
+   * where the toggle that undoes it does, and it still works when the page is
+   * rendered inside another document, where nothing set on
+   * document.documentElement ever reaches this element.
+   *
+   * A max-height rather than -webkit-line-clamp, because the content is a list
+   * and line clamping does not reliably cross block children.
+   */
+  .bio-text.is-clamped:not(.is-open) {
+    max-height: 4.65em; /* three lines at the line-height above */
     overflow: hidden;
   }
 
@@ -143,8 +160,13 @@ function initials(name: string): string {
     const toggle = wrapper.querySelector<HTMLButtonElement>('.bio-toggle')
     if (!text || !toggle) continue
 
+    text.classList.add('is-clamped')
+
     // Nothing is being hidden if the biography is short enough to fit.
-    if (text.scrollHeight <= text.clientHeight + 1) continue
+    if (text.scrollHeight <= text.clientHeight + 1) {
+      text.classList.remove('is-clamped')
+      continue
+    }
 
     toggle.hidden = false
     toggle.addEventListener('click', () => {
