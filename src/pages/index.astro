@@ -10,15 +10,11 @@ if (!home) throw new Error('Missing src/content/pages/home.md')
 const { lead, prose, sponsors } = splitHome(home.body ?? '')
 
 /**
- * The homepage shows three of the ten research topics. Nothing in the CMS says
- * which, so it takes the first three the collection returns — alphabetical by
- * filename: Cancer Stem Cells, CDK4/6 and DNA repair, and the Crisperized
- * Medicine programme. Marking the featured three in the CMS is a content
- * decision that has not been made yet.
+ * Every research topic goes in the rail, in the order the collection returns
+ * them, so the CMS ordering is the running order and there is no featured set
+ * to choose. Three fit on screen at a time with the fourth peeking out.
  */
-const FEATURED_TOPICS = 3
 const topics = await getCollection('research')
-const featured = topics.slice(0, FEATURED_TOPICS)
 
 const LATEST_NEWS = 4
 const posts = (await getCollection('news'))
@@ -60,21 +56,40 @@ const leadCaption = home.data.headerCaption
     {lead && <p class="mission">{lead}</p>}
   </section>
 
-  <section class="page band">
-    <div class="section-head">
-      <p class="eyebrow meta">Research</p>
-      <a href="/research/">All {topics.length} research areas</a>
+  <section class="page band research">
+    <p class="eyebrow meta">Research</p>
+    <a class="all-link" href="/research/">All {topics.length} research areas</a>
+
+    <!--
+      Hidden until the script reveals them: the rail below is a real scroll
+      container, so it works by swipe, trackpad and keyboard on its own, and a
+      visitor without JavaScript should never be shown a control that does
+      nothing.
+    -->
+    <div class="arrows" hidden>
+      <button type="button" class="arrow" data-rail-step="-1" aria-label="Previous research topics" disabled>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+      </button>
+      <button type="button" class="arrow" data-rail-step="1" aria-label="Next research topics">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </button>
     </div>
-    <ul class="topics">
+
+    <ul class="rail" id="researchRail" tabindex="0" role="group" aria-label="Research topics, scrollable">
       {
-        featured.map((topic) => (
+        topics.map((topic) => (
           <li>
             <a class="quiet topic" href={`/research/${topic.id}/`}>
+              <div class="topic-figure">
+                {topic.data.headerImage && (
+                  <img src={topic.data.headerImage} alt="" loading="lazy" decoding="async" />
+                )}
+              </div>
               <h2>{topic.data.title.trim()}</h2>
               {topic.data.subtitle && <p class="topic-sub">{topic.data.subtitle}</p>}
               {topic.data.tags && topic.data.tags.length > 0 && (
                 <p class="tags meta">
-                  {topic.data.tags.map((tag, index) => (
+                  {topic.data.tags.slice(0, 4).map((tag, index) => (
                     <>
                       {index > 0 && <span class="sep">·</span>}
                       <span>{tag}</span>
@@ -87,6 +102,8 @@ const leadCaption = home.data.headerCaption
         ))
       }
     </ul>
+
+    <div class="track" aria-hidden="true"><span class="thumb"></span></div>
   </section>
 
   <section class="page band">
@@ -164,46 +181,191 @@ const leadCaption = home.data.headerCaption
     margin-bottom: 2.5rem;
   }
 
-  .topics {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  /* ------------------------------------------------ research rail -- */
+
+  /*
+   * A grid so the "All N research areas" link can sit under the eyebrow on
+   * desktop and below the track on mobile without being written twice.
+   */
+  .research {
+    --card: 312px;
+    --rail-gap: 32px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 48px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    row-gap: 16px;
+    column-gap: 24px;
+  }
+
+  .research .eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .all-link {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    font-size: 0.9375rem;
+  }
+
+  .arrows {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    display: flex;
+    gap: 8px;
+  }
+
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .arrow:hover:not(:disabled) {
+    border-color: var(--ink);
+  }
+
+  .arrow:disabled {
+    color: #b9c0c9;
+    cursor: default;
+  }
+
+  /*
+   * The rail is a native scroll container, not a transform slider: it scrolls
+   * by swipe, trackpad and arrow key with no script at all, and every topic is
+   * a real link in the document whether or not the buttons work.
+   */
+  .rail {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    gap: var(--rail-gap);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  /*
+   * With no script the arrows stay hidden, so the scrollbar is the only
+   * remaining affordance for a mouse — give it back.
+   */
+  :global(html.no-js) .rail {
+    scrollbar-width: thin;
+  }
+
+  :global(html.no-js) .rail::-webkit-scrollbar {
+    display: block;
+    height: 8px;
+  }
+
+  .rail > li {
+    flex: 0 0 var(--card);
+    scroll-snap-align: start;
   }
 
   .topic {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    padding-top: 24px;
-    border-top: 1px solid var(--ink);
+    gap: 12px;
     height: 100%;
   }
 
-  .topic h2 {
-    font-size: var(--size-card);
-    line-height: 1.2;
+  .topic-figure {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--tile);
+    overflow: hidden;
   }
 
+  .topic-figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /*
+   * Titles run from "MicroRNAs in Cancer" to a hundred characters, and a flex
+   * row is as tall as its tallest card, so the longest title would otherwise
+   * set the height of the whole rail.
+   */
+  .topic h2 {
+    margin-top: 4px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /*
+   * Two of the ten subtitles are a full paragraph rather than a line, and one
+   * over-long card would otherwise set the height of every card in the row.
+   */
   .topic-sub {
     margin: 0;
     font-size: 0.9375rem;
     line-height: 1.5;
     color: var(--slate);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
+  /*
+   * Four of the ten topics carry a long semicolon-separated keyword string
+   * rather than a few short tags. Two lines is the cap, and the height is an
+   * exact multiple of the line box so the cut lands between lines instead of
+   * slicing one in half. Plain inline flow rather than a wrapping flex row:
+   * a flex row-gap would put the cut back off the line boundary. The markup
+   * caps the strip at four tags for the same reason — only one topic carries
+   * more than four, and without the cap its row ends mid-word. The full set
+   * is on the topic page.
+   */
   .tags {
     margin: 0;
     font-size: 0.6875rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    line-height: 1.7;
+    max-height: 3.4em;
+    overflow: hidden;
   }
 
   .sep {
     color: #b5b0a8;
+    margin-inline: 6px;
+  }
+
+  .track {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    margin-top: 24px;
+    height: 2px;
+    background: var(--rule);
+  }
+
+  .thumb {
+    display: block;
+    height: 2px;
+    width: 33%;
+    background: var(--ink);
   }
 
   .news-row {
@@ -239,18 +401,42 @@ const leadCaption = home.data.headerCaption
   }
 
   @media (max-width: 900px) {
-    .topics {
-      grid-template-columns: 1fr;
-      gap: 0;
+    .research {
+      --card: 240px;
+      --rail-gap: 20px;
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 20px;
     }
 
-    .topic {
-      padding-block: 20px;
-      border-top: 1px solid var(--rule);
+    /* Swipe only below this width, as the board has it. */
+    .arrows {
+      display: none;
     }
 
-    .topics li:first-child .topic {
-      border-top-color: var(--ink);
+    .rail {
+      grid-row: 2;
+      margin-top: 0;
+    }
+
+    .track {
+      grid-row: 3;
+      margin-top: 20px;
+    }
+
+    .all-link {
+      grid-row: 4;
+    }
+
+    .topic h2 {
+      font-size: 1.1875rem;
+    }
+
+    .topic-sub {
+      font-size: 0.875rem;
+    }
+
+    .tags {
+      display: none;
     }
 
     .news-row {
@@ -270,3 +456,63 @@ const leadCaption = home.data.headerCaption
     }
   }
 </style>
+
+<script>
+  const rail = document.getElementById('researchRail')
+  const section = rail?.closest('.research')
+  const arrows = section?.querySelector<HTMLElement>('.arrows')
+  const thumb = section?.querySelector<HTMLElement>('.thumb')
+
+  if (rail && arrows && thumb) {
+    const buttons = Array.from(arrows.querySelectorAll<HTMLButtonElement>('.arrow'))
+
+    // The controls do something now, so they can be shown.
+    arrows.hidden = false
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+    // One card plus its gap — read from the DOM so the two breakpoints and any
+    // future card size stay correct without being repeated here.
+    const step = () => {
+      const card = rail.querySelector('li')
+      const gap = parseFloat(getComputedStyle(rail).columnGap) || 0
+      return (card?.getBoundingClientRect().width ?? 0) + gap
+    }
+
+    const maxScroll = () => rail.scrollWidth - rail.clientWidth
+
+    const sync = () => {
+      const max = maxScroll()
+      // A sub-pixel scrollLeft is normal after a snap, so leave a little slack.
+      buttons[0].disabled = rail.scrollLeft <= 1
+      buttons[1].disabled = rail.scrollLeft >= max - 1
+
+      const visible = rail.scrollWidth > 0 ? rail.clientWidth / rail.scrollWidth : 1
+      thumb.style.width = `${Math.min(visible, 1) * 100}%`
+      thumb.style.transform = `translateX(${max > 0 ? (rail.scrollLeft / max) * (100 / Math.min(visible, 1) - 100) : 0}%)`
+    }
+
+    for (const button of buttons) {
+      button.addEventListener('click', () => {
+        const direction = Number(button.dataset.railStep ?? 1)
+        rail.scrollBy({
+          left: direction * step(),
+          behavior: reduced.matches ? 'auto' : 'smooth',
+        })
+      })
+    }
+
+    let queued = false
+    rail.addEventListener('scroll', () => {
+      if (queued) return
+      queued = true
+      requestAnimationFrame(() => {
+        queued = false
+        sync()
+      })
+    })
+
+    window.addEventListener('resize', sync)
+    sync()
+  }
+</script>
