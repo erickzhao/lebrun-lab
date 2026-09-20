@@ -6,7 +6,11 @@ hidden: true
 
 _**Based in Montréal, Canada, the Lebrun Lab is part of the Cancer Research Program at the McGill University Health center.**_
 
-The vision/direction of our research program aims at understanding the molecular mechanisms underlying tumor initiation, progression, stemness and drug resistance in metastatic cancer, all of which considered as major challenges in the management of cancer patients. Metastatic cancer is by large an incurable disease, responsible for most of cancer deaths and lacks effective targeted therapies. Our mission and long-term goal are to advance and accelerate the translation of basic laboratory discoveries into new cancer therapeutics against this deadly disease. To achieve these objectives, our lab has developed central lines of research using cellular systems (in vitro), patient-derived organoids (ex-vivo), patient-derived preclinical xenografts (in vivo), bioinformatics and data mining analysis for large cohorts of human patient datasets (in silico). Using state of the art technologies, gene editing (CRISPR) and genome-wide molecular approaches, our lab has also developed a cutting edge “Crisperized Medicine” research program. In time, our research will help develop diagnostic/biomarkers and therapeutic tools to improve metastatic cancer patients’ stratification and treatment and improve cancer patients’ survival.
+The vision/direction of our research program aims at understanding the molecular mechanisms underlying tumor initiation, progression, stemness and drug resistance in metastatic cancer, all of which considered as major challenges in the management of cancer patients. Metastatic cancer is by large an incurable disease, responsible for most of cancer deaths and lacks effective targeted therapies.
+
+Our mission and long-term goal are to advance and accelerate the translation of basic laboratory discoveries into new cancer therapeutics against this deadly disease. To achieve these objectives, our lab has developed central lines of research using cellular systems (in vitro), patient-derived organoids (ex-vivo), patient-derived preclinical xenografts (in vivo), bioinformatics and data mining analysis for large cohorts of human patient datasets (in silico).
+
+Using state of the art technologies, gene editing (CRISPR) and genome-wide molecular approaches, our lab has also developed a cutting edge “Crisperized Medicine” research program. In time, our research will help develop diagnostic/biomarkers and therapeutic tools to improve metastatic cancer patients’ stratification and treatment and improve cancer patients’ survival.
 
 # About the Research Institute of McGill University Health center
 
@@ -48,7 +52,9 @@ https://youtu.be/MrL8necSYhc
 
 ![null](/img/screenshot-73-.png)
 
-Montreal, June 2, 2021 –Breast cancer is the leading cause of cancer death in women around the world, responsible for 1,700 deaths every day. Although the vast majority of breast cancers are treatable, the most aggressive subtype – triple negative breast cancer (TNBC) – has a high recurrence rate, a high potential for metastasis and shows resistance to conventional treatments, leading to very poor prognosis and survival outcomes. A team of researchers at the Research Institute of the McGill University Health Centre (RI-MUHC) conducted a preclinical study and discovered a novel targeted combination therapy that efficiently reduced tumor growth in metastatic breast cancer. Published in Nature Communications, their findings could lead to the development of a novel first line targeted therapy for the treatment of TNBC, with the prospect of rapidly transitioning to clinical trials in humans.
+Montreal, June 2, 2021 –Breast cancer is the leading cause of cancer death in women around the world, responsible for 1,700 deaths every day. Although the vast majority of breast cancers are treatable, the most aggressive subtype – triple negative breast cancer (TNBC) – has a high recurrence rate, a high potential for metastasis and shows resistance to conventional treatments, leading to very poor prognosis and survival outcomes.
+
+A team of researchers at the Research Institute of the McGill University Health Centre (RI-MUHC) conducted a preclinical study and discovered a novel targeted combination therapy that efficiently reduced tumor growth in metastatic breast cancer. Published in Nature Communications, their findings could lead to the development of a novel first line targeted therapy for the treatment of TNBC, with the prospect of rapidly transitioning to clinical trials in humans.
 
 <https://muhc.ca/news-and-patient-stories/releases/new-study-paves-way-novel-treatment-triple-negative-breast-cancer>
 

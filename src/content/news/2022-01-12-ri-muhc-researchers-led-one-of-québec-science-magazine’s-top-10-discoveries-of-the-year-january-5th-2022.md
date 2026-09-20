@@ -8,7 +8,9 @@ description: >-
   Jean-Jacques Lebrun and his team have discovered a promising treatment for
   triple negative breast cancer.
 ---
-One of the top ten scientific breakthroughs of 2021 selected by Québec Science magazine was achieved by researchers from the Research Institute of the McGill University Health Centre (RI-MUHC) and McGill University. Using CRISPR “genetic scissors”, the team of Jean-Jacques Lebrun, senior scientist in the Cancer Research Program at the RI-MUHC and professor in the Department of Medicine at McGill University, has discovered two cellular pathways that regulate the formation of tumors in triple-negative breast cancer, a particularly deadly cancer. The researchers then found two drugs that worked together to eradicate the tumors in preclinical models. These extremely promising results pave the way for clinical trials in humans.
+One of the top ten scientific breakthroughs of 2021 selected by Québec Science magazine was achieved by researchers from the Research Institute of the McGill University Health Centre (RI-MUHC) and McGill University. Using CRISPR “genetic scissors”, the team of Jean-Jacques Lebrun, senior scientist in the Cancer Research Program at the RI-MUHC and professor in the Department of Medicine at McGill University, has discovered two cellular pathways that regulate the formation of tumors in triple-negative breast cancer, a particularly deadly cancer.
+
+The researchers then found two drugs that worked together to eradicate the tumors in preclinical models. These extremely promising results pave the way for clinical trials in humans.
 
 
 

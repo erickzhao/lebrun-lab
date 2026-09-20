@@ -19,7 +19,9 @@ The overarching goal of our research program going forward is to elucidate the m
 
 
 
-To that end, our lab specialized in studying the molecular mechanisms and signaling pathways underlying the TGFβ tumor suppressive and prometastatic functions in cancer. TGFβ exerts tumor suppressive effects in normal cells and in early carcinomas, whereas in advanced cancer it exerts invasive and prometastatic effects. We have developed two lines of research: 1) defining the tumor suppressive role of TGFβ – how this growth factor inhibits cell proliferation, induces apoptosis and prevents cell immortalization in normal cells and early carcinomas; and 2) defining the pro-metastatic effect of this cytokine in invasive cancers, focusing on breast cancer with the goal of designing novel anti-TGFβ signaling therapies.
+To that end, our lab specialized in studying the molecular mechanisms and signaling pathways underlying the TGFβ tumor suppressive and prometastatic functions in cancer. TGFβ exerts tumor suppressive effects in normal cells and in early carcinomas, whereas in advanced cancer it exerts invasive and prometastatic effects.
+
+We have developed two lines of research: 1) defining the tumor suppressive role of TGFβ – how this growth factor inhibits cell proliferation, induces apoptosis and prevents cell immortalization in normal cells and early carcinomas; and 2) defining the pro-metastatic effect of this cytokine in invasive cancers, focusing on breast cancer with the goal of designing novel anti-TGFβ signaling therapies.
 
 
 
