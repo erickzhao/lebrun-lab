@@ -94,23 +94,25 @@ const leadCaption = home.data.headerCaption
         topics.map((topic) => (
           <li>
             <a class="quiet topic" href={`/research/${topic.id}/`}>
-              <div class="topic-figure">
+              <div class:list={['topic-figure', { 'figure--empty': !topic.data.headerImage }]}>
                 {topic.data.headerImage && (
                   <img src={topic.data.headerImage} alt="" loading="lazy" decoding="async" />
                 )}
               </div>
-              <h2>{topic.data.title.trim()}</h2>
-              {topic.data.subtitle && <p class="topic-sub">{topic.data.subtitle}</p>}
-              {topic.data.tags && topic.data.tags.length > 0 && (
-                <p class="tags meta">
-                  {topic.data.tags.slice(0, 4).map((tag, index) => (
-                    <>
-                      {index > 0 && <span class="sep">·</span>}
-                      <span>{tag}</span>
-                    </>
-                  ))}
-                </p>
-              )}
+              <div class="topic-body">
+                <h2>{topic.data.title.trim()}</h2>
+                {topic.data.subtitle && <p class="topic-sub">{topic.data.subtitle}</p>}
+                {topic.data.tags && topic.data.tags.length > 0 && (
+                  <p class="tags meta">
+                    {topic.data.tags.slice(0, 4).map((tag, index) => (
+                      <>
+                        {index > 0 && <span class="sep"> · </span>}
+                        <span>{tag}</span>
+                      </>
+                    ))}
+                  </p>
+                )}
+              </div>
             </a>
           </li>
         ))
@@ -316,16 +318,37 @@ const leadCaption = home.data.headerCaption
     scroll-snap-align: start;
   }
 
+  /*
+   * A bordered card, so a topic reads as one object whether or not the
+   * photograph behind it exists. The picture runs the full width of the card
+   * and the words are inset from it, which is why they sit in their own box.
+   */
   .topic {
     display: flex;
     flex-direction: column;
     gap: 12px;
     height: 100%;
+    padding-bottom: 24px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    background: var(--bg);
+    overflow: hidden;
+  }
+
+  .topic:hover {
+    border-color: var(--accent);
+  }
+
+  .topic-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-inline: 20px;
   }
 
   .topic-figure {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 2;
     background: var(--tile);
     overflow: hidden;
   }
@@ -385,9 +408,14 @@ const leadCaption = home.data.headerCaption
     overflow: hidden;
   }
 
+  /*
+   * The spaces around the separator are the point: without them the strip is
+   * one unbreakable run, and the only place a line could break was inside a
+   * hyphenated tag — "SELF-" on one line and "RENEWAL" on the next. Spacing
+   * comes from those spaces rather than a margin for the same reason.
+   */
   .sep {
     color: #b5b0a8;
-    margin-inline: 6px;
   }
 
   .track {

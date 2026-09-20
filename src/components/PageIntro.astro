@@ -20,10 +20,12 @@ interface Props {
 const { eyebrow, title, subtitle, displaySubtitle = false } = Astro.props
 ---
 
-<div class="page">
-  <div class="intro">
-    {eyebrow && <p class="eyebrow meta">{eyebrow}</p>}
-    {title && <h1>{title}</h1>}
-    {subtitle && <p class:list={['intro-sub', { 'is-display': displaySubtitle }]}>{subtitle}</p>}
+<div class="intro-band">
+  <div class="page">
+    <div class="intro">
+      {eyebrow && <p class="eyebrow meta">{eyebrow}</p>}
+      {title && <h1>{title}</h1>}
+      {subtitle && <p class:list={['intro-sub', { 'is-display': displaySubtitle }]}>{subtitle}</p>}
+    </div>
   </div>
 </div>

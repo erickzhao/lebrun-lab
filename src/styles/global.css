@@ -19,6 +19,15 @@
   --tile-2: #e9edf1;
   --muted: #8a8f99;
 
+  /*
+   * A whisper of the accent. The logo's fuchsia at full strength can only ever
+   * be the mark itself, so these are the diluted forms it is allowed to take:
+   * a page header band, a tile standing in for a photograph nobody has sent,
+   * and the dots that keep such a tile from reading as a loading state.
+   */
+  --tint: #f6f4f8;
+  --tint-2: #f3e4f0;
+
   /* Type */
   --display-family: Manrope, 'Helvetica Neue', Arial, sans-serif;
   --body-family: Inter, system-ui, 'Helvetica Neue', Arial, sans-serif;
@@ -217,6 +226,11 @@ a:hover {
 
 /* ------------------------------------------------------------- page intro - */
 
+/* Full bleed, so the tint reads as a band the page opens with. */
+.intro-band {
+  background: var(--tint);
+}
+
 .intro {
   padding-block: clamp(2.5rem, 1.5rem + 4vw, 6rem) clamp(2rem, 1.2rem + 3vw, 3.5rem);
   display: flex;
@@ -368,6 +382,7 @@ a:hover {
 .portrait {
   aspect-ratio: 4 / 5;
   width: 100%;
+  border-radius: 2px;
   background: var(--tile);
   display: flex;
   align-items: center;
@@ -382,16 +397,24 @@ a:hover {
   display: block;
 }
 
-.portrait--initials {
-  background: var(--tile-2);
+/*
+ * Four of the eleven lab members are a name and nothing else. The dots give
+ * the tile something to be rather than an empty grey box waiting for a
+ * photograph, and the initials carry the accent.
+ */
+.portrait--initials,
+.figure--empty {
+  background-color: var(--tint-2);
+  background-image: radial-gradient(rgba(163, 18, 143, 0.16) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
 
 .portrait--initials span {
   font-family: var(--display-family);
   font-size: clamp(2rem, 1rem + 4vw, 3.75rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  color: var(--slate);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--accent);
 }
 
 /* A full-bleed photograph: the lead image and post headers. */

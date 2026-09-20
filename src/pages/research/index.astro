@@ -16,10 +16,10 @@ const topics = await listedTopics()
   <section class="page band">
     <ul class="topics">
       {
-        topics.map((topic) => (
+        topics.map((topic, position) => (
           <li>
             <a class="quiet topic" href={`/research/${topic.id}/`}>
-              <div class="figure">
+              <div class:list={['figure', { 'figure--empty': !topic.data.headerImage }]}>
                 {topic.data.headerImage ? (
                   <img
                     src={topic.data.headerImage}
@@ -29,18 +29,38 @@ const topics = await listedTopics()
                   />
                 ) : null}
               </div>
-              <h2>{topic.data.title.trim()}</h2>
-              {topic.data.subtitle && <p class="topic-sub">{topic.data.subtitle}</p>}
-              {topic.data.tags && topic.data.tags.length > 0 && (
-                <p class="tags meta">
-                  {topic.data.tags.map((tag, index) => (
-                    <>
-                      {index > 0 && <span class="sep">·</span>}
-                      <span>{tag}</span>
-                    </>
-                  ))}
+              <div class="topic-body">
+                {/* The count is the reader's place in the list, so it is
+                    decoration rather than content and stays out of the
+                    accessibility tree along with the arrow beside it. */}
+                <p class="topic-index" aria-hidden="true">
+                  <span class="meta">{String(position + 1).padStart(2, '0')}</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 10h12M11 5l5 5-5 5" />
+                  </svg>
                 </p>
-              )}
+                <h2>{topic.data.title.trim()}</h2>
+                {topic.data.subtitle && <p class="topic-sub">{topic.data.subtitle}</p>}
+                {topic.data.tags && topic.data.tags.length > 0 && (
+                  <p class="tags meta">
+                    {topic.data.tags.map((tag, index) => (
+                      <>
+                        {index > 0 && <span class="sep">·</span>}
+                        <span>{tag}</span>
+                      </>
+                    ))}
+                  </p>
+                )}
+              </div>
             </a>
           </li>
         ))
@@ -59,11 +79,42 @@ const topics = await listedTopics()
     gap: 72px 48px;
   }
 
+  /*
+   * A bordered card, so a topic reads as one object whether or not the
+   * photograph behind it exists. The picture runs the full width of the card
+   * and the words are inset from it, which is why they sit in their own box.
+   */
   .topic {
     display: flex;
     flex-direction: column;
-    gap: 14px;
     height: 100%;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    background: var(--bg);
+    overflow: hidden;
+  }
+
+  .topic:hover {
+    border-color: var(--accent);
+  }
+
+  .topic-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 28px 28px;
+  }
+
+  .topic-index {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    color: var(--accent);
+  }
+
+  .topic-index .meta {
+    color: inherit;
   }
 
   .figure {
