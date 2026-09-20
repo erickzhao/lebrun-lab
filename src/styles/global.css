@@ -247,6 +247,21 @@ section.band {
   line-height: 1.7;
 }
 
+/*
+ * Spacing between blocks comes from one rule, and one rule only.
+ *
+ * The browser's own margins are cleared here rather than on each element,
+ * because a per-element reset like `.prose p { margin: 0 }` is more specific
+ * than `.prose > * + *` and silently cancels the spacing below it — which is
+ * exactly what used to happen, leaving every paragraph flush against the one
+ * before it. Anything that genuinely needs its own rhythm (headings, images,
+ * rules) overrides margin-top on its own selector, which is more specific
+ * again and so still wins.
+ */
+.prose > * {
+  margin-block: 0;
+}
+
 .prose > * + * {
   margin-top: 1.25rem;
 }
@@ -272,13 +287,8 @@ section.band {
   margin-top: 0;
 }
 
-.prose p {
-  margin: 0;
-}
-
 .prose ul,
 .prose ol {
-  margin: 0;
   padding-left: 1.25rem;
 }
 
@@ -293,7 +303,6 @@ section.band {
 }
 
 .prose blockquote {
-  margin: 0;
   padding-left: 1.25rem;
   border-left: 2px solid var(--rule);
   color: var(--slate);
