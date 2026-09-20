@@ -22,10 +22,11 @@
   /*
    * A whisper of the accent. The logo's fuchsia at full strength can only ever
    * be the mark itself, so these are the diluted forms it is allowed to take:
-   * a page header band, a tile standing in for a photograph nobody has sent,
-   * and the dots that keep such a tile from reading as a loading state.
+   * a wash behind a section heading, a tile standing in for a photograph
+   * nobody has sent, and the dots that keep such a tile from reading as a
+   * loading state.
    */
-  --tint: #f6f4f8;
+  --tint: #f9eef7;
   --tint-2: #f3e4f0;
 
   /* Type */
@@ -226,17 +227,20 @@ a:hover {
 
 /* ------------------------------------------------------------- page intro - */
 
-/* Full bleed, so the tint reads as a band the page opens with. */
-.intro-band {
-  background: var(--tint);
-}
-
 .intro {
   padding-block: clamp(2.5rem, 1.5rem + 4vw, 6rem) clamp(2rem, 1.2rem + 3vw, 3.5rem);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   max-width: 56rem;
+}
+
+/*
+ * On a single-column page the header shares the body's column, so the title
+ * and the first paragraph start on the same edge.
+ */
+.page--measure > .intro {
+  max-width: var(--measure);
 }
 
 .intro h1 {
@@ -290,6 +294,22 @@ a:hover {
   font-size: var(--size-section);
   line-height: 1.1;
   margin-top: 2.5rem;
+}
+
+/*
+ * A section heading sits in a wash of the accent, as the artboards have it.
+ * The box hugs the words rather than the column, and the negative margin pulls
+ * its padding back so the letters still start on the text edge. The extra
+ * line-height keeps the wash clear of the line above.
+ */
+.tinted-heading,
+.prose h2 {
+  background: var(--tint);
+  padding: 2px 10px;
+  margin-left: -10px;
+  width: max-content;
+  max-width: calc(100% + 10px);
+  line-height: 1.45;
 }
 
 .prose h3 {
@@ -370,10 +390,24 @@ a:hover {
   margin-top: 0;
 }
 
+/*
+ * Publications opens each section under a rule as well as a wash. The two
+ * cannot share a box — one spans the column, the other only the words — so the
+ * rule is drawn above the heading at the column's own width.
+ */
 .prose--citations h2 {
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--ink);
+  position: relative;
+  margin-top: 3.25rem;
   font-size: var(--size-card);
+}
+
+.prose--citations h2::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 1.25rem);
+  left: -10px;
+  width: calc(min(var(--measure), 100vw - 2 * var(--gutter)) + 10px);
+  border-top: 1px solid var(--ink);
 }
 
 /* ------------------------------------------------------------------ tiles - */
