@@ -3,17 +3,37 @@ import type { GetStaticPaths } from 'astro'
 import type { CollectionEntry } from 'astro:content'
 import { getCollection, render } from 'astro:content'
 import Base from '../../layouts/Base.astro'
+import PostNav from '../../components/PostNav.astro'
 
+/*
+ * Newest first, the same order the News index lists them, so the neighbours
+ * offered here are the rows above and below the one the reader came from.
+ */
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getCollection('news')
-  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }))
+  const posts = (await getCollection('news')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  )
+
+  return posts.map((post, index) => ({
+    params: { slug: post.id },
+    props: { post, newer: posts[index - 1], older: posts[index + 1] },
+  }))
 }
 
 interface Props {
   post: CollectionEntry<'news'>
+  newer?: CollectionEntry<'news'>
+  older?: CollectionEntry<'news'>
 }
 
-const { post } = Astro.props
+const { post, newer, older } = Astro.props
+
+/*
+ * "Previous" and "next" have no fixed meaning in a list that runs backwards
+ * through time, so these say which way they go.
+ */
+const toLink = (entry?: CollectionEntry<'news'>) =>
+  entry && { href: `/news/${entry.id}/`, title: entry.data.title }
 const { Content } = await render(post)
 
 /*
@@ -44,7 +64,8 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
   <header class="page page--measure post-head">
     <div>
       <p class="eyebrow meta">
-        News · <time datetime={post.data.date.toISOString()}>{dateFormat.format(post.data.date)}</time>
+        <a href="/news/" class="back">← News</a> ·{' '}
+        <time datetime={post.data.date.toISOString()}>{dateFormat.format(post.data.date)}</time>
       </p>
       <h1>{post.data.title}</h1>
       {
@@ -64,6 +85,12 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
       <Content />
     </div>
   </section>
+
+  <PostNav
+    previous={toLink(newer)}
+    next={toLink(older)}
+    labels={{ previous: 'Newer', next: 'Older' }}
+  />
 </Base>
 
 <style>
@@ -81,6 +108,15 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
     font-size: var(--size-title);
     line-height: 1.08;
     letter-spacing: -0.01em;
+  }
+
+  .back {
+    color: var(--slate);
+    text-decoration: none;
+  }
+
+  .back:hover {
+    color: var(--accent);
   }
 
   .post-sub p {

@@ -4,17 +4,42 @@ import type { CollectionEntry } from 'astro:content'
 import { getCollection, render } from 'astro:content'
 import Base from '../../layouts/Base.astro'
 import Attachments from '../../components/Attachments.astro'
+import PostNav from '../../components/PostNav.astro'
+import { listedTopics } from '../../lib/research'
 
+/*
+ * Every topic still gets its own page, including the unlisted ones, but only
+ * the listed ones form the sequence — stepping through here should not walk a
+ * reader into a topic the Research page deliberately hides. An unlisted topic
+ * is therefore not in the chain and offers no neighbours, only the way back.
+ */
 export const getStaticPaths: GetStaticPaths = async () => {
-  const topics = await getCollection('research')
-  return topics.map((topic) => ({ params: { slug: topic.id }, props: { topic } }))
+  const all = await getCollection('research')
+  const listed = await listedTopics()
+
+  return all.map((topic) => {
+    const index = listed.findIndex((candidate) => candidate.id === topic.id)
+    return {
+      params: { slug: topic.id },
+      props: {
+        topic,
+        previous: index === -1 ? undefined : listed[index - 1],
+        next: index === -1 ? undefined : listed[index + 1],
+      },
+    }
+  })
 }
 
 interface Props {
   topic: CollectionEntry<'research'>
+  previous?: CollectionEntry<'research'>
+  next?: CollectionEntry<'research'>
 }
 
-const { topic } = Astro.props
+const { topic, previous, next } = Astro.props
+
+const toLink = (entry?: CollectionEntry<'research'>) =>
+  entry && { href: `/research/${entry.id}/`, title: entry.data.title.trim() }
 const { Content } = await render(topic)
 const { title, subtitle, headerImage, tags, files } = topic.data
 ---
@@ -30,7 +55,7 @@ const { title, subtitle, headerImage, tags, files } = topic.data
 
   <header class="page page--measure post-head">
     <div>
-      <p class="eyebrow meta">Research · Project</p>
+      <p class="eyebrow meta"><a href="/research/" class="back">← Research</a> · Project</p>
       <h1>{title.trim()}</h1>
       {subtitle && <p class="post-sub">{subtitle}</p>}
       {
@@ -54,6 +79,12 @@ const { title, subtitle, headerImage, tags, files } = topic.data
     </div>
     <Attachments files={files} />
   </section>
+
+  <PostNav
+    previous={toLink(previous)}
+    next={toLink(next)}
+    labels={{ previous: 'Previous', next: 'Next' }}
+  />
 </Base>
 
 <style>
@@ -80,6 +111,15 @@ const { title, subtitle, headerImage, tags, files } = topic.data
     line-height: 1.4;
     letter-spacing: -0.02em;
     color: var(--slate);
+  }
+
+  .back {
+    color: var(--slate);
+    text-decoration: none;
+  }
+
+  .back:hover {
+    color: var(--accent);
   }
 
   .tags {

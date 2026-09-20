@@ -1,0 +1,105 @@
+---
+/**
+ * Previous and next links at the foot of a news post or a research project.
+ *
+ * The sequence is whatever the matching index page shows, in the same order,
+ * so moving through here and scrolling that list reach the same things in the
+ * same sequence. Nothing wraps around: at either end that side is simply
+ * absent, because a "next" that silently returns to the beginning leaves a
+ * reader unsure whether they have seen everything.
+ */
+interface Link {
+  href: string
+  title: string
+}
+
+interface Props {
+  /** The entry before this one, towards the top of the index. */
+  previous?: Link
+  /** The entry after this one, towards the bottom of the index. */
+  next?: Link
+  /** What the two directions are called, which differs by collection. */
+  labels: { previous: string; next: string }
+}
+
+const { previous, next, labels } = Astro.props
+---
+
+{
+  (previous || next) && (
+    <nav class="page post-nav" aria-label="More in this section">
+      {/* An empty first cell keeps a lone "next" over on the right. */}
+      {previous ? (
+        <a class="quiet nav-cell is-previous" href={previous.href} rel="prev">
+          <span class="meta">← {labels.previous}</span>
+          <span class="nav-title">{previous.title}</span>
+        </a>
+      ) : (
+        <span class="nav-cell is-empty" />
+      )}
+
+      {next && (
+        <a class="quiet nav-cell is-next" href={next.href} rel="next">
+          <span class="meta">{labels.next} →</span>
+          <span class="nav-title">{next.title}</span>
+        </a>
+      )}
+    </nav>
+  )
+}
+
+<style>
+  .post-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding-block: 2rem 0;
+    margin-bottom: clamp(3.5rem, 2rem + 6vw, 7rem);
+    border-top: 1px solid var(--ink);
+  }
+
+  .nav-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 1.5rem;
+    min-width: 0;
+  }
+
+  .is-next {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .nav-title {
+    font-family: var(--display-family);
+    font-size: var(--size-card);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    /* Titles here run past a hundred characters, and a nav row is a glance. */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @media (max-width: 700px) {
+    .post-nav {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    /* Stacked, the two cells need a rule between them rather than beside. */
+    .is-next {
+      text-align: left;
+      align-items: flex-start;
+      border-top: 1px solid var(--rule);
+      margin-top: 1.5rem;
+    }
+
+    .is-empty {
+      display: none;
+    }
+  }
+</style>
