@@ -1,12 +1,13 @@
 ---
-import { getCollection, getEntry } from 'astro:content'
+import { getEntry } from 'astro:content'
 import Base from '../../layouts/Base.astro'
 import PageIntro from '../../components/PageIntro.astro'
+import { listedTopics } from '../../lib/research'
 
 const info = await getEntry('pages', 'research')
 const { title, subtitle } = info?.data ?? {}
 
-const topics = await getCollection('research')
+const topics = await listedTopics()
 ---
 
 <Base title={title} description={subtitle}>

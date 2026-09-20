@@ -3,6 +3,7 @@ import { marked } from 'marked'
 import { getCollection, getEntry } from 'astro:content'
 import Base from '../layouts/Base.astro'
 import { splitHome } from '../lib/homeSections'
+import { listedTopics } from '../lib/research'
 
 const home = await getEntry('pages', 'home')
 if (!home) throw new Error('Missing src/content/pages/home.md')
@@ -10,14 +11,14 @@ if (!home) throw new Error('Missing src/content/pages/home.md')
 const { lead, prose, sponsors } = splitHome(home.body ?? '')
 
 /**
- * The homepage shows three of the ten research topics. Nothing in the CMS says
- * which, so it takes the first three the collection returns — alphabetical by
- * filename: Cancer Stem Cells, CDK4/6 and DNA repair, and the Crisperized
- * Medicine programme. Marking the featured three in the CMS is a content
- * decision that has not been made yet.
+ * The homepage shows three of the seven listed research topics. Nothing in the
+ * CMS says which, so it takes the first three the collection returns —
+ * alphabetical by filename: Cancer Stem Cells, CDK4/6 and DNA repair, and the
+ * Crisperized Medicine programme. Marking the featured three in the CMS is a
+ * content decision that has not been made yet.
  */
 const FEATURED_TOPICS = 3
-const topics = await getCollection('research')
+const topics = await listedTopics()
 const featured = topics.slice(0, FEATURED_TOPICS)
 
 const LATEST_NEWS = 4

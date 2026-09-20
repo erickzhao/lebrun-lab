@@ -38,6 +38,8 @@ const research = defineCollection({
     subtitle: z.string().optional(),
     tags: z.array(z.string()).nullish(),
     headerImage: z.string().optional(),
+    /** Keeps the topic's own page and address but drops it from the listings. */
+    unlisted: z.boolean().optional(),
     files: z.array(attachment).nullish(),
   }),
 })

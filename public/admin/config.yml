@@ -54,6 +54,13 @@ collections:
               { label: "File Name", name: "name", widget: "string" },
             ],
         }
+      - {
+          label: "Hide from the Research page",
+          name: "unlisted",
+          widget: "boolean",
+          default: false,
+          hint: "The topic keeps its own page and web address, it just stops being listed. Use this when the same item is already posted under News.",
+        }
   # Inner pages open with a typographic header, not a photograph, so only the
   # two places that still render an image offer the field: the Home lead image
   # below, and Header Image on a research topic. Offering it on the other pages
