@@ -36,9 +36,14 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
 })
 
 /**
- * The lead photograph. `headerImage` on the Home entry is the CMS field for it;
- * until one is chosen there, the site falls back to the panoramic photograph of
- * the Glen site that the Contact and Lab members pages already use.
+ * The lead photograph. `headerImage` on the Home entry is the CMS field for it,
+ * so Dr. Lebrun can choose one; until he does, this falls back to the lab's
+ * panoramic photograph of the Glen site.
+ *
+ * That photograph was the header image on Contact and Lab members under the old
+ * site. Those pages now open with a typographic header instead, so this is the
+ * only place it still appears. Nobody has picked a homepage lead image yet —
+ * this is a stand-in, not an editorial choice.
  */
 const DEFAULT_LEAD_IMAGE = '/img/new panoramic glen-blue-sky - low res.jpg'
 const leadImage = home.data.headerImage || DEFAULT_LEAD_IMAGE
