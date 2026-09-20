@@ -20,14 +20,17 @@
   --muted: #8a8f99;
 
   /*
-   * A whisper of the accent. The logo's fuchsia at full strength can only ever
-   * be the mark itself, so these are the diluted forms it is allowed to take:
-   * a wash behind a section heading, a tile standing in for a photograph
-   * nobody has sent, and the dots that keep such a tile from reading as a
-   * loading state.
+   * A whisper of the accent, for a tile standing in for a photograph nobody
+   * has sent and the dots that keep such a tile from reading as a loading
+   * state. The logo's fuchsia at full strength can only ever be the mark.
    */
-  --tint: #f9eef7;
   --tint-2: #f3e4f0;
+
+  /*
+   * On the near-black header band the accent is too dark to read against the
+   * background, so it lightens to the tint the artboards use on dark ground.
+   */
+  --accent-light: #e9a7de;
 
   /* Type */
   --display-family: Manrope, 'Helvetica Neue', Arial, sans-serif;
@@ -227,8 +230,31 @@ a:hover {
 
 /* ------------------------------------------------------------- page intro - */
 
+/*
+ * Full bleed, and dark, so the page opens on something with weight rather than
+ * a wash. The margin below is the band's own, because the band ends at a hard
+ * edge and the body would otherwise start against it.
+ */
+.intro-band {
+  background: var(--ink);
+  color: var(--bg);
+  margin-block-end: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+}
+
+.intro-band .meta {
+  color: #b9c0c9;
+}
+
+.intro-band .eyebrow::before {
+  background: var(--accent-light);
+}
+
+.intro-band .intro-sub {
+  color: #b9c0c9;
+}
+
 .intro {
-  padding-block: clamp(2.5rem, 1.5rem + 4vw, 6rem) clamp(2rem, 1.2rem + 3vw, 3.5rem);
+  padding-block: clamp(2.5rem, 1.5rem + 4vw, 6rem) clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -297,19 +323,15 @@ a:hover {
 }
 
 /*
- * A section heading sits in a wash of the accent, as the artboards have it.
- * The box hugs the words rather than the column, and the negative margin pulls
- * its padding back so the letters still start on the text edge. The extra
- * line-height keeps the wash clear of the line above.
+ * A section heading opens under an accent rule across the column, the same
+ * device the news and research lists use. A wash behind the words was the
+ * artboards' answer, but at the strength a wash has to be to stay readable it
+ * only muddies the heading.
  */
 .tinted-heading,
 .prose h2 {
-  background: var(--tint);
-  padding: 2px 10px;
-  margin-left: -10px;
-  width: max-content;
-  max-width: calc(100% + 10px);
-  line-height: 1.45;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--accent);
 }
 
 .prose h3 {
@@ -390,24 +412,9 @@ a:hover {
   margin-top: 0;
 }
 
-/*
- * Publications opens each section under a rule as well as a wash. The two
- * cannot share a box — one spans the column, the other only the words — so the
- * rule is drawn above the heading at the column's own width.
- */
 .prose--citations h2 {
-  position: relative;
   margin-top: 3.25rem;
   font-size: var(--size-card);
-}
-
-.prose--citations h2::before {
-  content: '';
-  position: absolute;
-  bottom: calc(100% + 1.25rem);
-  left: -10px;
-  width: calc(min(var(--measure), 100vw - 2 * var(--gutter)) + 10px);
-  border-top: 1px solid var(--ink);
 }
 
 /* ------------------------------------------------------------------ tiles - */
