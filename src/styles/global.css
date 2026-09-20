@@ -26,12 +26,6 @@
    */
   --tint-2: #f3e4f0;
 
-  /*
-   * On the near-black header band the accent is too dark to read against the
-   * background, so it lightens to the tint the artboards use on dark ground.
-   */
-  --accent-light: #e9a7de;
-
   /* Type */
   --display-family: Manrope, 'Helvetica Neue', Arial, sans-serif;
   --body-family: Inter, system-ui, 'Helvetica Neue', Arial, sans-serif;
@@ -231,26 +225,15 @@ a:hover {
 /* ------------------------------------------------------------- page intro - */
 
 /*
- * Full bleed, and dark, so the page opens on something with weight rather than
- * a wash. The margin below is the band's own, because the band ends at a hard
- * edge and the body would otherwise start against it.
+ * Full bleed, and closed by an accent edge. The colour is the footer's, so a
+ * page is bracketed by the same grey top and bottom, and the rule does the
+ * work a tint behind the type never could. The margin below is the band's own,
+ * because it ends at a hard edge the body would otherwise start against.
  */
 .intro-band {
-  background: var(--ink);
-  color: var(--bg);
+  background: var(--bg-2);
+  border-bottom: 3px solid var(--accent);
   margin-block-end: clamp(2.5rem, 1.5rem + 3vw, 4rem);
-}
-
-.intro-band .meta {
-  color: #b9c0c9;
-}
-
-.intro-band .eyebrow::before {
-  background: var(--accent-light);
-}
-
-.intro-band .intro-sub {
-  color: #b9c0c9;
 }
 
 .intro {
