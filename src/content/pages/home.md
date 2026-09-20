@@ -4,7 +4,7 @@ hidden: true
 ---
 # About the Lebrun Lab
 
-_**Based in Montréal, Canada, the Lebrun Lab is part of the Cancer Research Program at the McGill University Health Centre.**_
+_**Based in Montreal, Canada, the Lebrun Lab is part of the Cancer Research Program at the McGill University Health Centre.**_
 
 The vision/direction of our research program aims at understanding the molecular mechanisms underlying tumor initiation, progression, stemness and drug resistance in metastatic cancer, all of which considered as major challenges in the management of cancer patients. Metastatic cancer is by large an incurable disease, responsible for most of cancer deaths and lacks effective targeted therapies.
 
