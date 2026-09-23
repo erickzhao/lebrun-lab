@@ -8,7 +8,7 @@
  * master, so there it changes nothing; with no BRANCH set, as when building
  * locally, config.yml is used unchanged.
  */
-const branch = process.env.BRANCH
+const branch = import.meta.env.BRANCH
 ---
 
 <!doctype html>

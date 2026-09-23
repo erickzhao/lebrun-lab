@@ -57,6 +57,11 @@ Netlify builds `npm run build` and publishes `dist/`. The Node version is pinned
 in both `.nvmrc` and `netlify.toml` so the build environment lives in this
 repository rather than only in the Netlify dashboard.
 
+`/admin` edits the branch the deploy was built from (Netlify's `BRANCH`
+variable), so the CMS on a branch deploy or deploy preview reads and commits
+to that branch rather than to `master`. Production is built from `master`, so
+there it behaves exactly as `public/admin/config.yml` says.
+
 ## Notes
 
 - The Google Maps embed key in `src/components/Map.astro` is public by
