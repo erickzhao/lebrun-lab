@@ -62,26 +62,33 @@ const metaDescription =
       Netlify Identity invitation, recovery and confirmation links land on the
       site root carrying a token in the URL fragment. Only then is the widget
       worth loading, so ordinary visitors never pay for it.
+
+      The widget initialises itself as soon as it loads and has already read
+      the token by the time onload runs, so the handlers below are attached
+      directly rather than waiting for an init event that has passed. A
+      recovery link signs the editor in before they have chosen a new
+      password, so that case waits for the dialog to close instead of leaving
+      for the CMS straight away.
     -->
     <script is:inline>
       ;(function () {
-        var hash = window.location.hash
-        if (!/\b(invite_token|recovery_token|confirmation_token|email_change_token)=/.test(hash)) {
-          return
-        }
+        var match = /\b(invite|recovery|confirmation|email_change)_token=/.exec(window.location.hash)
+        if (!match) return
+        var recovering = match[1] === 'recovery'
         var script = document.createElement('script')
         script.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js'
         script.onload = function () {
           var identity = window.netlifyIdentity
           if (!identity) return
-          identity.on('init', function (user) {
-            if (!user) {
-              identity.on('login', function () {
-                window.location.href = '/admin/'
-              })
-            }
+          var toAdmin = function () {
+            window.location.href = '/admin/'
+          }
+          identity.on('login', function () {
+            if (!recovering) toAdmin()
           })
-          identity.init()
+          identity.on('close', function () {
+            if (identity.currentUser()) toAdmin()
+          })
         }
         document.head.appendChild(script)
       })()

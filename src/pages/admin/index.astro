@@ -1,0 +1,39 @@
+---
+/*
+ * The CMS commits to the branch named in public/admin/config.yml, which is
+ * master. On a Netlify branch deploy or deploy preview that would mean the
+ * editor shows and changes master's content rather than the content of the
+ * build in front of them, so the branch Netlify is building (its BRANCH
+ * variable) is handed to Decap instead. A production build is built from
+ * master, so there it changes nothing; with no BRANCH set, as when building
+ * locally, config.yml is used unchanged.
+ */
+const branch = process.env.BRANCH
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Content Manager &middot; Lebrun Lab</title>
+
+    <!--
+      Netlify Identity signs the editor in; Decap CMS commits their changes
+      through Git Gateway. Both are loaded from a CDN at pinned versions, which
+      is Decap's standard installation.
+    -->
+    <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <script is:inline define:vars={{ branch }}>
+      window.CMS_MANUAL_INIT = true
+      window.CMS_BRANCH = branch
+    </script>
+    <script is:inline src="https://unpkg.com/decap-cms@3.16.2/dist/decap-cms.js"></script>
+    <script is:inline>
+      window.CMS.init(window.CMS_BRANCH ? { config: { backend: { branch: window.CMS_BRANCH } } } : {})
+    </script>
+  </body>
+</html>
