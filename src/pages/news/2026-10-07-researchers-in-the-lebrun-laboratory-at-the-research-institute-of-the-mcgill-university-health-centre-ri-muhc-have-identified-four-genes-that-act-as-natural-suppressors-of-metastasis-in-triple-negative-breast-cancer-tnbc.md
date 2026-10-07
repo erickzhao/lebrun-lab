@@ -39,6 +39,6 @@ description: >-
 
   DOI: 10.1038/s41467-026-76293-x
 ---
-
+![](/img/dsc01818-team-nature-communications-paper.jpg)
 
 https://www-nature-com.proxy3.library.mcgill.ca/articles/s41467-026-76293-x
