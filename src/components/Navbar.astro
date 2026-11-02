@@ -67,6 +67,9 @@ const sectionIsCurrent = (section: Section) =>
                   aria-expanded="false"
                 >
                   {section.label}
+                  <svg class="chevron" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+                    <path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.5" />
+                  </svg>
                 </button>
                 <ul class="nav-menu">
                   {section.items.map((item) => (
@@ -213,6 +216,19 @@ const sectionIsCurrent = (section: Section) =>
     border-bottom-color: var(--accent);
   }
 
+  /* The chevron says a trigger opens a menu rather than going somewhere. */
+  .has-menu > .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .chevron {
+    flex-shrink: 0;
+    color: var(--slate);
+    transition: transform 0.2s ease;
+  }
+
   .nav-menu {
     list-style: none;
     margin: 6px 0 0;
@@ -258,6 +274,12 @@ const sectionIsCurrent = (section: Section) =>
     display: block;
   }
 
+  .has-menu:hover .chevron,
+  .has-menu:focus-within .chevron,
+  .has-menu.is-open .chevron {
+    transform: rotate(180deg);
+  }
+
   /*
    * Escape has to beat :focus-within, since it closes the menu while focus is
    * still on the trigger. Same specificity as the rules above, so it wins on
@@ -265,6 +287,10 @@ const sectionIsCurrent = (section: Section) =>
    */
   .has-menu.is-dismissed .nav-menu {
     display: none;
+  }
+
+  .has-menu.is-dismissed .chevron {
+    transform: none;
   }
 
   .nav-menu a {
@@ -400,11 +426,22 @@ const sectionIsCurrent = (section: Section) =>
   // handler is what makes them work on a touch screen and with a keyboard.
   const menus = Array.from(document.querySelectorAll<HTMLElement>('.has-menu'))
 
+  // aria-expanded has to say what the stylesheet is showing. A menu is open
+  // when it was clicked open, or when focus is inside it and Escape has not
+  // dismissed it since — the same conditions as the CSS above, minus hover,
+  // which assistive technology never sees.
+  const syncExpanded = (menu: HTMLElement) => {
+    const open =
+      menu.classList.contains('is-open') ||
+      (menu.contains(document.activeElement) && !menu.classList.contains('is-dismissed'))
+    menu.querySelector('button')?.setAttribute('aria-expanded', String(open))
+  }
+
   const closeMenus = (except?: HTMLElement) => {
     for (const menu of menus) {
       if (menu === except) continue
       menu.classList.remove('is-open')
-      menu.querySelector('button')?.setAttribute('aria-expanded', 'false')
+      syncExpanded(menu)
     }
   }
 
@@ -418,8 +455,14 @@ const sectionIsCurrent = (section: Section) =>
       menu.querySelector('button')?.setAttribute('aria-expanded', String(open))
     })
 
+    // Tabbing onto the trigger opens the menu through :focus-within alone, so
+    // the attribute has to follow focus as well as clicks.
+    menu.addEventListener('focusin', () => syncExpanded(menu))
+
     menu.addEventListener('focusout', (event) => {
-      if (!menu.contains(event.relatedTarget as Node | null)) menu.classList.remove('is-dismissed')
+      if (menu.contains(event.relatedTarget as Node | null)) return
+      menu.classList.remove('is-dismissed')
+      menu.querySelector('button')?.setAttribute('aria-expanded', String(menu.classList.contains('is-open')))
     })
   }
 
@@ -440,6 +483,7 @@ const sectionIsCurrent = (section: Section) =>
       // would hold that menu open behind the one now under the pointer.
       if (menu !== entered && menu.contains(document.activeElement)) {
         menu.classList.add('is-dismissed')
+        syncExpanded(menu)
       }
     }
   })

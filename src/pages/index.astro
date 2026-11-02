@@ -362,6 +362,11 @@ const leadCaption = home.data.headerCaption
     display: block;
   }
 
+  /* A diagram is shown whole rather than cropped; see .figure-wide. */
+  .topic-figure.is-contained img {
+    object-fit: contain;
+  }
+
   /*
    * Titles run from "MicroRNAs in Cancer" to a hundred characters, and a flex
    * row is as tall as its tallest card, so the longest title would otherwise

@@ -121,6 +121,11 @@ const topics = await listedTopics()
     display: block;
   }
 
+  /* A diagram is shown whole rather than cropped; see .figure-wide. */
+  .figure.is-contained img {
+    object-fit: contain;
+  }
+
   .topic h2 {
     font-size: clamp(1.5rem, 1.32rem + 0.73vw, 1.75rem);
     line-height: 1.2;

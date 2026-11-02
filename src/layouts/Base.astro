@@ -56,6 +56,33 @@ const metaDescription =
     <script is:inline>
       document.documentElement.classList.replace('no-js', 'js')
     </script>
+
+    <!-- A diagram cropped to a frame loses its labels, so one is shown whole:
+         a picture much wider than its card is contained rather than cropped,
+         and a banner-shaped picture at the head of a page takes its own
+         height. A picture taller than its frame is still cropped, since that
+         is a photograph losing some sky. Load events do not bubble, so this
+         listens in the capture phase and catches every image on the page, lazy
+         ones included. -->
+    <script is:inline>
+      document.addEventListener(
+        'load',
+        function (event) {
+          var img = event.target
+          if (!(img instanceof HTMLImageElement) || !img.naturalWidth) return
+          var frame = img.closest('.figure, .topic-figure, .figure-wide')
+          if (!frame || !frame.clientHeight) return
+          var picture = img.naturalWidth / img.naturalHeight
+          if (frame.classList.contains('figure-wide')) {
+            frame.classList.toggle('is-banner', picture >= 1.8)
+            return
+          }
+          var box = frame.clientWidth / frame.clientHeight
+          frame.classList.toggle('is-contained', picture / box > 1.2)
+        },
+        true
+      )
+    </script>
   </head>
   <body>
     <!--

@@ -107,6 +107,15 @@ a:hover {
   text-decoration-color: currentColor;
 }
 
+/*
+ * A link whose text is a bare URL has nothing to break at, and the Links page
+ * is a list of those. Without this, one address can push the page wider than a
+ * phone screen.
+ */
+.prose a {
+  overflow-wrap: anywhere;
+}
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
@@ -485,23 +494,13 @@ a:hover {
 }
 
 /*
- * Four of the eleven lab members are a name and nothing else. The dots give
- * the tile something to be rather than an empty grey box waiting for a
- * photograph, and the initials carry the accent.
+ * A research topic without a picture. The dots give the tile something to be
+ * rather than an empty grey box waiting for a photograph.
  */
-.portrait--initials,
 .figure--empty {
   background-color: var(--tint-2);
   background-image: radial-gradient(rgba(163, 18, 143, 0.16) 1px, transparent 1px);
   background-size: 22px 22px;
-}
-
-.portrait--initials span {
-  font-family: var(--display-family);
-  font-size: clamp(2rem, 1rem + 4vw, 3.75rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--accent);
 }
 
 /* A full-bleed photograph: the lead image and post headers. */
@@ -515,6 +514,16 @@ a:hover {
   height: clamp(260px, 42vw, 620px);
   object-fit: cover;
   display: block;
+}
+
+/*
+ * Most header images are photographs and crop happily to the frame. A diagram
+ * does not: cropped, it loses its labels. The script in Base.astro marks a
+ * header whose picture is banner-shaped, and that one takes the picture's own
+ * height instead.
+ */
+.figure-wide.is-banner img {
+  height: auto;
 }
 
 .figure-caption {
